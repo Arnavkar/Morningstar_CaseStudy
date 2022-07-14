@@ -30,6 +30,8 @@ class LocalStorage {
         chrome.storage.local.get(name, function(item) {
             if (item !== undefined) {
                 callback(item[name]);
+            } else {
+                console.log(`${name} not found in local storage`)
             }
         });
     }
