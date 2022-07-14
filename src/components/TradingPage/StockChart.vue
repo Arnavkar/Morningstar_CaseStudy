@@ -2,30 +2,30 @@
     <div class="stock-chart-main nice-boxshadow">
         <div class="button-row">
             <div class="buttons">
-                <button v-if='activeTimeFilter === 0' class='time-button-selected' @click="getStockDataForPeriod(7)">1W</button>
-                <button v-else  @click="getStockDataForPeriod(7); updateActiveTimeFilter(0);">1W</button>
+                <button v-if='activeTimeFilter === 0' class='time-button-selected' @click="getStockDataForPeriod('1W')">1W</button>
+                <button v-else  @click="getStockDataForPeriod('1W'); updateActiveTimeFilter(0);">1W</button>
 
-                <button v-if='activeTimeFilter === 1' class='time-button-selected' @click="getStockDataForPeriod(14)">2W</button>
-                <button v-else @click="getStockDataForPeriod(14); updateActiveTimeFilter(1);">2W</button>
+                <button v-if='activeTimeFilter === 1' class='time-button-selected' @click="getStockDataForPeriod('2W')">2W</button>
+                <button v-else @click="getStockDataForPeriod('2W'); updateActiveTimeFilter(1);">2W</button>
 
-                <button v-if='activeTimeFilter === 2' class='time-button-selected' @click="getStockDataForPeriod(31)">1M</button>
-                <button v-else @click="getStockDataForPeriod(31); updateActiveTimeFilter(2);">1M</button>
+                <button v-if='activeTimeFilter === 2' class='time-button-selected' @click="getStockDataForPeriod('1M')">1M</button>
+                <button v-else @click="getStockDataForPeriod('1M'); updateActiveTimeFilter(2);">1M</button>
 
-                <button v-if='activeTimeFilter === 3' class='time-button-selected' @click="getStockDataForPeriod(65)">3M</button>
-                <button v-else @click="getStockDataForPeriod(65); updateActiveTimeFilter(3);">3M</button>
+                <button v-if='activeTimeFilter === 3' class='time-button-selected' @click="getStockDataForPeriod('3M')">3M</button>
+                <button v-else @click="getStockDataForPeriod('3M'); updateActiveTimeFilter(3);">3M</button>
 
-                <button v-if='activeTimeFilter === 4' class='time-button-selected' @click="getStockDataForPeriod(130)">6M</button>
-                <button v-else @click="getStockDataForPeriod(130); updateActiveTimeFilter(4);">6M</button>
+                <button v-if='activeTimeFilter === 4' class='time-button-selected' @click="getStockDataForPeriod('6M')">6M</button>
+                <button v-else @click="getStockDataForPeriod('6M'); updateActiveTimeFilter(4);">6M</button>
 
-                <button v-if='activeTimeFilter === 5' class='time-button-selected' @click="getStockDataForPeriod(380)">YTD</button>
-                <button v-else @click="getStockDataForPeriod(380) ; updateActiveTimeFilter(5);">YTD</button>
+                <button v-if='activeTimeFilter === 5' class='time-button-selected' @click="getStockDataForPeriod('YTD')">YTD</button>
+                <button v-else @click="getStockDataForPeriod('YTD') ; updateActiveTimeFilter(5);">YTD</button>
             </div>
             <div class="price-container">
                 {{ parseFloat(allTimeStockData[allTimeStockData.length - 1].closePrice).toFixed(2) }}
             </div>
         </div>
         <div ref="resizeRef">
-            <svg ref="svgRef">
+            <svg :key='currentDay' ref="svgRef">
                 <g class="x-axis"/>
                 <g class="y-axis"/>
             </svg>
@@ -37,7 +37,7 @@
 
     import * as d3 from 'd3'
 
-    import { watchEffect, ref} from "vue";
+    import { watch, ref} from "vue";
     import {
         select,
     } from "d3";
@@ -57,17 +57,31 @@
         props: {
             allTimeStockData: { type: Array },
             simulationDuration: { type: Number },
+            currentDay: { type: Number },
         },
         setup(props) {
 
             const svgRef = ref(null)
             const rootData = ref(props.allTimeStockData)
             const activeData = ref(props.allTimeStockData)
-            const getStockDataForPeriod = (n) => {
-                activeData.value = rootData.value.slice(rootData.value.length - n)
+            const getStockDataForPeriod = (period) => {
+                if (period === 'YTD') {
+                    console.log(rootData.value.length)
+                    activeData.value = rootData.value
+                } else if (period === '6M') {
+                    activeData.value = rootData.value.slice(rootData.value.length - 180, rootData.value.length)
+                } else if (period === '3M') {
+                    activeData.value = rootData.value.slice(rootData.value.length - 90, rootData.value.length)
+                } else if (period === '1M') {
+                    activeData.value = rootData.value.slice(rootData.value.length - 30, rootData.value.length)
+                } else if (period === '2W') {
+                    activeData.value = rootData.value.slice(rootData.value.length - 14, rootData.value.length)
+                } else if (period === '1W') {
+                    activeData.value = rootData.value.slice(rootData.value.length - 7, rootData.value.length)
+                }
             }
             
-            watchEffect(() => {
+            watch(() => {
                 
                 // SVG object
                 const svg = select(svgRef.value);
@@ -180,7 +194,6 @@
         padding-bottom: 15px;
         border: 2px solid grey;
         border-radius: 5px;
-        display: flex;
         justify-content: center;
         align-items: center;
         display: flex;

@@ -1,4 +1,4 @@
-export const aapl_data = [ { ticker: 'AAPL' }, {
+export const aapl_data = [ { ticker: 'CROC' }, {
   closePrice: "132.690002",
   day: 1
 }, {
@@ -1140,7 +1140,7 @@ export const aapl_data = [ { ticker: 'AAPL' }, {
   day: 380
 }]
 
-export const nflx_data = [ { ticker: 'NFLX' }, {
+export const nflx_data = [ { ticker: 'SLTH' }, {
   closePrice: "540.729980",
   day: 1
 }, {
@@ -2282,7 +2282,7 @@ export const nflx_data = [ { ticker: 'NFLX' }, {
   day: 380
 }]
 
-export const tsla_data = [ { ticker: 'TSLA' }, {
+export const tsla_data = [ { ticker: 'TURT' }, {
   closePrice: "705.669983",
   day: 1
 }, {
@@ -3424,7 +3424,7 @@ export const tsla_data = [ { ticker: 'TSLA' }, {
   day: 380
 }]
 
-export const goog_data = [ { ticker: 'GOOG'}, {
+export const goog_data = [ { ticker: 'GIRA'}, {
   closePrice: "1751.880005",
   day: 1
 }, {
@@ -4566,7 +4566,7 @@ export const goog_data = [ { ticker: 'GOOG'}, {
   day: 380
 }]
 
-export const msft_data = [ { ticker: 'MSFT' }, {
+export const msft_data = [ { ticker: 'BUNY' }, {
   closePrice: "222.419998",
   day: 1
 }, {

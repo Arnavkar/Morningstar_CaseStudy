@@ -1,5 +1,4 @@
 <template>
-
     <div class="container-main">
         <div class="section-left section-margin">
             <div class="heading-container">
@@ -20,37 +19,36 @@
                         </div>
                     </div>
                 </div>
-                <div><u>Day:</u>&nbsp;{{ currentDay }}</div>
+                <div><u>Day:</u>&nbsp;{{ currentDay }} / 200</div>
             </div>
             <div class="heading-container">
                 Watchlist
             </div>
             <div v-for="stock in stocks" :key="stock.id">
-                <StockCard :ticker="stock.ticker" :price="getCurrentPriceForStock(stock.ticker)" :updateCurrentStock="updateCurrentStock" :activeStock="activeStock"></StockCard>
+                <StockCard :name="stock.name" :ticker="stock.ticker" :price="getCurrentPriceForStock(stock.ticker)" :updateCurrentStock="updateCurrentStock" :activeStock="activeStock"></StockCard>
             </div>
         </div>
-
         <div class="section-middle section-margin">
             <div class="heading-container">
                 Market Profile >&nbsp;<b>{{ activeStock }}</b>
             </div>
-            <div v-if="activeStock === 'AAPL'">
-                <StockChart :simulationDuration="simulationDuration" :allTimeStockData="stockData[0].slice(1, stockData[0].length - simulationDuration)"></StockChart>
+            <div v-if="activeStock === 'CROC'">
+                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[0].slice(1, stockData[0].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <div v-else-if="activeStock === 'NFLX'">
-                <StockChart :simulationDuration="simulationDuration" :allTimeStockData="stockData[1].slice(1, stockData[1].length - simulationDuration)"></StockChart>
+            <div v-else-if="activeStock === 'SLTH'">
+                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[1].slice(1, stockData[1].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <div v-else-if="activeStock === 'TSLA'">
-                <StockChart :simulationDuration="simulationDuration" :allTimeStockData="stockData[2].slice(1, stockData[2].length - simulationDuration)"></StockChart>
+            <div v-else-if="activeStock === 'TURT'">
+                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[2].slice(1, stockData[2].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <div v-else-if="activeStock === 'GOOG'">
-                <StockChart :simulationDuration="simulationDuration" :allTimeStockData="stockData[3].slice(1, stockData[3].length - simulationDuration)"></StockChart>
+            <div v-else-if="activeStock === 'GIRA'">
+                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[3].slice(1, stockData[3].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <div v-else-if="activeStock === 'MSFT'">
-                <StockChart :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration)"></StockChart>
+            <div v-else-if="activeStock === 'BUNY'">
+                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + currentDay)"></StockChart>
             </div>
+            <TradingForm></TradingForm>
         </div>
-        
         <div class="section-right section-margin">
             <div class="heading-container">
                 Events
@@ -68,6 +66,8 @@
     import StockChart from './StockChart.vue'
     import StockCard from './StockCard.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
+    import TradingForm from './TradingForm.vue'
+    
     //import NewsCard from './NewsCard.vue'
 
     import { aapl_data, nflx_data, tsla_data, goog_data, msft_data } from '../../stockData.js'
@@ -79,16 +79,17 @@
             StockChart,
             StockCard,
             ClockIcon,
+            TradingForm,
         },
         data() {
             return {
-                activeStock: 'AAPL',
+                activeStock: 'CROC',
                 stocks: stocks,
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
                 activeStockData: [],
                 isTimeRunning: false,
                 currentDay: 0,
-                simulationDuration: 127,
+                simulationDuration: 200,
             }
         },
         methods: {
@@ -106,8 +107,10 @@
             },
             startSimulation() {
                 this.interval = setInterval(() => {
-                    this.currentDay++;
-                }, 4000) 
+                    if (this.currentDay < 200) {
+                        this.currentDay++;
+                    }
+                }, 2500) 
             },
             stopSimulation() {
                 clearInterval(this.interval);
@@ -131,7 +134,7 @@
     }
 
     .section-margin {
-        margin: 25px;
+        margin: 0 25px 0 25px;
     }
 
     .heading-container {
@@ -152,7 +155,7 @@
     .section-middle {
         @include mds-level-1-heading($bold: true);
         width: 900px;
-        height: 750px;
+        height: 1000px;
         display: flex;
         flex-direction: column;
     }

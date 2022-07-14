@@ -1,16 +1,28 @@
 <template>
     <button v-if="isActiveStock()" class="stock-card-main-selected" @click="changeStock(current)">
-            <div class="ticker-container">
-                {{ ticker }}
+            <div class="ticker-and-name-container">
+                <div class="ticker-container">
+                    {{ ticker }}
+                </div>
+                <div class="name-container">
+                     {{ name }}
+                </div>
             </div>
+            
             <div class="price-container">
                 {{ price }}
             </div>
     </button>
     <button v-else class="stock-card-main" @click="changeStock(current)">
-            <div class="ticker-container">
-                {{ ticker }}
+            <div class="ticker-and-name-container">
+                <div class="ticker-container">
+                    {{ ticker }}
+                </div>
+                <div class="name-container">
+                     {{ name }}
+                </div>
             </div>
+            
             <div class="price-container">
                 {{ price }}
             </div>
@@ -26,6 +38,7 @@
             }
         },
         props: {
+            name: { type: String },
             ticker: { type: String },
             price: { type: String },
             activeStock: { type: String},
@@ -84,9 +97,16 @@
         //box-shadow: 2.5px 5px 8px rgba(255, 0, 0, 0.3);
     }
 
-    .ticker-container {
+    .name-container {
+        @include mds-body-text-m($bold: false);
+        margin-top: 7px;
+        margin-left: 15px;
+        color: #8a8a8a;
+    }
+
+    .ticker-and-name-container {
+        display: inline-flex;
         text-align: left;
-        padding-left: 5px;
     }
 
     .price-container {
