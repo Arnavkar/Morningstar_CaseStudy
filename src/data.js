@@ -3,48 +3,28 @@ let id = 0
 export const stocks = [
     {
         id: id++,
-        name: 'Apple',
-        ticker: "AAPL",
+        name: 'Crocodile Inc.',
+        ticker: "CROC",
     },
     {
         id: id++,
-        name: 'Netflix',
-        ticker: "NFLX",
+        name: 'Sloth Entertainment',
+        ticker: "SLTH",
     },
     {
         id: id++,
-        name: 'Tesla',
-        ticker: "TSLA",
+        name: 'Turtle',
+        ticker: "TURT",
     },
     {
         id: id++,
-        name: 'Alphabet',
-        ticker: "GOOG",
+        name: 'Giraffe Inc.',
+        ticker: "GIRA",
     },
     {
         id: id++,
-        name: 'Microsoft',
-        ticker: "MSFT",
+        name: 'Bunny Corp.',
+        ticker: "BUNY",
     },
 ]
 
-export const articles = [
-    {
-        id: id++,
-        title: 'Mark Zuckerberg Names New CTO',
-        subtitle: 'Will the tech giant sustain a new chain of command?',
-        source: 'WSJ',
-    },
-    {
-        id: id++,
-        title: 'Elon Musk To Acquire Twitter',
-        subtitle: 'Tesla CEO takes Twitter by storm',
-        source: 'Snapchat',
-    },
-    {
-        id: id++,
-        title: 'Tim Cook Unveils Latest Apple Product',
-        subtitle: 'Reports say new health gadget will exceed expectations',
-        source: 'CNN',
-    },
-]
