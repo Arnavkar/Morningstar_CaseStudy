@@ -7,7 +7,7 @@
             <div class="timer-section">
                 <div class="timer-section-top">
                     <div class="timer-section-bottom">
-                        <u>Account Balance:</u> &nbsp; $10,000
+                        <u>Account Balance:</u> &nbsp; {{ formatAccountBalance() }}
                     </div>
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
@@ -26,6 +26,9 @@
             </div>
             <div v-for="stock in stocks" :key="stock.id">
                 <StockCard :name="stock.name" :ticker="stock.ticker" :price="getCurrentPriceForStock(stock.ticker)" :updateCurrentStock="updateCurrentStock" :activeStock="activeStock"></StockCard>
+            </div>
+            <div class="heading-container-holdings">
+                Your Holdings 
             </div>
         </div>
         <div class="section-middle section-margin">
@@ -47,7 +50,7 @@
             <div v-else-if="activeStock === 'BUNY'">
                 <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <TradingForm></TradingForm>
+            <TradingForm :isTimeRunning="isTimeRunning" :currentPrices="getCurrentPrices()" :accountBalance="accountBalance"></TradingForm>
         </div>
         <div class="section-right section-margin">
             <div class="heading-container">
@@ -90,9 +93,27 @@
                 isTimeRunning: false,
                 currentDay: 0,
                 simulationDuration: 200,
+                accountBalance: 20000,
             }
         },
         methods: {
+            formatAccountBalance() {
+                var formatter = new Intl.NumberFormat('en-US', {
+                    style: 'currency',
+                    currency: 'USD',
+                });
+
+                return formatter.format(this.accountBalance)
+            },
+            getCurrentPrices() {
+                let rtn = {}
+                for (let i = 0; i < this.stockData.length; i++) {
+                    let name = this.stockData[i][0].ticker
+                    let price = this.stockData[i][this.stockData[i].length - this.simulationDuration + this.currentDay - 1].closePrice
+                    rtn[name] = price
+                }
+                return rtn
+            },
             updateCurrentStock(ticker) {
                 this.activeStock = ticker
             },
@@ -119,8 +140,6 @@
     }
 </script>
 
-
-
 <style scoped lang="scss">
 
     @import '@mds/fonts';
@@ -139,6 +158,15 @@
 
     .heading-container {
         @include mds-level-1-heading($bold: false);
+        text-align: left;
+        padding: 5px;
+        display: inline-flex;
+        border-bottom: 3px solid grey;
+    }
+
+    .heading-container-holdings {
+        @include mds-level-1-heading($bold: false);
+        margin-top: 20px;
         text-align: left;
         padding: 5px;
         display: inline-flex;
