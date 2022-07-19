@@ -30,6 +30,7 @@
             <div class="heading-container-holdings">
                 Your Holdings 
             </div>
+            <PieChart :holdingsData="holdingsData" :key="pieChartKey"></PieChart>
         </div>
         <div class="section-middle section-margin">
             <div class="heading-container">
@@ -50,15 +51,12 @@
             <div v-else-if="activeStock === 'BUNY'">
                 <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <TradingForm :isTimeRunning="isTimeRunning" :currentPrices="getCurrentPrices()" :accountBalance="accountBalance"></TradingForm>
+            <TradingForm :makeTrade="makeTrade" :isTimeRunning="isTimeRunning" :currentPrices="getCurrentPrices()" :accountBalance="accountBalance"></TradingForm>
         </div>
         <div class="section-right section-margin">
             <div class="heading-container">
                 Events
             </div>
-            <!-- <div v-for="article in articles" :key="article.id">
-                <NewsCard :title="article.title" :subtitle="article.subtitle" :source="article.source"></NewsCard>
-            </div> -->
         </div>
     </div>
 
@@ -66,23 +64,25 @@
 
 <script>
 
-    import StockChart from './StockChart.vue'
+    import StockChart from '../Charts/StockChart.vue'
+    import PieChart from '../Charts/PieChart'
+
     import StockCard from './StockCard.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
-    
-    //import NewsCard from './NewsCard.vue'
 
     import { aapl_data, nflx_data, tsla_data, goog_data, msft_data } from '../../stockData.js'
+    import { defineComponent } from 'vue'
     import { stocks } from '../../data.js'
 
-    export default {
+    export default defineComponent ({
         name: 'TradingPage',
         components: {
             StockChart,
             StockCard,
             ClockIcon,
             TradingForm,
+            PieChart,
         },
         data() {
             return {
@@ -94,15 +94,28 @@
                 currentDay: 0,
                 simulationDuration: 200,
                 accountBalance: 20000,
+                holdingsData: [0, 0, 0, 0, 0, 20000],
+                numSharesOwned: [0, 0, 0, 0, 0],
+                pieChartKey: 0,
             }
         },
         methods: {
+            makeTrade(ticker, price, shares) {
+                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
+                const idx = tickers.indexOf(ticker)
+
+                this.accountBalance -= parseFloat(price)
+                this.holdingsData[5] -= parseFloat(price)
+                this.holdingsData[idx] += parseFloat(price)
+                this.numSharesOwned[idx] += parseFloat(shares)
+                this.pieChartKey += 1
+
+            },
             formatAccountBalance() {
                 var formatter = new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD',
                 });
-
                 return formatter.format(this.accountBalance)
             },
             getCurrentPrices() {
@@ -131,13 +144,13 @@
                     if (this.currentDay < 200) {
                         this.currentDay++;
                     }
-                }, 2500) 
+                }, 2250) 
             },
             stopSimulation() {
                 clearInterval(this.interval);
             }
         },
-    }
+    })
 </script>
 
 <style scoped lang="scss">
@@ -171,6 +184,7 @@
         padding: 5px;
         display: inline-flex;
         border-bottom: 3px solid grey;
+        margin-bottom: 10px;
     }
 
     .section-left {
@@ -228,6 +242,7 @@
         padding-left: 5px;
         padding-top: 10px;
         text-align: left;
+        margin-bottom: 10px;
     }
 
     .timer-section-top {
