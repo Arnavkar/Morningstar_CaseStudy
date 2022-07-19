@@ -37,7 +37,7 @@
 
     import * as d3 from 'd3'
 
-    import { watch, ref} from "vue";
+    import { watchEffect, ref} from "vue";
     import {
         select,
     } from "d3";
@@ -81,7 +81,7 @@
                 }
             }
             
-            watch(() => {
+            watchEffect(() => {
                 
                 // SVG object
                 const svg = select(svgRef.value);
