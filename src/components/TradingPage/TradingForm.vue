@@ -52,6 +52,7 @@ export default {
         isTimeRunning: { type: Boolean, },
         currentPrices: { type: Object },
         accountBalance: { type: Number },
+        makeTrade: { type: Function },
     },
     methods: {
         validateForm() {
@@ -72,8 +73,9 @@ export default {
                 + " shares of " + this.selectedStock 
                 + " for $" + this.amount + " at $" 
                 + parseFloat(this.currentPrices[this.selectedStock]).toFixed(2) + " per share?";
+
             if (confirm(msg)) {
-                console.log(this.currentPrices)
+                this.makeTrade(this.selectedStock, this.amount, parseFloat(numShares))
             }
         }
     }
