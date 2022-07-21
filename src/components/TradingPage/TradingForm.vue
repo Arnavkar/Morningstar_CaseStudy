@@ -52,11 +52,20 @@ export default {
         isTimeRunning: { type: Boolean, },
         currentPrices: { type: Object },
         accountBalance: { type: Number },
+        numSharesOwned: { type: Array },
         makeTrade: { type: Function },
     },
     methods: {
         validateForm() {
-            return this.selectedStock != '' && this.orderType != '' && this.amount > 0 && this.amount >= 100 && this.amount <= this.accountBalance
+            if (this.orderType === 'BUY') {
+                return this.selectedStock != '' && this.orderType != '' && this.amount > 0 && this.amount >= 100 && this.amount <= this.accountBalance
+            } else if (this.orderType === 'SELL') {
+                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
+                const idx = tickers.indexOf(this.selectedStock)
+                let valueOfActiveStock = parseFloat(this.currentPrices[this.selectedStock]) * this.numSharesOwned[idx]
+
+                return this.amount <= valueOfActiveStock && this.amount > 0
+            }
         },
         updateSelectedStock(ticker) {
             this.selectedStock = ticker;
@@ -65,9 +74,10 @@ export default {
             this.orderType = type;
         },
         confirmOrder() {
-            console.log(this.currentPrices[this.selectedStock])
+
             let numShares = parseFloat(this.amount) / parseFloat(this.currentPrices[this.selectedStock])
             numShares = numShares.toFixed(2)
+
             const msg = "Are you sure you'd like to " 
                 + this.orderType + " " + numShares 
                 + " shares of " + this.selectedStock 
@@ -75,7 +85,7 @@ export default {
                 + parseFloat(this.currentPrices[this.selectedStock]).toFixed(2) + " per share?";
 
             if (confirm(msg)) {
-                this.makeTrade(this.selectedStock, this.amount, parseFloat(numShares))
+                this.makeTrade(this.orderType, this.selectedStock, this.amount, parseFloat(numShares))
             }
         }
     }

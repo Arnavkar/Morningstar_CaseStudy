@@ -59,7 +59,7 @@ export default {
         right: 0;
         bottom: 0;
         left: 5%;
-        animation: rotate 2.5s infinite linear;
+        animation: rotate 2.25s infinite linear;
     }
 
     .hours-container {
