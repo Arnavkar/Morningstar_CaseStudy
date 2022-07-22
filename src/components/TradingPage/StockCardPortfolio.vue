@@ -1,5 +1,5 @@
 <template>
-    <button v-if="isActiveStock()" class="stock-card-main-selected" @click="changeStock(current)">
+    <div class="stock-card-main">
             <div class="ticker-and-name-container">
                 <div class="ticker-container">
                     {{ ticker }}
@@ -8,25 +8,19 @@
                      {{ name }}
                 </div>
             </div>
-            
             <div class="price-container">
+                <div v-if="percentageUpdate > 0" class="percentage-container-green">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
+                <div v-else-if="percentageUpdate < 0" class="percentage-container-red">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
+                <div v-else class="percentage-container-grey">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
                 {{ price }}
             </div>
-    </button>
-    <button v-else class="stock-card-main" @click="changeStock(current)">
-            <div class="ticker-and-name-container">
-                <div class="ticker-container">
-                    {{ ticker }}
-                </div>
-                <div class="name-container">
-                     {{ name }}
-                </div>
-            </div>
-            
-            <div class="price-container">
-                {{ price }}
-            </div>
-    </button>
+    </div>
 </template>
 
 <script>
@@ -41,6 +35,7 @@
             name: { type: String },
             ticker: { type: String },
             price: { type: String },
+            percentageUpdate: { type: Number },
             activeStock: { type: String},
             updateCurrentStock: { type: Function },
         },
@@ -50,6 +45,16 @@
             },
             isActiveStock() {
                 return this.ticker === this.activeStock
+            },
+            formatCurrency(amount) {
+                if (amount == 0) {
+                    return '0.00'
+                }
+                if (amount > 0) {
+                    return '+ ' + amount.toFixed(2) + '%'
+                } else {
+                    return amount.toFixed(2) + '%'
+                }
             },
         }
     }
@@ -108,7 +113,35 @@
     }
 
     .price-container {
+        display: inline-flex;
         text-align: right;
+    }
+
+    .percentage-container-green {
+        @include mds-body-text-m($bold: true);
+        color: #00af41;
+        margin-right: 15px;
+        line-height: 32.5px;
+    }
+
+    .percentage-container-red {
+        @include mds-body-text-m($bold: true);
+        color: #ff0000;
+        margin-right: 15px;
+        line-height: 32.5px;
+    }
+
+    .percentage-container-grey {
+        @include mds-body-text-m($bold: true);
+        margin-right: 15px;
+        color: #cccccc;
+        line-height: 32.5px;
+    }
+
+    .nice-boxshadow {
+        box-shadow: 0 1px 2px rgba(36, 36, 36, 0.07), 
+                0 2px 4px rgba(41, 41, 41, 0.07), 
+                0 4px 8px rgba(37, 37, 37, 0.07),
     }
 
 </style>

@@ -65,21 +65,49 @@
                 :accountBalance="accountBalance" 
                 :numSharesOwned="numSharesOwned"
             ></TradingForm>
-            <div class="portfolio-card-main">
+            <div class="portfolio-card-main nice-boxshadow">
                 <div class="portfolio-card-header">
                     <b>Portfolio</b>
                 </div>
                 <div class="securities-container">
                     <div class="securities-row">
-                        <StockCardPortfolio :name="'Crocodile Inc.'" :ticker="'CROC'" :price="getPortfolioValueForStock('CROC')" class="security"></StockCardPortfolio>
-                        <StockCardPortfolio :name="'Sloth Entertainment'" :ticker="'SLTH'" :price="getPortfolioValueForStock('SLTH')"  class="security"></StockCardPortfolio>
+                        <StockCardPortfolio 
+                            :name="'Crocodile Inc.'" 
+                            :ticker="'CROC'" 
+                            :price="getPortfolioValueForStock('CROC')" 
+                            :percentageUpdate="calculatePercentage('CROC')"
+                            class="security" 
+                        ></StockCardPortfolio>
+                        <StockCardPortfolio 
+                            :name="'Sloth Entertainment'" 
+                            :ticker="'SLTH'" 
+                            :price="getPortfolioValueForStock('SLTH')"
+                            :percentageUpdate="calculatePercentage('SLTH')"
+                            class="security"
+                        ></StockCardPortfolio>
                     </div>
                     <div class="securities-row">
-                        <StockCardPortfolio :name="'Turtle'" :ticker="'TURT'" :price="getPortfolioValueForStock('TURT')"  class="security"></StockCardPortfolio>
-                        <StockCardPortfolio :name="'Giraffe Inc.'" :ticker="'GIRA'" :price="getPortfolioValueForStock('GIRA')"  class="security"></StockCardPortfolio>
+                        <StockCardPortfolio 
+                            :name="'Turtle'" 
+                            :ticker="'TURT'" 
+                            :price="getPortfolioValueForStock('TURT')"
+                            :percentageUpdate="calculatePercentage('TURT')"
+                            class="security"
+                        ></StockCardPortfolio>
+                        <StockCardPortfolio 
+                            :name="'Giraffe Inc.'" 
+                            :ticker="'GIRA'" 
+                            :price="getPortfolioValueForStock('GIRA')"
+                            :percentageUpdate="calculatePercentage('GIRA')"
+                            class="security"></StockCardPortfolio>
                     </div>
                     <div class="securities-bottom-row">
-                        <StockCardPortfolio :name="'Bunny Corp.'" :ticker="'BUNY'" :price="getPortfolioValueForStock('BUNY')"  class="security"></StockCardPortfolio>
+                        <StockCardPortfolio 
+                            :name="'Bunny Corp.'" 
+                            :ticker="'BUNY'" 
+                            :price="getPortfolioValueForStock('BUNY')"
+                            :percentageUpdate="calculatePercentage('BUNY')"
+                            class="security"></StockCardPortfolio>
                     </div>
                 </div>
             </div>
@@ -88,12 +116,12 @@
             <div class="heading-container">
                 Events
             </div>
-            <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
+            <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
             <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
-            <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
-            <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard> -->
+            <NewsCard :title="'Silicon Shortage Catastrophe'" :subtitle="'The precious resource has been ...'" :imageNum="1"></NewsCard>
+            <NewsCard :title="'Digital Entertainment Boosted'" :subtitle="'The media giant receives highest ... '" :imageNum="1"></NewsCard>
+            <NewsCard :title="'Apple Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard>
         </div>
     </div>
 </template>
@@ -104,6 +132,7 @@
     import PieChart from '../Charts/PieChart'
 
     import StockCard from './StockCard.vue'
+    import NewsCard from './NewsCard.vue'
     import StockCardPortfolio from './StockCardPortfolio.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
@@ -117,6 +146,7 @@
         components: {
             StockChart,
             StockCard,
+            NewsCard,
             StockCardPortfolio,
             ClockIcon,
             TradingForm,
@@ -135,11 +165,31 @@
                 portfolioValue: 0,
                 holdingsData: [0, 0, 0, 0, 0, 20000],
                 numSharesOwned: [0, 0, 0, 0, 0],
-                buyHistory: [],
+                buyHistory: {
+                    'CROC': -1,
+                    'SLTH': -1,
+                    'TURT': -1,
+                    'GIRA': -1,
+                    'BUNY': -1,
+                },
                 pieKey: -1,
             }
         },
         methods: {
+            calculatePercentage(ticker) {
+                let marketPrice = this.getCurrentPriceForStock(ticker)
+                let startPrice = this.buyHistory[ticker]
+                let percentage = 0
+
+                if (startPrice != -1) {
+                    if (marketPrice > startPrice) {
+                        percentage = (marketPrice / startPrice) - 1
+                    } else if (marketPrice < startPrice) {
+                        percentage = (1 - (marketPrice / startPrice)) * -1
+                    }
+                }
+                return percentage
+            },
             getPortfolioValueForStock(ticker) {
                 const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
 
@@ -167,19 +217,25 @@
                 const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
                 const idx = tickers.indexOf(ticker)
 
+                let currentPrice = this.getCurrentPriceForStock(ticker)
+                let stockValue = this.numSharesOwned[idx] * currentPrice
+
                 if (action === 'BUY') {
                     this.accountBalance -= parseFloat(price)
                     this.holdingsData[5] -= parseFloat(price)
                     this.holdingsData[idx] += parseFloat(price)
                     this.numSharesOwned[idx] += parseFloat(shares)
+                    if (this.buyHistory[ticker] == -1) {
+                        this.buyHistory[ticker] = currentPrice
+                    }
                 } else if (action === 'SELL') {
-                    // Update 'holdingsData' to reflect the most recent prices
-                    let currentPrice = this.getCurrentPriceForStock(ticker)
-                    let stockValue = this.numSharesOwned[idx] * currentPrice
                     this.accountBalance += parseFloat(price)
                     this.holdingsData[5] += parseFloat(price)
                     this.holdingsData[idx] = parseFloat(stockValue) - parseFloat(price)
                     this.numSharesOwned[idx] -= parseFloat(shares)
+                    if (this.numSharesOwned[idx] == 0) {
+                        this.buyHistory[ticker] = -1
+                    }
                 }
                 this.pieKey *= -1 // Force updates Pie Chart
                 this.portfolioKey *= -1
@@ -298,6 +354,7 @@
 
     .heading-container {
         @include mds-level-1-heading($bold: false);
+        margin-top: 10px;
         text-align: left;
         padding: 5px;
         display: inline-flex;
