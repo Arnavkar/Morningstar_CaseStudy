@@ -1,6 +1,5 @@
 <template>
-    <Transition>
-        <div v-if="!isTimeRunning" class="trading-form-container-main nice-boxshadow">
+        <div class="trading-form-container-main nice-boxshadow">
             <div class="trading-form-header">
                 Trade
             </div>
@@ -35,7 +34,6 @@
                 <button v-else class="confirm-order-button-disabled">Confirm Order</button>
             </div>
         </div>
-    </Transition>
 </template>
 
 <script>
@@ -54,6 +52,8 @@ export default {
         accountBalance: { type: Number },
         numSharesOwned: { type: Array },
         makeTrade: { type: Function },
+        startSimulation: { type: Function },
+        stopSimulation: { type: Function },
     },
     methods: {
         validateForm() {

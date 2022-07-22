@@ -12,10 +12,10 @@
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
                         <div v-if="isTimeRunning === true">
-                            <img class="stop-icon icon" @click="isTimeRunning = !isTimeRunning; stopSimulation();" src="../../assets/stop-icon-other.svg"/>
+                            <img class="stop-icon icon" @click="stopSimulation();" src="../../assets/stop-icon-other.svg"/>
                         </div>
                         <div v-else>
-                            <img class="play-icon icon" @click="isTimeRunning = !isTimeRunning; startSimulation();" src="../../assets/play-icon.svg"/>
+                            <img class="play-icon icon" @click="startSimulation();" src="../../assets/play-icon.svg"/>
                         </div>
                     </div>
                 </div>
@@ -35,7 +35,7 @@
             <div class="heading-container-holdings">
                 Your Holdings 
             </div>
-            <PieChart :holdingsData="holdingsData" :key="pieChartKey"></PieChart>
+            <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart>
         </div>
         <div class="section-middle section-margin">
             <div class="heading-container">
@@ -56,18 +56,44 @@
             <div v-else-if="activeStock === 'BUNY'">
                 <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + currentDay)"></StockChart>
             </div>
-            <TradingForm :makeTrade="makeTrade" :isTimeRunning="isTimeRunning" :currentPrices="getCurrentPrices()" :accountBalance="accountBalance" :numSharesOwned="numSharesOwned"></TradingForm>
+            <TradingForm 
+                :startSimulation="startSimulation" 
+                :stopSimulation="stopSimulation" 
+                :makeTrade="makeTrade" 
+                :isTimeRunning="isTimeRunning" 
+                :currentPrices="getCurrentPrices()" 
+                :accountBalance="accountBalance" 
+                :numSharesOwned="numSharesOwned"
+            ></TradingForm>
+            <div class="portfolio-card-main">
+                <div class="portfolio-card-header">
+                    <b>Portfolio</b>
+                </div>
+                <div class="securities-container">
+                    <div class="securities-row">
+                        <StockCardPortfolio :name="'Crocodile Inc.'" :ticker="'CROC'" :price="getPortfolioValueForStock('CROC')" class="security"></StockCardPortfolio>
+                        <StockCardPortfolio :name="'Sloth Entertainment'" :ticker="'SLTH'" :price="getPortfolioValueForStock('SLTH')"  class="security"></StockCardPortfolio>
+                    </div>
+                    <div class="securities-row">
+                        <StockCardPortfolio :name="'Turtle'" :ticker="'TURT'" :price="getPortfolioValueForStock('TURT')"  class="security"></StockCardPortfolio>
+                        <StockCardPortfolio :name="'Giraffe Inc.'" :ticker="'GIRA'" :price="getPortfolioValueForStock('GIRA')"  class="security"></StockCardPortfolio>
+                    </div>
+                    <div class="securities-bottom-row">
+                        <StockCardPortfolio :name="'Bunny Corp.'" :ticker="'BUNY'" :price="getPortfolioValueForStock('BUNY')"  class="security"></StockCardPortfolio>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="section-right section-margin">
             <div class="heading-container">
                 Events
             </div>
-            <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
+            <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
             <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
             <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard>
+            <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard> -->
         </div>
     </div>
 </template>
@@ -78,7 +104,7 @@
     import PieChart from '../Charts/PieChart'
 
     import StockCard from './StockCard.vue'
-    import NewsCard from './NewsCard.vue'
+    import StockCardPortfolio from './StockCardPortfolio.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
 
@@ -91,7 +117,7 @@
         components: {
             StockChart,
             StockCard,
-            NewsCard,
+            StockCardPortfolio,
             ClockIcon,
             TradingForm,
             PieChart,
@@ -109,10 +135,21 @@
                 portfolioValue: 0,
                 holdingsData: [0, 0, 0, 0, 0, 20000],
                 numSharesOwned: [0, 0, 0, 0, 0],
-                pieChartKey: 0,
+                buyHistory: [],
+                pieKey: -1,
             }
         },
         methods: {
+            getPortfolioValueForStock(ticker) {
+                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
+
+                let marketPrice = this.getCurrentPriceForStock(ticker)
+                let numShares = this.numSharesOwned[tickers.indexOf(ticker)]
+
+                let res = parseFloat(marketPrice) * parseFloat(numShares)
+
+                return this.formatCurrency(res)
+            },
             calculateTotalPortfolioValue() {
                 let total = 0.0
                 let currentPrices = this.getCurrentPrices()
@@ -135,22 +172,22 @@
                     this.holdingsData[5] -= parseFloat(price)
                     this.holdingsData[idx] += parseFloat(price)
                     this.numSharesOwned[idx] += parseFloat(shares)
-                    this.pieChartKey += 1
                 } else if (action === 'SELL') {
+                    // Update 'holdingsData' to reflect the most recent prices
+                    let currentPrice = this.getCurrentPriceForStock(ticker)
+                    let stockValue = this.numSharesOwned[idx] * currentPrice
                     this.accountBalance += parseFloat(price)
-                    this.holdingsData[5] -= parseFloat(price)
-                    this.holdingsData[idx] -= parseFloat(price)
+                    this.holdingsData[5] += parseFloat(price)
+                    this.holdingsData[idx] = parseFloat(stockValue) - parseFloat(price)
                     this.numSharesOwned[idx] -= parseFloat(shares)
-                    this.pieChartKey -= 1
                 }
-
-                console.log(this.holdingsdata)
+                this.pieKey *= -1 // Force updates Pie Chart
+                this.portfolioKey *= -1
             },
             formatCurrency(amount) {
                 if (amount == 0) {
                     return '$0.00'
                 }
-
                 var formatter = new Intl.NumberFormat('en-US', {
                     style: 'currency',
                     currency: 'USD',
@@ -179,6 +216,7 @@
                 return -1
             },
             startSimulation() {
+                this.isTimeRunning = true
                 this.interval = setInterval(() => {
                     if (this.currentDay < 200) {
                         this.currentDay++;
@@ -186,6 +224,7 @@
                 }, 2250) 
             },
             stopSimulation() {
+                this.isTimeRunning = false
                 clearInterval(this.interval);
             }
         },
@@ -206,6 +245,55 @@
 
     .section-margin {
         margin: 0 25px 0 25px;
+    }
+
+    .portfolio-card-main {
+        height: 250px;
+        margin-top: 15px;
+        border: 2px solid grey;
+        border-radius: 5px;
+        display: flex;
+        padding-top: 10px;
+        justify-content: center;
+        flex-direction: column;
+        background: white;
+    }
+
+    .portfolio-card-header {
+        @include mds-level-1-heading($bold: true);
+        text-align: left;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 5px;
+        border-bottom: 2px solid black;
+    }
+
+    .securities-container {
+        padding-left: 22.5px;
+        padding-right: 22.5px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .securities-row {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        display: inline-flex;
+        height: 33%;
+    }
+
+    .securities-bottom-row {
+        margin-bottom: 5px;
+        margin-top: 5px;
+        display: inline-flex;
+        height: 33%;
+        justify-content: center;
+    }
+
+    .security {
+        border-radius: 5px;
+        text-align: left;
+        width: 50%;
     }
 
     .heading-container {
@@ -236,7 +324,7 @@
     .section-middle {
         @include mds-level-1-heading($bold: true);
         width: 900px;
-        height: 1000px;
+        height: 1200px;
         display: flex;
         flex-direction: column;
     }
