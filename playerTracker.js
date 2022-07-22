@@ -3,13 +3,12 @@ import TimeUtility from 'timeUtility'
 class PlayerDataTracker{
 	constructor(initialMoney,SIMULATED_DURATION_IN_DAYS,REAL_DURATION_IN_MINUTES,article_data){
 		this.isAdvisorEnabled = false
-		this.numberOfClicks = 0
-		this.initialMoney = initialMoney
+		this.pauseCount = 0
+		this.articleClickCount = 0
+		this.investedMoney = 0
+		this.uninvestedMoney = initialMoney
 		this.timeUtility = new TimeUtility(SIMULATED_DURATION_IN_DAYS,REAL_DURATION_IN_MINUTES,article_data)
-		this.purchasedStockName = [] //use maps or dictionary?
-		this.startingPercent = []
-		this.endPercent = []
-		this.finalMoney = 0
+		this.portfolio = {}
 	}
 	
 	addStockToPurchasedStock(stock){
@@ -24,6 +23,42 @@ class PlayerDataTracker{
 	updatePortfolioPercentage(){
 		// Do the math to update portfolio percentages
 		//return updated this.endPercent 
+		/*
+
+		portfolio = {
+			"GOOG":{
+				"numberOfShares":20
+				"totalValue":600
+				"percentageValue": 15
+				"recommendedPercentage":None
+				"tradeHistory":[
+					{
+						"day":
+						"value":
+						"type":
+	
+					}
+
+
+				]
+			},
+			"TSLA":{
+	
+			}
+	
+		}
+
+
+
+
+
+
+		*/
+	}
+
+	start(){
+		this.timeUtility.start()
+		
 	}
 
 	isPortfolioBalanced(){
@@ -31,8 +66,12 @@ class PlayerDataTracker{
 		//return Boolean or Value
 	}
 
-	incrementNumberOfClicks(){
-		this.numberOfClicks++
+	incrementPauseCount(){
+		this.pauseCount++
+	}
+
+	incrementArticleCount(){
+		this.articleClickCount++
 	}
 
 	/*  
@@ -54,3 +93,11 @@ OVER CONFIDENCE METRICS
 3. Is their portfolio extremely unbalanced
 4. Are they reading articles -> how often they pause the game, how long spent in pause state? 
 */
+
+
+
+
+
+
+
+
