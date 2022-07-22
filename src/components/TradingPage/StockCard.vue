@@ -69,7 +69,7 @@
         border-radius: 5px;
         width: 450px;
         padding: 5px;
-        margin-top: 15px;
+        margin-top: 10px;
         transition: 0.5s;
         box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
         display: inline-flex;
