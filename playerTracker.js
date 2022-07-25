@@ -4,15 +4,76 @@ class PlayerDataTracker{
 	constructor(initialMoney,SIMULATED_DURATION_IN_DAYS,REAL_DURATION_IN_MINUTES,article_data){
 		this.isAdvisorEnabled = false
 		this.pauseCount = 0
+		this.currentMoney = 0
 		this.articleClickCount = 0
 		this.investedMoney = 0
 		this.uninvestedMoney = initialMoney
 		this.timeUtility = new TimeUtility(SIMULATED_DURATION_IN_DAYS,REAL_DURATION_IN_MINUTES,article_data)
-		this.portfolio = {}
-	}
-	
-	addStockToPurchasedStock(stock){
-		this.purchasedStockName.push(stock)
+		this.portfolio = {
+			"CROC":{
+				numberOfShares: 0,
+				totalValue: 0,
+				percentageValue: 0,
+				recommendedPercentage: 0,
+				isInPortfolio: false, 
+				currentHoldings:[],
+				tradeHistory:[]
+			},
+			"SLTH":{
+				numberOfShares: 0,
+				totalValue: 0,
+				percentageValue: 0,
+				recommendedPercentage: 0,
+				isInPortfolio: false, 
+				currentHoldings:[],
+				tradeHistory:[]
+			},
+			"TURT":{
+				numberOfShares: 0,
+				totalValue: 0,
+				percentageValue: 0,
+				recommendedPercentage: 0,
+				isInPortfolio: false, 
+				currentHoldings:[],
+				tradeHistory:[]
+			},
+			"GIRA":{
+				numberOfShares: 0,
+				totalValue: 0,
+				percentageValue: 0,
+				recommendedPercentage: 0,
+				isInPortfolio: false, 
+				currentHoldings:[],
+				tradeHistory:[]
+			},
+			"BUNY":{
+				numberOfShares: 0,
+				totalValue: 0,
+				percentageValue: 0,
+				recommendedPercentage: 0,
+				isInPortfolio: false, 
+				currentHoldings:[],
+				tradeHistory:[]
+			}
+		}
+	}	
+	// for addStock w are updating numberOfShare,totoalValue, isInProtfolio, 
+	//add stuff to current holding and trandHistory
+
+	addStock(ticker, numberShares, pricePerShare,currentDay){
+		//this.purchasedStockName.push(sock)
+		portfolio[ticker]['numberOfShares']+=numberShares
+		portfolio[ticker]['totalValue']+= numberShares*pricePerShare
+		portfolio[ticker]['isInPortfolio']=true
+		holding = {
+			day: currentDay,
+			numberOfShares: numberShares, 
+			totalValue: numberShares*pricePerShare,
+			percentageInvested: totalValue/currentMoney * 100
+		}
+		portfolio[ticker]['currentHoldings'].push(holding)
+		portfolio[ticker]['tradeHistory'].push(holding)
+		currentMoney-= numberShares*pricePerShare
 	}
 
 	enableAdvisor(){
@@ -23,44 +84,22 @@ class PlayerDataTracker{
 	updatePortfolioPercentage(){
 		// Do the math to update portfolio percentages
 		//return updated this.endPercent 
-		/*
-
-		portfolio = {
-			"GOOG":{
-				"numberOfShares":20
-				"totalValue":600
-				"percentageValue": 15
-				"recommendedPercentage":None
-				"tradeHistory":[
-					{
-						"day":
-						"value":
-						"type":
+		portfolio.forEach(stock=> {
+			
+		});
 	
-					}
-
-
-				]
-			},
-			"TSLA":{
+	} 
 	
-			}
-	
-		}
-
-
-
-
-
-
-		*/
-	}
+// This fuction needs to update the updateProtfolioPercentage function
 
 	start(){
 		this.timeUtility.start()
 		
-	}
 
+	
+		
+	}
+	
 	isPortfolioBalanced(){
 		//Do the math to see if portfolio is balanced
 		//return Boolean or Value
