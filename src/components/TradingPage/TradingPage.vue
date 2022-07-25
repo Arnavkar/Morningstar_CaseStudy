@@ -23,7 +23,7 @@
                     <u>Portfolio Value:</u>&nbsp;{{formatCurrency(calculateTotalPortfolioValue())}}
                 </div>
                 <div class="timer-section-bottom">
-                    <u>Day:</u>&nbsp;{{ currentDay }} / 200
+                    <u>Day:</u>&nbsp;{{ currentDay }} / {{ simulationDuration }}
                 </div>
             </div>
             <div class="heading-container">
@@ -33,7 +33,7 @@
                 <StockCard :name="stock.name" :ticker="stock.ticker" :price="getCurrentPriceForStock(stock.ticker)" :updateCurrentStock="updateCurrentStock" :activeStock="activeStock"></StockCard>
             </div>
             <div class="heading-container-holdings">
-                Your Holdings 
+                Holdings 
             </div>
             <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart>
         </div>
@@ -59,8 +59,7 @@
             <TradingForm 
                 :startSimulation="startSimulation" 
                 :stopSimulation="stopSimulation" 
-                :makeTrade="makeTrade" 
-                :isTimeRunning="isTimeRunning" 
+                :makeTrade="makeTrade"
                 :currentPrices="getCurrentPrices()" 
                 :accountBalance="accountBalance" 
                 :numSharesOwned="numSharesOwned"
@@ -99,7 +98,8 @@
                             :ticker="'GIRA'" 
                             :price="getPortfolioValueForStock('GIRA')"
                             :percentageUpdate="calculatePercentage('GIRA')"
-                            class="security"></StockCardPortfolio>
+                            class="security">
+                        </StockCardPortfolio>
                     </div>
                     <div class="securities-bottom-row">
                         <StockCardPortfolio 
@@ -107,7 +107,8 @@
                             :ticker="'BUNY'" 
                             :price="getPortfolioValueForStock('BUNY')"
                             :percentageUpdate="calculatePercentage('BUNY')"
-                            class="security"></StockCardPortfolio>
+                            class="security">
+                        </StockCardPortfolio>
                     </div>
                 </div>
             </div>
@@ -160,7 +161,7 @@
                 activeStockData: [],
                 isTimeRunning: false,
                 currentDay: 0,
-                simulationDuration: 200,
+                simulationDuration: 136,
                 accountBalance: 20000,
                 portfolioValue: 0,
                 holdingsData: [0, 0, 0, 0, 0, 20000],
@@ -276,8 +277,11 @@
                 this.interval = setInterval(() => {
                     if (this.currentDay < 200) {
                         this.currentDay++;
+                    } else {
+                        this.isTimeRunning = false;
+                        clearInterval(this.interval)
                     }
-                }, 2250) 
+                }, 3250)
             },
             stopSimulation() {
                 this.isTimeRunning = false
@@ -388,7 +392,7 @@
 
     .section-right {
         width: 450px;
-        height: 500px;
+        height: 1200px;
         display: flex;
         flex-direction: column;
     }

@@ -59,7 +59,7 @@ export default {
         right: 0;
         bottom: 0;
         left: 5%;
-        animation: rotate 2.25s infinite linear;
+        animation: rotate 3.25s infinite linear;
     }
 
     .hours-container {
@@ -177,7 +177,7 @@ export default {
         height: 2px;
         width: 1px;
         background: black;
-        animation: tick 2.25s infinite linear;
+        animation: tick 3.25s infinite linear;
         animation-timing-function: cubic-bezier(0,0.1,0,0.6);
     }
 
