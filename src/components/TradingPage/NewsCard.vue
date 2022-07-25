@@ -4,7 +4,7 @@
             {{ title }}   
         </div>
         <div v-if="!showContent" class="content-container-hidden">
-            {{ content.slice(0, 50) }}...
+            {{ content.slice(0, 100) }} ...
         </div>
         <div v-if="showContent" class="content-container">
             {{ content }}
@@ -47,6 +47,7 @@
         @include mds-level-3-heading($bold: true);
         background: white;
         border: 2px solid grey;
+        border-right: 4px solid red;
         text-align: left;
         border-radius: 5px;
         width: 100%;
@@ -87,7 +88,10 @@
 
     .content-container-hidden {
         @include mds-body-text-l($bold: false);
+        color: black;
+        -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgb(54, 54, 54)), to(rgba(200, 200, 200, 0)));
         height: 50px;
+        width: 90%;
         overflow: hidden;
         transition: max-height 0.2s ease-out;
         padding: 0px 10px 0px 10px;
