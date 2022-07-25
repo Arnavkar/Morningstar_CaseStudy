@@ -1,21 +1,20 @@
 <template>
     <div class="news-card-main nice-boxshadow">
-        <div class="news-card-section-left">
-            <div class="title-container">
-                {{ title }}   
-            </div>
-            <div class="subtitle-container">
-                {{ subtitle }}
-            </div>
-            <div class="read-more-container">
-                <a class="read-more-link greyText">Read more</a>
-            </div>
+        <div class="title-container">
+            {{ title }}   
         </div>
-        <div class="news-card-section-right">
-            <img v-if="imageNum == 1" class="news-source-image-wrapper nice-boxshadow" src="../../assets/cnn-icon.png">
-            <img v-else-if="imageNum == 2" class="news-source-image-wrapper nice-boxshadow" src="../../assets/wsj-icon.png">
-            <img v-else-if="imageNum == 3" class="news-source-image-wrapper nice-boxshadow" src="../../assets/instagram-icon.png">
+        <div v-if="!showContent" class="content-container-hidden">
+            {{ content.slice(0, 50) }}...
         </div>
+        <div v-if="showContent" class="content-container">
+            {{ content }}
+        </div>
+        <button v-if="showContent == false" @click="showContent = true" class="collapsible">
+            Read more
+        </button>
+        <button v-else @click="showContent = false" class="collapsible">
+            Collapse
+        </button>
     </div>
 </template>
 
@@ -27,7 +26,13 @@
             subtitle: { type: String },
             source: { type: String },
             imageNum: { type: Number },
-        }
+        },
+        data() {
+            return {
+                showContent: false,
+                content: 'A shocking downturn for the media company rears its ugly head as SLTH loses almost $50 billion in market cap value. The company\'s subscriber count continues to fall despite the push for more content.',
+            }
+        },
     }
 </script>
 
@@ -45,16 +50,13 @@
         text-align: left;
         border-radius: 5px;
         width: 100%;
-        height: 125px;
+        max-height: 300px;
         margin-top: 15px;
         transition: 0.5s;
         box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
-        display: inline-flex;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
-    }
-
-    .news-card-section-left {
-        width: 80%;
     }
 
     .title-container {
@@ -67,30 +69,43 @@
         @include mds-level-6-heading($bold: false);
         position: relative;
         bottom: 10px;
-        
         padding: 10px;
     }
 
-    .read-more-container {
-        @include mds-level-6-heading($bold: false);
-        margin-left: 10px;
-        margin-top: -5px;
+    .collapsible {
+        @include mds-body-text-l($bold: false);
+        cursor: pointer;
+        width: 98%;
+        padding-left: 10px;
+        color: #909090;
+        height: 40px;
+        border: none;
+        text-align: left;
+        background: none;
+        border-top: 1px solid #cccccc;
+    }
+
+    .content-container-hidden {
+        @include mds-body-text-l($bold: false);
+        height: 50px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        padding: 0px 10px 0px 10px;
+    }
+
+    .content-container {
+        @include mds-body-text-l($bold: false);
+        height: 100px;
+        overflow: hidden;
+        width: 90%;
+        transition: max-height 0.2s ease-out;
+        padding: 0px 10px 10px 10px;
+        transition: all ease 0.5;
     }
 
     .read-more-link:hover {
         text-decoration: underline;
         cursor: pointer;
-    }
-
-    .news-source-image-wrapper {
-        height: 100px;
-        width: 100px;
-        border-radius: 25px;
-    }
-
-    .news-card-section-right {
-        width: 10%;
-        margin: auto;
     }
 
     .nice-boxshadow {

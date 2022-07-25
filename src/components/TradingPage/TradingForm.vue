@@ -47,7 +47,6 @@ export default {
         }
     },
     props: {
-        isTimeRunning: { type: Boolean, },
         currentPrices: { type: Object },
         accountBalance: { type: Number },
         numSharesOwned: { type: Array },
@@ -139,7 +138,6 @@ export default {
         margin-left: 25px;
         margin-right: 25px;
         border-bottom: 2px solid black;
-        padding-bottom: 5px;
     }
 
     .stock-select-button {
