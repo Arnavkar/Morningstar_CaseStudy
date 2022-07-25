@@ -12,7 +12,7 @@
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
                         <div v-if="isTimeRunning === true">
-                            <img class="stop-icon icon" @click="stopSimulation();" src="../../assets/stop-icon-other.svg"/>
+                            <img class="stop-icon icon" @click="stopSimulation();" src="../../assets/stop-icon.svg"/>
                         </div>
                         <div v-else>
                             <img class="play-icon icon" @click="startSimulation();" src="../../assets/play-icon.svg"/>
