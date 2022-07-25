@@ -4,6 +4,7 @@ class PlayerDataTracker{
 	constructor(initialMoney,SIMULATED_DURATION_IN_DAYS,REAL_DURATION_IN_MINUTES,article_data){
 		this.isAdvisorEnabled = false
 		this.pauseCount = 0
+		this.overConfidence = 0 // we add points when they are being too coky 
 		this.currentMoney = 0
 		this.articleClickCount = 0
 		this.investedMoney = 0
@@ -74,21 +75,35 @@ class PlayerDataTracker{
 		portfolio[ticker]['currentHoldings'].push(holding)
 		portfolio[ticker]['tradeHistory'].push(holding)
 		currentMoney-= numberShares*pricePerShare
+
+		if (holding['percentageInvested']>= 50 ){
+			overConfidence+= 10
+		}
 	}
 
 	enableAdvisor(){
 		this.isAdvisorEnabled = true
-		this.initialMoney = this.initialMoney - 1500
+		this.initialMoney = this.initialMoney - 100
+	}
+
+	// this needs to check every day 
+	checkAdvisor(){
+		if (isAdvisorEnabled === false){
+			overConfidence+= 1
+		}
 	}
 
 	updatePortfolioPercentage(){
 		// Do the math to update portfolio percentages
 		//return updated this.endPercent 
+		// suggested ideal percent 
 		portfolio.forEach(stock=> {
 			
 		});
-	
+		
 	} 
+
+	
 	
 // This fuction needs to update the updateProtfolioPercentage function
 
@@ -129,6 +144,7 @@ OVER CONFIDENCE METRICS
 
 1. Are the picking an advisor when they start the game
 2. Are the investing large sums of money, early in the game 
+
 3. Is their portfolio extremely unbalanced
 4. Are they reading articles -> how often they pause the game, how long spent in pause state? 
 */
