@@ -83,7 +83,7 @@
         border-radius: 5px;
         width: 450px;
         padding: 5px;
-        margin-top: 15px;
+        margin-top: 10px;
         transition: 0.5s;
         box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
         display: inline-flex;
@@ -94,7 +94,6 @@
     .stock-card-main:hover {
         transform: scale(1.02);
         border-left: 4.5px solid red;
-        //box-shadow: 2.5px 5px 8px rgba(255, 0, 0, 0.3);
     }
 
     .name-container {
