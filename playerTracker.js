@@ -102,8 +102,6 @@ class PlayerDataTracker{
 		});
 		
 	} 
-
-	
 	
 // This fuction needs to update the updateProtfolioPercentage function
 
