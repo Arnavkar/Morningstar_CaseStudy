@@ -301,6 +301,8 @@
 
     .container-main {
         display: inline-flex;
+        width: 100%;
+        justify-content: center;
     }
 
     .section-margin {

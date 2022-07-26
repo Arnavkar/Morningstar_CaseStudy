@@ -13,7 +13,7 @@
             Read more
         </button>
         <button v-else @click="showContent = false" class="collapsible">
-            Collapse
+            Read less
         </button>
     </div>
 </template>
