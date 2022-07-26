@@ -10,8 +10,8 @@
                         <u>Account Balance:</u>&nbsp;{{formatCurrency(accountBalance)}}
                     </div>
                     <div class="clock-and-button">
-                        <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
-                        <div v-if="isTimeRunning === true">
+                        <ClockIcon :timeRunning="playerTracker.isTimeRunning"></ClockIcon>
+                        <div v-if="playerTracker.isTimeRunning === true">
                             <img class="stop-icon icon" @click="stopSimulation();" src="../../assets/stop-icon-other.svg"/>
                         </div>
                         <div v-else>
@@ -23,7 +23,7 @@
                     <u>Portfolio Value:</u>&nbsp;{{formatCurrency(calculateTotalPortfolioValue())}}
                 </div>
                 <div class="timer-section-bottom">
-                    <u>Day:</u>&nbsp;{{ currentDay }} / 200
+                    <u>Day:</u>&nbsp;{{ playerTracker.day }} / 200
                 </div>
             </div>
             <div class="heading-container">
@@ -42,25 +42,25 @@
                 Market Profile >&nbsp;<b>{{ activeStock }}</b>
             </div>
             <div v-if="activeStock === 'CROC'">
-                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[0].slice(1, stockData[0].length - simulationDuration + currentDay)"></StockChart>
+                <StockChart :key='playerTracker.day' :currentDay='playerTracker.day' :simulationDuration="simulationDuration" :allTimeStockData="stockData[0].slice(1, stockData[0].length - simulationDuration + playerTracker.day)"></StockChart>
             </div>
             <div v-else-if="activeStock === 'SLTH'">
-                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[1].slice(1, stockData[1].length - simulationDuration + currentDay)"></StockChart>
+                <StockChart :key='playerTracker.day' :currentDay='playerTracker.day' :simulationDuration="simulationDuration" :allTimeStockData="stockData[1].slice(1, stockData[1].length - simulationDuration + playerTracker.day)"></StockChart>
             </div>
             <div v-else-if="activeStock === 'TURT'">
-                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[2].slice(1, stockData[2].length - simulationDuration + currentDay)"></StockChart>
+                <StockChart :key='playerTracker.day' :currentDay='playerTracker.day' :simulationDuration="simulationDuration" :allTimeStockData="stockData[2].slice(1, stockData[2].length - simulationDuration + playerTracker.day)"></StockChart>
             </div>
             <div v-else-if="activeStock === 'GIRA'">
-                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[3].slice(1, stockData[3].length - simulationDuration + currentDay)"></StockChart>
+                <StockChart :key='playerTracker.day' :currentDay='playerTracker.day' :simulationDuration="simulationDuration" :allTimeStockData="stockData[3].slice(1, stockData[3].length - simulationDuration + playerTracker.day)"></StockChart>
             </div>
             <div v-else-if="activeStock === 'BUNY'">
-                <StockChart :key='currentDay' :currentDay='currentDay' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + currentDay)"></StockChart>
+                <StockChart :key='playerTracker.day' :currentDay='playerTracker.day' :simulationDuration="simulationDuration" :allTimeStockData="stockData[4].slice(1, stockData[4].length - simulationDuration + playerTracker.day)"></StockChart>
             </div>
             <TradingForm 
                 :startSimulation="startSimulation" 
                 :stopSimulation="stopSimulation" 
                 :makeTrade="makeTrade" 
-                :isTimeRunning="isTimeRunning" 
+                :isTimeRunning="playerTracker.isTimeRunning" 
                 :currentPrices="getCurrentPrices()" 
                 :accountBalance="accountBalance" 
                 :numSharesOwned="numSharesOwned"
@@ -141,6 +141,8 @@
     import { defineComponent } from 'vue'
     import { stocks } from '../../data.js'
 
+    import { TimeTracker } from '../../utils/timetracker.js'
+
     export default defineComponent ({
         name: 'TradingPage',
         components: {
@@ -154,12 +156,11 @@
         },
         data() {
             return {
+                playerTracker: new TimeTracker(130,8,0),
                 activeStock: 'CROC',
                 stocks: stocks,
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
                 activeStockData: [],
-                isTimeRunning: false,
-                currentDay: 0,
                 simulationDuration: 200,
                 accountBalance: 20000,
                 portfolioValue: 0,
@@ -254,7 +255,7 @@
                 let rtn = {}
                 for (let i = 0; i < this.stockData.length; i++) {
                     let name = this.stockData[i][0].ticker
-                    let price = this.stockData[i][this.stockData[i].length - this.simulationDuration + this.currentDay - 1].closePrice
+                    let price = this.stockData[i][this.stockData[i].length - this.simulationDuration + this.playerTracker.day - 1].closePrice
                     rtn[name] = price
                 }
                 return rtn
@@ -265,23 +266,23 @@
             getCurrentPriceForStock(ticker) {
                 for (let i = 0; i < this.stockData.length; i++) {
                     if (ticker === this.stockData[i][0].ticker) {
-                        let res = this.stockData[i][this.stockData[i].length - this.simulationDuration + this.currentDay - 1].closePrice
+                        let res = this.stockData[i][this.stockData[i].length - this.simulationDuration + this.playerTracker.day - 1].closePrice
                         return parseFloat(res).toFixed(2)
                     }
                 }
                 return -1
             },
             startSimulation() {
-                this.isTimeRunning = true
-                this.interval = setInterval(() => {
-                    if (this.currentDay < 200) {
-                        this.currentDay++;
-                    }
-                }, 2250) 
+                // this.interval = setInterval(() => {
+                //     if (this.currentDay < 200) {
+                //         this.currentDay++;
+                //     }
+                // }, 2250)
+                this.playerTracker.resume()
             },
             stopSimulation() {
-                this.isTimeRunning = false
-                clearInterval(this.interval);
+                // clearInterval(this.interval);
+                this.playerTracker.pause()
             }
         },
     })
