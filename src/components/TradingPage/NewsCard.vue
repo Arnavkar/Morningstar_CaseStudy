@@ -9,7 +9,7 @@
         <div v-if="showContent" class="content-container">
             {{ content }}
         </div>
-        <button v-if="showContent == false" @click="showContent = true" class="collapsible">
+        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead();" class="collapsible">
             Read more
         </button>
         <button v-else @click="showContent = false" class="collapsible">
@@ -19,6 +19,9 @@
 </template>
 
 <script>
+
+    import { playerDataStore } from '@/use/playerDataStore'
+
     export default {
         name: 'NewsCard',
         props: {
@@ -29,6 +32,7 @@
         },
         data() {
             return {
+                playerDataStore,
                 showContent: false,
                 content: 'A shocking downturn for the media company rears its ugly head as SLTH loses almost $50 billion in market cap value. The company\'s subscriber count continues to fall despite the push for more content.',
             }

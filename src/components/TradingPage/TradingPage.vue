@@ -12,10 +12,10 @@
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
                         <div v-if="isTimeRunning === true">
-                            <img class="stop-icon icon" @click="stopSimulation();" src="../../assets/stop-icon.svg"/>
+                            <img class="stop-icon icon" @click="pauseSimulation();" src="../../assets/stop-icon.svg"/>
                         </div>
                         <div v-else>
-                            <img class="play-icon icon" @click="startSimulation();" src="../../assets/play-icon.svg"/>
+                            <img class="play-icon icon" @click="resumeSimulation();" src="../../assets/play-icon.svg"/>
                         </div>
                     </div>
                 </div>
@@ -142,6 +142,8 @@
     import { defineComponent } from 'vue'
     import { stocks } from '../../data.js'
 
+    import { playerDataStore } from '@/use/playerDataStore'
+
     export default defineComponent ({
         name: 'TradingPage',
         components: {
@@ -155,13 +157,16 @@
         },
         data() {
             return {
+                playerDataStore,
                 activeStock: 'CROC',
                 stocks: stocks,
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
                 activeStockData: [],
                 isTimeRunning: false,
                 currentDay: 0,
-                simulationDuration: 136,
+                simulationDuration: 120, //in Days
+                realDuration:8, //in minutes
+                simulationTimeElapsed:0,
                 accountBalance: 20000,
                 portfolioValue: 0,
                 holdingsData: [0, 0, 0, 0, 0, 20000],
@@ -174,6 +179,19 @@
                     'BUNY': -1,
                 },
                 pieKey: -1,
+            }
+        },
+        computed:{
+            simulationDurationInSeconds(){
+                return this.simulationDuration * 86400
+            },
+
+            realDurationInSeconds(){
+                return this.realDuration * 60
+            },
+
+            ratio(){
+                return this.simulationDurationInSeconds/this.realDurationInSeconds
             }
         },
         methods: {
@@ -272,20 +290,38 @@
                 }
                 return -1
             },
+            updateTimeData(){
+                if(!this.isTimeRunning){
+                    playerDataStore.incrementPauseTime()
+                } else {
+                    playerDataStore.incrementSimulationTime()
+                    this.simulationTimeElapsed += this.ratio
+                }
+
+                const remainder = this.simulationTimeElapsed % 86400
+                if (remainder === 0){
+                    this.currentDay++
+                }
+            },
             startSimulation() {
                 this.isTimeRunning = true
-                this.interval = setInterval(() => {
-                    if (this.currentDay < 200) {
-                        this.currentDay++;
-                    } else {
-                        this.isTimeRunning = false;
-                        clearInterval(this.interval)
-                    }
-                }, 3250)
+                this.interval = setInterval(this.updateTimeData,1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
                 clearInterval(this.interval);
+            },
+
+            pauseSimulation(){
+                this.isTimeRunning = false
+            },
+            resumeSimulation(){
+                if (this.interval == undefined){
+                    this.startSimulation()
+                    return //If game has not started, first start it 
+                }
+                this.isTimeRunning = true
+                console.log(playerDataStore.timeSpentInPause)
             }
         },
     })
