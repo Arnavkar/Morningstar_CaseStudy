@@ -109,7 +109,7 @@
                             :percentageUpdate="calculatePercentage('BUNY')"
                             class="security">
                         </StockCardPortfolio>
-                    </div>
+                    </div> 
                 </div>
             </div>
         </div>
@@ -117,15 +117,20 @@
             <div class="heading-container">
                 Events
             </div>
-            <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
+            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
+                <Transition name="fade">
+                    <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
+                </Transition>
+            </div>
+            <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
             <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
             <NewsCard :title="'Silicon Shortage Catastrophe'" :subtitle="'The precious resource has been ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Digital Entertainment Boosted'" :subtitle="'The media giant receives highest ... '" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Apple Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard>
-        </div>
+            <NewsCard :title="'Apple Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard> -->
+        </div> 
     </div>
-</template>
+</template> 
 
 <script>
 
@@ -141,6 +146,9 @@
     import { aapl_data, nflx_data, tsla_data, goog_data, msft_data } from '../../stockData.js'
     import { defineComponent } from 'vue'
     import { stocks } from '../../data.js'
+
+    var RingBuffer = require('ringbufferjs');
+    import { newsData } from '../../news.js'
 
     import { playerDataStore } from '@/use/playerDataStore'
 
@@ -161,6 +169,8 @@
                 activeStock: 'CROC',
                 stocks: stocks,
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
+                newsData,
+                currentNewsFeed: new RingBuffer(6),
                 activeStockData: [],
                 isTimeRunning: false,
                 currentDay: 0,
@@ -185,14 +195,12 @@
             simulationDurationInSeconds(){
                 return this.simulationDuration * 86400
             },
-
             realDurationInSeconds(){
                 return this.realDuration * 60
             },
-
             ratio(){
                 return this.simulationDurationInSeconds/this.realDurationInSeconds
-            }
+            },
         },
         methods: {
             calculatePercentage(ticker) {
@@ -290,7 +298,15 @@
                 }
                 return -1
             },
-            updateTimeData(){
+            updateNewsFeed(){
+                for (const [key, article] of Object.entries(newsData)){
+                    if (article["day"] == this.currentDay){
+                        this.currentNewsFeed.enq(article)
+                        console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                    }
+                }
+            },
+            updateData(){
                 if(!this.isTimeRunning){
                     playerDataStore.incrementPauseTime()
                 } else {
@@ -301,11 +317,15 @@
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
+                    this.updateNewsFeed()
                 }
+
+                
             },
             startSimulation() {
                 this.isTimeRunning = true
-                this.interval = setInterval(this.updateTimeData,1000)
+                this.updateNewsFeed()
+                this.interval = setInterval(this.updateData,1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
@@ -321,7 +341,6 @@
                     return //If game has not started, first start it 
                 }
                 this.isTimeRunning = true
-                console.log(playerDataStore.timeSpentInPause)
             }
         },
     })

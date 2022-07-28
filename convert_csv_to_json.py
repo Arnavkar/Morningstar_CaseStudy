@@ -4,15 +4,19 @@ import sys
 
 def extract_data_from_csv(path):
 	output = []
-	with open(path, 'r') as fp:
+	with open(path, 'r', encoding='utf-8-sig') as fp:
 		reader = csv.reader(fp)
 		headerRow = reader.__next__()
-		headerRow = [header.lower() for header in headerRow]
+		headerRow = [header.lower().strip() for header in headerRow]
 
-		for row in reader:
+		for idx,row in enumerate(reader):
 			row_output = {}
+			row_output["id"] = idx
 			for idx,val in enumerate(row):
-					row_output[headerRow[idx]] = row[idx]
+					if headerRow[idx] in ["day","credibility"]:
+						row_output[headerRow[idx]] = int(row[idx])
+					else:
+						row_output[headerRow[idx]] = row[idx]
 			output.append(row_output)
 
 		print(output)
