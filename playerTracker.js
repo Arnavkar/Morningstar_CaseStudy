@@ -17,7 +17,6 @@ class PlayerDataTracker{
 				percentageValue: 0,
 				recommendedPercentage: 0,
 				isInPortfolio: false, 
-				currentHoldings:[],
 				tradeHistory:[]
 			},
 			"SLTH":{
@@ -26,7 +25,6 @@ class PlayerDataTracker{
 				percentageValue: 0,
 				recommendedPercentage: 0,
 				isInPortfolio: false, 
-				currentHoldings:[],
 				tradeHistory:[]
 			},
 			"TURT":{
@@ -35,7 +33,6 @@ class PlayerDataTracker{
 				percentageValue: 0,
 				recommendedPercentage: 0,
 				isInPortfolio: false, 
-				currentHoldings:[],
 				tradeHistory:[]
 			},
 			"GIRA":{
@@ -44,7 +41,6 @@ class PlayerDataTracker{
 				percentageValue: 0,
 				recommendedPercentage: 0,
 				isInPortfolio: false, 
-				currentHoldings:[],
 				tradeHistory:[]
 			},
 			"BUNY":{
@@ -53,7 +49,6 @@ class PlayerDataTracker{
 				percentageValue: 0,
 				recommendedPercentage: 0,
 				isInPortfolio: false, 
-				currentHoldings:[],
 				tradeHistory:[]
 			}
 		}
@@ -72,12 +67,11 @@ class PlayerDataTracker{
 			totalValue: numberShares*pricePerShare,
 			percentageInvested: totalValue/currentMoney * 100
 		}
-		portfolio[ticker]['currentHoldings'].push(holding)
 		portfolio[ticker]['tradeHistory'].push(holding)
 		currentMoney-= numberShares*pricePerShare
 
-		if (holding['percentageInvested']>= 50 ){
-			overConfidence+= 10
+		if (this.holding['percentageInvested']>= 50 ){
+			this.overConfidence+= 10
 		}
 	}
 
@@ -89,7 +83,7 @@ class PlayerDataTracker{
 	// this needs to check every day 
 	checkAdvisor(){
 		if (isAdvisorEnabled === false){
-			overConfidence+= 1
+			overConfidence+= 100
 		}
 	}
 
@@ -97,6 +91,7 @@ class PlayerDataTracker{
 		// Do the math to update portfolio percentages
 		//return updated this.endPercent 
 		// suggested ideal percent 
+
 		portfolio.forEach(stock=> {
 			
 		});
