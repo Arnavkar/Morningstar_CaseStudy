@@ -12,7 +12,7 @@
     name: 'App',
     components: {
       TradingPage
-    }
+    },
   }
 
 </script>
