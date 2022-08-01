@@ -163,7 +163,6 @@
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
                 activeStockData: [],
                 isTimeRunning: false,
-                intervalID: '',
                 currentDay: 0,
                 simulationDuration: 120, //in Days
                 realDuration: 8, //in minutes
@@ -319,18 +318,17 @@
             },
             startSimulation() {
                 this.isTimeRunning = true
-                this.intervalID = setInterval(this.updateTimeData,1000)
+                this.interval = setInterval(this.updateTimeData,1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
                 clearInterval(this.intervalID);
-                this.intervalID = ''
             },
             pauseSimulation() {
                 this.isTimeRunning = false
             },
             resumeSimulation() {
-                if (this.intervalID == ''){
+                if (this.intervalID == undefined){
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
