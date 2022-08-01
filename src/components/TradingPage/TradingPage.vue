@@ -329,7 +329,7 @@
                 this.isTimeRunning = false
             },
             resumeSimulation() {
-                if (this.intervalID == undefined){
+                if (this.interval == undefined){
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
