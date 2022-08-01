@@ -164,9 +164,10 @@
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
                 activeStockData: [],
                 isTimeRunning: false,
+                intervalID: '',
                 currentDay: 0,
-                // simulationDuration: 120, //in Days
-                // realDuration: 8, //in minutes
+                simulationDuration: 120, //in Days
+                realDuration: 8, //in minutes
                 simulationTimeElapsed: 0,
                 accountBalance: playerDataStore.accountBalance,
                 currentPortfolio: playerDataStore.currentPortfolio,
@@ -319,22 +320,23 @@
             },
             startSimulation() {
                 this.isTimeRunning = true
-                this.interval = setInterval(this.updateTimeData,1000)
+                this.intervalID = setInterval(this.updateTimeData,1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
-                clearInterval(this.interval);
+                clearInterval(this.intervalID);
+                intervalID = ''
             },
             pauseSimulation() {
                 this.isTimeRunning = false
             },
             resumeSimulation() {
-                if (this.interval == undefined){
+                if (this.intervalID == ''){
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
                 this.isTimeRunning = true
-                console.log(playerDataStore.timeSpentInPause)
+                // console.log(playerDataStore.timeSpentInPause)
             }
         },
     })
