@@ -323,7 +323,7 @@
             },
             stopSimulation() {
                 this.isTimeRunning = false
-                clearInterval(this.intervalID);
+                clearInterval(this.interval);
             },
             pauseSimulation() {
                 this.isTimeRunning = false
