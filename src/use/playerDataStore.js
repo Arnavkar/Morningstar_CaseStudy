@@ -81,7 +81,8 @@ export const playerDataStore = reactive({
         this.portfolioValue = 0
         this.portfolio.forEach((ticker, data) => {
             let sharePrice = currentPrices[ticker]
-            data['totalValue'] = data['numberOfShares'] * sharePrice
+            // Using "portfolio[ticker]['totalValue']" to modify its value
+            this.portfolio[ticker]['totalValue'] = data['numberOfShares'] * sharePrice
             this.portfolioValue += data['totalValue']
         })
     },

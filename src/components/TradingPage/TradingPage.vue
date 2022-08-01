@@ -170,8 +170,8 @@
                 accountBalance: playerDataStore.accountBalance,
                 portfolio: playerDataStore.portfolio,
                 portfolioValue: playerDataStore.portfolioValue,
-                // holdingsData: [0, 0, 0, 0, 0, 20000],
-                // numSharesOwned: [0, 0, 0, 0, 0],
+                holdingsData: [0, 0, 0, 0, 0, 20000],
+                numSharesOwned: [0, 0, 0, 0, 0],
                 tradeHistory: playerDataStore.tradeHistory,
                 buyHistory: {
                     'CROC': -1,
@@ -180,6 +180,7 @@
                     'GIRA': -1,
                     'BUNY': -1,
                 },
+                overconfidenceScore: playerDataStore.overconfidenceScore,
                 pieKey: -1,
             }
         },
@@ -307,13 +308,13 @@
                     playerDataStore.incrementPauseTime()
                 } else {
                     playerDataStore.incrementSimulationTime()
-                    playerDataStore.updatePortfolio()
                     this.simulationTimeElapsed += this.ratio
                 }
 
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
+                    playerDataStore.updatePortfolio()
                 }
             },
             startSimulation() {
@@ -333,7 +334,7 @@
                     return //If game has not started, first start it 
                 }
                 this.isTimeRunning = true
-                // console.log(playerDataStore.timeSpentInPause)
+                console.log(playerDataStore.timeSpentInPause)
             }
         },
     })
