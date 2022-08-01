@@ -11,7 +11,7 @@ export const playerDataStore = reactive({
     // type, price, was the game pause or not, day, number of share, total value, percent invested 
     tradeHistory: [],
     portfolioValue: 0,
-    currentPortfolio:{
+    portfolio:{
         "CROC":{
             numberOfShares: 0,
             totalValue: 0,
@@ -54,6 +54,18 @@ export const playerDataStore = reactive({
         }
     },
 
+    incrementOverConfidenceScore(value){
+        this.overconfidenceScore += value
+    },
+
+    incrementPauseTime(){
+        this.timeSpentInPause++
+    },
+
+    incrementSimulationTime(){
+        this.timeSpentInSimulation++
+    },
+
     get numArticlesRead(){
         return this.articlesRead.length
     },
@@ -66,11 +78,11 @@ export const playerDataStore = reactive({
 
     // Updates the current portfolio as the simulation time increases
     updatePortfolio(currentPrices){
-        portfolioValue = 0
-        portfolio.forEach((ticker, data) => {
+        this.portfolioValue = 0
+        this.portfolio.forEach((ticker, data) => {
             let sharePrice = currentPrices[ticker]
-		    data['totalValue'] = data['numberOfShares'] * sharePrice
-            totalPortfolioValue += data['totalValue']
+            data['totalValue'] = data['numberOfShares'] * sharePrice
+            this.portfolioValue += data['totalValue']
         })
     },
 
@@ -79,75 +91,63 @@ export const playerDataStore = reactive({
     // numShares is the number of shares being bought now
     // Updates the current portfolio as the user buys shares of a stock
     addStock(ticker, sharePrice, numShares, currentDay, isTimeRunning){
-		portfolio[ticker]['numberOfShares'] += numShares
-		portfolio[ticker]['totalValue'] = portfolio[ticker]['numberOfShares'] * sharePrice
-		portfolio[ticker]['isInPortfolio'] = true
-        portfolio[ticker]['isPurchasedAtLeastOnce'] = true
-        accountBalance -= numShares * sharePrice
+		this.portfolio[ticker]['numberOfShares'] += numShares
+		this.portfolio[ticker]['totalValue'] = this.portfolio[ticker]['numberOfShares'] * sharePrice
+		this.portfolio[ticker]['isInPortfolio'] = true
+        this.portfolio[ticker]['isPurchasedAtLeastOnce'] = true
+        this.accountBalance -= numShares * sharePrice
 
-		history = {
+		let history = {
             ticker: ticker,
 			day: currentDay,
             tradeType: "BUY",
             price: sharePrice,
 			numberOfShares: numShares,
 			tradeValue: numShares * sharePrice,
-			totalValue: portfolio[ticker]['totalValue'],
-			percentageOfInvestedMoney: totalValue / accountBalance * 100,
+			totalValue: this.portfolio[ticker]['totalValue'],
+			percentageOfInvestedMoney: this.totalValue / this.accountBalance * 100,
             isTimeRunning: isTimeRunning,
 		}
 
-		tradeHistory.push(history)
+		this.tradeHistory.push(history)
 
 		if (history['percentageOfInvestedMoney'] >= 40) {
-			incrementOverConfidenceScore(10) // change value
+			this.incrementOverConfidenceScore(10) // change value
 		}
 
         if (isTimeRunning === true) {
-            incrementOverConfidenceScore(10)
+            this.incrementOverConfidenceScore(10)
         }
 	},
 
     // make sure to check if numShares exists in current portfolio
     // Updates the current portfolio as the user sells shares of a stock
     sellStock(ticker, sharePrice, numShares, currentDay, isTimeRunning){
-        portfolio[ticker]['numberOfShares'] -= numShares
-		portfolio[ticker]['totalValue'] = portfolio[ticker]['numberOfShares'] * sharePrice
-        accountBalance += numShares * sharePrice
-	    
-        if (portfolio[ticker]['numberOfShares'] === 0) {
-            portfolio[ticker]['isInPortfolio'] = false
+        this.portfolio[ticker]['numberOfShares'] -= numShares
+		this.portfolio[ticker]['totalValue'] = this.portfolio[ticker]['numberOfShares'] * sharePrice
+        this.accountBalance += numShares * sharePrice
+
+        if (this.portfolio[ticker]['numberOfShares'] === 0) {
+            this.portfolio[ticker]['isInPortfolio'] = false
         }
 
-        history = {
+        let history = {
             ticker: ticker,
 			day: currentDay,
             tradeType: "SELL",
             price: sharePrice,
 			numberOfShares: numShares,
             tradeValue: numShares * sharePrice,
-			totalValue: portfolio[ticker]['totalValue'],
-			percentageOfInvestedMoney: totalValue / accountBalance * 100, // ??? 
+			totalValue: this.portfolio[ticker]['totalValue'],
+			percentageOfInvestedMoney: this.totalValue / this.accountBalance * 100, // ??? 
             isTimeRunning: isTimeRunning,
 		}
 
-		tradeHistory.push(history)
+		this.tradeHistory.push(history)
 
         if (isTimeRunning === true) {
-            incrementOverConfidenceScore(10)
+            this.incrementOverConfidenceScore(10)
         }
-    },
-
-    incrementOverConfidenceScore(value){
-        this.overconfidenceScore += value
-    },
-
-    incrementPauseTime(){
-        this.timeSpentInPause++
-    },
-
-    incrementSimulationTime(){
-        this.timeSpentInSimulation++
     }
 
     // addToTradeHistory(newTrade){

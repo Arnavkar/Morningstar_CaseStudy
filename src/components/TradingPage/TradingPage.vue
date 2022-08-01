@@ -158,7 +158,6 @@
         data() {
             return {
                 playerDataStore,
-                timeUtility,
                 activeStock: 'CROC',
                 stocks: stocks,
                 stockData: [ aapl_data, nflx_data, tsla_data, goog_data, msft_data ],
@@ -170,7 +169,7 @@
                 realDuration: 8, //in minutes
                 simulationTimeElapsed: 0,
                 accountBalance: playerDataStore.accountBalance,
-                currentPortfolio: playerDataStore.currentPortfolio,
+                portfolio: playerDataStore.portfolio,
                 portfolioValue: playerDataStore.portfolioValue,
                 // holdingsData: [0, 0, 0, 0, 0, 20000],
                 // numSharesOwned: [0, 0, 0, 0, 0],
@@ -220,7 +219,7 @@
                 // let numShares = this.numSharesOwned[tickers.indexOf(ticker)]
 
                 // let res = parseFloat(marketPrice) * parseFloat(numShares)
-                let res = parseFloat(currentPortfolio[ticker]['totalValue'])
+                let res = parseFloat(this.portfolio[ticker]['totalValue'])
 
                 return this.formatCurrency(res)
             },
@@ -250,25 +249,25 @@
                 // let stockValue = this.numSharesOwned[idx] * currentPrice
 
                 if (action === 'BUY') {
-                    playerDataStore.addStock(ticker, currentPrice, shares, currentDay, isTimeRunning)
+                    playerDataStore.addStock(ticker, currentPrice, shares, this.currentDay, this.isTimeRunning)
 
                     // this.accountBalance -= parseFloat(price)
                     // this.holdingsData[5] -= parseFloat(price)
                     // this.holdingsData[idx] += parseFloat(price)
                     // this.numSharesOwned[idx] += parseFloat(shares)
-                    // if (this.buyHistory[ticker] == -1) {
-                    //     this.buyHistory[ticker] = currentPrice
-                    // }
+                    if (this.buyHistory[ticker] == -1) {
+                        this.buyHistory[ticker] = currentPrice
+                    }
                 } else if (action === 'SELL') {
-                    playerDataStore.sellStock(ticker, currentPrice, shares, currentDay)
+                    playerDataStore.sellStock(ticker, currentPrice, shares, this.currentDay)
 
                     // this.accountBalance += parseFloat(price)
                     // this.holdingsData[5] += parseFloat(price)
                     // this.holdingsData[idx] = parseFloat(stockValue) - parseFloat(price)
                     // this.numSharesOwned[idx] -= parseFloat(shares)
-                    // if (this.numSharesOwned[idx] == 0) {
-                    //     this.buyHistory[ticker] = -1
-                    // }
+                    if (this.portfolio[ticker]['numberOfShares'] == 0) {
+                        this.buyHistory[ticker] = -1
+                    }
                 }
                 this.pieKey *= -1 // Force updates Pie Chart
                 this.portfolioKey *= -1
@@ -325,7 +324,7 @@
             stopSimulation() {
                 this.isTimeRunning = false
                 clearInterval(this.intervalID);
-                intervalID = ''
+                this.intervalID = ''
             },
             pauseSimulation() {
                 this.isTimeRunning = false
