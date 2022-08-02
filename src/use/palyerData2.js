@@ -123,22 +123,12 @@ export const playerDataStore = reactive({
  // this to check for overcofidence 
 // at this point we are only seeing if the user only has bought one singular stuck
         if (currentDay % 20 ==0 ){
-            for(let[ticker,isInPoortfolio] of Object.entries(this.portfolio)){
-                if (this.portfolio[ticker]['isInPortfolio'] == true){stockCount += 1}
+            for(const[ticker,data] of Object.entries(this.portfolio)){
+                if (data['isInPortfolio'] == true){stockCount += 1}
                 if(stockCount <= 3){ this.incrementOverConfidenceScore(50)}    
             }
-            // this.portfolio.forEach([ticker, isInPortfolio] => {
-            //     if (isInPortfolio == True ){
-            //         stockCount+=1
-            //     }
-            //    if (stockCount <= 3){
-            //     this.incrementOverConfidenceScore(100)
-            //     } 
-            // })
         }
     },
-
-         
 
     // make sure to check if numShares exists in current portfolio
     // Updates the current portfolio as the user sells shares of a stock
