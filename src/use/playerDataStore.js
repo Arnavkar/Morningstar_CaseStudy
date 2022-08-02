@@ -1,8 +1,9 @@
 import { reactive } from 'vue'
 
 export const playerDataStore = reactive({
-    accountBalance: 20000,
+    accountBalance: 10000,
     overconfidenceScore: 0,
+    stockCount:0,
     //didGetAdvisor:false,
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
@@ -79,10 +80,9 @@ export const playerDataStore = reactive({
     // Updates the current portfolio as the simulation time increases
     updatePortfolio(currentPrices){
         this.portfolioValue = 0
-        this.portfolio.forEach((ticker, data) => {
+        this.portfolio.forEach((ticker,data) => {
             let sharePrice = currentPrices[ticker]
-            // Using "portfolio[ticker]['totalValue']" to modify its value
-            this.portfolio[ticker]['totalValue'] = data['numberOfShares'] * sharePrice
+            data['totalValue'] = data['numberOfShares'] * sharePrice
             this.portfolioValue += data['totalValue']
         })
     },
@@ -117,9 +117,30 @@ export const playerDataStore = reactive({
 		}
 
         if (isTimeRunning === true) {
-            this.incrementOverConfidenceScore(10)
+            this.incrementOverConfidenceScore(20)
         }
-	},
+
+ // this to check for overcofidence 
+// at this point we are only seeing if the user only has bought one singular stuck
+        if (currentDay % 20 ==0 ){
+            for(const[ticker,isInPoortfolio] of Object.entries(this.portfolio)){
+                if (this.portfolio[ticker]['isInPortfolio'] == true){stockCount += 1}
+                if(stockCount <= 3){ this.incrementOverConfidenceScore(50)}    
+            }
+
+        
+        //     this.portfolio.forEach([ticker, isInPortfolio]) => {
+        //         if (isInPortfolio == True ){
+        //             stockCount+=1
+        //         }
+        //        if (stockCount <= 3){
+        //         this.incrementOverConfidenceScore(100)
+        //         } 
+        // }
+        
+    }
+},
+         
 
     // make sure to check if numShares exists in current portfolio
     // Updates the current portfolio as the user sells shares of a stock
@@ -149,9 +170,26 @@ export const playerDataStore = reactive({
         if (isTimeRunning === true) {
             this.incrementOverConfidenceScore(10)
         }
+
     }
+})
+        // its balance if all of th shokes are in the proflio 
+
+    
+        // this next functin should be for the check points
+            // the check point should be on day 20, 40,80,100,120 
+        
+    // balanceCheckPoint(ticker,numSahre, ){
+
+    // }
 
     // addToTradeHistory(newTrade){
     //     tradeHistory.
     // }
-})
+    // my task is to add more function and add customozing the overconfidence metrics 
+
+    // what should be stuff that causes overconfidence point to increase 
+        // are they selliing a large amount of current stock give them 10 points 
+        // buying a large amoount of current stock give theem 10 points 
+        // not havinig a balance profoli 
+        //
