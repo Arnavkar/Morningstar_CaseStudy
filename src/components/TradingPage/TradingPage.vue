@@ -62,7 +62,7 @@
                 :makeTrade="makeTrade"
                 :currentPrices="getCurrentPrices()" 
                 :accountBalance="accountBalance" 
-                :numSharesOwned="numSharesOwned"
+                :portfolio="portfolio"
             ></TradingForm>
             <div class="portfolio-card-main nice-boxshadow">
                 <div class="portfolio-card-header">
@@ -170,8 +170,7 @@
                 accountBalance: playerDataStore.accountBalance,
                 portfolio: playerDataStore.portfolio,
                 portfolioValue: playerDataStore.portfolioValue,
-                holdingsData: [0, 0, 0, 0, 0, 20000],
-                numSharesOwned: [0, 0, 0, 0, 0],
+                holdingsData: playerDataStore.holdingsData,
                 tradeHistory: playerDataStore.tradeHistory,
                 buyHistory: {
                     'CROC': -1,
@@ -314,7 +313,9 @@
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
-                    playerDataStore.updatePortfolio()
+                    console.log("Day: " + this.currentDay)
+                    this.currentPrices = this.getCurrentPrices()
+                    playerDataStore.updatePortfolio(this.currentPrices)
                 }
             },
             startSimulation() {
