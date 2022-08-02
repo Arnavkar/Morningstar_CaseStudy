@@ -7,7 +7,7 @@
             <div class="timer-section">
                 <div class="timer-section-top">
                     <div class="timer-section-bottom">
-                        <u>Account Balance:</u>&nbsp;{{formatCurrency(accountBalance)}}
+                        <u>Account Balance:</u>&nbsp;{{formatCurrency(playerDataStore.accountBalance)}}
                     </div>
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>

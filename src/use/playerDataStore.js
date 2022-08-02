@@ -94,10 +94,6 @@ export const playerDataStore = reactive({
             this.portfolio[ticker]['totalValue'] = data['numberOfShares'] * sharePrice
             this.portfolioValue += data['totalValue']
             this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
-            // console.log("Ticker: " + ticker)
-            // console.log("Share price: " + sharePrice)
-            // console.log("Total value: " + this.portfolio[ticker]['totalValue'])
-            // console.log("Portfolio value: " + this.portfolioValue)
         }
     },
 
@@ -110,16 +106,9 @@ export const playerDataStore = reactive({
 		this.portfolio[ticker]['totalValue'] = this.portfolio[ticker]['numberOfShares'] * sharePrice
 		this.portfolio[ticker]['isInPortfolio'] = true
         this.portfolio[ticker]['isPurchasedAtLeastOnce'] = true
-        // console.log("Ticker: " + ticker)
-        // console.log("Share price: " + sharePrice)
-        // console.log("Number of shares: " + numShares)
-        // console.log("Account balance before: " + this.accountBalance)
         this.accountBalance -= numShares * sharePrice
-        // console.log("Account balance after: " + this.accountBalance)
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         this.holdingsData[5] = this.accountBalance
-        console.log("Account balance: " + this.accountBalance)
-        console.log("Account balance in holdingsData: " + this.holdingsData[5])
 
 		let history = {
             ticker: ticker,
