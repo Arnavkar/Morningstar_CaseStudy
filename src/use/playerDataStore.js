@@ -3,13 +3,11 @@ import { reactive } from 'vue'
 export const playerDataStore = reactive({
     accountBalance: 10000,
     overconfidenceScore: 0,
-    //didGetAdvisor:false,
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
     timeSpentInSimulation: 0,
     holdingsData: [0, 0, 0, 0, 0, 10000],
     articlesRead: [],
-    // type, price, was the game pause or not, day, number of share, total value, percent invested 
     tradeHistory: [],
     portfolioValue: 0,
     portfolio:{
@@ -19,8 +17,7 @@ export const playerDataStore = reactive({
             totalValue: 0,
             percentageValue: 0,
             recommendedPercentage: 0,
-            isInPortfolio: false,
-            isPurchasedAtLeastOnce: false
+            isInPortfolio: false
         },
         "SLTH":{
             index: 1,
@@ -28,8 +25,7 @@ export const playerDataStore = reactive({
             totalValue: 0,
             percentageValue: 0,
             recommendedPercentage: 0,
-            isInPortfolio: false,
-            isPurchasedAtLeastOnce: false
+            isInPortfolio: false
         },
         "TURT":{
             index: 2,
@@ -37,8 +33,7 @@ export const playerDataStore = reactive({
             totalValue: 0,
             percentageValue: 0,
             recommendedPercentage: 0,
-            isInPortfolio: false,
-            isPurchasedAtLeastOnce: false
+            isInPortfolio: false
         },
         "GIRA":{
             index: 3,
@@ -46,8 +41,7 @@ export const playerDataStore = reactive({
             totalValue: 0,
             percentageValue: 0,
             recommendedPercentage: 0,
-            isInPortfolio: false,
-            isPurchasedAtLeastOnce: false
+            isInPortfolio: false
         },
         "BUNY":{
             index: 4,
@@ -55,8 +49,7 @@ export const playerDataStore = reactive({
             totalValue: 0,
             percentageValue: 0,
             recommendedPercentage: 0,
-            isInPortfolio: false,
-            isPurchasedAtLeastOnce: false
+            isInPortfolio: false
         }
     },
 
@@ -98,26 +91,26 @@ export const playerDataStore = reactive({
         }
     },
 
-    // add currentDay as parameter in makeTrade front-end
-    // parsefloat?
-    // numShares is the number of shares being bought now
     // Updates the current portfolio as the user buys shares of a stock
-    addStock(ticker, sharePrice, numShares, currentDay, isTimeRunning){
+    // totalPrice is sharePrice * numShares
+    addStock(ticker, sharePrice, totalPrice, numShares, currentDay, isTimeRunning){
+        console.log("totalPrice is " + this.totalPrice)
+        console.log("Account balance before purchasing stock: " + this.accountBalance)
+        this.accountBalance -= totalPrice
 		this.portfolio[ticker]['numberOfShares'] += numShares
-		this.portfolio[ticker]['totalValue'] = this.portfolio[ticker]['numberOfShares'] * sharePrice
+		this.portfolio[ticker]['totalValue'] += totalPrice
 		this.portfolio[ticker]['isInPortfolio'] = true
-        this.portfolio[ticker]['isPurchasedAtLeastOnce'] = true
-        this.accountBalance -= numShares * sharePrice
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         this.holdingsData[5] = this.accountBalance
+        console.log("Account balance after purchasing stock: " + this.accountBalance)
 
 		let history = {
             ticker: ticker,
 			day: currentDay,
             tradeType: "BUY",
-            price: sharePrice,
+            sharePrice: sharePrice,
 			numberOfShares: numShares,
-			tradeValue: numShares * sharePrice,
+			tradeValue: totalPrice,
 			totalValue: this.portfolio[ticker]['totalValue'],
 			percentageOfInvestedMoney: this.totalValue / this.accountBalance * 100,
             isTimeRunning: isTimeRunning,
@@ -138,12 +131,14 @@ export const playerDataStore = reactive({
 
     // make sure to check if numShares exists in current portfolio
     // Updates the current portfolio as the user sells shares of a stock
-    sellStock(ticker, sharePrice, numShares, currentDay, isTimeRunning){
+    sellStock(ticker, sharePrice, totalPrice, numShares, currentDay, isTimeRunning){
+        console.log("Account balance before selling stock: " + this.accountBalance)
+        this.accountBalance += totalPrice
         this.portfolio[ticker]['numberOfShares'] -= numShares
-		this.portfolio[ticker]['totalValue'] = this.portfolio[ticker]['numberOfShares'] * sharePrice
-        this.accountBalance += numShares * sharePrice
+		this.portfolio[ticker]['totalValue'] -= totalPrice
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         this.holdingsData[5] = this.accountBalance
+        console.log("Account balance after purchasing stock: " + this.accountBalance)
 
         if (this.portfolio[ticker]['numberOfShares'] === 0) {
             this.portfolio[ticker]['isInPortfolio'] = false
@@ -153,11 +148,11 @@ export const playerDataStore = reactive({
             ticker: ticker,
 			day: currentDay,
             tradeType: "SELL",
-            price: sharePrice,
+            sharePrice: sharePrice,
 			numberOfShares: numShares,
-            tradeValue: numShares * sharePrice,
+			tradeValue: totalPrice,
 			totalValue: this.portfolio[ticker]['totalValue'],
-			percentageOfInvestedMoney: this.totalValue / this.accountBalance * 100, // ??? 
+			percentageOfInvestedMoney: this.totalValue / this.accountBalance * 100,
             isTimeRunning: isTimeRunning,
 		}
 

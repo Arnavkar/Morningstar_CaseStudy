@@ -49,7 +49,7 @@ export default {
     props: {
         currentPrices: { type: Object },
         accountBalance: { type: Number },
-        numSharesOwned: { type: Array },
+        portfolio : { type: Object },
         makeTrade: { type: Function },
         startSimulation: { type: Function },
         stopSimulation: { type: Function },
@@ -59,9 +59,7 @@ export default {
             if (this.orderType === 'BUY') {
                 return this.selectedStock != '' && this.orderType != '' && this.amount > 0 && this.amount >= 100 && this.amount <= this.accountBalance
             } else if (this.orderType === 'SELL') {
-                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
-                const idx = tickers.indexOf(this.selectedStock)
-                let valueOfActiveStock = parseFloat(this.currentPrices[this.selectedStock]) * this.numSharesOwned[idx]
+                let valueOfActiveStock = parseFloat(this.currentPrices[this.selectedStock]) * this.portfolio[this.selectedStock]['numberOfShares']
 
                 return this.amount <= valueOfActiveStock && this.amount > 0
             }
@@ -84,7 +82,7 @@ export default {
                 + parseFloat(this.currentPrices[this.selectedStock]).toFixed(2) + " per share?";
 
             if (confirm(msg)) {
-                this.makeTrade(this.orderType, this.selectedStock, this.amount, parseFloat(numShares))
+                this.makeTrade(this.orderType, this.selectedStock, parseFloat(this.currentPrices[this.selectedStock]), parseFloat(this.amount), parseFloat(numShares))
             }
         }
     }
