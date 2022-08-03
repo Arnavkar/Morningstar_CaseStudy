@@ -323,8 +323,8 @@
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 15){
-                    //Set to 15 just for testing purposes, should set to 120
+                if (this.currentDay === 5){
+                    // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
             },
