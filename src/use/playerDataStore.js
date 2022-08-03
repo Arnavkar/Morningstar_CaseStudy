@@ -79,7 +79,8 @@ export const playerDataStore = reactive({
     markArticleAsRead(){
         //SOMEHOW STORE THIS ARTICLE AS READ
         //articlesRead.push(article)
-        console.log("article was read")
+        this.overconfidenceScore -= 3
+        console.log("Overconfidence score: " + this.overconfidenceScore)
     },
 
     // Updates the current portfolio as the simulation time increases
@@ -125,11 +126,13 @@ export const playerDataStore = reactive({
 		this.tradeHistory.push(history)
 
 		if (history['percentageOfInvestedMoney'] >= 40) {
-			this.incrementOverConfidenceScore(10) // change value
+			this.incrementOverConfidenceScore(50) // change value
+            console.log("Overconfidence score: " + this.overconfidenceScore)
 		}
 
         if (isTimeRunning === true) {
             this.incrementOverConfidenceScore(10)
+            console.log("Overconfidence score: " + this.overconfidenceScore)
         }
 	},
 
@@ -162,6 +165,7 @@ export const playerDataStore = reactive({
 
         if (isTimeRunning === true) {
             this.incrementOverConfidenceScore(10)
+            console.log("Overconfidence score: " + this.overconfidenceScore)
         }
     }
 
