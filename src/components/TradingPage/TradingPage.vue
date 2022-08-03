@@ -7,7 +7,7 @@
             <div class="timer-section">
                 <div class="timer-section-top">
                     <div class="timer-section-bottom">
-                        <u>Account Balance:</u>&nbsp;{{formatCurrency(accountBalance)}}
+                        <u>Account Balance:</u>&nbsp;{{formatCurrency(playerDataStore.accountBalance)}}
                     </div>
                     <div class="clock-and-button">
                         <ClockIcon :timeRunning="isTimeRunning"></ClockIcon>
@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div>
-                    <u>Portfolio Value:</u>&nbsp;{{formatCurrency(calculateTotalPortfolioValue())}}
+                    <u>Portfolio Value:</u>&nbsp;{{formatCurrency(playerDataStore.portfolioValue)}}
                 </div>
                 <div class="timer-section-bottom">
                     <u>Day:</u>&nbsp;{{ currentDay }} / {{ simulationDuration }}
@@ -62,7 +62,7 @@
                 :makeTrade="makeTrade"
                 :currentPrices="getCurrentPrices()" 
                 :accountBalance="accountBalance" 
-                :numSharesOwned="numSharesOwned"
+                :portfolio="portfolio"
             ></TradingForm>
             <div class="portfolio-card-main nice-boxshadow">
                 <div class="portfolio-card-header">
@@ -175,12 +175,14 @@
                 isTimeRunning: false,
                 currentDay: 0,
                 simulationDuration: 120, //in Days
-                realDuration:8, //in minutes
-                simulationTimeElapsed:0,
-                accountBalance: 20000,
-                portfolioValue: 0,
-                holdingsData: [0, 0, 0, 0, 0, 20000],
-                numSharesOwned: [0, 0, 0, 0, 0],
+                realDuration: 8, //in minutes
+                simulationTimeElapsed: 0,
+                overconfidenceScore: playerDataStore.overconfidenceScore,
+                accountBalance: playerDataStore.accountBalance,
+                portfolio: playerDataStore.portfolio,
+                portfolioValue: playerDataStore.portfolioValue,
+                holdingsData: playerDataStore.holdingsData,
+                tradeHistory: playerDataStore.tradeHistory,
                 buyHistory: {
                     'CROC': -1,
                     'SLTH': -1,
@@ -218,49 +220,25 @@
                 return percentage
             },
             getPortfolioValueForStock(ticker) {
-                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
+                // const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
 
-                let marketPrice = this.getCurrentPriceForStock(ticker)
-                let numShares = this.numSharesOwned[tickers.indexOf(ticker)]
+                // let marketPrice = this.getCurrentPriceForStock(ticker)
+                // let numShares = this.numSharesOwned[tickers.indexOf(ticker)]
 
-                let res = parseFloat(marketPrice) * parseFloat(numShares)
+                // let res = parseFloat(marketPrice) * parseFloat(numShares)
+                let res = parseFloat(this.portfolio[ticker]['totalValue'])
 
                 return this.formatCurrency(res)
             },
-            calculateTotalPortfolioValue() {
-                let total = 0.0
-                let currentPrices = this.getCurrentPrices()
-
-                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
-
-                for (let i = 0; i < this.numSharesOwned.length; i++) {
-                    total += currentPrices[tickers[i]] * this.numSharesOwned[i]
-                }
-                
-                return parseFloat(total)
-            },
-            makeTrade(action, ticker, price, shares) {
-
-                const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
-                const idx = tickers.indexOf(ticker)
-
-                let currentPrice = this.getCurrentPriceForStock(ticker)
-                let stockValue = this.numSharesOwned[idx] * currentPrice
-
+            makeTrade(action, ticker, sharePrice, totalPrice, shares) {
                 if (action === 'BUY') {
-                    this.accountBalance -= parseFloat(price)
-                    this.holdingsData[5] -= parseFloat(price)
-                    this.holdingsData[idx] += parseFloat(price)
-                    this.numSharesOwned[idx] += parseFloat(shares)
+                    playerDataStore.addStock(ticker, sharePrice, totalPrice, shares, this.currentDay, this.isTimeRunning)
                     if (this.buyHistory[ticker] == -1) {
-                        this.buyHistory[ticker] = currentPrice
+                        this.buyHistory[ticker] = sharePrice
                     }
                 } else if (action === 'SELL') {
-                    this.accountBalance += parseFloat(price)
-                    this.holdingsData[5] += parseFloat(price)
-                    this.holdingsData[idx] = parseFloat(stockValue) - parseFloat(price)
-                    this.numSharesOwned[idx] -= parseFloat(shares)
-                    if (this.numSharesOwned[idx] == 0) {
+                    playerDataStore.sellStock(ticker, sharePrice, totalPrice, shares, this.currentDay)
+                    if (this.portfolio[ticker]['numberOfShares'] == 0) {
                         this.buyHistory[ticker] = -1
                     }
                 }
@@ -306,7 +284,7 @@
                     }
                 }
             },
-            updateData(){
+            updateTimeData(){
                 if(!this.isTimeRunning){
                     playerDataStore.incrementPauseTime()
                 } else {
@@ -317,10 +295,14 @@
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
+                    console.log("Day: " + this.currentDay)
+                    this.currentPrices = this.getCurrentPrices()
+                    playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
+                    if (this.currentDay === 120) {
+                        this.stopSimulation()
+                    }
                 }
-
-                
             },
             startSimulation() {
                 this.isTimeRunning = true
@@ -331,11 +313,10 @@
                 this.isTimeRunning = false
                 clearInterval(this.interval);
             },
-
-            pauseSimulation(){
+            pauseSimulation() {
                 this.isTimeRunning = false
             },
-            resumeSimulation(){
+            resumeSimulation() {
                 if (this.interval == undefined){
                     this.startSimulation()
                     return //If game has not started, first start it 
