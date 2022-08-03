@@ -129,6 +129,7 @@ export const playerDataStore = reactive({
 			numberOfShares: numShares,
 			tradeValue: totalPrice,
 			totalValue: this.portfolio[ticker]['totalValue'],
+            // To do: Make percentageOfInvestedMoney in history a number, not NAN
 			percentageOfInvestedMoney: (this.tradeValue / uninvestedMoney) * 100,
             isTimeRunning: isTimeRunning,
 		}
@@ -138,6 +139,7 @@ export const playerDataStore = reactive({
         console.log("uninvestedMoney is " + uninvestedMoney)
         console.log("Percentage: " + history['percentageOfInvestedMoney'])
 
+        // To do: Make percentageOfInvestedMoney in history a number, not NAN
 		if (history['percentageOfInvestedMoney'] >= 40 && uninvestedMoney >= 1000) {
             console.log("Overconfidence score BEFORE: " + this.overconfidenceScore)
 			this.incrementOverconfidenceScore(history['percentageOfInvestedMoney'] / 2) // change value
