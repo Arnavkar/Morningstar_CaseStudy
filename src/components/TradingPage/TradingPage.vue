@@ -281,7 +281,10 @@
                     this.currentDay++
                     console.log("Day: " + this.currentDay)
                     this.currentPrices = this.getCurrentPrices()
-                    playerDataStore.updatePortfolio(this.currentPrices)
+                    playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
+                    if (this.currentDay === 120) {
+                        this.stopSimulation()
+                    }
                 }
             },
             startSimulation() {
