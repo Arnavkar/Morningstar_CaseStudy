@@ -18,7 +18,7 @@
                 <Transition name="fade">
                     <div v-if="showChart1" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 40</h2>
-                        <!-- <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart> -->
+                        <PieChart :holdingsData="[0, 0, 0, 0, 0, 20000]" :key="1"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -27,7 +27,7 @@
                 <Transition name="fade">
                     <div v-if="showChart2" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 60</h2>
-                        <!-- <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart> -->
+                        <PieChart :holdingsData="[0, 0, 7000, 0, 0, 13000]" :key="2"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -36,7 +36,7 @@
                 <Transition name="fade">
                     <div v-if="showChart3" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 80</h2>
-                        <!-- <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart> -->
+                        <PieChart :holdingsData="[2000, 2000, 0, 0, 0, 16000]" :key="3"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -45,7 +45,7 @@
                 <Transition name="fade">
                     <div v-if="showChart4" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 100</h2>
-                        <!-- <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart> -->
+                        <PieChart :holdingsData="[6000, 1000, 0, 3000, 0, 10000]" :key="4"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -54,7 +54,7 @@
                 <Transition name="fade">
                     <div v-if="showChart5" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 120 - End</h2>
-                        <!-- <PieChart :holdingsData="holdingsData" :key="pieKey"></PieChart> -->
+                        <PieChart :holdingsData="[4000, 4000, 5000, 3000, 1000, 3000]" :key="5"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -77,11 +77,14 @@
 </template>
 
 <script>
-    // import PieChart from '../Charts/PieChart'
+    import PieChart from '../Charts/PieChart'
     //import { playerDataStore } from '@/use/playerDataStore'
 
     export default {
         name: 'EndPage',
+        components: {
+            PieChart,
+        },
         data() {
             return {
                 isShowingSubHeader: false,
@@ -195,11 +198,11 @@
     .card-container {
         display: inline-flex;
         margin-top: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 70px;
     }
 
     .card {
-        height: 300px;
+        height: 450px;
         width: 300px;
         margin-left: 20px;
         margin-right: 20px;
@@ -207,14 +210,14 @@
     }
 
     .card:hover {
-        transform: scale(1.01);
+        transform: scale(1.07);
     }
 
     .card-cover {
         position: absolute;
         border-radius: 5px;
         background: white;
-        height: 325px;
+        height: 475px;
         width: 300px;
         transition: 0.5s;
         border-bottom: 8px solid red;
