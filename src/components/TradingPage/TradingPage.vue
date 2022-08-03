@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div>
-                    <u>Portfolio Value:</u>&nbsp;{{formatCurrency(calculateTotalPortfolioValue())}}
+                    <u>Portfolio Value:</u>&nbsp;{{formatCurrency(playerDataStore.portfolioValue)}}
                 </div>
                 <div class="timer-section-bottom">
                     <u>Day:</u>&nbsp;{{ currentDay }} / {{ simulationDuration }}
@@ -222,44 +222,14 @@
 
                 return this.formatCurrency(res)
             },
-            calculateTotalPortfolioValue() {
-                let total = 0.0
-                // let currentPrices = this.getCurrentPrices()
-
-                // const tickers = ['CROC', 'SLTH', 'TURT', 'GIRA', 'BUNY']
-
-                // for (let i = 0; i < this.numSharesOwned.length; i++) {
-                //     total += currentPrices[tickers[i]] * this.numSharesOwned[i]
-                // }
-
-                total = playerDataStore.portfolioValue
-
-                return parseFloat(total)
-            },
-            // price = total $ the user is investing during the buy/sell
-            // currentPrice = price per share
-            // stockValue = total value of stock OVERALLLLLLLLL
             makeTrade(action, ticker, sharePrice, totalPrice, shares) {
-                console.log("totalPPPrice is " + this.totalPrice)
-                console.log("sharePPPrice is " + sharePrice)
-                console.log("numShares is " + shares)
                 if (action === 'BUY') {
                     playerDataStore.addStock(ticker, sharePrice, totalPrice, shares, this.currentDay, this.isTimeRunning)
-
-                    // this.accountBalance -= parseFloat(price)
-                    // this.holdingsData[5] -= parseFloat(price)
-                    // this.holdingsData[idx] += parseFloat(price)
-                    // this.numSharesOwned[idx] += parseFloat(shares)
                     if (this.buyHistory[ticker] == -1) {
                         this.buyHistory[ticker] = sharePrice
                     }
                 } else if (action === 'SELL') {
                     playerDataStore.sellStock(ticker, sharePrice, totalPrice, shares, this.currentDay)
-
-                    // this.accountBalance += parseFloat(price)
-                    // this.holdingsData[5] += parseFloat(price)
-                    // this.holdingsData[idx] = parseFloat(stockValue) - parseFloat(price)
-                    // this.numSharesOwned[idx] -= parseFloat(shares)
                     if (this.portfolio[ticker]['numberOfShares'] == 0) {
                         this.buyHistory[ticker] = -1
                     }

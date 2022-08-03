@@ -6,7 +6,7 @@ export const playerDataStore = reactive({
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
     timeSpentInSimulation: 0,
-    holdingsData: [0, 0, 0, 0, 0, 10000],
+    holdingsData: [0, 0, 0, 0, 0, 0.01],
     articlesRead: [],
     tradeHistory: [],
     portfolioValue: 0,
@@ -89,19 +89,21 @@ export const playerDataStore = reactive({
             this.portfolioValue += data['totalValue']
             this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         }
+
+        console.log(this.holdingsData)
     },
 
     // Updates the current portfolio as the user buys shares of a stock
     // totalPrice is sharePrice * numShares
     addStock(ticker, sharePrice, totalPrice, numShares, currentDay, isTimeRunning){
-        console.log("totalPrice is " + this.totalPrice)
+        console.log("totalPrice is " + totalPrice)
         console.log("Account balance before purchasing stock: " + this.accountBalance)
         this.accountBalance -= totalPrice
+        this.portfolioValue += totalPrice
 		this.portfolio[ticker]['numberOfShares'] += numShares
 		this.portfolio[ticker]['totalValue'] += totalPrice
 		this.portfolio[ticker]['isInPortfolio'] = true
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
-        this.holdingsData[5] = this.accountBalance
         console.log("Account balance after purchasing stock: " + this.accountBalance)
 
 		let history = {
@@ -132,12 +134,13 @@ export const playerDataStore = reactive({
     // make sure to check if numShares exists in current portfolio
     // Updates the current portfolio as the user sells shares of a stock
     sellStock(ticker, sharePrice, totalPrice, numShares, currentDay, isTimeRunning){
+        console.log("totalPrice is " + totalPrice)
         console.log("Account balance before selling stock: " + this.accountBalance)
         this.accountBalance += totalPrice
+        this.portfolioValue -= totalPrice
         this.portfolio[ticker]['numberOfShares'] -= numShares
 		this.portfolio[ticker]['totalValue'] -= totalPrice
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
-        this.holdingsData[5] = this.accountBalance
         console.log("Account balance after purchasing stock: " + this.accountBalance)
 
         if (this.portfolio[ticker]['numberOfShares'] === 0) {
