@@ -9,15 +9,17 @@ export const playerDataStore = reactive({
     tradeHistory:{},
     currentPortfolio:{},
 
-
-    markArticleAsRead(){
-        //SOMEHOW STORE THIS ARTICLE AS READ
-        //articlesRead.push(article)
-        console.log("article was read")
+    markArticleAsRead(id){
+        if(this.articlesRead.includes(id)){
+            console.log(`article ${id} was already read`)
+        } else {
+            this.articlesRead.push(id)
+            console.log( `Just read article no. ${id}`)
+        }
     },
 
-    get numArticlesRead(){
-        return this.articlesRead.length
+    get overConfidenceScoreFromArticles(){
+        return 30 - this.articlesRead.length
     },
 
     incrementOverConfidenceScore(value){
