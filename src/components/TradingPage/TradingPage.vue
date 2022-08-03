@@ -291,7 +291,7 @@
                     playerDataStore.incrementSimulationTime()
                     this.simulationTimeElapsed += this.ratio
                 }
-
+                console.log(this.simulationTimeElapsed)
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
@@ -307,7 +307,7 @@
             startSimulation() {
                 this.isTimeRunning = true
                 this.updateNewsFeed()
-                this.interval = setInterval(this.updateData,1000)
+                this.interval = setInterval(this.updateTimeData,1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
@@ -317,7 +317,9 @@
                 this.isTimeRunning = false
             },
             resumeSimulation() {
+                
                 if (this.interval == undefined){
+                    console.log("Was Called")
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
