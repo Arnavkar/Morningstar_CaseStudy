@@ -9,7 +9,7 @@
         <div v-if="showContent" class="content-container">
             {{ content }}
         </div>
-        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead();" class="collapsible">
+        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead(_article_id);" class="collapsible">
             Read more
         </button>
         <button v-else @click="showContent = false" class="collapsible">
@@ -29,6 +29,7 @@
             subtitle: { type: String },
             source: { type: String },
             imageNum: { type: Number },
+            _article_id:{type: Number},
         },
         data() {
             return {

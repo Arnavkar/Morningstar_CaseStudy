@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 export const playerDataStore = reactive({
     accountBalance: 10000,
-    overconfidenceScore: 50,
+    overconfidenceScore: 30,
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
     timeSpentInSimulation: 0,
@@ -66,16 +66,19 @@ export const playerDataStore = reactive({
         this.incrementOverconfidenceScore(-50)
         console.log("Overconfidence score: " + this.overconfidenceScore)
     },
-
-    get numArticlesRead(){
-        return this.articlesRead.length
+    
+    markArticleAsRead(id){
+        if(this.articlesRead.includes(id)){
+            console.log(`article ${id} was already read`)
+        } else {
+            this.articlesRead.push(id)
+            this.incrementOverconfidenceScore(-1)
+            console.log( `Just read article no. ${id}`)
+        }
     },
 
-    markArticleAsRead(){
-        //SOMEHOW STORE THIS ARTICLE AS READ
-        //articlesRead.push(article)
-        this.incrementOverconfidenceScore(-1)
-        console.log("Overconfidence score: " + this.overconfidenceScore)
+    get overConfidenceScoreFromArticles(){
+        return 30 - this.articlesRead.length
     },
 
     // Updates the current portfolio as the day changes
