@@ -6,30 +6,36 @@
     <Transition name="fade">
       <InfoPage v-if="isShowingInfoPage" :switchToTradingPage="switchToTradingPage"></InfoPage>
     </Transition>
+    <Transition name="fade">
+      <TradingPage v-if="isShowingTradingPage" :switchToEndPage="switchToEndPage"></TradingPage>
+    </Transition>
     <Transition name="fadee">
-      <TradingPage v-if="isShowingTradingPage"></TradingPage>
+      <EndPage v-if="isShowingEndPage"></EndPage>
     </Transition>
   </div>
 </template>
 
 <script>
 
-  import IntroPage from './components/IntroStaticPages/IntroPage.vue'
-  import InfoPage from './components/IntroStaticPages/InfoPage.vue'
+  import IntroPage from './components/StaticPages/IntroPage.vue'
+  import InfoPage from './components/StaticPages/InfoPage.vue'
   import TradingPage from './components/TradingPage/TradingPage.vue'
+  import EndPage from './components/StaticPages/EndPage.vue'
 
   export default {
     name: 'App',
     components: {
-      IntroPage,
-      InfoPage,
-      TradingPage,
-    },
+    IntroPage,
+    InfoPage,
+    TradingPage,
+    EndPage,
+},
     data() {
       return {
         isShowingIntroPage: true,
         isShowingInfoPage: false,
         isShowingTradingPage: false,
+        isShowingEndPage: false
       }
     },
     methods: {
@@ -43,8 +49,14 @@
         this.isShowingInfoPage = false;
         setTimeout(() => {
           this.isShowingTradingPage = true;
-        }, 3000)
-      }
+        }, 2000)
+      },
+      switchToEndPage() {
+        this.isShowingTradingPage = false;
+        setTimeout(() => {
+          this.isShowingEndPage = true;
+        }, 2000)
+      },
     }
   }
 

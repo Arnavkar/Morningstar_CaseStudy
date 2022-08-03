@@ -163,6 +163,9 @@
             TradingForm,
             PieChart,
         },
+        props: {
+            switchToEndPage: { type: Function },
+        },
         data() {
             return {
                 playerDataStore,
@@ -303,6 +306,11 @@
                         this.stopSimulation()
                     }
                 }
+
+                if (this.currentDay === 5){
+                    // TODO: Currently Set to 15 just for testing purposes, should set to 120
+                    this.stopSimulation()
+                }
             },
             startSimulation() {
                 this.isTimeRunning = true
@@ -312,6 +320,7 @@
             stopSimulation() {
                 this.isTimeRunning = false
                 clearInterval(this.interval);
+                this.switchToEndPage()
             },
             pauseSimulation() {
                 this.isTimeRunning = false
