@@ -302,15 +302,16 @@
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
-                    if (this.currentDay === 120) {
-                        this.stopSimulation()
-                    }
                 }
 
-                if (this.currentDay === 5){
-                    // TODO: Currently Set to 15 just for testing purposes, should set to 120
+                if (this.currentDay === 120) {
                     this.stopSimulation()
                 }
+
+                // if (this.currentDay === 5){
+                //     // TODO: Currently Set to 15 just for testing purposes, should set to 120
+                //     this.stopSimulation()
+                // }
             },
             startSimulation() {
                 this.isTimeRunning = true
