@@ -6,6 +6,7 @@ export const playerDataStore = reactive({
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
     timeSpentInSimulation: 0,
+    numberOfTrades: 0,
     holdingsData: [0, 0, 0, 0, 0, 10000],
     articlesRead: [],
     tradeHistory: [],
@@ -111,6 +112,11 @@ export const playerDataStore = reactive({
                 console.log("Overconfidence score: " + this.overconfidenceScore)
             }
         }
+
+        if (this.numberOfTrades >= 25) {
+            this.incrementOverconfidenceScore(30)
+            console.log("Overconfidence score: " + this.overconfidenceScore)
+        }
     },
 
     // Updates the current portfolio as the user buys shares of a stock
@@ -123,6 +129,7 @@ export const playerDataStore = reactive({
 		this.portfolio[ticker]['isInPortfolio'] = true
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         this.holdingsData[5] = this.accountBalance
+        this.numberOfTrades++
 
         let percentageOfInvestedMoney = (totalPrice / uninvestedMoney) * 100
 
@@ -143,7 +150,6 @@ export const playerDataStore = reactive({
 
         // To do: Make percentageOfInvestedMoney in history a number, not NAN
 		if (history['percentageOfInvestedMoney'] >= 40 && uninvestedMoney >= 1000) {
-            console.log("Overconfidence score BEFORE: " + this.overconfidenceScore)
 			this.incrementOverconfidenceScore(history['percentageOfInvestedMoney'] / 2) // change value
             console.log("Overconfidence score: " + this.overconfidenceScore)
 		}
@@ -162,6 +168,7 @@ export const playerDataStore = reactive({
 		this.portfolio[ticker]['totalValue'] -= totalPrice
         this.holdingsData[this.portfolio[ticker]['index']] = this.portfolio[ticker]['totalValue']
         this.holdingsData[5] = this.accountBalance
+        this.numberOfTrades++
 
         if (this.portfolio[ticker]['numberOfShares'] === 0) {
             this.portfolio[ticker]['isInPortfolio'] = false
