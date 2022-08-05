@@ -1,6 +1,5 @@
 <template>
     <div class="info-page-main">
-        <h1 class="header-one">Welcome to the Morningstar Overconfidence Trading Simulation</h1>
         <Transition name="fade">
             <h1 class="header-two" v-if="isShowingSubHeader">In this game, you will be following five stocks in a controlled trading environment.</h1>
         </Transition>
@@ -84,6 +83,9 @@
             switchToTradingPage: { type: Function },
         },
         mounted() {
+            setTimeout(() => {
+                this.isShowingSubHeader = false;
+            }, 1000)
             setTimeout(() => {
                 this.isShowingSubHeader = true;
             }, 2000)

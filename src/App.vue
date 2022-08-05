@@ -1,7 +1,10 @@
 <template>
   <div class="trading-app-main">
     <Transition name="fade">
-      <IntroPage @click="switchToInfoPage()" v-if="isShowingIntroPage"></IntroPage>
+      <IntroPage @click="switchToInputPage()" v-if="isShowingIntroPage"></IntroPage>
+    </Transition>
+    <Transition name="fade">
+      <InputPage v-if="isShowingInputPage" :switchToInfoPage="switchToInfoPage"></InputPage>
     </Transition>
     <Transition name="fade">
       <InfoPage v-if="isShowingInfoPage" :switchToTradingPage="switchToTradingPage"></InfoPage>
@@ -9,7 +12,7 @@
     <Transition name="fade">
       <TradingPage v-if="isShowingTradingPage" :switchToEndPage="switchToEndPage"></TradingPage>
     </Transition>
-    <Transition name="fadee">
+    <Transition name="fade">
       <EndPage v-if="isShowingEndPage"></EndPage>
     </Transition>
   </div>
@@ -21,6 +24,7 @@
   import InfoPage from './components/StaticPages/InfoPage.vue'
   import TradingPage from './components/TradingPage/TradingPage.vue'
   import EndPage from './components/StaticPages/EndPage.vue'
+  import InputPage from './components/StaticPages/InputPage.vue'
 
   export default {
     name: 'App',
@@ -29,18 +33,26 @@
     InfoPage,
     TradingPage,
     EndPage,
+    InputPage
 },
     data() {
       return {
         isShowingIntroPage: true,
+        isShowingInputPage: false,
         isShowingInfoPage: false,
         isShowingTradingPage: false,
         isShowingEndPage: false
       }
     },
     methods: {
-      switchToInfoPage() {
+      switchToInputPage() {
         this.isShowingIntroPage = false;
+        setTimeout(() => {
+          this.isShowingInputPage = true;  
+        }, 1000)
+      },
+      switchToInfoPage() {
+        this.isShowingInputPage = false;
         setTimeout(() => {
           this.isShowingInfoPage = true;  
         }, 1000)
