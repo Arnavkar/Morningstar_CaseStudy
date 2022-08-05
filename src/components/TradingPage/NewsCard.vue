@@ -22,6 +22,24 @@
 
     import { playerDataStore } from '@/use/playerDataStore'
 
+    // export default {
+    //     name: 'AdvisorCard',
+    //     props: {
+    //         title: { type: String },
+    //         subtitle: { type: String },
+    //         source: { type: String },
+    //         imageNum: { type: Number },
+    //         _article_id:{type: Number}
+    //     },
+    //     data() {
+    //         return {
+    //             playerDataStore,
+    //             showContent: false,
+    //             content: 'A shocking downturn for the media company rears its ugly head as SLTH loses almost $50 billion in market cap value. The company\'s subscriber count continues to fall despite the push for more content.',
+    //         }
+    //     },
+    // }
+
     export default {
         name: 'NewsCard',
         props: {
@@ -29,7 +47,7 @@
             subtitle: { type: String },
             source: { type: String },
             imageNum: { type: Number },
-            _article_id:{type: Number},
+            _article_id:{type: Number}
         },
         data() {
             return {
@@ -53,6 +71,23 @@
         background: white;
         border: 2px solid grey;
         border-right: 4px solid red;
+        text-align: left;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 300px;
+        margin-top: 15px;
+        transition: 0.5s;
+        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .advisor-card-main {
+        @include mds-level-3-heading($bold: true);
+        background: white;
+        border: 2px solid grey;
+        border-right: 4px solid green;
         text-align: left;
         border-radius: 5px;
         width: 100%;

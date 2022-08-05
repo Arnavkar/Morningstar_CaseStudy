@@ -119,6 +119,9 @@
             </div>
             <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
                 <Transition name="fade">
+                    <div v-if="article.ticker === 'Advisor'">
+                        <AdvisorCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></AdvisorCard>
+                    </div>
                     <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
                 </Transition>
             </div>
