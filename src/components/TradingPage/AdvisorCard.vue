@@ -50,7 +50,7 @@
 
     .advisor-card-main {
         @include mds-level-3-heading($bold: true);
-        background: pink;
+        background: white;
         border: 2px solid grey;
         border-right: 4px solid green;
         text-align: left;

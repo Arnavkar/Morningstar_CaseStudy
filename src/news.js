@@ -204,7 +204,7 @@ export const newsData = [
     "description": "Crocodile first took over from Bunny as the world's most valuable tech company in 2015, and there has been years of toing and froing between the two as each has raced to out-innovate the other and be the most valuable company on Wall Street. However, Crocodile is investing more heavily in saving the world they have pledge to have a fully cabon neutral supply chain by 2030",
     "source": "Prime news",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -213,7 +213,7 @@ export const newsData = [
     "description": "Biden signed a sweeping executive order (EO) directing a multitude of federal agencies to promote additional competition in the U.S. economy. One such directive encourages the Federal Trade Commission (FTC) to enact additional regulations that prohibit manufacturer policies barring the repair of equipment and devices by individuals and independent repair shops.",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -222,7 +222,7 @@ export const newsData = [
     "description": "Crocodile wins last minute reprieve from App Store changes while 'Fortnite' appeal play out. The lowe court did not find that Crocodile violated any antitrust laws.",
     "source": "Reuters",
     "credibility": 5,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -231,7 +231,7 @@ export const newsData = [
     "description": "With top executives leaving the most traditional Silicon Valley business, Crocodile is suffering another lost as Gomez, its VP Marcom Intergration, who is departing from the company after a liitlw more then two years in this role.",
     "source": "9To5Mac",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 1,
@@ -240,7 +240,7 @@ export const newsData = [
     "description": "Crocodile became the first US company to be valued at over $3tn on as the tech company continued its phenomenal share price growth, tripling in value in under four years.",
     "source": "The Guardian",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 13,
@@ -249,7 +249,7 @@ export const newsData = [
     "description": "Crocodile is the best think to by no mattre what! Think abou it is the only Tech company that everyone goes crazy about everytime they are releasing a new product.",
     "source": "twitter",
     "credibility": 1,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 18,
@@ -258,7 +258,7 @@ export const newsData = [
     "description": "Crocodile is no stranger to antitrust cases. Which mean that it refers to the regulation of th cinceentration of economic power, particulary in regarding to monopolies. According to history thy are strarting to become faiirly familiar wiith lossing them as well, most resently in Netherlands, allowing Dutch datiing apps to offer non-Crocodile payment optioins.",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 28,
@@ -267,7 +267,7 @@ export const newsData = [
     "description": "Crocodile has a double edge in China which makes up one-fifth of its sales. US sanctions helped Crocodile gain market share in China because they blocked Chincese competitors form getting key componetws and softwate for phones.",
     "source": "snapchat",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 34,
@@ -276,7 +276,7 @@ export const newsData = [
     "description": "the competition bill regulators and politicians ramp up thir scrutint of the growiing industry. In addtiion the senate  is hoping that the the Open App Markets Act will target the commission. This bill was passes despite Crocodile's urge for it to be dismissed given how much revenue it'll wipe away.",
     "source": "twitter",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 41,
@@ -285,7 +285,7 @@ export const newsData = [
     "description": "the news crypto feature, alloews user to for the tap to pay, which creates a contackless payment systeem and after Covid that’s all we want. It is important to also note that crypto enthusiasts want Web3 to take control away from Big Tech.",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 48,
@@ -294,7 +294,7 @@ export const newsData = [
     "description": "Crocodile CEO faces a shareholder revolt over his massive pay package. Her resives $99m pay abd bonuses package. This means that the massive jump of 14.8m he got in 2020. this indicates that severeal sharehoolder are making themselves heard across the tech industry.",
     "source": "News",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 67,
@@ -303,7 +303,7 @@ export const newsData = [
     "description": "THE SHOCK MOVED DOWN. 1.17% this could be because there is  pressure on big tech stocks atm as Russia destabizes global markets. Thanks for nothing Russia",
     "source": "Magazine",
     "credibility": 1,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 71,
@@ -312,7 +312,7 @@ export const newsData = [
     "description": "China's new covid suge force tech giants to shut down their local operations. The Bank of America analysts are cautions about \"prolongued supply impact\". However it has not cut any current quarter estimates, though investors were less forgiving and sent the stock down 2.66% to its lowest price.",
     "source": "News",
     "credibility": 5,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 80,
@@ -321,7 +321,7 @@ export const newsData = [
     "description": "New product coming out as Crocodile hints at a UK Crocodile Card on the way with its latest credut rating tech purchase. It is imporatnt to note that Credit Kudos helps lenders make better informed decisions by tracking banking data.",
     "source": "news",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 85,
@@ -330,7 +330,7 @@ export const newsData = [
     "description": "WE ARENT TO KEEN ON THE CROC-PHONE SE ANYMORE. Which is probably why Crocodile is cutting its CROC-PHONE SE outout by 20% in the next quarter as the model receiives weaker-than expected demans in China. Also Electronics demand is taking a hit in the face of the Ukraine war.",
     "source": "YouTube",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 96,
@@ -339,7 +339,7 @@ export const newsData = [
     "description": "the CFO, has just stated that the supply constraints are waiting to bite into its balance sheet. Since there are several challenges ahead, with inflation. Covid in China means production shut downs, and supply constraints are here tp stay- all which could hurt sales by as much as  $8bn.",
     "source": "news",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 110,
@@ -348,7 +348,7 @@ export const newsData = [
     "description": "Crocodile has lost its title as world's most valuable company. Even, with a down of over 20% Crocodile is still the most valuable company in the USA. Many people are wondering what this could really mean for the market in the long run?",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 132,
@@ -357,7 +357,7 @@ export const newsData = [
     "description": "Its about time that Crocodile gives a edit feature that includes on undo send as well as mark as unread. Even with all of this releases, the stock remained flat, which worries people since its down 20% compare to this time last year.",
     "source": "twitter",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 135,
@@ -366,7 +366,7 @@ export const newsData = [
     "description": "Crocodile keep going down should we start to get worry or should Sell! Everything. Crocodile needs to start to let its invester know why sell are also down. No Way that they are still struggling form COVID!",
     "source": "YouTube",
     "credibility": 1,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 149,
@@ -375,7 +375,7 @@ export const newsData = [
     "description": "it is about time that the stock for Crocodile has started to go up. Many people belive that Crocodile is turning around and making a come back form how it was it has been. I would jugest everyone too BUY!",
     "source": "twitter",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 171,
@@ -384,7 +384,7 @@ export const newsData = [
     "description": "since 2000, Crocodile has filed for and publiish a total of 248 automobiile related patents. It is important to noter that this inclues: self-driving technology, riding comfort, seat, suspeensions, navigariooin, battery management, vehicle-to-everything coonnectivity for car to car communication.",
     "source": "news",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -393,7 +393,7 @@ export const newsData = [
     "description": "Coconut's and Yam's advertising revenues have increased significantly from last year. However, Yam's advertising revenue was less than its expected goal. Coconut Cloud's revenue was also less than its expected goal.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -402,7 +402,7 @@ export const newsData = [
     "description": "Your friend advises you to invest in Giraffe, claiming that it is one of the safest bets in the market.",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 3,
@@ -411,7 +411,7 @@ export const newsData = [
     "description": "Several states have filed complaints against Giraffe, accusing Giraffe of abusing its monopoly power",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 3,
@@ -420,7 +420,7 @@ export const newsData = [
     "description": "Popular celebrity Bobby Smith invested in over 5000 shares of Giraffe",
     "source": "News",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 6,
@@ -429,7 +429,7 @@ export const newsData = [
     "description": "Coconut's latest purchase of $500 million is for improving the cybersecurity of its Cloud",
     "source": "News",
     "credibility": 5,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 15,
@@ -438,7 +438,7 @@ export const newsData = [
     "description": "Coconut joins the other social media platforms in moving towards crypto. Coconut revealed its first public blockchain project, as well as its blockchain team.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 15,
@@ -447,7 +447,7 @@ export const newsData = [
     "description": "Ex-Coconut CEO Mary Johnson posted on social media, stating that they started investing in crypto",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 15,
@@ -456,7 +456,7 @@ export const newsData = [
     "description": "Mary Johnson, Coconut's previous CEO, has joined the blockchain project as a strategic advisor",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -465,7 +465,7 @@ export const newsData = [
     "description": "Almond filed a lawsuit against the DMV, trying to hide its self-driving accidents from the public eye. Almond refuses to share its safety protocols, arguing that it would be a disavantage in the competitive market.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -474,7 +474,7 @@ export const newsData = [
     "description": "A user posted on social media, claiming that self-driving cars are the future.",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -483,7 +483,7 @@ export const newsData = [
     "description": "A user posted on social media, claiming that Almond's testers are required to sign nondisclosure agreements. The user also claims that self-driving cars are not reliable, and that there are more self-driving accidents than companies reveal.",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -492,7 +492,7 @@ export const newsData = [
     "description": "Giraffe announces a stock split, increasing the availability of its shares",
     "source": "News",
     "credibility": 5,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -501,7 +501,7 @@ export const newsData = [
     "description": "Your friend advises you to invest in Giraffe because of the stock split",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -510,7 +510,7 @@ export const newsData = [
     "description": "Your friend advises you to invest in Giraffe before the stock split",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 42,
@@ -519,7 +519,7 @@ export const newsData = [
     "description": "Coconut spent 5 billion dollars on cybersecurity company Acorn. Acorn is one of Giraffe's biggest acquisitions ever.",
     "source": "News",
     "credibility": 5,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 57,
@@ -528,7 +528,7 @@ export const newsData = [
     "description": "After years of development and testing, Almond is ready to hit the road.",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 72,
@@ -537,7 +537,7 @@ export const newsData = [
     "description": "Giraffe's stock prices are plummeting.",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 72,
@@ -546,7 +546,7 @@ export const newsData = [
     "description": "The CEO of Giraffe posts on social media, claiming that the stock's under performance is not their fault. Ad spending had to be decreased because of another war in another country.",
     "source": "Interview",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 81,
@@ -555,7 +555,7 @@ export const newsData = [
     "description": "Coconut is working on releasing the Mango Watch, the Mango 9 smartphone, and the Mango Pro earbuds.",
     "source": "News",
     "credibility": "",
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 111,
@@ -564,7 +564,7 @@ export const newsData = [
     "description": "Giraffe's stocks are going to split soon. Investors will receive additional shares per share they own.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 114,
@@ -573,7 +573,7 @@ export const newsData = [
     "description": "Giraffe is reducing hiring due to inflation and war",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 117,
@@ -582,7 +582,7 @@ export const newsData = [
     "description": "A friend who works at Google expresses their fears of lay-offs",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -591,7 +591,7 @@ export const newsData = [
     "description": "Bunny's stock prices are quickly approaching the all-time high stock price that it recently achieved",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -600,7 +600,7 @@ export const newsData = [
     "description": "Antitrust officials are investigating Bunny's acquisition of Carrot, a speech-to-text software.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
@@ -609,7 +609,7 @@ export const newsData = [
     "description": "A user posts on social media, claiming that Bunny's true all-time high is soon to come",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 9,
@@ -618,7 +618,7 @@ export const newsData = [
     "description": "Bunny recently hired one of the top semiconductor engineers to help develop its in-house Arm-based chip.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 12,
@@ -627,7 +627,7 @@ export const newsData = [
     "description": "Bunny and Alpaca strike a deal, agreeing to integrate the Lettuce video conferencing software in Alpaca's products",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 18,
@@ -636,7 +636,7 @@ export const newsData = [
     "description": "Bunny's sales topped $50 billion for the first time. However, the revenue for Bunny's cloud computing service, Potato, has been overestimated the last few quarters.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 21,
@@ -645,7 +645,7 @@ export const newsData = [
     "description": "Your friend advises you to invest in Bunny because it is a strong stock and is likely to soar again",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 27,
@@ -654,7 +654,7 @@ export const newsData = [
     "description": "Bunny is considering acquiring cybersecurity firm Acorn which has a market value of $4 billion.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 39,
@@ -663,7 +663,7 @@ export const newsData = [
     "description": "Bunny has completed its $15 billion acquisition of Carrot, a speech-to-text software",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 48,
@@ -672,7 +672,7 @@ export const newsData = [
     "description": "Bunny is facing antitrust complaints about Potato, its cloud computing service",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 48,
@@ -681,7 +681,7 @@ export const newsData = [
     "description": "A user posts on social media, claiming that Bunny abuses its power, undermines fair competition, and limits consumer choice in the cloud computing market",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 72,
@@ -690,7 +690,7 @@ export const newsData = [
     "description": "Bunny shares surged as much as 8% in Wednesday's extending trading",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 90,
@@ -699,7 +699,7 @@ export const newsData = [
     "description": "A friend claims that Microsoft can continue thriving despite the recession",
     "source": "Friend",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 93,
@@ -708,7 +708,7 @@ export const newsData = [
     "description": "Bunny intends to increase wages for current employees despite the reduction in hiring",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 93,
@@ -717,7 +717,7 @@ export const newsData = [
     "description": "A user posts on social media, claiming that Bunny is one of the most resilient and undervalued stocks.",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 96,
@@ -726,7 +726,7 @@ export const newsData = [
     "description": "Bunny reduced its revenue estimates by about $1 billion.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 96,
@@ -735,7 +735,7 @@ export const newsData = [
     "description": "Bunny gets half of its revenue from outside the country, so inflation has negatively affected the company.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 102,
@@ -744,7 +744,7 @@ export const newsData = [
     "description": "Bunny has lost 30% YTD. Can Bunny recover from the losses?",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 105,
@@ -753,7 +753,7 @@ export const newsData = [
     "description": "A user posts on social media, claiming that the bear market is an advantage for long-term investors. They also claimed that Bunny has continuously rewarded long-term shareholders.",
     "source": "Social media",
     "credibility": 2,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 114,
@@ -762,7 +762,7 @@ export const newsData = [
     "description": "One of Bunny's recent acquistions is being investigated by antitrust officials. Antitrust officials want to find out whether this acquisition will undermine competition.",
     "source": "News",
     "credibility": 4,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 117,
@@ -771,159 +771,303 @@ export const newsData = [
     "description": "Bunny cuts some jobs, claiming that the layoff is not related to the recession",
     "source": "News",
     "credibility": 3,
-    "analyst_opinion": "-"
+    "analyst_opinion": ""
 },
 {
     "day": 0,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Studies show that overconfident investors trade more than rational investors and that doing so lowers their expected utilities. Greater overconfidence leads to greater trading and to lower expected utility.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 7,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Your best bet to overcome the pitfalls of overconfidence is to slow down your thinking and simply become aware of it, and question whether you’re maybe being overly optimistic. Don’t act in haste.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 14,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Be confident, yet intellectually humble. Consider the possibility that you could be wrong. Listen to evidence that could possible change your mind. Be ruthless with your investment thesis. Be open-minded.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 21,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Consider the consequences of being wrong. Your job should be first and foremost not to lose money. Put your ego aside and keep that in mind.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 28,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Don’t view each problem in isolation. The single best advice we have in framing is broad framing. See the decision as a member of a class of decisions that you’ll probably have to take.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 35,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Don’t underplay regret. Regret is probably the greatest enemy of good decision making in personal finance. So if you are an asset manager or financial adviser, assess how prone clients are to it. The more potential for regret, the more likely they are to churn their account, sell at the wrong time, and buy when prices are high. High-net-worth individuals are especially risk averse, so try to gauge just how risk averse. Clients who have regrets will often fire their advisers.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 42,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Seek out good advice. Part of getting a wide-ranging perspective is to cultivate curiosity and to seek out guidance. An ideal adviser is a person who likes you and doesn’t care about your feelings.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 49,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Probably the most compelling evidence is that most investors, especially active investors, both professional and amateur, tend to have a very hard time beating market indices consistently, as demonstrated in the latest Morningstar Active-Passive Barometer.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 56,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "How can you tackle overconfidence bias? You could look back at your trading records and ask yourself questions such as “why did I buy or sell that stock?” and try to give an objective answer. If you can spot behavioural patterns in your trading activity, it’s easier to correct these mistakes.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 63,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "I have seen overconfidence in action many times over my practice. To counteract this behavior in my clients, I often recommend they establish a “mad money” account. This involves taking a small portion of one’s wealth for “overconfident” trading activities while leaving the remainder of their wealth to be managed in a disciplined way. This approach scratches the itch that many investors have to trade their account, while at the same time keeping the majority of the money intelligently managed.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 70,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Effective investing doesn’t come naturally to most of us. Even when we know the fundamentals, we tend to make snap decisions and irrational--sometimes destructive--mistakes, based on what “feels” right. The gamification built into platforms like Robinhood—free stock for signing up, frequently updating and colourful screens based on performance, even digital confetti upon completion of a successful transaction—may at times, just worsen these tendencies.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 77,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "In a study we conducted on a nationally representative sample of the U.S population, we found evidence that although most Americans are overconfident (67 per cent of the sample), people currently in Generation Z are significantly more overconfident—even more than millennials and Gen Xers. We also know that Robinhood’s average user is 31 years old, and half of them are first-time investors. This premise of innate investing knowledge, combined with a platform that rewards hasty decisions with immediate gratification and self-flattery, makes for a breeding ground of biased decisions.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 84,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "For instance, compared with people with low bias, people who showed high levels of overconfidence were twice as likely to be struggling with their financial lives: having the lowest savings, the highest debt, and the worst credit scores.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 91,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "If you’re overconfident, you might overestimate your knowledge and abilities, which in turn can lead you to overestimate expected returns and underestimate investment risks. Overconfidence can also result in excessive trading. One phenomenon investors often fall prey to is the so-called Hot Hand Fallacy where they assume that a winning streak will continue, whether it is a top-performing fund manager, a stock that has soared, or their own investment choices.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 98,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "Reviewing your trading records can be a good exercise to reduce overconfidence bias. While conducting your review, it’s important to remain objective. Ask yourself questions such as “why did I buy that security?” or “why did I sell?”. If you can identify behavioral patterns in your trading activity, it’s easier to correct for mistakes.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 105,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "While it is very possible to outperform indices and people do all the time, it is not probable--and that is the point. Most investors, both professional and amateur, tend to have a very hard time beating market indices consistently.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
 },
 {
     "day": 112,
-    "ticker": "N/A",
+    "ticker": "Advisor",
     "headline": "Advisor Message",
     "description": "In recent years, investors have begun to realise that trading frequently hurts, higher fees and commissions hurt, and overconfidence hurts.",
     "source": "Advisor",
-    "credibility": 0,
-    "analyst_opinion": "-"
+    "credibility": "N/A",
+    "analyst_opinion": ""
+},
+{
+    "day": 0,
+    "ticker": "SLTH",
+    "headline": "Sloth schedules release of brand new original title.",
+    "description": "The entertainment mogul enlists a top-tier cast for a never before seen action-thriller. Set to release in March, the film follows David Hendrix, a wanted man hungry for revenge.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 6,
+    "ticker": "SLTH",
+    "headline": "Sloth's \"The Barnyard\" denies expectations",
+    "description": "Sloth's first attempt at an original horror\nfilm receives scathing reviews from even\nthe most passive media consumers.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 10,
+    "ticker": "SLTH",
+    "headline": "Sloth stock plummets in value",
+    "description": "Despite a positive outlook for 2022, Sloth's\ndiminishing subscriber count resulted in poor\nperformance in the markets all week.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 17,
+    "ticker": "SLTH",
+    "headline": "Your friend insists that SLTH is a good buy",
+    "description": "Your friend, a finance major at UC Boulder,\ninsists that SLTH is a perfect buy because\nit's evaluation is so low. \"Buy low, sell high\", he\nsays.",
+    "source": "Friend",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 21,
+    "ticker": "SLTH",
+    "headline": "A horrendous outlook for Sloth",
+    "description": "A shocking downturn for the media company\nrears its ugly head as SLTH loses almost $50\nbillion in market cap value. The company's \nsubscriber count continues to fall despite the\npush for more content.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 24,
+    "ticker": "SLTH",
+    "headline": "Sloth CEO plan of action",
+    "description": "In an interview with the media mogul's CEO,\nshe lays out an active recovery plan for the\ncompany and a positive outlook for\ninvestors.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 36,
+    "ticker": "SLTH",
+    "headline": "Sloth holds value after devastating hit",
+    "description": "Sloth's plan to draw in more subscribers seems\nto pay off, as the stock holds its value after\na devastasting first quarter loss.",
+    "source": "",
+    "credibility": "No",
+    "analyst_opinion": ""
+},
+{
+    "day": 44,
+    "ticker": "SLTH",
+    "headline": "A pleasant suprise for Sloth investors",
+    "description": "A new ad-based subscriber tier gives a positive\noutlook for the company to defend its market\nshare.",
+    "source": "",
+    "credibility": "Yes",
+    "analyst_opinion": ""
+},
+{
+    "day": 49,
+    "ticker": "SLTH",
+    "headline": "Increased web services fees hits tech stocks",
+    "description": "Amazon CEO, Jeff Bozo, increases web services fees for corporations. Sloth entertainment, a heavy user, takes a hit in the markets after the decision.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 54,
+    "ticker": "SLTH",
+    "headline": "Your friend insists that SLTH is a good buy",
+    "description": "Your friend, a finance major at UC Boulder, \ninsists once again that you must buy SLTH. The\nstock is \"quickly recovering\", he says.",
+    "source": "Friend",
+    "credibility": "No",
+    "analyst_opinion": ""
+},
+{
+    "day": 63,
+    "ticker": "SLTH",
+    "headline": "Sloth to release steamy new series",
+    "description": "Sloth enlists Megan Fox to star in provocative\nnew series. OMG yes?",
+    "source": "Social Media",
+    "credibility": "No",
+    "analyst_opinion": ""
+},
+{
+    "day": 69,
+    "ticker": "SLTH",
+    "headline": "Tweet from Taylor Swift boosts Sloth",
+    "description": "A tweet from the singer-songwriter advocates\nfor Sloth's \"The Barnyard\", and fans are quick\nto watch.",
+    "source": "News",
+    "credibility": "No",
+    "analyst_opinion": ""
+},
+{
+    "day": 80,
+    "ticker": "SLTH",
+    "headline": "Sloth drops tremendously",
+    "description": "Sloth stock drops significantly after reports of\ncontinued subscriber downturn. The tech giant\nis not expected to recover anytime soon.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 100,
+    "ticker": "SLTH",
+    "headline": "Your friend insists that SLTH is a good buy",
+    "description": "Your friend, a finance major at UC Boulder, says now is your last chance to get the best\npossible buy in for SLTH - a \"no brainer\" he says.",
+    "source": "Friend",
+    "credibility": "No",
+    "analyst_opinion": ""
+},
+{
+    "day": 110,
+    "ticker": "SLTH",
+    "headline": "Sloth makes decent recovery",
+    "description": "Sloth gains ground in the markets after a\nhorrendous drop. Does this signify a comeback for the media giant?",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
+},
+{
+    "day": 133,
+    "ticker": "SLTH",
+    "headline": "Sloth schedules release of original series",
+    "description": "Sloth enlists a stellar cast in brand new original\nseries, titled \"A Long Way Home\". The show\nfollows a group of low-country children on\ntheir search for treasure.",
+    "source": "",
+    "credibility": "",
+    "analyst_opinion": ""
 }
 ]
