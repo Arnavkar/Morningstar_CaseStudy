@@ -303,9 +303,13 @@
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 15){
+                if (this.currentDay === 121){
                     // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
+                }
+
+                if ([40,60,80,100,120].includes(this.currentDay)){
+                    this.playerDataStore.addPortfolioSnapshot(this.currentDay)
                 }
             },
             startSimulation() {
