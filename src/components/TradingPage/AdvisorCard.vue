@@ -1,5 +1,5 @@
 <template>
-    <div class="news-card-main nice-boxshadow">
+    <div class="advisor-card-main nice-boxshadow">
         <div class="title-container">
             {{ title }}   
         </div>
@@ -23,7 +23,7 @@
     import { playerDataStore } from '@/use/playerDataStore'
 
     export default {
-        name: 'NewsCard',
+        name: 'AdvisorCard',
         props: {
             title: { type: String },
             description: { type: String },
@@ -48,11 +48,11 @@
     @import '@mds/utils-scss';
     @import '@mds/typography';
 
-    .news-card-main {
+    .advisor-card-main {
         @include mds-level-3-heading($bold: true);
-        background: white;
+        background: pink;
         border: 2px solid grey;
-        border-right: 4px solid red;
+        border-right: 4px solid green;
         text-align: left;
         border-radius: 5px;
         width: 100%;

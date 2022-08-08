@@ -118,12 +118,16 @@
                 Events
             </div>
             <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                <Transition name="fade">
-                    <div v-if="article.ticker === 'Advisor'">
-                        <AdvisorCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></AdvisorCard>
-                    </div>
-                    <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
-                </Transition>
+                <div v-if="article.ticker == 'Advisor'">
+                    <Transition name="fade">
+                        <AdvisorCard :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id"></AdvisorCard>
+                    </Transition>
+                </div>
+                <div v-else>
+                    <Transition name="fade">
+                        <NewsCard :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
+                    </Transition>
+                </div>
             </div>
             <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
@@ -142,6 +146,7 @@
 
     import StockCard from './StockCard.vue'
     import NewsCard from './NewsCard.vue'
+    import AdvisorCard from './AdvisorCard.vue'
     import StockCardPortfolio from './StockCardPortfolio.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
@@ -161,6 +166,7 @@
             StockChart,
             StockCard,
             NewsCard,
+            AdvisorCard,
             StockCardPortfolio,
             ClockIcon,
             TradingForm,
