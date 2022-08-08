@@ -203,6 +203,10 @@ export const playerDataStore = reactive({
 
     setAccountBalance(accountBalance){
         this.accountBalance = accountBalance
+    },
+
+    setIsAdvisorEnabled(value){
+        this.isAdvisorEnabled = value
     }
 
 })
