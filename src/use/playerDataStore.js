@@ -212,8 +212,11 @@ export const playerDataStore = reactive({
             day:day,
             holdingsData:this.holdingsData
         })
+    },
+    
     setIsAdvisorEnabled(value){
         this.isAdvisorEnabled = value
     }
+       
 
 })
