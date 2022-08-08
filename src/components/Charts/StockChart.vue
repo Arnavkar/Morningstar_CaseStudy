@@ -66,7 +66,6 @@
             const activeData = ref(props.allTimeStockData)
             const getStockDataForPeriod = (period) => {
                 if (period === 'YTD') {
-                    console.log(rootData.value.length)
                     activeData.value = rootData.value
                 } else if (period === '6M') {
                     activeData.value = rootData.value.slice(rootData.value.length - 180, rootData.value.length)

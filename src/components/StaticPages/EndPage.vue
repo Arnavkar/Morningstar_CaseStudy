@@ -5,10 +5,10 @@
             <h1 class="score" v-if="isShowingSubHeader">Here is your score:</h1>
         </Transition>
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingScore">{SCORE WITH RATING METER HERE}</h1>
+            <h1 class="header-one" v-if="isShowingScore">{{playerDataStore.overconfidenceScore.toFixed(2)}}</h1>
         </Transition>
         <Transition name="fade">
-            <h2 v-if="showMetric_1">Based on your trade history, We saw that you made 6 trades with a value that was more than 40% of your uninvested money at the time. See more</h2>
+            <h2 v-if="showMetric_1">Based on your trade history, We saw that you made {{playerDataStore.bigTrades.length}} {{playerDataStore.bigTrades.length===1?"trade":"trades"}} with a value that was more than 40% of your uninvested money at the time. See more</h2>
         </Transition>
         <Transition name="fade">
             <h2 v-if="showMetric_2">Your portfolio was well balanced throughout the simulation, here are snapshots of your portfolio</h2>
@@ -18,7 +18,7 @@
                 <Transition name="fade">
                     <div v-if="showChart1" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 40</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[0]" :key="1"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[0]" :key="1"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -27,7 +27,7 @@
                 <Transition name="fade">
                     <div v-if="showChart2" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 60</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[1]" :key="2"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[1]" :key="2"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -36,7 +36,7 @@
                 <Transition name="fade">
                     <div v-if="showChart3" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 80</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[2]" :key="3"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[2]" :key="3"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -45,7 +45,7 @@
                 <Transition name="fade">
                     <div v-if="showChart4" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 100</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[3]" :key="4"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[3]" :key="4"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -54,22 +54,25 @@
                 <Transition name="fade">
                     <div v-if="showChart5" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 120 - End</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[4]" :key="5"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[4]" :key="5"></PieChart> 
                     </div>
                 </Transition>
             </div>
         </div>
 
         <Transition name="fade">
-            <h2 v-if="showMetric_3">You read a total of 20 articles</h2>
+            <h2 v-if="showMetric_3">You read a total of {{playerDataStore.numArticlesRead}} articles</h2>
         </Transition>
 
         <Transition name="fade">
-            <h2  v-if="showMetric_4">You decided to subscribe to Morningstar's premium advice, enhancing the quality of the information you received</h2>
+            <div v-if="showMetric_4">
+                <h2 v-if="playerDataStore.isAdvisorEnabled === true"> You decided to subscribe to Morningstar's premium advice, enhancing the objectiveness & quality of the information you received to best make decisions</h2>
+                <h2 v-else> You chose not to subscribe to Morningstar's premium advice. This could be a sign of overconfidence, especially if you are only looking of perspectives that reinforce your own</h2>
+            </div>
         </Transition>
 
         <Transition name="fade">
-            <h2 v-if="showMetric_5">You frequently made trades in the game's pause state, which tells us that you took time to think about each trade</h2>
+            <h2 v-if="showMetric_5">You made {{playerDataStore.hastyTrades.length}} {{playerDataStore.hastyTrades.length===1?"trade":"trades"}} in the game's running state</h2>
         </Transition>
 
         
@@ -99,7 +102,7 @@
                 showChart3: false,
                 showChart4: false,
                 showChart5: false,
-                portfolioSnapshots:playerDataStore.portfolioSnapshots
+                playerDataStore
             }
         },
         mounted() {

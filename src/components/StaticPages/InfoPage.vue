@@ -96,7 +96,7 @@
 
 
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest and grow ${{accountBalance}}, good luck!</h1>
+            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest and grow ${{accountBalance.toFixed(2)}}, good luck!</h1>
         </Transition>
         <Transition name="fade">
             <h3 @click="switchToTradingPage()" v-if="showClickAnywhere" class="click-here">Click here to continue.</h3>

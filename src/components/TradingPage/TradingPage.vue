@@ -275,14 +275,12 @@
                 return -1
             },
             updateNewsFeed(){
-                for (const [key, article] of Object.entries(newsData)){
+                for (const article of Object.values(newsData)){
                     if (article["day"] == this.currentDay){
                         if(article["ticker"]!=="Advisor"){
                             this.currentNewsFeed.enq(article)
-                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
                         } else if (article["ticker"]==="Advisor" && this.playerDataStore.isAdvisorEnabled === true){
                             this.currentNewsFeed.enq(article)
-                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
                         }
                     }
                 }
@@ -292,7 +290,7 @@
                     playerDataStore.incrementPauseTime()
                 } else {
                     playerDataStore.incrementSimulationTime()
-                    this.simulationTimeElapsed += this.ratio
+                    this.simulationTimeElapsed += this.ratio*4
                 }
                 
                 let day = Math.floor(this.simulationTimeElapsed/86400)
@@ -303,13 +301,13 @@
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 121){
+                if (this.currentDay === 120 || this.currentDay > 120){
                     // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
 
                 if ([40,60,80,100,120].includes(this.currentDay)){
-                    this.playerDataStore.addPortfolioSnapshot(this.currentDay)
+                    this.playerDataStore.addPortfolioSnapshot()
                 }
             },
             startSimulation() {
@@ -328,7 +326,6 @@
             resumeSimulation() {
                 
                 if (this.interval == undefined){
-                    console.log("Was Called")
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
