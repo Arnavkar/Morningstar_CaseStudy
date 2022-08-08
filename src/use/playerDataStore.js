@@ -113,8 +113,8 @@ export const playerDataStore = reactive({
             }
         }
 
-        // consider both numberOfTrades and percentageOfInvestedMoney
-        if (this.numberOfTrades >= 25) {
+        // Consider both numberOfTrades and percentageOfInvestedMoney?
+        if (this.numberOfTrades >= 50) {
             this.incrementOverconfidenceScore(30)
             console.log("Overconfidence score: " + this.overconfidenceScore)
         }
