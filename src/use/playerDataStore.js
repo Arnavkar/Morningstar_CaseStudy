@@ -8,6 +8,7 @@ export const playerDataStore = reactive({
     timeSpentInSimulation: 0,
     numberOfTrades: 0,
     holdingsData: [0, 0, 0, 0, 0, 10000],
+    portfolioSnapshots:[],
     articlesRead: [],
     tradeHistory: [],
     portfolioValue: 0,
@@ -203,6 +204,13 @@ export const playerDataStore = reactive({
 
     setAccountBalance(accountBalance){
         this.accountBalance = accountBalance
+    },
+
+    addPortfolioSnapshot(day){
+        this.portfolioSnapshots.push({
+            day:day,
+            holdingsData:this.holdingsData
+        })
     }
 
 })
