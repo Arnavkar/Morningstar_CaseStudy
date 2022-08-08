@@ -119,16 +119,9 @@
             </div>
             <TransitionGroup name="fade">
                 <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                    
-                        <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
+                    <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
                 </div>
             </TransitionGroup>
-            <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
-            <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
-            <NewsCard :title="'Silicon Shortage Catastrophe'" :subtitle="'The precious resource has been ...'" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Digital Entertainment Boosted'" :subtitle="'The media giant receives highest ... '" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Apple Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard> -->
         </div> 
     </div>
 </template> 
