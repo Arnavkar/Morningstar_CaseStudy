@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'news-card-main nice-boxshadow': !was_read, 'news-card-main-deactivated nice-boxshadow': was_read}">
+    <div class="advisor-card-main nice-boxshadow">
         <div class="title-container">
             {{ title }}   
         </div>
@@ -9,10 +9,10 @@
         <div v-if="showContent" class="content-container">
             {{ description }}
         </div>
-        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead(_article_id);;" class="collapsible">
+        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead(_article_id);" class="collapsible">
             Read more
         </button>
-        <button v-else @click="showContent = false; was_read=true" class="collapsible">
+        <button v-else @click="showContent = false" class="collapsible">
             Read less
         </button>
     </div>
@@ -23,7 +23,7 @@
     import { playerDataStore } from '@/use/playerDataStore'
 
     export default {
-        name: 'NewsCard',
+        name: 'AdvisorCard',
         props: {
             title: { type: String },
             description: { type: String },
@@ -35,7 +35,6 @@
             return {
                 playerDataStore,
                 showContent: false,
-                was_read: false,
                 content: 'A shocking downturn for the media company rears its ugly head as SLTH loses almost $50 billion in market cap value. The company\'s subscriber count continues to fall despite the push for more content.',
             }
         },
@@ -49,11 +48,11 @@
     @import '@mds/utils-scss';
     @import '@mds/typography';
 
-    .news-card-main {
+    .advisor-card-main {
         @include mds-level-3-heading($bold: true);
-        background: white;
+        background: pink;
         border: 2px solid grey;
-        border-right: 4px solid red;
+        border-right: 4px solid green;
         text-align: left;
         border-radius: 5px;
         width: 100%;
@@ -64,24 +63,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-    }
-
-    .news-card-main-deactivated {
-        @include mds-level-3-heading($bold: true);
-        background: white;
-        border: 2px solid grey;
-        border-right: 4px solid rgb(175, 172, 172);
-        text-align: left;
-        border-radius: 5px;
-        width: 100%;
-        max-height: 300px;
-        margin-top: 15px;
-        transition: 0.5s;
-        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        opacity:0.9
     }
 
     .title-container {
