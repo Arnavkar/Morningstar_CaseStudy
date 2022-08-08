@@ -1,5 +1,5 @@
 <template>
-    <button v-if="isActiveStock()" class="stock-card-main-selected" @click="changeStock(current)">
+    <div class="stock-card-main">
             <div class="ticker-and-name-container">
                 <div class="ticker-container">
                     {{ ticker }}
@@ -8,30 +8,24 @@
                      {{ name }}
                 </div>
             </div>
-            
             <div class="price-container">
+                <div v-if="percentageUpdate > 0" class="percentage-container-green">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
+                <div v-else-if="percentageUpdate < 0" class="percentage-container-red">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
+                <div v-else class="percentage-container-grey">
+                    {{ formatCurrency(percentageUpdate) }}
+                </div>
                 {{ price }}
             </div>
-    </button>
-    <button v-else class="stock-card-main" @click="changeStock(current)">
-            <div class="ticker-and-name-container">
-                <div class="ticker-container">
-                    {{ ticker }}
-                </div>
-                <div class="name-container">
-                     {{ name }}
-                </div>
-            </div>
-            
-            <div class="price-container">
-                {{ price }}
-            </div>
-    </button>
+    </div>
 </template>
 
 <script>
     export default {
-        name: 'StockCard',
+        name: 'StockCardPortfolio',
         data() {
             return {
                 current: this.ticker,
@@ -41,6 +35,7 @@
             name: { type: String },
             ticker: { type: String },
             price: { type: String },
+            percentageUpdate: { type: Number },
             activeStock: { type: String},
             updateCurrentStock: { type: Function },
         },
@@ -50,6 +45,16 @@
             },
             isActiveStock() {
                 return this.ticker === this.activeStock
+            },
+            formatCurrency(amount) {
+                if (amount == 0) {
+                    return '0.00'
+                }
+                if (amount > 0) {
+                    return '+ ' + amount.toFixed(2) + '%'
+                } else {
+                    return amount.toFixed(2) + '%'
+                }
             },
         }
     }
@@ -67,9 +72,9 @@
         background: white;
         border: 2px solid grey;
         border-radius: 5px;
-        width: 450px;
+        margin-left: 5px;
+        margin-right: 5px;
         padding: 5px;
-        margin-top: 10px;
         transition: 0.5s;
         box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
         display: inline-flex;
@@ -83,7 +88,7 @@
         border-radius: 5px;
         width: 450px;
         padding: 5px;
-        margin-top: 10px;
+        margin-top: 15px;
         transition: 0.5s;
         box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
         display: inline-flex;
@@ -92,7 +97,6 @@
     }
 
     .stock-card-main:hover {
-        transform: scale(1.02);
         border-left: 4.5px solid red;
     }
 
@@ -109,7 +113,35 @@
     }
 
     .price-container {
+        display: inline-flex;
         text-align: right;
+    }
+
+    .percentage-container-green {
+        @include mds-body-text-m($bold: true);
+        color: #00af41;
+        margin-right: 15px;
+        line-height: 32.5px;
+    }
+
+    .percentage-container-red {
+        @include mds-body-text-m($bold: true);
+        color: #ff0000;
+        margin-right: 15px;
+        line-height: 32.5px;
+    }
+
+    .percentage-container-grey {
+        @include mds-body-text-m($bold: true);
+        margin-right: 15px;
+        color: #cccccc;
+        line-height: 32.5px;
+    }
+
+    .nice-boxshadow {
+        box-shadow: 0 1px 2px rgba(36, 36, 36, 0.07), 
+                0 2px 4px rgba(41, 41, 41, 0.07), 
+                0 4px 8px rgba(37, 37, 37, 0.07),
     }
 
 </style>

@@ -1,5709 +1,5709 @@
 export const aapl_data = [ { ticker: 'CROC' }, {
-  closePrice: "132.690002",
+  closePrice: "126.599998",
   day: 1
 }, {
-  closePrice: "129.410004",
+  closePrice: "130.919998",
   day: 2
 }, {
-  closePrice: "131.009995",
+  closePrice: "132.050003",
   day: 3
 }, {
-  closePrice: "126.599998",
+  closePrice: "128.979996",
   day: 4
 }, {
-  closePrice: "130.919998",
+  closePrice: "128.800003",
   day: 5
 }, {
-  closePrice: "132.050003",
+  closePrice: "130.889999",
   day: 6
 }, {
-  closePrice: "128.979996",
+  closePrice: "128.910004",
   day: 7
 }, {
-  closePrice: "128.800003",
+  closePrice: "127.139999",
   day: 8
 }, {
-  closePrice: "130.889999",
+  closePrice: "127.830002",
   day: 9
 }, {
-  closePrice: "128.910004",
+  closePrice: "132.029999",
   day: 10
 }, {
-  closePrice: "127.139999",
+  closePrice: "136.869995",
   day: 11
 }, {
-  closePrice: "127.830002",
+  closePrice: "139.070007",
   day: 12
 }, {
-  closePrice: "132.029999",
+  closePrice: "142.919998",
   day: 13
 }, {
-  closePrice: "136.869995",
+  closePrice: "143.160004",
   day: 14
 }, {
-  closePrice: "139.070007",
+  closePrice: "142.059998",
   day: 15
 }, {
-  closePrice: "142.919998",
+  closePrice: "137.089996",
   day: 16
 }, {
-  closePrice: "143.160004",
+  closePrice: "131.960007",
   day: 17
 }, {
-  closePrice: "142.059998",
+  closePrice: "134.139999",
   day: 18
 }, {
-  closePrice: "137.089996",
+  closePrice: "134.990005",
   day: 19
 }, {
-  closePrice: "131.960007",
+  closePrice: "133.940002",
   day: 20
 }, {
-  closePrice: "134.139999",
+  closePrice: "137.389999",
   day: 21
 }, {
-  closePrice: "134.990005",
+  closePrice: "136.759995",
   day: 22
 }, {
-  closePrice: "133.940002",
+  closePrice: "136.910004",
   day: 23
 }, {
-  closePrice: "137.389999",
+  closePrice: "136.009995",
   day: 24
 }, {
-  closePrice: "136.759995",
+  closePrice: "135.389999",
   day: 25
 }, {
-  closePrice: "136.910004",
+  closePrice: "135.130005",
   day: 26
 }, {
-  closePrice: "136.009995",
+  closePrice: "135.369995",
   day: 27
 }, {
-  closePrice: "135.389999",
+  closePrice: "133.190002",
   day: 28
 }, {
-  closePrice: "135.130005",
+  closePrice: "130.839996",
   day: 29
 }, {
-  closePrice: "135.369995",
+  closePrice: "129.710007",
   day: 30
 }, {
-  closePrice: "133.190002",
+  closePrice: "129.869995",
   day: 31
 }, {
-  closePrice: "130.839996",
+  closePrice: "126",
   day: 32
 }, {
-  closePrice: "129.710007",
+  closePrice: "125.860001",
   day: 33
 }, {
-  closePrice: "129.869995",
+  closePrice: "125.349998",
   day: 34
 }, {
-  closePrice: "126.000000",
+  closePrice: "120.989998",
   day: 35
 }, {
-  closePrice: "125.860001",
+  closePrice: "121.260002",
   day: 36
 }, {
-  closePrice: "125.349998",
+  closePrice: "127.790001",
   day: 37
 }, {
-  closePrice: "120.989998",
+  closePrice: "125.120003",
   day: 38
 }, {
-  closePrice: "121.260002",
+  closePrice: "122.059998",
   day: 39
 }, {
-  closePrice: "127.790001",
+  closePrice: "120.129997",
   day: 40
 }, {
-  closePrice: "125.120003",
+  closePrice: "121.419998",
   day: 41
 }, {
-  closePrice: "122.059998",
+  closePrice: "116.360001",
   day: 42
 }, {
-  closePrice: "120.129997",
+  closePrice: "121.089996",
   day: 43
 }, {
-  closePrice: "121.419998",
+  closePrice: "119.980003",
   day: 44
 }, {
-  closePrice: "116.360001",
+  closePrice: "121.959999",
   day: 45
 }, {
-  closePrice: "121.089996",
+  closePrice: "121.029999",
   day: 46
 }, {
-  closePrice: "119.980003",
+  closePrice: "123.989998",
   day: 47
 }, {
-  closePrice: "121.959999",
+  closePrice: "125.57",
   day: 48
 }, {
-  closePrice: "121.029999",
+  closePrice: "124.760002",
   day: 49
 }, {
-  closePrice: "123.989998",
+  closePrice: "120.529999",
   day: 50
 }, {
-  closePrice: "125.570000",
+  closePrice: "119.989998",
   day: 51
 }, {
-  closePrice: "124.760002",
+  closePrice: "123.389999",
   day: 52
 }, {
-  closePrice: "120.529999",
+  closePrice: "122.540001",
   day: 53
 }, {
-  closePrice: "119.989998",
+  closePrice: "120.089996",
   day: 54
 }, {
-  closePrice: "123.389999",
+  closePrice: "120.589996",
   day: 55
 }, {
-  closePrice: "122.540001",
+  closePrice: "121.209999",
   day: 56
 }, {
-  closePrice: "120.089996",
+  closePrice: "121.389999",
   day: 57
 }, {
-  closePrice: "120.589996",
+  closePrice: "119.900002",
   day: 58
 }, {
-  closePrice: "121.209999",
+  closePrice: "122.150002",
   day: 59
 }, {
-  closePrice: "121.389999",
+  closePrice: "123",
   day: 60
 }, {
-  closePrice: "119.900002",
+  closePrice: "125.900002",
   day: 61
 }, {
-  closePrice: "122.150002",
+  closePrice: "126.209999",
   day: 62
 }, {
-  closePrice: "123.000000",
+  closePrice: "127.900002",
   day: 63
 }, {
-  closePrice: "125.900002",
+  closePrice: "130.360001",
   day: 64
 }, {
-  closePrice: "126.209999",
+  closePrice: "133",
   day: 65
 }, {
-  closePrice: "127.900002",
+  closePrice: "131.240005",
   day: 66
 }, {
-  closePrice: "130.360001",
+  closePrice: "134.429993",
   day: 67
 }, {
-  closePrice: "133.000000",
+  closePrice: "132.029999",
   day: 68
 }, {
-  closePrice: "131.240005",
+  closePrice: "134.5",
   day: 69
 }, {
-  closePrice: "134.429993",
+  closePrice: "134.160004",
   day: 70
 }, {
-  closePrice: "132.029999",
+  closePrice: "134.839996",
   day: 71
 }, {
-  closePrice: "134.500000",
+  closePrice: "133.110001",
   day: 72
 }, {
-  closePrice: "134.160004",
+  closePrice: "133.5",
   day: 73
 }, {
-  closePrice: "134.839996",
+  closePrice: "131.940002",
   day: 74
 }, {
-  closePrice: "133.110001",
+  closePrice: "134.320007",
   day: 75
 }, {
-  closePrice: "133.500000",
+  closePrice: "134.720001",
   day: 76
 }, {
-  closePrice: "131.940002",
+  closePrice: "134.389999",
   day: 77
 }, {
-  closePrice: "134.320007",
+  closePrice: "133.580002",
   day: 78
 }, {
-  closePrice: "134.720001",
+  closePrice: "133.479996",
   day: 79
 }, {
-  closePrice: "134.389999",
+  closePrice: "131.460007",
   day: 80
 }, {
-  closePrice: "133.580002",
+  closePrice: "132.539993",
   day: 81
 }, {
-  closePrice: "133.479996",
+  closePrice: "127.849998",
   day: 82
 }, {
-  closePrice: "131.460007",
+  closePrice: "128.100006",
   day: 83
 }, {
-  closePrice: "132.539993",
+  closePrice: "129.740005",
   day: 84
 }, {
-  closePrice: "127.849998",
+  closePrice: "130.210007",
   day: 85
 }, {
-  closePrice: "128.100006",
+  closePrice: "126.849998",
   day: 86
 }, {
-  closePrice: "129.740005",
+  closePrice: "125.910004",
   day: 87
 }, {
-  closePrice: "130.210007",
+  closePrice: "122.769997",
   day: 88
 }, {
-  closePrice: "126.849998",
+  closePrice: "124.970001",
   day: 89
 }, {
-  closePrice: "125.910004",
+  closePrice: "127.449997",
   day: 90
 }, {
-  closePrice: "122.769997",
+  closePrice: "126.269997",
   day: 91
 }, {
-  closePrice: "124.970001",
+  closePrice: "124.849998",
   day: 92
 }, {
-  closePrice: "127.449997",
+  closePrice: "124.690002",
   day: 93
 }, {
-  closePrice: "126.269997",
+  closePrice: "127.309998",
   day: 94
 }, {
-  closePrice: "124.849998",
+  closePrice: "125.43",
   day: 95
 }, {
-  closePrice: "124.690002",
+  closePrice: "127.099998",
   day: 96
 }, {
-  closePrice: "127.309998",
+  closePrice: "126.900002",
   day: 97
 }, {
-  closePrice: "125.430000",
+  closePrice: "126.849998",
   day: 98
 }, {
-  closePrice: "127.099998",
+  closePrice: "125.279999",
   day: 99
 }, {
-  closePrice: "126.900002",
+  closePrice: "124.610001",
   day: 100
 }, {
-  closePrice: "126.849998",
+  closePrice: "124.279999",
   day: 101
 }, {
-  closePrice: "125.279999",
+  closePrice: "125.059998",
   day: 102
 }, {
-  closePrice: "124.610001",
+  closePrice: "123.540001",
   day: 103
 }, {
-  closePrice: "124.279999",
+  closePrice: "125.889999",
   day: 104
 }, {
-  closePrice: "125.059998",
+  closePrice: "125.900002",
   day: 105
 }, {
-  closePrice: "123.540001",
+  closePrice: "126.739998",
   day: 106
 }, {
-  closePrice: "125.889999",
+  closePrice: "127.129997",
   day: 107
 }, {
-  closePrice: "125.900002",
+  closePrice: "126.110001",
   day: 108
 }, {
-  closePrice: "126.739998",
+  closePrice: "127.349998",
   day: 109
 }, {
-  closePrice: "127.129997",
+  closePrice: "130.479996",
   day: 110
 }, {
-  closePrice: "126.110001",
+  closePrice: "129.639999",
   day: 111
 }, {
-  closePrice: "127.349998",
+  closePrice: "130.149994",
   day: 112
 }, {
-  closePrice: "130.479996",
+  closePrice: "131.789993",
   day: 113
 }, {
-  closePrice: "129.639999",
+  closePrice: "130.460007",
   day: 114
 }, {
-  closePrice: "130.149994",
+  closePrice: "132.300003",
   day: 115
 }, {
-  closePrice: "131.789993",
+  closePrice: "133.979996",
   day: 116
 }, {
-  closePrice: "130.460007",
+  closePrice: "133.699997",
   day: 117
 }, {
-  closePrice: "132.300003",
+  closePrice: "133.410004",
   day: 118
 }, {
-  closePrice: "133.979996",
+  closePrice: "133.110001",
   day: 119
 }, {
-  closePrice: "133.699997",
+  closePrice: "134.779999",
   day: 120
 }, {
-  closePrice: "133.410004",
+  closePrice: "136.330002",
   day: 121
 }, {
-  closePrice: "133.110001",
+  closePrice: "136.960007",
   day: 122
 }, {
-  closePrice: "134.779999",
+  closePrice: "137.270004",
   day: 123
 }, {
-  closePrice: "136.330002",
+  closePrice: "139.960007",
   day: 124
 }, {
-  closePrice: "136.960007",
+  closePrice: "142.020004",
   day: 125
 }, {
-  closePrice: "137.270004",
+  closePrice: "144.570007",
   day: 126
 }, {
-  closePrice: "139.960007",
+  closePrice: "143.240005",
   day: 127
 }, {
-  closePrice: "142.020004",
+  closePrice: "145.110001",
   day: 128
 }, {
-  closePrice: "144.570007",
+  closePrice: "144.5",
   day: 129
 }, {
-  closePrice: "143.240005",
+  closePrice: "145.639999",
   day: 130
 }, {
-  closePrice: "145.110001",
+  closePrice: "149.149994",
   day: 131
 }, {
-  closePrice: "144.500000",
+  closePrice: "148.479996",
   day: 132
 }, {
-  closePrice: "145.639999",
+  closePrice: "146.389999",
   day: 133
 }, {
-  closePrice: "149.149994",
+  closePrice: "142.449997",
   day: 134
 }, {
-  closePrice: "148.479996",
+  closePrice: "146.149994",
   day: 135
 }, {
-  closePrice: "146.389999",
+  closePrice: "145.399994",
   day: 136
 }, {
-  closePrice: "142.449997",
+  closePrice: "146.800003",
   day: 137
 }, {
-  closePrice: "146.149994",
+  closePrice: "148.559998",
   day: 138
 }, {
-  closePrice: "145.399994",
+  closePrice: "148.990005",
   day: 139
 }, {
-  closePrice: "146.800003",
+  closePrice: "146.770004",
   day: 140
 }, {
-  closePrice: "148.559998",
+  closePrice: "144.979996",
   day: 141
 }, {
-  closePrice: "148.990005",
+  closePrice: "145.639999",
   day: 142
 }, {
-  closePrice: "146.770004",
+  closePrice: "145.860001",
   day: 143
 }, {
-  closePrice: "144.979996",
+  closePrice: "145.520004",
   day: 144
 }, {
-  closePrice: "145.639999",
+  closePrice: "147.360001",
   day: 145
 }, {
-  closePrice: "145.860001",
+  closePrice: "146.949997",
   day: 146
 }, {
-  closePrice: "145.520004",
+  closePrice: "147.059998",
   day: 147
 }, {
-  closePrice: "147.360001",
+  closePrice: "146.139999",
   day: 148
 }, {
-  closePrice: "146.949997",
+  closePrice: "146.089996",
   day: 149
 }, {
-  closePrice: "147.059998",
+  closePrice: "145.600006",
   day: 150
 }, {
-  closePrice: "146.139999",
+  closePrice: "145.860001",
   day: 151
 }, {
-  closePrice: "146.089996",
+  closePrice: "148.889999",
   day: 152
 }, {
-  closePrice: "145.600006",
+  closePrice: "149.100006",
   day: 153
 }, {
-  closePrice: "145.860001",
+  closePrice: "151.119995",
   day: 154
 }, {
-  closePrice: "148.889999",
+  closePrice: "150.190002",
   day: 155
 }, {
-  closePrice: "149.100006",
+  closePrice: "146.360001",
   day: 156
 }, {
-  closePrice: "151.119995",
+  closePrice: "146.699997",
   day: 157
 }, {
-  closePrice: "150.190002",
+  closePrice: "148.190002",
   day: 158
 }, {
-  closePrice: "146.360001",
+  closePrice: "149.710007",
   day: 159
 }, {
-  closePrice: "146.699997",
+  closePrice: "149.619995",
   day: 160
 }, {
-  closePrice: "148.190002",
+  closePrice: "148.360001",
   day: 161
 }, {
-  closePrice: "149.710007",
+  closePrice: "147.539993",
   day: 162
 }, {
-  closePrice: "149.619995",
+  closePrice: "148.600006",
   day: 163
 }, {
-  closePrice: "148.360001",
+  closePrice: "153.119995",
   day: 164
 }, {
-  closePrice: "147.539993",
+  closePrice: "151.830002",
   day: 165
 }, {
-  closePrice: "148.600006",
+  closePrice: "152.509995",
   day: 166
 }, {
-  closePrice: "153.119995",
+  closePrice: "153.649994",
   day: 167
 }, {
-  closePrice: "151.830002",
+  closePrice: "154.300003",
   day: 168
 }, {
-  closePrice: "152.509995",
+  closePrice: "156.690002",
   day: 169
 }, {
-  closePrice: "153.649994",
+  closePrice: "155.110001",
   day: 170
 }, {
-  closePrice: "154.300003",
+  closePrice: "154.070007",
   day: 171
 }, {
-  closePrice: "156.690002",
+  closePrice: "148.970001",
   day: 172
 }, {
-  closePrice: "155.110001",
+  closePrice: "149.550003",
   day: 173
 }, {
-  closePrice: "154.070007",
+  closePrice: "148.119995",
   day: 174
 }, {
-  closePrice: "148.970001",
+  closePrice: "149.029999",
   day: 175
 }, {
-  closePrice: "149.550003",
+  closePrice: "148.789993",
   day: 176
 }, {
-  closePrice: "148.119995",
+  closePrice: "146.059998",
   day: 177
 }, {
-  closePrice: "149.029999",
+  closePrice: "142.940002",
   day: 178
 }, {
-  closePrice: "148.789993",
+  closePrice: "143.429993",
   day: 179
 }, {
-  closePrice: "146.059998",
+  closePrice: "145.850006",
   day: 180
 }, {
-  closePrice: "142.940002",
+  closePrice: "146.830002",
   day: 181
 }, {
-  closePrice: "143.429993",
+  closePrice: "146.919998",
   day: 182
 }, {
-  closePrice: "145.850006",
+  closePrice: "145.369995",
   day: 183
 }, {
-  closePrice: "146.830002",
+  closePrice: "141.910004",
   day: 184
 }, {
-  closePrice: "146.919998",
+  closePrice: "142.830002",
   day: 185
 }, {
-  closePrice: "145.369995",
+  closePrice: "141.5",
   day: 186
 }, {
-  closePrice: "141.910004",
+  closePrice: "142.649994",
   day: 187
 }, {
-  closePrice: "142.830002",
+  closePrice: "139.139999",
   day: 188
 }, {
-  closePrice: "141.500000",
+  closePrice: "141.110001",
   day: 189
 }, {
-  closePrice: "142.649994",
+  closePrice: "142",
   day: 190
 }, {
-  closePrice: "139.139999",
+  closePrice: "143.289993",
   day: 191
 }, {
-  closePrice: "141.110001",
+  closePrice: "142.899994",
   day: 192
 }, {
-  closePrice: "142.000000",
+  closePrice: "142.809998",
   day: 193
 }, {
-  closePrice: "143.289993",
+  closePrice: "141.509995",
   day: 194
 }, {
-  closePrice: "142.899994",
+  closePrice: "140.910004",
   day: 195
 }, {
-  closePrice: "142.809998",
+  closePrice: "143.759995",
   day: 196
 }, {
-  closePrice: "141.509995",
+  closePrice: "144.839996",
   day: 197
 }, {
-  closePrice: "140.910004",
+  closePrice: "146.550003",
   day: 198
 }, {
-  closePrice: "143.759995",
+  closePrice: "148.759995",
   day: 199
 }, {
-  closePrice: "144.839996",
+  closePrice: "149.259995",
   day: 200
 }, {
-  closePrice: "146.550003",
+  closePrice: "149.479996",
   day: 201
 }, {
-  closePrice: "148.759995",
+  closePrice: "148.690002",
   day: 202
 }, {
-  closePrice: "149.259995",
+  closePrice: "148.639999",
   day: 203
 }, {
-  closePrice: "149.479996",
+  closePrice: "149.320007",
   day: 204
 }, {
-  closePrice: "148.690002",
+  closePrice: "148.850006",
   day: 205
 }, {
-  closePrice: "148.639999",
+  closePrice: "152.570007",
   day: 206
 }, {
-  closePrice: "149.320007",
+  closePrice: "149.800003",
   day: 207
 }, {
-  closePrice: "148.850006",
+  closePrice: "148.960007",
   day: 208
 }, {
-  closePrice: "152.570007",
+  closePrice: "150.020004",
   day: 209
 }, {
-  closePrice: "149.800003",
+  closePrice: "151.490005",
   day: 210
 }, {
-  closePrice: "148.960007",
+  closePrice: "150.960007",
   day: 211
 }, {
-  closePrice: "150.020004",
+  closePrice: "151.279999",
   day: 212
 }, {
-  closePrice: "151.490005",
+  closePrice: "150.440002",
   day: 213
 }, {
-  closePrice: "150.960007",
+  closePrice: "150.809998",
   day: 214
 }, {
-  closePrice: "151.279999",
+  closePrice: "147.919998",
   day: 215
 }, {
-  closePrice: "150.440002",
+  closePrice: "147.869995",
   day: 216
 }, {
-  closePrice: "150.809998",
+  closePrice: "149.990005",
   day: 217
 }, {
-  closePrice: "147.919998",
+  closePrice: "150",
   day: 218
 }, {
-  closePrice: "147.869995",
+  closePrice: "151",
   day: 219
 }, {
-  closePrice: "149.990005",
+  closePrice: "153.490005",
   day: 220
 }, {
-  closePrice: "150.000000",
+  closePrice: "157.869995",
   day: 221
 }, {
-  closePrice: "151.000000",
+  closePrice: "160.550003",
   day: 222
 }, {
-  closePrice: "153.490005",
+  closePrice: "161.020004",
   day: 223
 }, {
-  closePrice: "157.869995",
+  closePrice: "161.410004",
   day: 224
 }, {
-  closePrice: "160.550003",
+  closePrice: "161.940002",
   day: 225
 }, {
-  closePrice: "161.020004",
+  closePrice: "156.809998",
   day: 226
 }, {
-  closePrice: "161.410004",
+  closePrice: "160.240005",
   day: 227
 }, {
-  closePrice: "161.940002",
+  closePrice: "165.300003",
   day: 228
 }, {
-  closePrice: "156.809998",
+  closePrice: "164.770004",
   day: 229
 }, {
-  closePrice: "160.240005",
+  closePrice: "163.759995",
   day: 230
 }, {
-  closePrice: "165.300003",
+  closePrice: "161.839996",
   day: 231
 }, {
-  closePrice: "164.770004",
+  closePrice: "165.320007",
   day: 232
 }, {
-  closePrice: "163.759995",
+  closePrice: "171.179993",
   day: 233
 }, {
-  closePrice: "161.839996",
+  closePrice: "175.080002",
   day: 234
 }, {
-  closePrice: "165.320007",
+  closePrice: "174.559998",
   day: 235
 }, {
-  closePrice: "171.179993",
+  closePrice: "179.449997",
   day: 236
 }, {
-  closePrice: "175.080002",
+  closePrice: "175.740005",
   day: 237
 }, {
-  closePrice: "174.559998",
+  closePrice: "174.330002",
   day: 238
 }, {
-  closePrice: "179.449997",
+  closePrice: "179.300003",
   day: 239
 }, {
-  closePrice: "175.740005",
+  closePrice: "172.259995",
   day: 240
 }, {
-  closePrice: "174.330002",
+  closePrice: "171.139999",
   day: 241
 }, {
-  closePrice: "179.300003",
+  closePrice: "169.75",
   day: 242
 }, {
-  closePrice: "172.259995",
+  closePrice: "172.990005",
   day: 243
 }, {
-  closePrice: "171.139999",
+  closePrice: "175.639999",
   day: 244
 }, {
-  closePrice: "169.750000",
+  closePrice: "176.279999",
   day: 245
 }, {
-  closePrice: "172.990005",
+  closePrice: "180.330002",
   day: 246
 }, {
-  closePrice: "175.639999",
+  closePrice: "179.289993",
   day: 247
 }, {
-  closePrice: "176.279999",
+  closePrice: "179.380005",
   day: 248
 }, {
-  closePrice: "180.330002",
+  closePrice: "178.199997",
   day: 249
 }, {
-  closePrice: "179.289993",
+  closePrice: "177.570007",
   day: 250
 }, {
-  closePrice: "179.380005",
+  closePrice: "182.009995",
   day: 251
 }, {
-  closePrice: "178.199997",
+  closePrice: "179.699997",
   day: 252
 }, {
-  closePrice: "177.570007",
+  closePrice: "174.919998",
   day: 253
 }, {
-  closePrice: "182.009995",
+  closePrice: "172",
   day: 254
 }, {
-  closePrice: "179.699997",
+  closePrice: "172.169998",
   day: 255
 }, {
-  closePrice: "174.919998",
+  closePrice: "172.190002",
   day: 256
 }, {
-  closePrice: "172.000000",
+  closePrice: "175.080002",
   day: 257
 }, {
-  closePrice: "172.169998",
+  closePrice: "175.529999",
   day: 258
 }, {
   closePrice: "172.190002",
   day: 259
 }, {
-  closePrice: "175.080002",
+  closePrice: "173.070007",
   day: 260
 }, {
-  closePrice: "175.529999",
+  closePrice: "169.800003",
   day: 261
 }, {
-  closePrice: "172.190002",
+  closePrice: "166.229996",
   day: 262
 }, {
-  closePrice: "173.070007",
+  closePrice: "164.509995",
   day: 263
 }, {
-  closePrice: "169.800003",
+  closePrice: "162.410004",
   day: 264
 }, {
-  closePrice: "166.229996",
+  closePrice: "161.619995",
   day: 265
 }, {
-  closePrice: "164.509995",
+  closePrice: "159.779999",
   day: 266
 }, {
-  closePrice: "162.410004",
+  closePrice: "159.690002",
   day: 267
 }, {
-  closePrice: "161.619995",
+  closePrice: "159.220001",
   day: 268
 }, {
-  closePrice: "159.779999",
+  closePrice: "170.330002",
   day: 269
 }, {
-  closePrice: "159.690002",
+  closePrice: "174.779999",
   day: 270
 }, {
-  closePrice: "159.220001",
+  closePrice: "174.610001",
   day: 271
 }, {
-  closePrice: "170.330002",
+  closePrice: "175.839996",
   day: 272
 }, {
-  closePrice: "174.779999",
+  closePrice: "172.899994",
   day: 273
 }, {
-  closePrice: "174.610001",
+  closePrice: "172.389999",
   day: 274
 }, {
-  closePrice: "175.839996",
+  closePrice: "171.660004",
   day: 275
 }, {
-  closePrice: "172.899994",
+  closePrice: "174.830002",
   day: 276
 }, {
-  closePrice: "172.389999",
+  closePrice: "176.279999",
   day: 277
 }, {
-  closePrice: "171.660004",
+  closePrice: "172.119995",
   day: 278
 }, {
-  closePrice: "174.830002",
+  closePrice: "168.639999",
   day: 279
 }, {
-  closePrice: "176.279999",
+  closePrice: "168.880005",
   day: 280
 }, {
-  closePrice: "172.119995",
+  closePrice: "172.789993",
   day: 281
 }, {
-  closePrice: "168.639999",
+  closePrice: "172.550003",
   day: 282
 }, {
   closePrice: "168.880005",
   day: 283
 }, {
-  closePrice: "172.789993",
+  closePrice: "167.300003",
   day: 284
 }, {
-  closePrice: "172.550003",
+  closePrice: "164.320007",
   day: 285
 }, {
-  closePrice: "168.880005",
+  closePrice: "160.070007",
   day: 286
 }, {
-  closePrice: "167.300003",
+  closePrice: "162.740005",
   day: 287
 }, {
-  closePrice: "164.320007",
+  closePrice: "164.850006",
   day: 288
 }, {
-  closePrice: "160.070007",
+  closePrice: "165.119995",
   day: 289
 }, {
-  closePrice: "162.740005",
+  closePrice: "163.199997",
   day: 290
 }, {
-  closePrice: "164.850006",
+  closePrice: "166.559998",
   day: 291
 }, {
-  closePrice: "165.119995",
+  closePrice: "166.229996",
   day: 292
 }, {
-  closePrice: "163.199997",
+  closePrice: "163.169998",
   day: 293
 }, {
-  closePrice: "166.559998",
+  closePrice: "159.300003",
   day: 294
 }, {
-  closePrice: "166.229996",
+  closePrice: "157.440002",
   day: 295
 }, {
-  closePrice: "163.169998",
+  closePrice: "162.949997",
   day: 296
 }, {
-  closePrice: "159.300003",
+  closePrice: "158.520004",
   day: 297
 }, {
-  closePrice: "157.440002",
+  closePrice: "154.729996",
   day: 298
 }, {
-  closePrice: "162.949997",
+  closePrice: "150.619995",
   day: 299
 }, {
-  closePrice: "158.520004",
+  closePrice: "155.089996",
   day: 300
 }, {
-  closePrice: "154.729996",
+  closePrice: "159.589996",
   day: 301
 }, {
-  closePrice: "150.619995",
+  closePrice: "160.619995",
   day: 302
 }, {
-  closePrice: "155.089996",
+  closePrice: "163.979996",
   day: 303
 }, {
-  closePrice: "159.589996",
+  closePrice: "165.380005",
   day: 304
 }, {
-  closePrice: "160.619995",
+  closePrice: "168.820007",
   day: 305
 }, {
-  closePrice: "163.979996",
+  closePrice: "170.210007",
   day: 306
 }, {
-  closePrice: "165.380005",
+  closePrice: "174.070007",
   day: 307
 }, {
-  closePrice: "168.820007",
+  closePrice: "174.720001",
   day: 308
 }, {
-  closePrice: "170.210007",
+  closePrice: "175.600006",
   day: 309
 }, {
-  closePrice: "174.070007",
+  closePrice: "178.960007",
   day: 310
 }, {
-  closePrice: "174.720001",
+  closePrice: "177.770004",
   day: 311
 }, {
-  closePrice: "175.600006",
+  closePrice: "174.610001",
   day: 312
 }, {
-  closePrice: "178.960007",
+  closePrice: "174.309998",
   day: 313
 }, {
-  closePrice: "177.770004",
+  closePrice: "178.440002",
   day: 314
 }, {
-  closePrice: "174.610001",
+  closePrice: "175.059998",
   day: 315
 }, {
-  closePrice: "174.309998",
+  closePrice: "171.830002",
   day: 316
 }, {
-  closePrice: "178.440002",
+  closePrice: "172.139999",
   day: 317
 }, {
-  closePrice: "175.059998",
+  closePrice: "170.089996",
   day: 318
 }, {
-  closePrice: "171.830002",
+  closePrice: "165.75",
   day: 319
 }, {
-  closePrice: "172.139999",
+  closePrice: "167.660004",
   day: 320
 }, {
-  closePrice: "170.089996",
+  closePrice: "170.399994",
   day: 321
 }, {
-  closePrice: "165.750000",
+  closePrice: "165.289993",
   day: 322
 }, {
-  closePrice: "167.660004",
+  closePrice: "165.070007",
   day: 323
 }, {
-  closePrice: "170.399994",
+  closePrice: "167.399994",
   day: 324
 }, {
-  closePrice: "165.289993",
+  closePrice: "167.229996",
   day: 325
 }, {
-  closePrice: "165.070007",
+  closePrice: "166.419998",
   day: 326
 }, {
-  closePrice: "167.399994",
+  closePrice: "161.789993",
   day: 327
 }, {
-  closePrice: "167.229996",
+  closePrice: "162.880005",
   day: 328
 }, {
-  closePrice: "166.419998",
+  closePrice: "156.800003",
   day: 329
 }, {
-  closePrice: "161.789993",
+  closePrice: "156.570007",
   day: 330
 }, {
-  closePrice: "162.880005",
+  closePrice: "163.639999",
   day: 331
 }, {
-  closePrice: "156.800003",
+  closePrice: "157.649994",
   day: 332
 }, {
-  closePrice: "156.570007",
+  closePrice: "157.960007",
   day: 333
 }, {
-  closePrice: "163.639999",
+  closePrice: "159.479996",
   day: 334
 }, {
-  closePrice: "157.649994",
+  closePrice: "166.020004",
   day: 335
 }, {
-  closePrice: "157.960007",
+  closePrice: "156.770004",
   day: 336
 }, {
-  closePrice: "159.479996",
+  closePrice: "157.279999",
   day: 337
 }, {
-  closePrice: "166.020004",
+  closePrice: "152.059998",
   day: 338
 }, {
-  closePrice: "156.770004",
+  closePrice: "154.509995",
   day: 339
 }, {
-  closePrice: "157.279999",
+  closePrice: "146.5",
   day: 340
 }, {
-  closePrice: "152.059998",
+  closePrice: "142.559998",
   day: 341
 }, {
-  closePrice: "154.509995",
+  closePrice: "147.110001",
   day: 342
 }, {
-  closePrice: "146.500000",
+  closePrice: "145.539993",
   day: 343
 }, {
-  closePrice: "142.559998",
+  closePrice: "149.240005",
   day: 344
 }, {
-  closePrice: "147.110001",
+  closePrice: "140.820007",
   day: 345
 }, {
-  closePrice: "145.539993",
+  closePrice: "137.350006",
   day: 346
 }, {
-  closePrice: "149.240005",
+  closePrice: "137.589996",
   day: 347
 }, {
-  closePrice: "140.820007",
+  closePrice: "143.110001",
   day: 348
 }, {
-  closePrice: "137.350006",
+  closePrice: "140.360001",
   day: 349
 }, {
-  closePrice: "137.589996",
+  closePrice: "140.520004",
   day: 350
 }, {
-  closePrice: "143.110001",
+  closePrice: "143.779999",
   day: 351
 }, {
-  closePrice: "140.360001",
+  closePrice: "149.639999",
   day: 352
 }, {
-  closePrice: "140.520004",
+  closePrice: "148.839996",
   day: 353
 }, {
-  closePrice: "143.779999",
+  closePrice: "148.710007",
   day: 354
 }, {
-  closePrice: "149.639999",
+  closePrice: "151.210007",
   day: 355
 }, {
-  closePrice: "148.839996",
+  closePrice: "145.380005",
   day: 356
 }, {
-  closePrice: "148.710007",
+  closePrice: "146.139999",
   day: 357
 }, {
-  closePrice: "151.210007",
+  closePrice: "148.710007",
   day: 358
 }, {
-  closePrice: "145.380005",
+  closePrice: "147.960007",
   day: 359
 }, {
-  closePrice: "146.139999",
+  closePrice: "142.639999",
   day: 360
 }, {
-  closePrice: "148.710007",
+  closePrice: "137.130005",
   day: 361
 }, {
-  closePrice: "147.960007",
+  closePrice: "131.880005",
   day: 362
 }, {
-  closePrice: "142.639999",
+  closePrice: "132.759995",
   day: 363
 }, {
-  closePrice: "137.130005",
+  closePrice: "135.429993",
   day: 364
 }, {
-  closePrice: "131.880005",
+  closePrice: "130.059998",
   day: 365
 }, {
-  closePrice: "132.759995",
+  closePrice: "131.559998",
   day: 366
 }, {
-  closePrice: "135.429993",
+  closePrice: "135.869995",
   day: 367
 }, {
-  closePrice: "130.059998",
+  closePrice: "135.350006",
   day: 368
 }, {
-  closePrice: "131.559998",
+  closePrice: "138.270004",
   day: 369
 }, {
-  closePrice: "135.869995",
+  closePrice: "141.660004",
   day: 370
 }, {
-  closePrice: "135.350006",
+  closePrice: "141.660004",
   day: 371
 }, {
-  closePrice: "138.270004",
+  closePrice: "137.440002",
   day: 372
 }, {
-  closePrice: "141.660004",
+  closePrice: "139.229996",
   day: 373
 }, {
-  closePrice: "141.660004",
+  closePrice: "136.720001",
   day: 374
 }, {
-  closePrice: "137.440002",
+  closePrice: "138.929993",
   day: 375
 }, {
-  closePrice: "139.229996",
+  closePrice: "141.559998",
   day: 376
 }, {
-  closePrice: "136.720001",
+  closePrice: "142.919998",
   day: 377
 }, {
-  closePrice: "138.929993",
+  closePrice: "146.350006",
   day: 378
 }, {
-  closePrice: "141.559998",
+  closePrice: "147.039993",
   day: 379
 }, {
-  closePrice: "142.919998",
+  closePrice: "144.869995",
   day: 380
 }]
 
 export const nflx_data = [ { ticker: 'SLTH' }, {
-  closePrice: "540.729980",
+  closePrice: "508.890015",
   day: 1
 }, {
-  closePrice: "522.859985",
+  closePrice: "510.399994",
   day: 2
 }, {
-  closePrice: "520.799988",
+  closePrice: "499.100006",
   day: 3
 }, {
-  closePrice: "500.489990",
+  closePrice: "494.25",
   day: 4
 }, {
-  closePrice: "508.890015",
+  closePrice: "507.790009",
   day: 5
 }, {
-  closePrice: "510.399994",
+  closePrice: "500.859985",
   day: 6
 }, {
-  closePrice: "499.100006",
+  closePrice: "497.980011",
   day: 7
 }, {
-  closePrice: "494.250000",
+  closePrice: "501.769989",
   day: 8
 }, {
-  closePrice: "507.790009",
+  closePrice: "586.340027",
   day: 9
 }, {
-  closePrice: "500.859985",
+  closePrice: "579.840027",
   day: 10
 }, {
-  closePrice: "497.980011",
+  closePrice: "565.169983",
   day: 11
 }, {
-  closePrice: "501.769989",
+  closePrice: "556.780029",
   day: 12
 }, {
-  closePrice: "586.340027",
+  closePrice: "561.929993",
   day: 13
 }, {
-  closePrice: "579.840027",
+  closePrice: "523.280029",
   day: 14
 }, {
-  closePrice: "565.169983",
+  closePrice: "538.599976",
   day: 15
 }, {
-  closePrice: "556.780029",
+  closePrice: "532.390015",
   day: 16
 }, {
-  closePrice: "561.929993",
+  closePrice: "539.039978",
   day: 17
 }, {
-  closePrice: "523.280029",
+  closePrice: "548.159973",
   day: 18
 }, {
-  closePrice: "538.599976",
+  closePrice: "539.450012",
   day: 19
 }, {
-  closePrice: "532.390015",
+  closePrice: "552.159973",
   day: 20
 }, {
-  closePrice: "539.039978",
+  closePrice: "550.789978",
   day: 21
 }, {
-  closePrice: "548.159973",
+  closePrice: "547.919983",
   day: 22
 }, {
-  closePrice: "539.450012",
+  closePrice: "559.070007",
   day: 23
 }, {
-  closePrice: "552.159973",
+  closePrice: "563.590027",
   day: 24
 }, {
-  closePrice: "550.789978",
+  closePrice: "557.590027",
   day: 25
 }, {
-  closePrice: "547.919983",
+  closePrice: "556.52002",
   day: 26
 }, {
-  closePrice: "559.070007",
+  closePrice: "557.280029",
   day: 27
 }, {
-  closePrice: "563.590027",
+  closePrice: "551.340027",
   day: 28
 }, {
-  closePrice: "557.590027",
+  closePrice: "548.219971",
   day: 29
 }, {
-  closePrice: "556.520020",
+  closePrice: "540.219971",
   day: 30
 }, {
-  closePrice: "557.280029",
+  closePrice: "533.780029",
   day: 31
 }, {
-  closePrice: "551.340027",
+  closePrice: "546.150024",
   day: 32
 }, {
-  closePrice: "548.219971",
+  closePrice: "553.409973",
   day: 33
 }, {
-  closePrice: "540.219971",
+  closePrice: "546.700012",
   day: 34
 }, {
-  closePrice: "533.780029",
+  closePrice: "538.849976",
   day: 35
 }, {
-  closePrice: "546.150024",
+  closePrice: "550.640015",
   day: 36
 }, {
-  closePrice: "553.409973",
+  closePrice: "547.820007",
   day: 37
 }, {
-  closePrice: "546.700012",
+  closePrice: "520.700012",
   day: 38
 }, {
-  closePrice: "538.849976",
+  closePrice: "511.290009",
   day: 39
 }, {
-  closePrice: "550.640015",
+  closePrice: "516.390015",
   day: 40
 }, {
-  closePrice: "547.820007",
+  closePrice: "493.329987",
   day: 41
 }, {
-  closePrice: "520.700012",
+  closePrice: "506.440002",
   day: 42
 }, {
-  closePrice: "511.290009",
+  closePrice: "504.540009",
   day: 43
 }, {
-  closePrice: "516.390015",
+  closePrice: "523.059998",
   day: 44
 }, {
-  closePrice: "493.329987",
+  closePrice: "518.02002",
   day: 45
 }, {
-  closePrice: "506.440002",
+  closePrice: "520.25",
   day: 46
 }, {
-  closePrice: "504.540009",
+  closePrice: "524.030029",
   day: 47
 }, {
-  closePrice: "523.059998",
+  closePrice: "524.440002",
   day: 48
 }, {
-  closePrice: "518.020020",
+  closePrice: "504.790009",
   day: 49
 }, {
-  closePrice: "520.250000",
+  closePrice: "512.179993",
   day: 50
 }, {
-  closePrice: "524.030029",
+  closePrice: "523.109985",
   day: 51
 }, {
-  closePrice: "524.440002",
+  closePrice: "535.090027",
   day: 52
 }, {
-  closePrice: "504.790009",
+  closePrice: "520.809998",
   day: 53
 }, {
-  closePrice: "512.179993",
+  closePrice: "502.859985",
   day: 54
 }, {
-  closePrice: "523.109985",
+  closePrice: "508.049988",
   day: 55
 }, {
-  closePrice: "535.090027",
+  closePrice: "513.950012",
   day: 56
 }, {
-  closePrice: "520.809998",
+  closePrice: "513.390015",
   day: 57
 }, {
-  closePrice: "502.859985",
+  closePrice: "521.659973",
   day: 58
 }, {
-  closePrice: "508.049988",
+  closePrice: "539.419983",
   day: 59
 }, {
-  closePrice: "513.950012",
+  closePrice: "540.669983",
   day: 60
 }, {
-  closePrice: "513.390015",
+  closePrice: "544.530029",
   day: 61
 }, {
-  closePrice: "521.659973",
+  closePrice: "546.98999",
   day: 62
 }, {
-  closePrice: "539.419983",
+  closePrice: "554.580017",
   day: 63
 }, {
-  closePrice: "540.669983",
+  closePrice: "555.309998",
   day: 64
 }, {
-  closePrice: "544.530029",
+  closePrice: "552.780029",
   day: 65
 }, {
-  closePrice: "546.989990",
+  closePrice: "553.72998",
   day: 66
 }, {
-  closePrice: "554.580017",
+  closePrice: "540.02002",
   day: 67
 }, {
-  closePrice: "555.309998",
+  closePrice: "549.219971",
   day: 68
 }, {
-  closePrice: "552.780029",
+  closePrice: "546.539978",
   day: 69
 }, {
-  closePrice: "553.729980",
+  closePrice: "554.440002",
   day: 70
 }, {
-  closePrice: "540.020020",
+  closePrice: "549.570007",
   day: 71
 }, {
-  closePrice: "549.219971",
+  closePrice: "508.899994",
   day: 72
 }, {
-  closePrice: "546.539978",
+  closePrice: "508.779999",
   day: 73
 }, {
-  closePrice: "554.440002",
+  closePrice: "505.549988",
   day: 74
 }, {
-  closePrice: "549.570007",
+  closePrice: "510.299988",
   day: 75
 }, {
-  closePrice: "508.899994",
+  closePrice: "505.549988",
   day: 76
 }, {
-  closePrice: "508.779999",
+  closePrice: "506.519989",
   day: 77
 }, {
-  closePrice: "505.549988",
+  closePrice: "509",
   day: 78
 }, {
-  closePrice: "510.299988",
+  closePrice: "513.469971",
   day: 79
 }, {
-  closePrice: "505.549988",
+  closePrice: "509.109985",
   day: 80
 }, {
-  closePrice: "506.519989",
+  closePrice: "503.179993",
   day: 81
 }, {
-  closePrice: "509.000000",
+  closePrice: "496.079987",
   day: 82
 }, {
-  closePrice: "513.469971",
+  closePrice: "499.549988",
   day: 83
 }, {
-  closePrice: "509.109985",
+  closePrice: "503.839996",
   day: 84
 }, {
-  closePrice: "503.179993",
+  closePrice: "486.690002",
   day: 85
 }, {
-  closePrice: "496.079987",
+  closePrice: "495.079987",
   day: 86
 }, {
-  closePrice: "499.549988",
+  closePrice: "484.980011",
   day: 87
 }, {
-  closePrice: "503.839996",
+  closePrice: "486.660004",
   day: 88
 }, {
-  closePrice: "486.690002",
+  closePrice: "493.369995",
   day: 89
 }, {
-  closePrice: "495.079987",
+  closePrice: "488.940002",
   day: 90
 }, {
-  closePrice: "484.980011",
+  closePrice: "486.279999",
   day: 91
 }, {
-  closePrice: "486.660004",
+  closePrice: "487.700012",
   day: 92
 }, {
-  closePrice: "493.369995",
+  closePrice: "501.670013",
   day: 93
 }, {
-  closePrice: "488.940002",
+  closePrice: "497.890015",
   day: 94
 }, {
-  closePrice: "486.279999",
+  closePrice: "502.899994",
   day: 95
 }, {
-  closePrice: "487.700012",
+  closePrice: "501.339996",
   day: 96
 }, {
-  closePrice: "501.670013",
+  closePrice: "502.359985",
   day: 97
 }, {
-  closePrice: "497.890015",
+  closePrice: "503.859985",
   day: 98
 }, {
-  closePrice: "502.899994",
+  closePrice: "502.809998",
   day: 99
 }, {
-  closePrice: "501.339996",
+  closePrice: "499.079987",
   day: 100
 }, {
-  closePrice: "502.359985",
+  closePrice: "499.23999",
   day: 101
 }, {
-  closePrice: "503.859985",
+  closePrice: "489.429993",
   day: 102
 }, {
-  closePrice: "502.809998",
+  closePrice: "494.73999",
   day: 103
 }, {
-  closePrice: "499.079987",
+  closePrice: "494.660004",
   day: 104
 }, {
-  closePrice: "499.239990",
+  closePrice: "492.390015",
   day: 105
 }, {
-  closePrice: "489.429993",
+  closePrice: "485.809998",
   day: 106
 }, {
-  closePrice: "494.739990",
+  closePrice: "487.269989",
   day: 107
 }, {
-  closePrice: "494.660004",
+  closePrice: "488.769989",
   day: 108
 }, {
-  closePrice: "492.390015",
+  closePrice: "499.890015",
   day: 109
 }, {
-  closePrice: "485.809998",
+  closePrice: "491.899994",
   day: 110
 }, {
-  closePrice: "487.269989",
+  closePrice: "492.410004",
   day: 111
 }, {
-  closePrice: "488.769989",
+  closePrice: "498.339996",
   day: 112
 }, {
-  closePrice: "499.890015",
+  closePrice: "500.769989",
   day: 113
 }, {
-  closePrice: "491.899994",
+  closePrice: "497",
   day: 114
 }, {
-  closePrice: "492.410004",
+  closePrice: "508.820007",
   day: 115
 }, {
-  closePrice: "498.339996",
+  closePrice: "512.73999",
   day: 116
 }, {
-  closePrice: "500.769989",
+  closePrice: "518.059998",
   day: 117
 }, {
-  closePrice: "497.000000",
+  closePrice: "527.070007",
   day: 118
 }, {
-  closePrice: "508.820007",
+  closePrice: "533.030029",
   day: 119
 }, {
-  closePrice: "512.739990",
+  closePrice: "533.5",
   day: 120
 }, {
-  closePrice: "518.059998",
+  closePrice: "528.210022",
   day: 121
 }, {
-  closePrice: "527.070007",
+  closePrice: "533.539978",
   day: 122
 }, {
-  closePrice: "533.030029",
+  closePrice: "533.97998",
   day: 123
 }, {
-  closePrice: "533.500000",
+  closePrice: "541.640015",
   day: 124
 }, {
-  closePrice: "528.210022",
+  closePrice: "535.960022",
   day: 125
 }, {
-  closePrice: "533.539978",
+  closePrice: "530.76001",
   day: 126
 }, {
-  closePrice: "533.979980",
+  closePrice: "535.97998",
   day: 127
 }, {
-  closePrice: "541.640015",
+  closePrice: "537.309998",
   day: 128
 }, {
-  closePrice: "535.960022",
+  closePrice: "540.679993",
   day: 129
 }, {
-  closePrice: "530.760010",
+  closePrice: "547.950012",
   day: 130
 }, {
-  closePrice: "535.979980",
+  closePrice: "542.950012",
   day: 131
 }, {
-  closePrice: "537.309998",
+  closePrice: "530.309998",
   day: 132
 }, {
-  closePrice: "540.679993",
+  closePrice: "532.280029",
   day: 133
 }, {
-  closePrice: "547.950012",
+  closePrice: "531.049988",
   day: 134
 }, {
-  closePrice: "542.950012",
+  closePrice: "513.630005",
   day: 135
 }, {
-  closePrice: "530.309998",
+  closePrice: "511.769989",
   day: 136
 }, {
-  closePrice: "532.280029",
+  closePrice: "515.409973",
   day: 137
 }, {
-  closePrice: "531.049988",
+  closePrice: "516.48999",
   day: 138
 }, {
-  closePrice: "513.630005",
+  closePrice: "518.909973",
   day: 139
 }, {
-  closePrice: "511.769989",
+  closePrice: "519.299988",
   day: 140
 }, {
-  closePrice: "515.409973",
+  closePrice: "514.25",
   day: 141
 }, {
-  closePrice: "516.489990",
+  closePrice: "517.570007",
   day: 142
 }, {
-  closePrice: "518.909973",
+  closePrice: "515.150024",
   day: 143
 }, {
-  closePrice: "519.299988",
+  closePrice: "510.820007",
   day: 144
 }, {
-  closePrice: "514.250000",
+  closePrice: "517.349976",
   day: 145
 }, {
-  closePrice: "517.570007",
+  closePrice: "524.890015",
   day: 146
 }, {
-  closePrice: "515.150024",
+  closePrice: "520.549988",
   day: 147
 }, {
-  closePrice: "510.820007",
+  closePrice: "519.969971",
   day: 148
 }, {
-  closePrice: "517.349976",
+  closePrice: "515.840027",
   day: 149
 }, {
-  closePrice: "524.890015",
+  closePrice: "512.400024",
   day: 150
 }, {
-  closePrice: "520.549988",
+  closePrice: "510.720001",
   day: 151
 }, {
-  closePrice: "519.969971",
+  closePrice: "515.919983",
   day: 152
 }, {
-  closePrice: "515.840027",
+  closePrice: "517.919983",
   day: 153
 }, {
-  closePrice: "512.400024",
+  closePrice: "518.909973",
   day: 154
 }, {
-  closePrice: "510.720001",
+  closePrice: "521.869995",
   day: 155
 }, {
-  closePrice: "515.919983",
+  closePrice: "543.710022",
   day: 156
 }, {
-  closePrice: "517.919983",
+  closePrice: "546.880005",
   day: 157
 }, {
-  closePrice: "518.909973",
+  closePrice: "553.330017",
   day: 158
 }, {
-  closePrice: "521.869995",
+  closePrice: "553.409973",
   day: 159
 }, {
-  closePrice: "543.710022",
+  closePrice: "547.580017",
   day: 160
 }, {
-  closePrice: "546.880005",
+  closePrice: "550.119995",
   day: 161
 }, {
-  closePrice: "553.330017",
+  closePrice: "558.919983",
   day: 162
 }, {
-  closePrice: "553.409973",
+  closePrice: "566.179993",
   day: 163
 }, {
-  closePrice: "547.580017",
+  closePrice: "569.190002",
   day: 164
 }, {
-  closePrice: "550.119995",
+  closePrice: "582.070007",
   day: 165
 }, {
-  closePrice: "558.919983",
+  closePrice: "588.549988",
   day: 166
 }, {
-  closePrice: "566.179993",
+  closePrice: "590.530029",
   day: 167
 }, {
-  closePrice: "569.190002",
+  closePrice: "606.710022",
   day: 168
 }, {
-  closePrice: "582.070007",
+  closePrice: "606.049988",
   day: 169
 }, {
-  closePrice: "588.549988",
+  closePrice: "597.539978",
   day: 170
 }, {
-  closePrice: "590.530029",
+  closePrice: "598.719971",
   day: 171
 }, {
-  closePrice: "606.710022",
+  closePrice: "589.289978",
   day: 172
 }, {
-  closePrice: "606.049988",
+  closePrice: "577.76001",
   day: 173
 }, {
-  closePrice: "597.539978",
+  closePrice: "582.869995",
   day: 174
 }, {
-  closePrice: "598.719971",
+  closePrice: "586.5",
   day: 175
 }, {
-  closePrice: "589.289978",
+  closePrice: "589.349976",
   day: 176
 }, {
-  closePrice: "577.760010",
+  closePrice: "575.429993",
   day: 177
 }, {
-  closePrice: "582.869995",
+  closePrice: "573.140015",
   day: 178
 }, {
-  closePrice: "586.500000",
+  closePrice: "590.650024",
   day: 179
 }, {
-  closePrice: "589.349976",
+  closePrice: "593.26001",
   day: 180
 }, {
-  closePrice: "575.429993",
+  closePrice: "592.390015",
   day: 181
 }, {
-  closePrice: "573.140015",
+  closePrice: "592.640015",
   day: 182
 }, {
-  closePrice: "590.650024",
+  closePrice: "583.849976",
   day: 183
 }, {
-  closePrice: "593.260010",
+  closePrice: "599.059998",
   day: 184
 }, {
-  closePrice: "592.390015",
+  closePrice: "610.340027",
   day: 185
 }, {
-  closePrice: "592.640015",
+  closePrice: "613.150024",
   day: 186
 }, {
-  closePrice: "583.849976",
+  closePrice: "603.349976",
   day: 187
 }, {
-  closePrice: "599.059998",
+  closePrice: "634.809998",
   day: 188
 }, {
-  closePrice: "610.340027",
+  closePrice: "639.099976",
   day: 189
 }, {
-  closePrice: "613.150024",
+  closePrice: "631.849976",
   day: 190
 }, {
-  closePrice: "603.349976",
+  closePrice: "632.659973",
   day: 191
 }, {
-  closePrice: "634.809998",
+  closePrice: "627.039978",
   day: 192
 }, {
-  closePrice: "639.099976",
+  closePrice: "624.940002",
   day: 193
 }, {
-  closePrice: "631.849976",
+  closePrice: "629.76001",
   day: 194
 }, {
-  closePrice: "632.659973",
+  closePrice: "633.799988",
   day: 195
 }, {
-  closePrice: "627.039978",
+  closePrice: "628.289978",
   day: 196
 }, {
-  closePrice: "624.940002",
+  closePrice: "637.969971",
   day: 197
 }, {
-  closePrice: "629.760010",
+  closePrice: "639",
   day: 198
 }, {
-  closePrice: "633.799988",
+  closePrice: "625.140015",
   day: 199
 }, {
-  closePrice: "628.289978",
+  closePrice: "653.159973",
   day: 200
 }, {
-  closePrice: "637.969971",
+  closePrice: "664.780029",
   day: 201
 }, {
-  closePrice: "639.000000",
+  closePrice: "671.659973",
   day: 202
 }, {
-  closePrice: "625.140015",
+  closePrice: "668.52002",
   day: 203
 }, {
-  closePrice: "653.159973",
+  closePrice: "662.919983",
   day: 204
 }, {
-  closePrice: "664.780029",
+  closePrice: "674.049988",
   day: 205
 }, {
-  closePrice: "671.659973",
+  closePrice: "690.309998",
   day: 206
 }, {
-  closePrice: "668.520020",
+  closePrice: "681.169983",
   day: 207
 }, {
-  closePrice: "662.919983",
+  closePrice: "677.719971",
   day: 208
 }, {
-  closePrice: "674.049988",
+  closePrice: "688.289978",
   day: 209
 }, {
-  closePrice: "690.309998",
+  closePrice: "668.400024",
   day: 210
 }, {
-  closePrice: "681.169983",
+  closePrice: "645.719971",
   day: 211
 }, {
-  closePrice: "677.719971",
+  closePrice: "651.450012",
   day: 212
 }, {
-  closePrice: "688.289978",
+  closePrice: "655.98999",
   day: 213
 }, {
-  closePrice: "668.400024",
+  closePrice: "646.909973",
   day: 214
 }, {
-  closePrice: "645.719971",
+  closePrice: "657.580017",
   day: 215
 }, {
-  closePrice: "651.450012",
+  closePrice: "682.609985",
   day: 216
 }, {
-  closePrice: "655.989990",
+  closePrice: "679.330017",
   day: 217
 }, {
-  closePrice: "646.909973",
+  closePrice: "687.400024",
   day: 218
 }, {
-  closePrice: "657.580017",
+  closePrice: "691.690002",
   day: 219
 }, {
-  closePrice: "682.609985",
+  closePrice: "682.02002",
   day: 220
 }, {
-  closePrice: "679.330017",
+  closePrice: "678.799988",
   day: 221
 }, {
-  closePrice: "687.400024",
+  closePrice: "659.200012",
   day: 222
 }, {
-  closePrice: "691.690002",
+  closePrice: "654.059998",
   day: 223
 }, {
-  closePrice: "682.020020",
+  closePrice: "658.289978",
   day: 224
 }, {
-  closePrice: "678.799988",
+  closePrice: "665.640015",
   day: 225
 }, {
-  closePrice: "659.200012",
+  closePrice: "663.840027",
   day: 226
 }, {
-  closePrice: "654.059998",
+  closePrice: "641.900024",
   day: 227
 }, {
-  closePrice: "658.289978",
+  closePrice: "617.77002",
   day: 228
 }, {
-  closePrice: "665.640015",
+  closePrice: "616.469971",
   day: 229
 }, {
-  closePrice: "663.840027",
+  closePrice: "602.130005",
   day: 230
 }, {
-  closePrice: "641.900024",
+  closePrice: "612.690002",
   day: 231
 }, {
-  closePrice: "617.770020",
+  closePrice: "625.580017",
   day: 232
 }, {
-  closePrice: "616.469971",
+  closePrice: "628.080017",
   day: 233
 }, {
-  closePrice: "602.130005",
+  closePrice: "611",
   day: 234
 }, {
-  closePrice: "612.690002",
+  closePrice: "611.659973",
   day: 235
 }, {
-  closePrice: "625.580017",
+  closePrice: "604.559998",
   day: 236
 }, {
-  closePrice: "628.080017",
+  closePrice: "597.98999",
   day: 237
 }, {
-  closePrice: "611.000000",
+  closePrice: "605.039978",
   day: 238
 }, {
-  closePrice: "611.659973",
+  closePrice: "591.059998",
   day: 239
 }, {
-  closePrice: "604.559998",
+  closePrice: "586.72998",
   day: 240
 }, {
-  closePrice: "597.989990",
+  closePrice: "593.73999",
   day: 241
 }, {
-  closePrice: "605.039978",
+  closePrice: "604.919983",
   day: 242
 }, {
-  closePrice: "591.059998",
+  closePrice: "614.23999",
   day: 243
 }, {
-  closePrice: "586.729980",
+  closePrice: "614.090027",
   day: 244
 }, {
-  closePrice: "593.739990",
+  closePrice: "613.119995",
   day: 245
 }, {
-  closePrice: "604.919983",
+  closePrice: "610.710022",
   day: 246
 }, {
-  closePrice: "614.239990",
+  closePrice: "610.539978",
   day: 247
 }, {
-  closePrice: "614.090027",
+  closePrice: "612.090027",
   day: 248
 }, {
-  closePrice: "613.119995",
+  closePrice: "602.440002",
   day: 249
 }, {
-  closePrice: "610.710022",
+  closePrice: "597.369995",
   day: 250
 }, {
-  closePrice: "610.539978",
+  closePrice: "591.150024",
   day: 251
 }, {
-  closePrice: "612.090027",
+  closePrice: "567.52002",
   day: 252
 }, {
-  closePrice: "602.440002",
+  closePrice: "553.289978",
   day: 253
 }, {
-  closePrice: "597.369995",
+  closePrice: "541.059998",
   day: 254
 }, {
-  closePrice: "591.150024",
+  closePrice: "539.849976",
   day: 255
 }, {
-  closePrice: "567.520020",
+  closePrice: "540.840027",
   day: 256
 }, {
-  closePrice: "553.289978",
+  closePrice: "537.219971",
   day: 257
 }, {
-  closePrice: "541.059998",
+  closePrice: "519.200012",
   day: 258
 }, {
-  closePrice: "539.849976",
+  closePrice: "525.690002",
   day: 259
 }, {
-  closePrice: "540.840027",
+  closePrice: "510.799988",
   day: 260
 }, {
-  closePrice: "537.219971",
+  closePrice: "515.859985",
   day: 261
 }, {
-  closePrice: "519.200012",
+  closePrice: "508.25",
   day: 262
 }, {
-  closePrice: "525.690002",
+  closePrice: "397.5",
   day: 263
 }, {
-  closePrice: "510.799988",
+  closePrice: "387.149994",
   day: 264
 }, {
-  closePrice: "515.859985",
+  closePrice: "366.420013",
   day: 265
 }, {
-  closePrice: "508.250000",
+  closePrice: "359.700012",
   day: 266
 }, {
-  closePrice: "397.500000",
+  closePrice: "386.700012",
   day: 267
 }, {
-  closePrice: "387.149994",
+  closePrice: "384.359985",
   day: 268
 }, {
-  closePrice: "366.420013",
+  closePrice: "427.140015",
   day: 269
 }, {
-  closePrice: "359.700012",
+  closePrice: "457.130005",
   day: 270
 }, {
-  closePrice: "386.700012",
+  closePrice: "429.480011",
   day: 271
 }, {
-  closePrice: "384.359985",
+  closePrice: "405.600006",
   day: 272
 }, {
-  closePrice: "427.140015",
+  closePrice: "410.170013",
   day: 273
 }, {
-  closePrice: "457.130005",
+  closePrice: "402.100006",
   day: 274
 }, {
-  closePrice: "429.480011",
+  closePrice: "403.529999",
   day: 275
 }, {
-  closePrice: "405.600006",
+  closePrice: "412.890015",
   day: 276
 }, {
-  closePrice: "410.170013",
+  closePrice: "406.269989",
   day: 277
 }, {
-  closePrice: "402.100006",
+  closePrice: "391.309998",
   day: 278
 }, {
-  closePrice: "403.529999",
+  closePrice: "396.570007",
   day: 279
 }, {
-  closePrice: "412.890015",
+  closePrice: "407.459991",
   day: 280
 }, {
-  closePrice: "406.269989",
+  closePrice: "398.079987",
   day: 281
 }, {
-  closePrice: "391.309998",
+  closePrice: "386.670013",
   day: 282
 }, {
-  closePrice: "396.570007",
+  closePrice: "391.290009",
   day: 283
 }, {
-  closePrice: "407.459991",
+  closePrice: "377.380005",
   day: 284
 }, {
-  closePrice: "398.079987",
+  closePrice: "367.459991",
   day: 285
 }, {
-  closePrice: "386.670013",
+  closePrice: "390.029999",
   day: 286
 }, {
-  closePrice: "391.290009",
+  closePrice: "390.799988",
   day: 287
 }, {
-  closePrice: "377.380005",
+  closePrice: "394.519989",
   day: 288
 }, {
-  closePrice: "367.459991",
+  closePrice: "386.23999",
   day: 289
 }, {
-  closePrice: "390.029999",
+  closePrice: "380.029999",
   day: 290
 }, {
-  closePrice: "390.799988",
+  closePrice: "368.070007",
   day: 291
 }, {
-  closePrice: "394.519989",
+  closePrice: "361.730011",
   day: 292
 }, {
-  closePrice: "386.239990",
+  closePrice: "350.26001",
   day: 293
 }, {
-  closePrice: "380.029999",
+  closePrice: "341.76001",
   day: 294
 }, {
-  closePrice: "368.070007",
+  closePrice: "358.790009",
   day: 295
 }, {
-  closePrice: "361.730011",
+  closePrice: "356.769989",
   day: 296
 }, {
-  closePrice: "350.260010",
+  closePrice: "340.320007",
   day: 297
 }, {
-  closePrice: "341.760010",
+  closePrice: "331.01001",
   day: 298
 }, {
-  closePrice: "358.790009",
+  closePrice: "343.75",
   day: 299
 }, {
-  closePrice: "356.769989",
+  closePrice: "357.529999",
   day: 300
 }, {
-  closePrice: "340.320007",
+  closePrice: "371.399994",
   day: 301
 }, {
-  closePrice: "331.010010",
+  closePrice: "380.600006",
   day: 302
 }, {
-  closePrice: "343.750000",
+  closePrice: "374.589996",
   day: 303
 }, {
-  closePrice: "357.529999",
+  closePrice: "382.920013",
   day: 304
 }, {
-  closePrice: "371.399994",
+  closePrice: "374.48999",
   day: 305
 }, {
-  closePrice: "380.600006",
+  closePrice: "375.709991",
   day: 306
 }, {
-  closePrice: "374.589996",
+  closePrice: "373.850006",
   day: 307
 }, {
-  closePrice: "382.920013",
+  closePrice: "378.51001",
   day: 308
 }, {
-  closePrice: "374.489990",
+  closePrice: "391.820007",
   day: 309
 }, {
-  closePrice: "375.709991",
+  closePrice: "381.470001",
   day: 310
 }, {
-  closePrice: "373.850006",
+  closePrice: "374.589996",
   day: 311
 }, {
-  closePrice: "378.510010",
+  closePrice: "373.470001",
   day: 312
 }, {
-  closePrice: "391.820007",
+  closePrice: "391.5",
   day: 313
 }, {
-  closePrice: "381.470001",
+  closePrice: "380.149994",
   day: 314
 }, {
-  closePrice: "374.589996",
+  closePrice: "368.350006",
   day: 315
 }, {
-  closePrice: "373.470001",
+  closePrice: "362.149994",
   day: 316
 }, {
-  closePrice: "391.500000",
+  closePrice: "355.880005",
   day: 317
 }, {
-  closePrice: "380.149994",
+  closePrice: "348",
   day: 318
 }, {
-  closePrice: "368.350006",
+  closePrice: "344.100006",
   day: 319
 }, {
-  closePrice: "362.149994",
+  closePrice: "350.429993",
   day: 320
 }, {
-  closePrice: "355.880005",
+  closePrice: "341.130005",
   day: 321
 }, {
-  closePrice: "348.000000",
+  closePrice: "337.859985",
   day: 322
 }, {
-  closePrice: "344.100006",
+  closePrice: "348.609985",
   day: 323
 }, {
-  closePrice: "350.429993",
+  closePrice: "226.190002",
   day: 324
 }, {
-  closePrice: "341.130005",
+  closePrice: "218.220001",
   day: 325
 }, {
-  closePrice: "337.859985",
+  closePrice: "215.520004",
   day: 326
 }, {
-  closePrice: "348.609985",
+  closePrice: "209.910004",
   day: 327
 }, {
-  closePrice: "226.190002",
+  closePrice: "198.399994",
   day: 328
 }, {
-  closePrice: "218.220001",
+  closePrice: "188.539993",
   day: 329
 }, {
-  closePrice: "215.520004",
+  closePrice: "199.520004",
   day: 330
 }, {
-  closePrice: "209.910004",
+  closePrice: "190.360001",
   day: 331
 }, {
-  closePrice: "198.399994",
+  closePrice: "199.460007",
   day: 332
 }, {
-  closePrice: "188.539993",
+  closePrice: "199.869995",
   day: 333
 }, {
-  closePrice: "199.520004",
+  closePrice: "204.009995",
   day: 334
 }, {
-  closePrice: "190.360001",
+  closePrice: "188.320007",
   day: 335
 }, {
-  closePrice: "199.460007",
+  closePrice: "180.970001",
   day: 336
 }, {
-  closePrice: "199.869995",
+  closePrice: "173.100006",
   day: 337
 }, {
-  closePrice: "204.009995",
+  closePrice: "177.660004",
   day: 338
 }, {
-  closePrice: "188.320007",
+  closePrice: "166.369995",
   day: 339
 }, {
-  closePrice: "180.970001",
+  closePrice: "174.309998",
   day: 340
 }, {
-  closePrice: "173.100006",
+  closePrice: "187.639999",
   day: 341
 }, {
-  closePrice: "177.660004",
+  closePrice: "186.509995",
   day: 342
 }, {
-  closePrice: "166.369995",
+  closePrice: "190.559998",
   day: 343
 }, {
-  closePrice: "174.309998",
+  closePrice: "177.190002",
   day: 344
 }, {
-  closePrice: "187.639999",
+  closePrice: "183.479996",
   day: 345
 }, {
-  closePrice: "186.509995",
+  closePrice: "186.350006",
   day: 346
 }, {
-  closePrice: "190.559998",
+  closePrice: "187.440002",
   day: 347
 }, {
-  closePrice: "177.190002",
+  closePrice: "180.339996",
   day: 348
 }, {
-  closePrice: "183.479996",
+  closePrice: "187.830002",
   day: 349
 }, {
-  closePrice: "186.350006",
+  closePrice: "191.399994",
   day: 350
 }, {
-  closePrice: "187.440002",
+  closePrice: "195.190002",
   day: 351
 }, {
-  closePrice: "180.339996",
+  closePrice: "197.440002",
   day: 352
 }, {
-  closePrice: "187.830002",
+  closePrice: "192.910004",
   day: 353
 }, {
-  closePrice: "191.399994",
+  closePrice: "205.089996",
   day: 354
 }, {
-  closePrice: "195.190002",
+  closePrice: "198.979996",
   day: 355
 }, {
-  closePrice: "197.440002",
+  closePrice: "197.139999",
   day: 356
 }, {
-  closePrice: "192.910004",
+  closePrice: "198.610001",
   day: 357
 }, {
-  closePrice: "205.089996",
+  closePrice: "202.830002",
   day: 358
 }, {
-  closePrice: "198.979996",
+  closePrice: "192.770004",
   day: 359
 }, {
-  closePrice: "197.139999",
+  closePrice: "182.940002",
   day: 360
 }, {
-  closePrice: "198.610001",
+  closePrice: "169.690002",
   day: 361
 }, {
-  closePrice: "202.830002",
+  closePrice: "167.539993",
   day: 362
 }, {
-  closePrice: "192.770004",
+  closePrice: "180.110001",
   day: 363
 }, {
-  closePrice: "182.940002",
+  closePrice: "173.350006",
   day: 364
 }, {
-  closePrice: "169.690002",
+  closePrice: "175.509995",
   day: 365
 }, {
-  closePrice: "167.539993",
+  closePrice: "170.910004",
   day: 366
 }, {
-  closePrice: "180.110001",
+  closePrice: "178.889999",
   day: 367
 }, {
-  closePrice: "173.350006",
+  closePrice: "181.710007",
   day: 368
 }, {
-  closePrice: "175.509995",
+  closePrice: "190.850006",
   day: 369
 }, {
-  closePrice: "170.910004",
+  closePrice: "189.139999",
   day: 370
 }, {
-  closePrice: "178.889999",
+  closePrice: "179.600006",
   day: 371
 }, {
-  closePrice: "181.710007",
+  closePrice: "178.360001",
   day: 372
 }, {
-  closePrice: "190.850006",
+  closePrice: "174.869995",
   day: 373
 }, {
-  closePrice: "189.139999",
+  closePrice: "179.949997",
   day: 374
 }, {
-  closePrice: "179.600006",
+  closePrice: "185.880005",
   day: 375
 }, {
-  closePrice: "178.360001",
+  closePrice: "184.059998",
   day: 376
 }, {
-  closePrice: "174.869995",
+  closePrice: "189.270004",
   day: 377
 }, {
-  closePrice: "179.949997",
+  closePrice: "186.979996",
   day: 378
 }, {
-  closePrice: "185.880005",
+  closePrice: "177.339996",
   day: 379
 }, {
-  closePrice: "184.059998",
+  closePrice: "174.449997",
   day: 380
 }]
 
 export const tsla_data = [ { ticker: 'TURT' }, {
-  closePrice: "705.669983",
+  closePrice: "755.97998",
   day: 1
 }, {
-  closePrice: "729.770020",
+  closePrice: "816.039978",
   day: 2
 }, {
-  closePrice: "735.109985",
+  closePrice: "880.02002",
   day: 3
 }, {
-  closePrice: "755.979980",
+  closePrice: "811.190002",
   day: 4
 }, {
-  closePrice: "816.039978",
+  closePrice: "849.440002",
   day: 5
 }, {
-  closePrice: "880.020020",
+  closePrice: "854.409973",
   day: 6
 }, {
-  closePrice: "811.190002",
+  closePrice: "845",
   day: 7
 }, {
-  closePrice: "849.440002",
+  closePrice: "826.159973",
   day: 8
 }, {
-  closePrice: "854.409973",
+  closePrice: "844.549988",
   day: 9
 }, {
-  closePrice: "845.000000",
+  closePrice: "850.450012",
   day: 10
 }, {
-  closePrice: "826.159973",
+  closePrice: "844.98999",
   day: 11
 }, {
-  closePrice: "844.549988",
+  closePrice: "846.640015",
   day: 12
 }, {
-  closePrice: "850.450012",
+  closePrice: "880.799988",
   day: 13
 }, {
-  closePrice: "844.989990",
+  closePrice: "883.090027",
   day: 14
 }, {
-  closePrice: "846.640015",
+  closePrice: "864.159973",
   day: 15
 }, {
-  closePrice: "880.799988",
+  closePrice: "835.429993",
   day: 16
 }, {
-  closePrice: "883.090027",
+  closePrice: "793.530029",
   day: 17
 }, {
-  closePrice: "864.159973",
+  closePrice: "839.809998",
   day: 18
 }, {
-  closePrice: "835.429993",
+  closePrice: "872.789978",
   day: 19
 }, {
-  closePrice: "793.530029",
+  closePrice: "854.690002",
   day: 20
 }, {
-  closePrice: "839.809998",
+  closePrice: "849.98999",
   day: 21
 }, {
-  closePrice: "872.789978",
+  closePrice: "852.22998",
   day: 22
 }, {
-  closePrice: "854.690002",
+  closePrice: "863.419983",
   day: 23
 }, {
-  closePrice: "849.989990",
+  closePrice: "849.460022",
   day: 24
 }, {
-  closePrice: "852.229980",
+  closePrice: "804.820007",
   day: 25
 }, {
-  closePrice: "863.419983",
+  closePrice: "811.659973",
   day: 26
 }, {
-  closePrice: "849.460022",
+  closePrice: "816.119995",
   day: 27
 }, {
-  closePrice: "804.820007",
+  closePrice: "796.219971",
   day: 28
 }, {
-  closePrice: "811.659973",
+  closePrice: "798.150024",
   day: 29
 }, {
-  closePrice: "816.119995",
+  closePrice: "787.380005",
   day: 30
 }, {
-  closePrice: "796.219971",
+  closePrice: "781.299988",
   day: 31
 }, {
-  closePrice: "798.150024",
+  closePrice: "714.5",
   day: 32
 }, {
-  closePrice: "787.380005",
+  closePrice: "698.840027",
   day: 33
 }, {
-  closePrice: "781.299988",
+  closePrice: "742.02002",
   day: 34
 }, {
-  closePrice: "714.500000",
+  closePrice: "682.219971",
   day: 35
 }, {
-  closePrice: "698.840027",
+  closePrice: "675.5",
   day: 36
 }, {
-  closePrice: "742.020020",
+  closePrice: "718.429993",
   day: 37
 }, {
-  closePrice: "682.219971",
+  closePrice: "686.440002",
   day: 38
 }, {
-  closePrice: "675.500000",
+  closePrice: "653.200012",
   day: 39
 }, {
-  closePrice: "718.429993",
+  closePrice: "621.440002",
   day: 40
 }, {
-  closePrice: "686.440002",
+  closePrice: "597.950012",
   day: 41
 }, {
-  closePrice: "653.200012",
+  closePrice: "563",
   day: 42
 }, {
-  closePrice: "621.440002",
+  closePrice: "673.580017",
   day: 43
 }, {
-  closePrice: "597.950012",
+  closePrice: "668.059998",
   day: 44
 }, {
-  closePrice: "563.000000",
+  closePrice: "699.599976",
   day: 45
 }, {
-  closePrice: "673.580017",
+  closePrice: "693.72998",
   day: 46
 }, {
-  closePrice: "668.059998",
+  closePrice: "707.940002",
   day: 47
 }, {
-  closePrice: "699.599976",
+  closePrice: "676.880005",
   day: 48
 }, {
-  closePrice: "693.729980",
+  closePrice: "701.809998",
   day: 49
 }, {
-  closePrice: "707.940002",
+  closePrice: "653.159973",
   day: 50
 }, {
-  closePrice: "676.880005",
+  closePrice: "654.869995",
   day: 51
 }, {
-  closePrice: "701.809998",
+  closePrice: "670",
   day: 52
 }, {
-  closePrice: "653.159973",
+  closePrice: "662.159973",
   day: 53
 }, {
-  closePrice: "654.869995",
+  closePrice: "630.27002",
   day: 54
 }, {
-  closePrice: "670.000000",
+  closePrice: "640.390015",
   day: 55
 }, {
-  closePrice: "662.159973",
+  closePrice: "618.710022",
   day: 56
 }, {
-  closePrice: "630.270020",
+  closePrice: "611.289978",
   day: 57
 }, {
-  closePrice: "640.390015",
+  closePrice: "635.619995",
   day: 58
 }, {
-  closePrice: "618.710022",
+  closePrice: "667.929993",
   day: 59
 }, {
-  closePrice: "611.289978",
+  closePrice: "661.75",
   day: 60
 }, {
-  closePrice: "635.619995",
+  closePrice: "691.049988",
   day: 61
 }, {
-  closePrice: "667.929993",
+  closePrice: "691.619995",
   day: 62
 }, {
-  closePrice: "661.750000",
+  closePrice: "670.969971",
   day: 63
 }, {
-  closePrice: "691.049988",
+  closePrice: "683.799988",
   day: 64
 }, {
-  closePrice: "691.619995",
+  closePrice: "677.02002",
   day: 65
 }, {
-  closePrice: "670.969971",
+  closePrice: "701.97998",
   day: 66
 }, {
-  closePrice: "683.799988",
+  closePrice: "762.320007",
   day: 67
 }, {
-  closePrice: "677.020020",
+  closePrice: "732.22998",
   day: 68
 }, {
-  closePrice: "701.979980",
+  closePrice: "738.849976",
   day: 69
 }, {
-  closePrice: "762.320007",
+  closePrice: "739.780029",
   day: 70
 }, {
-  closePrice: "732.229980",
+  closePrice: "714.630005",
   day: 71
 }, {
-  closePrice: "738.849976",
+  closePrice: "718.98999",
   day: 72
 }, {
-  closePrice: "739.780029",
+  closePrice: "744.119995",
   day: 73
 }, {
-  closePrice: "714.630005",
+  closePrice: "719.690002",
   day: 74
 }, {
-  closePrice: "718.989990",
+  closePrice: "729.400024",
   day: 75
 }, {
-  closePrice: "744.119995",
+  closePrice: "738.200012",
   day: 76
 }, {
-  closePrice: "719.690002",
+  closePrice: "704.73999",
   day: 77
 }, {
-  closePrice: "729.400024",
+  closePrice: "694.400024",
   day: 78
 }, {
-  closePrice: "738.200012",
+  closePrice: "677",
   day: 79
 }, {
-  closePrice: "704.739990",
+  closePrice: "709.440002",
   day: 80
 }, {
-  closePrice: "694.400024",
+  closePrice: "684.900024",
   day: 81
 }, {
-  closePrice: "677.000000",
+  closePrice: "673.599976",
   day: 82
 }, {
-  closePrice: "709.440002",
+  closePrice: "670.940002",
   day: 83
 }, {
-  closePrice: "684.900024",
+  closePrice: "663.539978",
   day: 84
 }, {
-  closePrice: "673.599976",
+  closePrice: "672.369995",
   day: 85
 }, {
-  closePrice: "670.940002",
+  closePrice: "629.039978",
   day: 86
 }, {
-  closePrice: "663.539978",
+  closePrice: "617.200012",
   day: 87
 }, {
-  closePrice: "672.369995",
+  closePrice: "589.890015",
   day: 88
 }, {
-  closePrice: "629.039978",
+  closePrice: "571.690002",
   day: 89
 }, {
-  closePrice: "617.200012",
+  closePrice: "589.73999",
   day: 90
 }, {
-  closePrice: "589.890015",
+  closePrice: "576.830017",
   day: 91
 }, {
-  closePrice: "571.690002",
+  closePrice: "577.869995",
   day: 92
 }, {
-  closePrice: "589.739990",
+  closePrice: "563.460022",
   day: 93
 }, {
-  closePrice: "576.830017",
+  closePrice: "586.780029",
   day: 94
 }, {
-  closePrice: "577.869995",
+  closePrice: "580.880005",
   day: 95
 }, {
-  closePrice: "563.460022",
+  closePrice: "606.440002",
   day: 96
 }, {
-  closePrice: "586.780029",
+  closePrice: "604.690002",
   day: 97
 }, {
-  closePrice: "580.880005",
+  closePrice: "619.130005",
   day: 98
 }, {
-  closePrice: "606.440002",
+  closePrice: "630.849976",
   day: 99
 }, {
-  closePrice: "604.690002",
+  closePrice: "625.219971",
   day: 100
 }, {
-  closePrice: "619.130005",
+  closePrice: "623.900024",
   day: 101
 }, {
-  closePrice: "630.849976",
+  closePrice: "605.119995",
   day: 102
 }, {
-  closePrice: "625.219971",
+  closePrice: "572.840027",
   day: 103
 }, {
-  closePrice: "623.900024",
+  closePrice: "599.049988",
   day: 104
 }, {
-  closePrice: "605.119995",
+  closePrice: "605.130005",
   day: 105
 }, {
-  closePrice: "572.840027",
+  closePrice: "603.590027",
   day: 106
 }, {
-  closePrice: "599.049988",
+  closePrice: "598.780029",
   day: 107
 }, {
-  closePrice: "605.130005",
+  closePrice: "610.119995",
   day: 108
 }, {
-  closePrice: "603.590027",
+  closePrice: "609.890015",
   day: 109
 }, {
-  closePrice: "598.780029",
+  closePrice: "617.690002",
   day: 110
 }, {
-  closePrice: "610.119995",
+  closePrice: "599.359985",
   day: 111
 }, {
-  closePrice: "609.890015",
+  closePrice: "604.869995",
   day: 112
 }, {
-  closePrice: "617.690002",
+  closePrice: "616.599976",
   day: 113
 }, {
-  closePrice: "599.359985",
+  closePrice: "623.309998",
   day: 114
 }, {
-  closePrice: "604.869995",
+  closePrice: "620.830017",
   day: 115
 }, {
-  closePrice: "616.599976",
+  closePrice: "623.710022",
   day: 116
 }, {
-  closePrice: "623.309998",
+  closePrice: "656.570007",
   day: 117
 }, {
-  closePrice: "620.830017",
+  closePrice: "679.820007",
   day: 118
 }, {
-  closePrice: "623.710022",
+  closePrice: "671.869995",
   day: 119
 }, {
-  closePrice: "656.570007",
+  closePrice: "688.719971",
   day: 120
 }, {
-  closePrice: "679.820007",
+  closePrice: "680.76001",
   day: 121
 }, {
-  closePrice: "671.869995",
+  closePrice: "679.700012",
   day: 122
 }, {
-  closePrice: "688.719971",
+  closePrice: "677.919983",
   day: 123
 }, {
-  closePrice: "680.760010",
+  closePrice: "678.900024",
   day: 124
 }, {
-  closePrice: "679.700012",
+  closePrice: "659.580017",
   day: 125
 }, {
-  closePrice: "677.919983",
+  closePrice: "644.650024",
   day: 126
 }, {
-  closePrice: "678.900024",
+  closePrice: "652.809998",
   day: 127
 }, {
-  closePrice: "659.580017",
+  closePrice: "656.950012",
   day: 128
 }, {
-  closePrice: "644.650024",
+  closePrice: "685.700012",
   day: 129
 }, {
-  closePrice: "652.809998",
+  closePrice: "668.539978",
   day: 130
 }, {
-  closePrice: "656.950012",
+  closePrice: "653.380005",
   day: 131
 }, {
-  closePrice: "685.700012",
+  closePrice: "650.599976",
   day: 132
 }, {
-  closePrice: "668.539978",
+  closePrice: "644.219971",
   day: 133
 }, {
-  closePrice: "653.380005",
+  closePrice: "646.219971",
   day: 134
 }, {
-  closePrice: "650.599976",
+  closePrice: "660.5",
   day: 135
 }, {
-  closePrice: "644.219971",
+  closePrice: "655.289978",
   day: 136
 }, {
-  closePrice: "646.219971",
+  closePrice: "649.26001",
   day: 137
 }, {
-  closePrice: "660.500000",
+  closePrice: "643.380005",
   day: 138
 }, {
-  closePrice: "655.289978",
+  closePrice: "657.619995",
   day: 139
 }, {
-  closePrice: "649.260010",
+  closePrice: "644.780029",
   day: 140
 }, {
-  closePrice: "643.380005",
+  closePrice: "646.97998",
   day: 141
 }, {
-  closePrice: "657.619995",
+  closePrice: "677.349976",
   day: 142
 }, {
-  closePrice: "644.780029",
+  closePrice: "687.200012",
   day: 143
 }, {
-  closePrice: "646.979980",
+  closePrice: "709.669983",
   day: 144
 }, {
-  closePrice: "677.349976",
+  closePrice: "709.73999",
   day: 145
 }, {
-  closePrice: "687.200012",
+  closePrice: "710.919983",
   day: 146
 }, {
-  closePrice: "709.669983",
+  closePrice: "714.630005",
   day: 147
 }, {
-  closePrice: "709.739990",
+  closePrice: "699.099976",
   day: 148
 }, {
-  closePrice: "710.919983",
+  closePrice: "713.76001",
   day: 149
 }, {
-  closePrice: "714.630005",
+  closePrice: "709.98999",
   day: 150
 }, {
-  closePrice: "699.099976",
+  closePrice: "707.820007",
   day: 151
 }, {
-  closePrice: "713.760010",
+  closePrice: "722.25",
   day: 152
 }, {
-  closePrice: "709.989990",
+  closePrice: "717.169983",
   day: 153
 }, {
-  closePrice: "707.820007",
+  closePrice: "686.169983",
   day: 154
 }, {
-  closePrice: "722.250000",
+  closePrice: "665.710022",
   day: 155
 }, {
-  closePrice: "717.169983",
+  closePrice: "688.98999",
   day: 156
 }, {
-  closePrice: "686.169983",
+  closePrice: "673.469971",
   day: 157
 }, {
-  closePrice: "665.710022",
+  closePrice: "680.26001",
   day: 158
 }, {
-  closePrice: "688.989990",
+  closePrice: "706.299988",
   day: 159
 }, {
-  closePrice: "673.469971",
+  closePrice: "708.48999",
   day: 160
 }, {
-  closePrice: "680.260010",
+  closePrice: "711.200012",
   day: 161
 }, {
-  closePrice: "706.299988",
+  closePrice: "701.159973",
   day: 162
 }, {
-  closePrice: "708.489990",
+  closePrice: "711.919983",
   day: 163
 }, {
-  closePrice: "711.200012",
+  closePrice: "730.909973",
   day: 164
 }, {
-  closePrice: "701.159973",
+  closePrice: "735.719971",
   day: 165
 }, {
-  closePrice: "711.919983",
+  closePrice: "734.090027",
   day: 166
 }, {
-  closePrice: "730.909973",
+  closePrice: "732.390015",
   day: 167
 }, {
-  closePrice: "735.719971",
+  closePrice: "733.570007",
   day: 168
 }, {
-  closePrice: "734.090027",
+  closePrice: "752.919983",
   day: 169
 }, {
-  closePrice: "732.390015",
+  closePrice: "753.869995",
   day: 170
 }, {
-  closePrice: "733.570007",
+  closePrice: "754.859985",
   day: 171
 }, {
-  closePrice: "752.919983",
+  closePrice: "736.27002",
   day: 172
 }, {
-  closePrice: "753.869995",
+  closePrice: "743",
   day: 173
 }, {
-  closePrice: "754.859985",
+  closePrice: "744.48999",
   day: 174
 }, {
-  closePrice: "736.270020",
+  closePrice: "755.830017",
   day: 175
 }, {
-  closePrice: "743.000000",
+  closePrice: "756.98999",
   day: 176
 }, {
-  closePrice: "744.489990",
+  closePrice: "759.48999",
   day: 177
 }, {
-  closePrice: "755.830017",
+  closePrice: "730.169983",
   day: 178
 }, {
-  closePrice: "756.989990",
+  closePrice: "739.380005",
   day: 179
 }, {
-  closePrice: "759.489990",
+  closePrice: "751.940002",
   day: 180
 }, {
-  closePrice: "730.169983",
+  closePrice: "753.640015",
   day: 181
 }, {
-  closePrice: "739.380005",
+  closePrice: "774.390015",
   day: 182
 }, {
-  closePrice: "751.940002",
+  closePrice: "791.359985",
   day: 183
 }, {
-  closePrice: "753.640015",
+  closePrice: "777.559998",
   day: 184
 }, {
-  closePrice: "774.390015",
+  closePrice: "781.309998",
   day: 185
 }, {
-  closePrice: "791.359985",
+  closePrice: "775.47998",
   day: 186
 }, {
-  closePrice: "777.559998",
+  closePrice: "775.219971",
   day: 187
 }, {
-  closePrice: "781.309998",
+  closePrice: "781.530029",
   day: 188
 }, {
-  closePrice: "775.479980",
+  closePrice: "780.590027",
   day: 189
 }, {
-  closePrice: "775.219971",
+  closePrice: "782.75",
   day: 190
 }, {
-  closePrice: "781.530029",
+  closePrice: "793.609985",
   day: 191
 }, {
-  closePrice: "780.590027",
+  closePrice: "785.48999",
   day: 192
 }, {
-  closePrice: "782.750000",
+  closePrice: "791.940002",
   day: 193
 }, {
-  closePrice: "793.609985",
+  closePrice: "805.719971",
   day: 194
 }, {
-  closePrice: "785.489990",
+  closePrice: "811.080017",
   day: 195
 }, {
-  closePrice: "791.940002",
+  closePrice: "818.320007",
   day: 196
 }, {
-  closePrice: "805.719971",
+  closePrice: "843.030029",
   day: 197
 }, {
-  closePrice: "811.080017",
+  closePrice: "870.109985",
   day: 198
 }, {
-  closePrice: "818.320007",
+  closePrice: "864.27002",
   day: 199
 }, {
-  closePrice: "843.030029",
+  closePrice: "865.799988",
   day: 200
 }, {
-  closePrice: "870.109985",
+  closePrice: "894",
   day: 201
 }, {
-  closePrice: "864.270020",
+  closePrice: "909.679993",
   day: 202
 }, {
-  closePrice: "865.799988",
+  closePrice: "1024.859985",
   day: 203
 }, {
-  closePrice: "894.000000",
+  closePrice: "1018.429993",
   day: 204
 }, {
-  closePrice: "909.679993",
+  closePrice: "1037.859985",
   day: 205
 }, {
-  closePrice: "1024.859985",
+  closePrice: "1077.040039",
   day: 206
 }, {
-  closePrice: "1018.429993",
+  closePrice: "1114",
   day: 207
 }, {
-  closePrice: "1037.859985",
+  closePrice: "1208.589966",
   day: 208
 }, {
-  closePrice: "1077.040039",
+  closePrice: "1172",
   day: 209
 }, {
-  closePrice: "1114.000000",
+  closePrice: "1213.859985",
   day: 210
 }, {
-  closePrice: "1208.589966",
+  closePrice: "1229.910034",
   day: 211
 }, {
-  closePrice: "1172.000000",
+  closePrice: "1222.089966",
   day: 212
 }, {
-  closePrice: "1213.859985",
+  closePrice: "1162.939941",
   day: 213
 }, {
-  closePrice: "1229.910034",
+  closePrice: "1023.5",
   day: 214
 }, {
-  closePrice: "1222.089966",
+  closePrice: "1067.949951",
   day: 215
 }, {
-  closePrice: "1162.939941",
+  closePrice: "1063.51001",
   day: 216
 }, {
-  closePrice: "1023.500000",
+  closePrice: "1033.420044",
   day: 217
 }, {
-  closePrice: "1067.949951",
+  closePrice: "1013.390015",
   day: 218
 }, {
-  closePrice: "1063.510010",
+  closePrice: "1054.72998",
   day: 219
 }, {
-  closePrice: "1033.420044",
+  closePrice: "1089.01001",
   day: 220
 }, {
-  closePrice: "1013.390015",
+  closePrice: "1096.380005",
   day: 221
 }, {
-  closePrice: "1054.729980",
+  closePrice: "1137.060059",
   day: 222
 }, {
-  closePrice: "1089.010010",
+  closePrice: "1156.869995",
   day: 223
 }, {
-  closePrice: "1096.380005",
+  closePrice: "1109.030029",
   day: 224
 }, {
-  closePrice: "1137.060059",
+  closePrice: "1116",
   day: 225
 }, {
-  closePrice: "1156.869995",
+  closePrice: "1081.920044",
   day: 226
 }, {
-  closePrice: "1109.030029",
+  closePrice: "1136.98999",
   day: 227
 }, {
-  closePrice: "1116.000000",
+  closePrice: "1144.76001",
   day: 228
 }, {
-  closePrice: "1081.920044",
+  closePrice: "1095",
   day: 229
 }, {
-  closePrice: "1136.989990",
+  closePrice: "1084.599976",
   day: 230
 }, {
-  closePrice: "1144.760010",
+  closePrice: "1014.969971",
   day: 231
 }, {
-  closePrice: "1095.000000",
+  closePrice: "1009.01001",
   day: 232
 }, {
-  closePrice: "1084.599976",
+  closePrice: "1051.75",
   day: 233
 }, {
-  closePrice: "1014.969971",
+  closePrice: "1068.959961",
   day: 234
 }, {
-  closePrice: "1009.010010",
+  closePrice: "1003.799988",
   day: 235
 }, {
-  closePrice: "1051.750000",
+  closePrice: "1017.030029",
   day: 236
 }, {
-  closePrice: "1068.959961",
+  closePrice: "966.409973",
   day: 237
 }, {
-  closePrice: "1003.799988",
+  closePrice: "958.51001",
   day: 238
 }, {
-  closePrice: "1017.030029",
+  closePrice: "975.98999",
   day: 239
 }, {
-  closePrice: "966.409973",
+  closePrice: "926.919983",
   day: 240
 }, {
-  closePrice: "958.510010",
+  closePrice: "932.570007",
   day: 241
 }, {
-  closePrice: "975.989990",
+  closePrice: "899.940002",
   day: 242
 }, {
-  closePrice: "926.919983",
+  closePrice: "938.530029",
   day: 243
 }, {
-  closePrice: "932.570007",
+  closePrice: "1008.869995",
   day: 244
 }, {
-  closePrice: "899.940002",
+  closePrice: "1067",
   day: 245
 }, {
-  closePrice: "938.530029",
+  closePrice: "1093.939941",
   day: 246
 }, {
-  closePrice: "1008.869995",
+  closePrice: "1088.469971",
   day: 247
 }, {
-  closePrice: "1067.000000",
+  closePrice: "1086.189941",
   day: 248
 }, {
-  closePrice: "1093.939941",
+  closePrice: "1070.339966",
   day: 249
 }, {
-  closePrice: "1088.469971",
+  closePrice: "1056.780029",
   day: 250
 }, {
-  closePrice: "1086.189941",
+  closePrice: "1199.780029",
   day: 251
 }, {
-  closePrice: "1070.339966",
+  closePrice: "1149.589966",
   day: 252
 }, {
-  closePrice: "1056.780029",
+  closePrice: "1088.119995",
   day: 253
 }, {
-  closePrice: "1199.780029",
+  closePrice: "1064.699951",
   day: 254
 }, {
-  closePrice: "1149.589966",
+  closePrice: "1026.959961",
   day: 255
 }, {
-  closePrice: "1088.119995",
+  closePrice: "1058.119995",
   day: 256
 }, {
-  closePrice: "1064.699951",
+  closePrice: "1064.400024",
   day: 257
 }, {
-  closePrice: "1026.959961",
+  closePrice: "1106.219971",
   day: 258
 }, {
-  closePrice: "1058.119995",
+  closePrice: "1031.560059",
   day: 259
 }, {
-  closePrice: "1064.400024",
+  closePrice: "1049.609985",
   day: 260
 }, {
-  closePrice: "1106.219971",
+  closePrice: "1030.51001",
   day: 261
 }, {
-  closePrice: "1031.560059",
+  closePrice: "995.650024",
   day: 262
 }, {
-  closePrice: "1049.609985",
+  closePrice: "996.27002",
   day: 263
 }, {
-  closePrice: "1030.510010",
+  closePrice: "943.900024",
   day: 264
 }, {
-  closePrice: "995.650024",
+  closePrice: "930",
   day: 265
 }, {
-  closePrice: "996.270020",
+  closePrice: "918.400024",
   day: 266
 }, {
-  closePrice: "943.900024",
+  closePrice: "937.409973",
   day: 267
 }, {
-  closePrice: "930.000000",
+  closePrice: "829.099976",
   day: 268
 }, {
-  closePrice: "918.400024",
+  closePrice: "846.349976",
   day: 269
 }, {
-  closePrice: "937.409973",
+  closePrice: "936.719971",
   day: 270
 }, {
-  closePrice: "829.099976",
+  closePrice: "931.25",
   day: 271
 }, {
-  closePrice: "846.349976",
+  closePrice: "905.659973",
   day: 272
 }, {
-  closePrice: "936.719971",
+  closePrice: "891.140015",
   day: 273
 }, {
-  closePrice: "931.250000",
+  closePrice: "923.320007",
   day: 274
 }, {
-  closePrice: "905.659973",
+  closePrice: "907.340027",
   day: 275
 }, {
-  closePrice: "891.140015",
+  closePrice: "922",
   day: 276
 }, {
-  closePrice: "923.320007",
+  closePrice: "932",
   day: 277
 }, {
-  closePrice: "907.340027",
+  closePrice: "904.549988",
   day: 278
 }, {
-  closePrice: "922.000000",
+  closePrice: "860",
   day: 279
 }, {
-  closePrice: "932.000000",
+  closePrice: "875.76001",
   day: 280
 }, {
-  closePrice: "904.549988",
+  closePrice: "922.429993",
   day: 281
 }, {
-  closePrice: "860.000000",
+  closePrice: "923.390015",
   day: 282
 }, {
-  closePrice: "875.760010",
+  closePrice: "876.349976",
   day: 283
 }, {
-  closePrice: "922.429993",
+  closePrice: "856.97998",
   day: 284
 }, {
-  closePrice: "923.390015",
+  closePrice: "821.530029",
   day: 285
 }, {
-  closePrice: "876.349976",
+  closePrice: "764.039978",
   day: 286
 }, {
-  closePrice: "856.979980",
+  closePrice: "800.77002",
   day: 287
 }, {
-  closePrice: "821.530029",
+  closePrice: "809.869995",
   day: 288
 }, {
-  closePrice: "764.039978",
+  closePrice: "870.429993",
   day: 289
 }, {
-  closePrice: "800.770020",
+  closePrice: "864.369995",
   day: 290
 }, {
-  closePrice: "809.869995",
+  closePrice: "879.890015",
   day: 291
 }, {
-  closePrice: "870.429993",
+  closePrice: "839.289978",
   day: 292
 }, {
-  closePrice: "864.369995",
+  closePrice: "838.289978",
   day: 293
 }, {
-  closePrice: "879.890015",
+  closePrice: "804.580017",
   day: 294
 }, {
-  closePrice: "839.289978",
+  closePrice: "824.400024",
   day: 295
 }, {
-  closePrice: "838.289978",
+  closePrice: "858.969971",
   day: 296
 }, {
-  closePrice: "804.580017",
+  closePrice: "838.299988",
   day: 297
 }, {
-  closePrice: "824.400024",
+  closePrice: "795.349976",
   day: 298
 }, {
-  closePrice: "858.969971",
+  closePrice: "766.369995",
   day: 299
 }, {
-  closePrice: "838.299988",
+  closePrice: "801.890015",
   day: 300
 }, {
-  closePrice: "795.349976",
+  closePrice: "840.22998",
   day: 301
 }, {
-  closePrice: "766.369995",
+  closePrice: "871.599976",
   day: 302
 }, {
-  closePrice: "801.890015",
+  closePrice: "905.390015",
   day: 303
 }, {
-  closePrice: "840.229980",
+  closePrice: "921.159973",
   day: 304
 }, {
-  closePrice: "871.599976",
+  closePrice: "993.97998",
   day: 305
 }, {
-  closePrice: "905.390015",
+  closePrice: "999.109985",
   day: 306
 }, {
-  closePrice: "921.159973",
+  closePrice: "1013.919983",
   day: 307
 }, {
-  closePrice: "993.979980",
+  closePrice: "1010.640015",
   day: 308
 }, {
-  closePrice: "999.109985",
+  closePrice: "1091.839966",
   day: 309
 }, {
-  closePrice: "1013.919983",
+  closePrice: "1099.569946",
   day: 310
 }, {
-  closePrice: "1010.640015",
+  closePrice: "1093.98999",
   day: 311
 }, {
-  closePrice: "1091.839966",
+  closePrice: "1077.599976",
   day: 312
 }, {
-  closePrice: "1099.569946",
+  closePrice: "1084.589966",
   day: 313
 }, {
-  closePrice: "1093.989990",
+  closePrice: "1145.449951",
   day: 314
 }, {
-  closePrice: "1077.599976",
+  closePrice: "1091.26001",
   day: 315
 }, {
-  closePrice: "1084.589966",
+  closePrice: "1045.76001",
   day: 316
 }, {
-  closePrice: "1145.449951",
+  closePrice: "1057.26001",
   day: 317
 }, {
-  closePrice: "1091.260010",
+  closePrice: "1025.48999",
   day: 318
 }, {
-  closePrice: "1045.760010",
+  closePrice: "975.929993",
   day: 319
 }, {
-  closePrice: "1057.260010",
+  closePrice: "986.950012",
   day: 320
 }, {
-  closePrice: "1025.489990",
+  closePrice: "1022.369995",
   day: 321
 }, {
-  closePrice: "975.929993",
+  closePrice: "985",
   day: 322
 }, {
-  closePrice: "986.950012",
+  closePrice: "1004.289978",
   day: 323
 }, {
-  closePrice: "1022.369995",
+  closePrice: "1028.150024",
   day: 324
 }, {
-  closePrice: "985.000000",
+  closePrice: "977.200012",
   day: 325
 }, {
-  closePrice: "1004.289978",
+  closePrice: "1008.780029",
   day: 326
 }, {
-  closePrice: "1028.150024",
+  closePrice: "1005.049988",
   day: 327
 }, {
-  closePrice: "977.200012",
+  closePrice: "998.02002",
   day: 328
 }, {
-  closePrice: "1008.780029",
+  closePrice: "876.419983",
   day: 329
 }, {
-  closePrice: "1005.049988",
+  closePrice: "881.51001",
   day: 330
 }, {
-  closePrice: "998.020020",
+  closePrice: "877.51001",
   day: 331
 }, {
-  closePrice: "876.419983",
+  closePrice: "870.76001",
   day: 332
 }, {
-  closePrice: "881.510010",
+  closePrice: "902.940002",
   day: 333
 }, {
-  closePrice: "877.510010",
+  closePrice: "909.25",
   day: 334
 }, {
-  closePrice: "870.760010",
+  closePrice: "952.619995",
   day: 335
 }, {
-  closePrice: "902.940002",
+  closePrice: "873.280029",
   day: 336
 }, {
-  closePrice: "909.250000",
+  closePrice: "865.650024",
   day: 337
 }, {
-  closePrice: "952.619995",
+  closePrice: "787.109985",
   day: 338
 }, {
-  closePrice: "873.280029",
+  closePrice: "800.039978",
   day: 339
 }, {
-  closePrice: "865.650024",
+  closePrice: "734",
   day: 340
 }, {
-  closePrice: "787.109985",
+  closePrice: "728",
   day: 341
 }, {
-  closePrice: "800.039978",
+  closePrice: "769.590027",
   day: 342
 }, {
-  closePrice: "734.000000",
+  closePrice: "724.369995",
   day: 343
 }, {
-  closePrice: "728.000000",
+  closePrice: "761.609985",
   day: 344
 }, {
-  closePrice: "769.590027",
+  closePrice: "709.809998",
   day: 345
 }, {
-  closePrice: "724.369995",
+  closePrice: "709.419983",
   day: 346
 }, {
-  closePrice: "761.609985",
+  closePrice: "663.900024",
   day: 347
 }, {
-  closePrice: "709.809998",
+  closePrice: "674.900024",
   day: 348
 }, {
-  closePrice: "709.419983",
+  closePrice: "628.159973",
   day: 349
 }, {
-  closePrice: "663.900024",
+  closePrice: "658.799988",
   day: 350
 }, {
-  closePrice: "674.900024",
+  closePrice: "707.72998",
   day: 351
 }, {
-  closePrice: "628.159973",
+  closePrice: "759.630005",
   day: 352
 }, {
-  closePrice: "658.799988",
+  closePrice: "758.26001",
   day: 353
 }, {
-  closePrice: "707.729980",
+  closePrice: "740.369995",
   day: 354
 }, {
-  closePrice: "759.630005",
+  closePrice: "775",
   day: 355
 }, {
-  closePrice: "758.260010",
+  closePrice: "703.549988",
   day: 356
 }, {
-  closePrice: "740.369995",
+  closePrice: "714.840027",
   day: 357
 }, {
-  closePrice: "775.000000",
+  closePrice: "716.659973",
   day: 358
 }, {
-  closePrice: "703.549988",
+  closePrice: "725.599976",
   day: 359
 }, {
-  closePrice: "714.840027",
+  closePrice: "719.119995",
   day: 360
 }, {
-  closePrice: "716.659973",
+  closePrice: "696.690002",
   day: 361
 }, {
-  closePrice: "725.599976",
+  closePrice: "647.210022",
   day: 362
 }, {
-  closePrice: "719.119995",
+  closePrice: "662.669983",
   day: 363
 }, {
-  closePrice: "696.690002",
+  closePrice: "699",
   day: 364
 }, {
-  closePrice: "647.210022",
+  closePrice: "639.299988",
   day: 365
 }, {
-  closePrice: "662.669983",
+  closePrice: "650.280029",
   day: 366
 }, {
-  closePrice: "699.000000",
+  closePrice: "711.109985",
   day: 367
 }, {
-  closePrice: "639.299988",
+  closePrice: "708.26001",
   day: 368
 }, {
-  closePrice: "650.280029",
+  closePrice: "705.210022",
   day: 369
 }, {
-  closePrice: "711.109985",
+  closePrice: "737.119995",
   day: 370
 }, {
-  closePrice: "708.260010",
+  closePrice: "734.76001",
   day: 371
 }, {
-  closePrice: "705.210022",
+  closePrice: "697.98999",
   day: 372
 }, {
-  closePrice: "737.119995",
+  closePrice: "685.469971",
   day: 373
 }, {
-  closePrice: "734.760010",
+  closePrice: "673.419983",
   day: 374
 }, {
-  closePrice: "697.989990",
+  closePrice: "681.789978",
   day: 375
 }, {
-  closePrice: "685.469971",
+  closePrice: "699.200012",
   day: 376
 }, {
-  closePrice: "673.419983",
+  closePrice: "695.200012",
   day: 377
 }, {
-  closePrice: "681.789978",
+  closePrice: "733.630005",
   day: 378
 }, {
-  closePrice: "699.200012",
+  closePrice: "752.289978",
   day: 379
 }, {
-  closePrice: "695.200012",
+  closePrice: "703.030029",
   day: 380
 }]
 
-export const goog_data = [ { ticker: 'GIRA'}, {
-  closePrice: "1751.880005",
+export const goog_data = [ { ticker: 'GIRA' }, {
+  closePrice: "86.764503",
   day: 1
 }, {
-  closePrice: "1728.239990",
+  closePrice: "89.362503",
   day: 2
 }, {
-  closePrice: "1740.920044",
+  closePrice: "90.360497",
   day: 3
 }, {
-  closePrice: "1735.290039",
+  closePrice: "88.335999",
   day: 4
 }, {
-  closePrice: "1787.250000",
+  closePrice: "87.327499",
   day: 5
 }, {
-  closePrice: "1807.209961",
+  closePrice: "87.720001",
   day: 6
 }, {
-  closePrice: "1766.719971",
+  closePrice: "87.009003",
   day: 7
 }, {
-  closePrice: "1746.550049",
+  closePrice: "86.809502",
   day: 8
 }, {
-  closePrice: "1754.400024",
+  closePrice: "89.542999",
   day: 9
 }, {
-  closePrice: "1740.180054",
+  closePrice: "94.345001",
   day: 10
 }, {
-  closePrice: "1736.189941",
+  closePrice: "94.5625",
   day: 11
 }, {
-  closePrice: "1790.859985",
+  closePrice: "95.052498",
   day: 12
 }, {
-  closePrice: "1886.900024",
+  closePrice: "94.970001",
   day: 13
 }, {
-  closePrice: "1891.250000",
+  closePrice: "95.862",
   day: 14
 }, {
-  closePrice: "1901.050049",
+  closePrice: "91.539497",
   day: 15
 }, {
-  closePrice: "1899.400024",
+  closePrice: "93.155502",
   day: 16
 }, {
-  closePrice: "1917.239990",
+  closePrice: "91.787003",
   day: 17
 }, {
-  closePrice: "1830.790039",
+  closePrice: "95.067497",
   day: 18
 }, {
-  closePrice: "1863.109985",
+  closePrice: "96.375504",
   day: 19
 }, {
-  closePrice: "1835.739990",
+  closePrice: "103.503502",
   day: 20
 }, {
-  closePrice: "1901.349976",
+  closePrice: "103.1185",
   day: 21
 }, {
-  closePrice: "1927.510010",
+  closePrice: "104.900002",
   day: 22
 }, {
-  closePrice: "2070.070068",
+  closePrice: "104.6455",
   day: 23
 }, {
-  closePrice: "2062.370117",
+  closePrice: "104.175499",
   day: 24
 }, {
-  closePrice: "2098.000000",
+  closePrice: "104.768997",
   day: 25
 }, {
-  closePrice: "2092.909912",
+  closePrice: "104.794502",
   day: 26
 }, {
-  closePrice: "2083.510010",
+  closePrice: "105.205498",
   day: 27
 }, {
-  closePrice: "2095.379883",
+  closePrice: "106.095001",
   day: 28
 }, {
-  closePrice: "2095.889893",
+  closePrice: "106.415497",
   day: 29
 }, {
-  closePrice: "2104.110107",
+  closePrice: "105.860001",
   day: 30
 }, {
-  closePrice: "2121.899902",
+  closePrice: "105.056999",
   day: 31
 }, {
-  closePrice: "2128.310059",
+  closePrice: "103.244003",
   day: 32
 }, {
-  closePrice: "2117.199951",
+  closePrice: "103.542999",
   day: 33
 }, {
-  closePrice: "2101.139893",
+  closePrice: "104.758499",
   day: 34
 }, {
-  closePrice: "2064.879883",
+  closePrice: "101.568001",
   day: 35
 }, {
-  closePrice: "2070.860107",
+  closePrice: "101.843002",
   day: 36
 }, {
-  closePrice: "2095.169922",
+  closePrice: "104.0755",
   day: 37
 }, {
-  closePrice: "2031.359985",
+  closePrice: "103.792",
   day: 38
 }, {
-  closePrice: "2036.859985",
+  closePrice: "101.335503",
   day: 39
 }, {
-  closePrice: "2081.510010",
+  closePrice: "102.454498",
   day: 40
 }, {
-  closePrice: "2075.840088",
+  closePrice: "105.427002",
   day: 41
 }, {
-  closePrice: "2026.709961",
+  closePrice: "101.208504",
   day: 42
 }, {
-  closePrice: "2049.090088",
+  closePrice: "102.635002",
   day: 43
 }, {
-  closePrice: "2108.540039",
+  closePrice: "102.751503",
   day: 44
 }, {
-  closePrice: "2024.170044",
+  closePrice: "105.738503",
   day: 45
 }, {
-  closePrice: "2052.699951",
+  closePrice: "103.096001",
   day: 46
 }, {
-  closePrice: "2055.030029",
+  closePrice: "103.324501",
   day: 47
 }, {
-  closePrice: "2114.770020",
+  closePrice: "104.625999",
   day: 48
 }, {
-  closePrice: "2061.919922",
+  closePrice: "104.554001",
   day: 49
 }, {
-  closePrice: "2066.489990",
+  closePrice: "101.810997",
   day: 50
 }, {
-  closePrice: "2092.520020",
+  closePrice: "102.160004",
   day: 51
 }, {
-  closePrice: "2091.080078",
+  closePrice: "101.929497",
   day: 52
 }, {
-  closePrice: "2036.219971",
+  closePrice: "102.648003",
   day: 53
 }, {
-  closePrice: "2043.199951",
+  closePrice: "102.252998",
   day: 54
 }, {
-  closePrice: "2038.589966",
+  closePrice: "102.218002",
   day: 55
 }, {
-  closePrice: "2052.959961",
+  closePrice: "101.777496",
   day: 56
 }, {
-  closePrice: "2045.060059",
+  closePrice: "102.797501",
   day: 57
 }, {
-  closePrice: "2044.359985",
+  closePrice: "102.777",
   day: 58
 }, {
-  closePrice: "2035.550049",
+  closePrice: "103.431503",
   day: 59
 }, {
-  closePrice: "2055.949951",
+  closePrice: "106.887497",
   day: 60
 }, {
-  closePrice: "2055.540039",
+  closePrice: "111.277496",
   day: 61
 }, {
-  closePrice: "2068.629883",
+  closePrice: "111.237503",
   day: 62
 }, {
-  closePrice: "2137.750000",
+  closePrice: "112.484001",
   day: 63
 }, {
-  closePrice: "2225.550049",
+  closePrice: "113.272003",
   day: 64
 }, {
-  closePrice: "2224.750000",
+  closePrice: "114.293999",
   day: 65
 }, {
-  closePrice: "2249.679932",
+  closePrice: "112.739502",
   day: 66
 }, {
-  closePrice: "2265.439941",
+  closePrice: "113.363503",
   day: 67
 }, {
-  closePrice: "2285.879883",
+  closePrice: "112.741997",
   day: 68
 }, {
-  closePrice: "2254.790039",
+  closePrice: "114.833",
   day: 69
 }, {
-  closePrice: "2267.270020",
+  closePrice: "114.888",
   day: 70
 }, {
-  closePrice: "2254.840088",
+  closePrice: "115.120003",
   day: 71
 }, {
-  closePrice: "2296.659912",
+  closePrice: "114.681503",
   day: 72
 }, {
-  closePrice: "2297.760010",
+  closePrice: "114.664497",
   day: 73
 }, {
-  closePrice: "2302.399902",
+  closePrice: "113.396004",
   day: 74
 }, {
-  closePrice: "2293.629883",
+  closePrice: "115.764999",
   day: 75
 }, {
-  closePrice: "2293.290039",
+  closePrice: "116.336998",
   day: 76
 }, {
-  closePrice: "2267.919922",
+  closePrice: "115.356003",
   day: 77
 }, {
-  closePrice: "2315.300049",
+  closePrice: "118.995499",
   day: 78
 }, {
-  closePrice: "2326.739990",
+  closePrice: "121.494499",
   day: 79
 }, {
-  closePrice: "2307.120117",
+  closePrice: "120.505997",
   day: 80
 }, {
-  closePrice: "2379.909912",
+  closePrice: "119.758499",
   day: 81
 }, {
-  closePrice: "2429.889893",
+  closePrice: "117.712502",
   day: 82
 }, {
-  closePrice: "2410.120117",
+  closePrice: "117.836998",
   day: 83
 }, {
-  closePrice: "2395.169922",
+  closePrice: "119.067497",
   day: 84
 }, {
-  closePrice: "2354.250000",
+  closePrice: "119.934502",
   day: 85
 }, {
-  closePrice: "2356.739990",
+  closePrice: "117.083",
   day: 86
 }, {
-  closePrice: "2381.350098",
+  closePrice: "115.438004",
   day: 87
 }, {
-  closePrice: "2398.689941",
+  closePrice: "111.954002",
   day: 88
 }, {
-  closePrice: "2341.659912",
+  closePrice: "113.098503",
   day: 89
 }, {
-  closePrice: "2308.760010",
+  closePrice: "115.807999",
   day: 90
 }, {
-  closePrice: "2239.080078",
+  closePrice: "116.070503",
   day: 91
 }, {
-  closePrice: "2261.969971",
+  closePrice: "115.171501",
   day: 92
 }, {
-  closePrice: "2316.159912",
+  closePrice: "115.435501",
   day: 93
 }, {
-  closePrice: "2321.409912",
+  closePrice: "117.804497",
   day: 94
 }, {
-  closePrice: "2303.429932",
+  closePrice: "117.254997",
   day: 95
 }, {
-  closePrice: "2308.709961",
+  closePrice: "120.333504",
   day: 96
 }, {
-  closePrice: "2356.090088",
+  closePrice: "120.453499",
   day: 97
 }, {
-  closePrice: "2345.100098",
+  closePrice: "121.676498",
   day: 98
 }, {
-  closePrice: "2406.669922",
+  closePrice: "120.125504",
   day: 99
 }, {
-  closePrice: "2409.070068",
+  closePrice: "120.578003",
   day: 100
 }, {
-  closePrice: "2433.530029",
+  closePrice: "121.490501",
   day: 101
 }, {
-  closePrice: "2402.510010",
+  closePrice: "121.064003",
   day: 102
 }, {
-  closePrice: "2411.560059",
+  closePrice: "120.230499",
   day: 103
 }, {
-  closePrice: "2429.810059",
+  closePrice: "122.587997",
   day: 104
 }, {
-  closePrice: "2421.280029",
+  closePrice: "123.304497",
   day: 105
 }, {
-  closePrice: "2404.610107",
+  closePrice: "124.142502",
   day: 106
 }, {
-  closePrice: "2451.760010",
+  closePrice: "124.57",
   day: 107
 }, {
-  closePrice: "2466.090088",
+  closePrice: "126.080002",
   day: 108
 }, {
-  closePrice: "2482.850098",
+  closePrice: "125.696503",
   day: 109
 }, {
-  closePrice: "2491.399902",
+  closePrice: "126.351997",
   day: 110
 }, {
-  closePrice: "2521.600098",
+  closePrice: "126.032997",
   day: 111
 }, {
-  closePrice: "2513.929932",
+  closePrice: "125.696503",
   day: 112
 }, {
-  closePrice: "2527.040039",
+  closePrice: "126.371002",
   day: 113
 }, {
-  closePrice: "2520.659912",
+  closePrice: "125.567497",
   day: 114
 }, {
-  closePrice: "2513.929932",
+  closePrice: "126.455002",
   day: 115
 }, {
-  closePrice: "2527.419922",
+  closePrice: "126.999496",
   day: 116
 }, {
-  closePrice: "2511.350098",
+  closePrice: "126.461502",
   day: 117
 }, {
-  closePrice: "2529.100098",
+  closePrice: "127.281998",
   day: 118
 }, {
-  closePrice: "2539.989990",
+  closePrice: "126.995003",
   day: 119
 }, {
-  closePrice: "2529.229980",
+  closePrice: "126.819504",
   day: 120
 }, {
-  closePrice: "2545.639893",
+  closePrice: "126.018501",
   day: 121
 }, {
-  closePrice: "2539.899902",
+  closePrice: "125.316002",
   day: 122
 }, {
-  closePrice: "2536.389893",
+  closePrice: "126.3685",
   day: 123
 }, {
-  closePrice: "2520.370117",
+  closePrice: "128.718994",
   day: 124
 }, {
-  closePrice: "2506.320068",
+  closePrice: "129.770996",
   day: 125
 }, {
-  closePrice: "2527.370117",
+  closePrice: "130.077499",
   day: 126
 }, {
-  closePrice: "2574.379883",
+  closePrice: "129.177002",
   day: 127
 }, {
-  closePrice: "2595.419922",
+  closePrice: "129.574493",
   day: 128
 }, {
-  closePrice: "2601.550049",
+  closePrice: "130.563995",
   day: 129
 }, {
-  closePrice: "2583.540039",
+  closePrice: "130.994507",
   day: 130
 }, {
-  closePrice: "2591.489990",
+  closePrice: "132.082504",
   day: 131
 }, {
-  closePrice: "2611.280029",
+  closePrice: "131.266495",
   day: 132
 }, {
-  closePrice: "2619.889893",
+  closePrice: "131.845505",
   day: 133
 }, {
-  closePrice: "2641.649902",
+  closePrice: "129.253998",
   day: 134
 }, {
-  closePrice: "2625.330078",
+  closePrice: "131.101501",
   day: 135
 }, {
-  closePrice: "2636.909912",
+  closePrice: "132.600494",
   day: 136
 }, {
-  closePrice: "2585.080078",
+  closePrice: "133.328506",
   day: 137
 }, {
-  closePrice: "2622.030029",
+  closePrice: "137.815994",
   day: 138
 }, {
-  closePrice: "2652.010010",
+  closePrice: "139.644501",
   day: 139
 }, {
-  closePrice: "2666.570068",
+  closePrice: "136.796494",
   day: 140
 }, {
-  closePrice: "2756.320068",
+  closePrice: "136.3815",
   day: 141
 }, {
-  closePrice: "2792.889893",
+  closePrice: "136.540497",
   day: 142
 }, {
-  closePrice: "2735.929932",
+  closePrice: "135.220993",
   day: 143
 }, {
-  closePrice: "2727.629883",
+  closePrice: "135.989502",
   day: 144
 }, {
-  closePrice: "2730.810059",
+  closePrice: "136.279999",
   day: 145
 }, {
-  closePrice: "2704.419922",
+  closePrice: "136.028503",
   day: 146
 }, {
-  closePrice: "2719.790039",
+  closePrice: "136.940002",
   day: 147
 }, {
-  closePrice: "2725.600098",
+  closePrice: "137.035995",
   day: 148
 }, {
-  closePrice: "2720.570068",
+  closePrice: "138.001999",
   day: 149
 }, {
-  closePrice: "2738.800049",
+  closePrice: "138.096497",
   day: 150
 }, {
-  closePrice: "2740.719971",
+  closePrice: "137.689499",
   day: 151
 }, {
-  closePrice: "2760.040039",
+  closePrice: "138.389496",
   day: 152
 }, {
-  closePrice: "2761.929932",
+  closePrice: "138.406006",
   day: 153
 }, {
-  closePrice: "2753.790039",
+  closePrice: "138.916",
   day: 154
 }, {
-  closePrice: "2767.790039",
+  closePrice: "137.300507",
   day: 155
 }, {
-  closePrice: "2768.120117",
+  closePrice: "136.570007",
   day: 156
 }, {
-  closePrice: "2778.320068",
+  closePrice: "136.913498",
   day: 157
 }, {
-  closePrice: "2746.010010",
+  closePrice: "138.436996",
   day: 158
 }, {
-  closePrice: "2731.399902",
+  closePrice: "141.099503",
   day: 159
 }, {
-  closePrice: "2738.270020",
+  closePrice: "142.398499",
   day: 160
 }, {
-  closePrice: "2768.739990",
+  closePrice: "142.949997",
   day: 161
 }, {
-  closePrice: "2821.989990",
+  closePrice: "142.123001",
   day: 162
 }, {
-  closePrice: "2847.969971",
+  closePrice: "144.550507",
   day: 163
 }, {
-  closePrice: "2859.000000",
+  closePrice: "145.469498",
   day: 164
 }, {
-  closePrice: "2842.459961",
+  closePrice: "145.462006",
   day: 165
 }, {
-  closePrice: "2891.010010",
+  closePrice: "145.841995",
   day: 166
 }, {
-  closePrice: "2909.389893",
+  closePrice: "144.218994",
   day: 167
 }, {
-  closePrice: "2909.239990",
+  closePrice: "144.774994",
   day: 168
 }, {
-  closePrice: "2916.840088",
+  closePrice: "145.518997",
   day: 169
 }, {
-  closePrice: "2884.379883",
+  closePrice: "144.883499",
   day: 170
 }, {
-  closePrice: "2895.500000",
+  closePrice: "144.913498",
   day: 171
 }, {
-  closePrice: "2910.379883",
+  closePrice: "141.921005",
   day: 172
 }, {
-  closePrice: "2897.669922",
+  closePrice: "143.464996",
   day: 173
 }, {
-  closePrice: "2898.270020",
+  closePrice: "143.406006",
   day: 174
 }, {
-  closePrice: "2838.419922",
+  closePrice: "145.205994",
   day: 175
 }, {
-  closePrice: "2869.300049",
+  closePrice: "144.373505",
   day: 176
 }, {
-  closePrice: "2868.120117",
+  closePrice: "141.463501",
   day: 177
 }, {
-  closePrice: "2904.120117",
+  closePrice: "139.016998",
   day: 178
 }, {
-  closePrice: "2887.469971",
+  closePrice: "139.6465",
   day: 179
 }, {
-  closePrice: "2829.270020",
+  closePrice: "140.938507",
   day: 180
 }, {
-  closePrice: "2780.340088",
+  closePrice: "141.826508",
   day: 181
 }, {
-  closePrice: "2792.929932",
+  closePrice: "142.632996",
   day: 182
 }, {
-  closePrice: "2818.770020",
+  closePrice: "141.501007",
   day: 183
 }, {
-  closePrice: "2836.530029",
+  closePrice: "136.184006",
   day: 184
 }, {
-  closePrice: "2852.659912",
+  closePrice: "134.520996",
   day: 185
 }, {
-  closePrice: "2830.020020",
+  closePrice: "133.265503",
   day: 186
 }, {
-  closePrice: "2723.679932",
+  closePrice: "136.462494",
   day: 187
 }, {
-  closePrice: "2690.419922",
+  closePrice: "133.764999",
   day: 188
 }, {
-  closePrice: "2665.310059",
+  closePrice: "136.177002",
   day: 189
 }, {
-  closePrice: "2729.250000",
+  closePrice: "137.354004",
   day: 190
 }, {
-  closePrice: "2675.300049",
+  closePrice: "139.185501",
   day: 191
 }, {
-  closePrice: "2723.540039",
+  closePrice: "140.056",
   day: 192
 }, {
-  closePrice: "2747.080078",
+  closePrice: "138.847504",
   day: 193
 }, {
-  closePrice: "2783.709961",
+  closePrice: "136.712997",
   day: 194
 }, {
-  closePrice: "2801.120117",
+  closePrice: "137.899994",
   day: 195
 }, {
-  closePrice: "2776.949951",
+  closePrice: "141.412003",
   day: 196
 }, {
-  closePrice: "2734.260010",
+  closePrice: "141.675003",
   day: 197
 }, {
-  closePrice: "2758.000000",
+  closePrice: "142.960495",
   day: 198
 }, {
-  closePrice: "2828.239990",
+  closePrice: "143.822006",
   day: 199
 }, {
-  closePrice: "2833.500000",
+  closePrice: "142.414993",
   day: 200
 }, {
-  closePrice: "2859.209961",
+  closePrice: "142.780502",
   day: 201
 }, {
-  closePrice: "2876.439941",
+  closePrice: "138.625",
   day: 202
 }, {
-  closePrice: "2848.300049",
+  closePrice: "138.772995",
   day: 203
 }, {
-  closePrice: "2855.610107",
+  closePrice: "139.671997",
   day: 204
 }, {
-  closePrice: "2772.500000",
+  closePrice: "146.427505",
   day: 205
 }, {
-  closePrice: "2775.459961",
+  closePrice: "146.128998",
   day: 206
 }, {
-  closePrice: "2793.439941",
+  closePrice: "148.270493",
   day: 207
 }, {
-  closePrice: "2928.550049",
+  closePrice: "143.774002",
   day: 208
 }, {
-  closePrice: "2922.580078",
+  closePrice: "145.863007",
   day: 209
 }, {
-  closePrice: "2965.409912",
+  closePrice: "146.789993",
   day: 210
 }, {
-  closePrice: "2875.479980",
+  closePrice: "148.682999",
   day: 211
 }, {
-  closePrice: "2917.260010",
+  closePrice: "149.240997",
   day: 212
 }, {
-  closePrice: "2935.800049",
+  closePrice: "149.351501",
   day: 213
 }, {
-  closePrice: "2973.659912",
+  closePrice: "149.248505",
   day: 214
 }, {
-  closePrice: "2984.820068",
+  closePrice: "146.626007",
   day: 215
 }, {
-  closePrice: "2987.030029",
+  closePrice: "146.748001",
   day: 216
 }, {
-  closePrice: "2984.969971",
+  closePrice: "149.645493",
   day: 217
 }, {
-  closePrice: "2932.520020",
+  closePrice: "149.388",
   day: 218
 }, {
-  closePrice: "2934.959961",
+  closePrice: "149.076004",
   day: 219
 }, {
-  closePrice: "2992.909912",
+  closePrice: "149.061996",
   day: 220
 }, {
-  closePrice: "2987.760010",
+  closePrice: "150.709",
   day: 221
 }, {
-  closePrice: "2981.520020",
+  closePrice: "149.952499",
   day: 222
 }, {
-  closePrice: "2981.239990",
+  closePrice: "147.078506",
   day: 223
 }, {
-  closePrice: "3014.179932",
+  closePrice: "146.757004",
   day: 224
 }, {
-  closePrice: "2999.050049",
+  closePrice: "146.717499",
   day: 225
 }, {
-  closePrice: "2941.570068",
+  closePrice: "142.806",
   day: 226
 }, {
-  closePrice: "2935.139893",
+  closePrice: "146.113998",
   day: 227
 }, {
-  closePrice: "2934.350098",
+  closePrice: "142.451996",
   day: 228
 }, {
-  closePrice: "2856.120117",
+  closePrice: "141.617996",
   day: 229
 }, {
-  closePrice: "2922.280029",
+  closePrice: "143.776505",
   day: 230
 }, {
-  closePrice: "2849.040039",
+  closePrice: "142.520493",
   day: 231
 }, {
-  closePrice: "2832.360107",
+  closePrice: "143.796494",
   day: 232
 }, {
-  closePrice: "2875.530029",
+  closePrice: "148.036499",
   day: 233
 }, {
-  closePrice: "2850.409912",
+  closePrice: "148.720505",
   day: 234
 }, {
-  closePrice: "2875.929932",
+  closePrice: "148.106003",
   day: 235
 }, {
-  closePrice: "2960.729980",
+  closePrice: "148.675003",
   day: 236
 }, {
-  closePrice: "2974.409912",
+  closePrice: "146.704498",
   day: 237
 }, {
-  closePrice: "2962.120117",
+  closePrice: "144.970505",
   day: 238
 }, {
-  closePrice: "2973.500000",
+  closePrice: "147.3685",
   day: 239
 }, {
-  closePrice: "2934.090088",
+  closePrice: "144.838501",
   day: 240
 }, {
-  closePrice: "2899.409912",
+  closePrice: "142.802994",
   day: 241
 }, {
-  closePrice: "2947.370117",
+  closePrice: "142.401505",
   day: 242
 }, {
-  closePrice: "2896.770020",
+  closePrice: "144.220505",
   day: 243
 }, {
-  closePrice: "2856.060059",
+  closePrice: "146.949005",
   day: 244
 }, {
-  closePrice: "2848.030029",
+  closePrice: "147.142502",
   day: 245
 }, {
-  closePrice: "2884.409912",
+  closePrice: "148.063995",
   day: 246
 }, {
-  closePrice: "2938.979980",
+  closePrice: "146.447998",
   day: 247
 }, {
-  closePrice: "2942.850098",
+  closePrice: "146.504501",
   day: 248
 }, {
-  closePrice: "2961.280029",
+  closePrice: "146.002502",
   day: 249
 }, {
-  closePrice: "2928.959961",
+  closePrice: "144.679504",
   day: 250
 }, {
-  closePrice: "2930.090088",
+  closePrice: "145.074493",
   day: 251
 }, {
-  closePrice: "2920.050049",
+  closePrice: "144.416504",
   day: 252
 }, {
-  closePrice: "2893.590088",
+  closePrice: "137.653503",
   day: 253
 }, {
-  closePrice: "2901.489990",
+  closePrice: "137.550995",
   day: 254
 }, {
-  closePrice: "2888.330078",
+  closePrice: "137.004501",
   day: 255
 }, {
-  closePrice: "2753.070068",
+  closePrice: "138.574005",
   day: 256
 }, {
-  closePrice: "2751.020020",
+  closePrice: "140.017502",
   day: 257
 }, {
-  closePrice: "2740.090088",
+  closePrice: "141.647995",
   day: 258
 }, {
-  closePrice: "2771.479980",
+  closePrice: "139.130997",
   day: 259
 }, {
-  closePrice: "2800.350098",
+  closePrice: "139.786499",
   day: 260
 }, {
-  closePrice: "2832.959961",
+  closePrice: "136.290497",
   day: 261
 }, {
-  closePrice: "2782.620117",
+  closePrice: "135.651993",
   day: 262
 }, {
-  closePrice: "2795.729980",
+  closePrice: "133.5065",
   day: 263
 }, {
-  closePrice: "2725.810059",
+  closePrice: "130.091995",
   day: 264
 }, {
-  closePrice: "2713.040039",
+  closePrice: "130.371994",
   day: 265
 }, {
-  closePrice: "2670.129883",
+  closePrice: "126.735497",
   day: 266
 }, {
-  closePrice: "2601.840088",
+  closePrice: "129.240005",
   day: 267
 }, {
-  closePrice: "2607.439941",
+  closePrice: "129.121002",
   day: 268
 }, {
-  closePrice: "2534.709961",
+  closePrice: "133.289505",
   day: 269
 }, {
-  closePrice: "2584.800049",
+  closePrice: "135.698502",
   day: 270
 }, {
-  closePrice: "2582.419922",
+  closePrice: "137.878494",
   day: 271
 }, {
-  closePrice: "2665.790039",
+  closePrice: "148.036499",
   day: 272
 }, {
-  closePrice: "2713.969971",
+  closePrice: "142.650497",
   day: 273
 }, {
-  closePrice: "2757.570068",
+  closePrice: "143.016006",
   day: 274
 }, {
-  closePrice: "2960.729980",
+  closePrice: "138.938004",
   day: 275
 }, {
-  closePrice: "2853.010010",
+  closePrice: "139.212997",
   day: 276
 }, {
-  closePrice: "2860.320068",
+  closePrice: "141.453003",
   day: 277
 }, {
-  closePrice: "2778.760010",
+  closePrice: "138.602493",
   day: 278
 }, {
-  closePrice: "2784.260010",
+  closePrice: "134.130005",
   day: 279
 }, {
-  closePrice: "2829.060059",
+  closePrice: "135.300003",
   day: 280
 }, {
-  closePrice: "2772.050049",
+  closePrice: "136.425507",
   day: 281
 }, {
-  closePrice: "2682.600098",
+  closePrice: "137.487503",
   day: 282
 }, {
-  closePrice: "2706.000000",
+  closePrice: "132.308502",
   day: 283
 }, {
-  closePrice: "2728.510010",
+  closePrice: "130.467499",
   day: 284
 }, {
-  closePrice: "2749.750000",
+  closePrice: "129.402496",
   day: 285
 }, {
-  closePrice: "2646.169922",
+  closePrice: "127.584999",
   day: 286
 }, {
-  closePrice: "2609.350098",
+  closePrice: "132.673492",
   day: 287
 }, {
-  closePrice: "2588.050049",
+  closePrice: "134.519501",
   day: 288
 }, {
-  closePrice: "2551.699951",
+  closePrice: "134.891006",
   day: 289
 }, {
-  closePrice: "2653.469971",
+  closePrice: "134.167999",
   day: 290
 }, {
-  closePrice: "2690.389893",
+  closePrice: "134.751495",
   day: 291
 }, {
-  closePrice: "2697.820068",
+  closePrice: "134.307999",
   day: 292
 }, {
-  closePrice: "2683.360107",
+  closePrice: "132.121994",
   day: 293
 }, {
-  closePrice: "2695.030029",
+  closePrice: "126.4645",
   day: 294
 }, {
-  closePrice: "2686.159912",
+  closePrice: "127.278503",
   day: 295
 }, {
-  closePrice: "2642.439941",
+  closePrice: "133.865997",
   day: 296
 }, {
-  closePrice: "2529.290039",
+  closePrice: "132.682007",
   day: 297
 }, {
-  closePrice: "2545.570068",
+  closePrice: "130.475494",
   day: 298
 }, {
-  closePrice: "2677.320068",
+  closePrice: "126.740997",
   day: 299
 }, {
-  closePrice: "2653.639893",
+  closePrice: "129.660507",
   day: 300
 }, {
-  closePrice: "2609.510010",
+  closePrice: "133.690506",
   day: 301
 }, {
-  closePrice: "2534.820068",
+  closePrice: "134.600494",
   day: 302
 }, {
-  closePrice: "2593.209961",
+  closePrice: "136.801498",
   day: 303
 }, {
-  closePrice: "2673.810059",
+  closePrice: "136.4785",
   day: 304
 }, {
-  closePrice: "2692.010010",
+  closePrice: "140.277496",
   day: 305
 }, {
-  closePrice: "2736.030029",
+  closePrice: "138.503494",
   day: 306
 }, {
-  closePrice: "2729.570068",
+  closePrice: "141.311996",
   day: 307
 }, {
-  closePrice: "2805.550049",
+  closePrice: "141.5215",
   day: 308
 }, {
-  closePrice: "2770.070068",
+  closePrice: "141.949997",
   day: 309
 }, {
-  closePrice: "2826.239990",
+  closePrice: "143.25",
   day: 310
 }, {
-  closePrice: "2830.429932",
+  closePrice: "142.644501",
   day: 311
 }, {
-  closePrice: "2839.000000",
+  closePrice: "139.649506",
   day: 312
 }, {
-  closePrice: "2865.000000",
+  closePrice: "140.699997",
   day: 313
 }, {
-  closePrice: "2852.889893",
+  closePrice: "143.642502",
   day: 314
 }, {
-  closePrice: "2792.989990",
+  closePrice: "141.063004",
   day: 315
 }, {
-  closePrice: "2814.000000",
+  closePrice: "137.175995",
   day: 316
 }, {
-  closePrice: "2872.850098",
+  closePrice: "136.464996",
   day: 317
 }, {
-  closePrice: "2821.260010",
+  closePrice: "134.010498",
   day: 318
 }, {
-  closePrice: "2743.520020",
+  closePrice: "129.796494",
   day: 319
 }, {
-  closePrice: "2729.300049",
+  closePrice: "128.374496",
   day: 320
 }, {
-  closePrice: "2680.209961",
+  closePrice: "130.285995",
   day: 321
 }, {
-  closePrice: "2595.929932",
+  closePrice: "127.252998",
   day: 322
 }, {
-  closePrice: "2567.489990",
+  closePrice: "127.960999",
   day: 323
 }, {
-  closePrice: "2605.719971",
+  closePrice: "130.531006",
   day: 324
 }, {
-  closePrice: "2545.060059",
+  closePrice: "128.245499",
   day: 325
 }, {
-  closePrice: "2559.219971",
+  closePrice: "124.9375",
   day: 326
 }, {
-  closePrice: "2610.620117",
+  closePrice: "119.613998",
   day: 327
 }, {
-  closePrice: "2564.909912",
+  closePrice: "123.25",
   day: 328
 }, {
-  closePrice: "2498.750000",
+  closePrice: "119.505997",
   day: 329
 }, {
-  closePrice: "2392.280029",
+  closePrice: "115.0205",
   day: 330
 }, {
-  closePrice: "2465.000000",
+  closePrice: "119.411499",
   day: 331
 }, {
-  closePrice: "2390.120117",
+  closePrice: "114.966499",
   day: 332
 }, {
-  closePrice: "2300.409912",
+  closePrice: "117.156998",
   day: 333
 }, {
-  closePrice: "2388.229980",
+  closePrice: "118.129501",
   day: 334
 }, {
-  closePrice: "2299.330078",
+  closePrice: "122.574997",
   day: 335
 }, {
-  closePrice: "2343.139893",
+  closePrice: "116.746498",
   day: 336
 }, {
-  closePrice: "2362.590088",
+  closePrice: "115.660004",
   day: 337
 }, {
-  closePrice: "2451.500000",
+  closePrice: "113.084",
   day: 338
 }, {
-  closePrice: "2334.929932",
+  closePrice: "114.584503",
   day: 339
 }, {
-  closePrice: "2313.199951",
+  closePrice: "113.960999",
   day: 340
 }, {
-  closePrice: "2261.679932",
+  closePrice: "113.161003",
   day: 341
 }, {
-  closePrice: "2291.689941",
+  closePrice: "116.515503",
   day: 342
 }, {
-  closePrice: "2279.219971",
+  closePrice: "114.792503",
   day: 343
 }, {
-  closePrice: "2263.219971",
+  closePrice: "116.7015",
   day: 344
 }, {
-  closePrice: "2330.310059",
+  closePrice: "112.401001",
   day: 345
 }, {
-  closePrice: "2295.850098",
+  closePrice: "110.745499",
   day: 346
 }, {
-  closePrice: "2334.030029",
+  closePrice: "109.313004",
   day: 347
 }, {
-  closePrice: "2248.020020",
+  closePrice: "111.666496",
   day: 348
 }, {
-  closePrice: "2214.909912",
+  closePrice: "105.926003",
   day: 349
 }, {
-  closePrice: "2186.260010",
+  closePrice: "105.8395",
   day: 350
 }, {
-  closePrice: "2233.330078",
+  closePrice: "108.295998",
   day: 351
 }, {
-  closePrice: "2118.520020",
+  closePrice: "112.799004",
   day: 352
 }, {
-  closePrice: "2116.790039",
+  closePrice: "114.039001",
   day: 353
 }, {
-  closePrice: "2165.919922",
+  closePrice: "114.137001",
   day: 354
 }, {
-  closePrice: "2255.979980",
+  closePrice: "117.746002",
   day: 355
 }, {
-  closePrice: "2280.780029",
+  closePrice: "114.564003",
   day: 356
 }, {
-  closePrice: "2282.739990",
+  closePrice: "117.010498",
   day: 357
 }, {
-  closePrice: "2354.919922",
+  closePrice: "117.2295",
   day: 358
 }, {
-  closePrice: "2291.280029",
+  closePrice: "117.237999",
   day: 359
 }, {
-  closePrice: "2340.209961",
+  closePrice: "114.917999",
   day: 360
 }, {
-  closePrice: "2344.590088",
+  closePrice: "111.427498",
   day: 361
 }, {
-  closePrice: "2344.760010",
+  closePrice: "106.876503",
   day: 362
 }, {
-  closePrice: "2298.360107",
+  closePrice: "107.194",
   day: 363
 }, {
-  closePrice: "2228.550049",
+  closePrice: "110.390503",
   day: 364
 }, {
-  closePrice: "2137.530029",
+  closePrice: "106.636002",
   day: 365
 }, {
-  closePrice: "2143.879883",
+  closePrice: "107.865501",
   day: 366
 }, {
-  closePrice: "2207.810059",
+  closePrice: "112.014999",
   day: 367
 }, {
-  closePrice: "2132.719971",
+  closePrice: "112.033997",
   day: 368
 }, {
-  closePrice: "2157.310059",
+  closePrice: "112.684502",
   day: 369
 }, {
-  closePrice: "2240.300049",
+  closePrice: "118.538002",
   day: 370
 }, {
-  closePrice: "2240.679932",
+  closePrice: "116.622498",
   day: 371
 }, {
-  closePrice: "2253.689941",
+  closePrice: "112.571503",
   day: 372
 }, {
-  closePrice: "2370.760010",
+  closePrice: "112.2565",
   day: 373
 }, {
-  closePrice: "2332.449951",
+  closePrice: "109.372498",
   day: 374
 }, {
-  closePrice: "2251.429932",
+  closePrice: "109.081001",
   day: 375
 }, {
-  closePrice: "2245.129883",
+  closePrice: "113.887001",
   day: 376
 }, {
-  closePrice: "2187.449951",
+  closePrice: "115.213501",
   day: 377
 }, {
-  closePrice: "2181.620117",
+  closePrice: "119.306",
   day: 378
 }, {
-  closePrice: "2277.739990",
+  closePrice: "120.168503",
   day: 379
 }, {
-  closePrice: "2304.270020",
+  closePrice: "116.522499",
   day: 380
 }]
 
 export const msft_data = [ { ticker: 'BUNY' }, {
-  closePrice: "222.419998",
+  closePrice: "212.25",
   day: 1
 }, {
-  closePrice: "217.690002",
+  closePrice: "218.289993",
   day: 2
 }, {
-  closePrice: "217.899994",
+  closePrice: "219.619995",
   day: 3
 }, {
-  closePrice: "212.250000",
+  closePrice: "217.490005",
   day: 4
 }, {
-  closePrice: "218.289993",
+  closePrice: "214.929993",
   day: 5
 }, {
-  closePrice: "219.619995",
+  closePrice: "216.339996",
   day: 6
 }, {
-  closePrice: "217.490005",
+  closePrice: "213.020004",
   day: 7
 }, {
-  closePrice: "214.929993",
+  closePrice: "212.649994",
   day: 8
 }, {
-  closePrice: "216.339996",
+  closePrice: "216.440002",
   day: 9
 }, {
-  closePrice: "213.020004",
+  closePrice: "224.339996",
   day: 10
 }, {
-  closePrice: "212.649994",
+  closePrice: "224.970001",
   day: 11
 }, {
-  closePrice: "216.440002",
+  closePrice: "225.949997",
   day: 12
 }, {
-  closePrice: "224.339996",
+  closePrice: "229.529999",
   day: 13
 }, {
-  closePrice: "224.970001",
+  closePrice: "232.330002",
   day: 14
 }, {
-  closePrice: "225.949997",
+  closePrice: "232.899994",
   day: 15
 }, {
-  closePrice: "229.529999",
+  closePrice: "238.929993",
   day: 16
 }, {
-  closePrice: "232.330002",
+  closePrice: "231.960007",
   day: 17
 }, {
-  closePrice: "232.899994",
+  closePrice: "239.649994",
   day: 18
 }, {
-  closePrice: "238.929993",
+  closePrice: "239.509995",
   day: 19
 }, {
-  closePrice: "231.960007",
+  closePrice: "243",
   day: 20
 }, {
-  closePrice: "239.649994",
+  closePrice: "242.009995",
   day: 21
 }, {
-  closePrice: "239.509995",
+  closePrice: "242.199997",
   day: 22
 }, {
-  closePrice: "243.000000",
+  closePrice: "242.470001",
   day: 23
 }, {
-  closePrice: "242.009995",
+  closePrice: "243.770004",
   day: 24
 }, {
-  closePrice: "242.199997",
+  closePrice: "242.820007",
   day: 25
 }, {
-  closePrice: "242.470001",
+  closePrice: "244.490005",
   day: 26
 }, {
-  closePrice: "243.770004",
+  closePrice: "244.990005",
   day: 27
 }, {
-  closePrice: "242.820007",
+  closePrice: "243.699997",
   day: 28
 }, {
-  closePrice: "244.490005",
+  closePrice: "244.199997",
   day: 29
 }, {
-  closePrice: "244.990005",
+  closePrice: "243.789993",
   day: 30
 }, {
-  closePrice: "243.699997",
+  closePrice: "240.970001",
   day: 31
 }, {
-  closePrice: "244.199997",
+  closePrice: "234.509995",
   day: 32
 }, {
-  closePrice: "243.789993",
+  closePrice: "233.270004",
   day: 33
 }, {
-  closePrice: "240.970001",
+  closePrice: "234.550003",
   day: 34
 }, {
-  closePrice: "234.509995",
+  closePrice: "228.990005",
   day: 35
 }, {
-  closePrice: "233.270004",
+  closePrice: "232.380005",
   day: 36
 }, {
-  closePrice: "234.550003",
+  closePrice: "236.940002",
   day: 37
 }, {
-  closePrice: "228.990005",
+  closePrice: "233.869995",
   day: 38
 }, {
-  closePrice: "232.380005",
+  closePrice: "227.559998",
   day: 39
 }, {
-  closePrice: "236.940002",
+  closePrice: "226.729996",
   day: 40
 }, {
-  closePrice: "233.869995",
+  closePrice: "231.600006",
   day: 41
 }, {
-  closePrice: "227.559998",
+  closePrice: "227.389999",
   day: 42
 }, {
-  closePrice: "226.729996",
+  closePrice: "233.779999",
   day: 43
 }, {
-  closePrice: "231.600006",
+  closePrice: "232.419998",
   day: 44
 }, {
-  closePrice: "227.389999",
+  closePrice: "237.130005",
   day: 45
 }, {
-  closePrice: "233.779999",
+  closePrice: "235.75",
   day: 46
 }, {
-  closePrice: "232.419998",
+  closePrice: "234.809998",
   day: 47
 }, {
-  closePrice: "237.130005",
+  closePrice: "237.710007",
   day: 48
 }, {
-  closePrice: "235.750000",
+  closePrice: "237.039993",
   day: 49
 }, {
-  closePrice: "234.809998",
+  closePrice: "230.720001",
   day: 50
 }, {
-  closePrice: "237.710007",
+  closePrice: "230.350006",
   day: 51
 }, {
-  closePrice: "237.039993",
+  closePrice: "235.990005",
   day: 52
 }, {
-  closePrice: "230.720001",
+  closePrice: "237.580002",
   day: 53
 }, {
-  closePrice: "230.350006",
+  closePrice: "235.460007",
   day: 54
 }, {
-  closePrice: "235.990005",
+  closePrice: "232.339996",
   day: 55
 }, {
-  closePrice: "237.580002",
+  closePrice: "236.479996",
   day: 56
 }, {
-  closePrice: "235.460007",
+  closePrice: "235.240005",
   day: 57
 }, {
-  closePrice: "232.339996",
+  closePrice: "231.850006",
   day: 58
 }, {
-  closePrice: "236.479996",
+  closePrice: "235.770004",
   day: 59
 }, {
-  closePrice: "235.240005",
+  closePrice: "242.350006",
   day: 60
 }, {
-  closePrice: "231.850006",
+  closePrice: "249.070007",
   day: 61
 }, {
-  closePrice: "235.770004",
+  closePrice: "247.860001",
   day: 62
 }, {
-  closePrice: "242.350006",
+  closePrice: "249.899994",
   day: 63
 }, {
-  closePrice: "249.070007",
+  closePrice: "253.25",
   day: 64
 }, {
-  closePrice: "247.860001",
+  closePrice: "255.850006",
   day: 65
 }, {
-  closePrice: "249.899994",
+  closePrice: "255.910004",
   day: 66
 }, {
-  closePrice: "253.250000",
+  closePrice: "258.48999",
   day: 67
 }, {
-  closePrice: "255.850006",
+  closePrice: "255.589996",
   day: 68
 }, {
-  closePrice: "255.910004",
+  closePrice: "259.5",
   day: 69
 }, {
-  closePrice: "258.489990",
+  closePrice: "260.73999",
   day: 70
 }, {
-  closePrice: "255.589996",
+  closePrice: "258.73999",
   day: 71
 }, {
-  closePrice: "259.500000",
+  closePrice: "258.26001",
   day: 72
 }, {
-  closePrice: "260.739990",
+  closePrice: "260.579987",
   day: 73
 }, {
-  closePrice: "258.739990",
+  closePrice: "257.170013",
   day: 74
 }, {
-  closePrice: "258.260010",
+  closePrice: "261.149994",
   day: 75
 }, {
-  closePrice: "260.579987",
+  closePrice: "261.549988",
   day: 76
 }, {
-  closePrice: "257.170013",
+  closePrice: "261.970001",
   day: 77
 }, {
-  closePrice: "261.149994",
+  closePrice: "254.559998",
   day: 78
 }, {
-  closePrice: "261.549988",
+  closePrice: "252.509995",
   day: 79
 }, {
-  closePrice: "261.970001",
+  closePrice: "252.179993",
   day: 80
 }, {
-  closePrice: "254.559998",
+  closePrice: "251.860001",
   day: 81
 }, {
-  closePrice: "252.509995",
+  closePrice: "247.789993",
   day: 82
 }, {
-  closePrice: "252.179993",
+  closePrice: "246.470001",
   day: 83
 }, {
-  closePrice: "251.860001",
+  closePrice: "249.729996",
   day: 84
 }, {
-  closePrice: "247.789993",
+  closePrice: "252.460007",
   day: 85
 }, {
-  closePrice: "246.470001",
+  closePrice: "247.179993",
   day: 86
 }, {
-  closePrice: "249.729996",
+  closePrice: "246.229996",
   day: 87
 }, {
-  closePrice: "252.460007",
+  closePrice: "239",
   day: 88
 }, {
-  closePrice: "247.179993",
+  closePrice: "243.029999",
   day: 89
 }, {
-  closePrice: "246.229996",
+  closePrice: "248.149994",
   day: 90
 }, {
-  closePrice: "239.000000",
+  closePrice: "245.179993",
   day: 91
 }, {
-  closePrice: "243.029999",
+  closePrice: "243.080002",
   day: 92
 }, {
-  closePrice: "248.149994",
+  closePrice: "243.119995",
   day: 93
 }, {
-  closePrice: "245.179993",
+  closePrice: "246.479996",
   day: 94
 }, {
-  closePrice: "243.080002",
+  closePrice: "245.169998",
   day: 95
 }, {
-  closePrice: "243.119995",
+  closePrice: "250.779999",
   day: 96
 }, {
-  closePrice: "246.479996",
+  closePrice: "251.720001",
   day: 97
 }, {
-  closePrice: "245.169998",
+  closePrice: "251.490005",
   day: 98
 }, {
-  closePrice: "250.779999",
+  closePrice: "249.309998",
   day: 99
 }, {
-  closePrice: "251.720001",
+  closePrice: "249.679993",
   day: 100
 }, {
-  closePrice: "251.490005",
+  closePrice: "247.399994",
   day: 101
 }, {
-  closePrice: "249.309998",
+  closePrice: "247.300003",
   day: 102
 }, {
-  closePrice: "249.679993",
+  closePrice: "245.710007",
   day: 103
 }, {
-  closePrice: "247.399994",
+  closePrice: "250.789993",
   day: 104
 }, {
-  closePrice: "247.300003",
+  closePrice: "253.809998",
   day: 105
 }, {
-  closePrice: "245.710007",
+  closePrice: "252.570007",
   day: 106
 }, {
-  closePrice: "250.789993",
+  closePrice: "253.589996",
   day: 107
 }, {
-  closePrice: "253.809998",
+  closePrice: "257.23999",
   day: 108
 }, {
-  closePrice: "252.570007",
+  closePrice: "257.890015",
   day: 109
 }, {
-  closePrice: "253.589996",
+  closePrice: "259.890015",
   day: 110
 }, {
-  closePrice: "257.239990",
+  closePrice: "258.359985",
   day: 111
 }, {
-  closePrice: "257.890015",
+  closePrice: "257.380005",
   day: 112
 }, {
-  closePrice: "259.890015",
+  closePrice: "260.899994",
   day: 113
 }, {
-  closePrice: "258.359985",
+  closePrice: "259.429993",
   day: 114
 }, {
-  closePrice: "257.380005",
+  closePrice: "262.630005",
   day: 115
 }, {
-  closePrice: "260.899994",
+  closePrice: "265.51001",
   day: 116
 }, {
-  closePrice: "259.429993",
+  closePrice: "265.269989",
   day: 117
 }, {
-  closePrice: "262.630005",
+  closePrice: "266.690002",
   day: 118
 }, {
-  closePrice: "265.510010",
+  closePrice: "265.019989",
   day: 119
 }, {
-  closePrice: "265.269989",
+  closePrice: "268.720001",
   day: 120
 }, {
-  closePrice: "266.690002",
+  closePrice: "271.399994",
   day: 121
 }, {
-  closePrice: "265.019989",
+  closePrice: "270.899994",
   day: 122
 }, {
-  closePrice: "268.720001",
+  closePrice: "271.600006",
   day: 123
 }, {
-  closePrice: "271.399994",
+  closePrice: "277.649994",
   day: 124
 }, {
-  closePrice: "270.899994",
+  closePrice: "277.660004",
   day: 125
 }, {
-  closePrice: "271.600006",
+  closePrice: "279.929993",
   day: 126
 }, {
-  closePrice: "277.649994",
+  closePrice: "277.420013",
   day: 127
 }, {
-  closePrice: "277.660004",
+  closePrice: "277.940002",
   day: 128
 }, {
-  closePrice: "279.929993",
+  closePrice: "277.320007",
   day: 129
 }, {
-  closePrice: "277.420013",
+  closePrice: "280.980011",
   day: 130
 }, {
-  closePrice: "277.940002",
+  closePrice: "282.51001",
   day: 131
 }, {
-  closePrice: "277.320007",
+  closePrice: "281.029999",
   day: 132
 }, {
-  closePrice: "280.980011",
+  closePrice: "280.75",
   day: 133
 }, {
-  closePrice: "282.510010",
+  closePrice: "277.01001",
   day: 134
 }, {
-  closePrice: "281.029999",
+  closePrice: "279.320007",
   day: 135
 }, {
-  closePrice: "280.750000",
+  closePrice: "281.399994",
   day: 136
 }, {
-  closePrice: "277.010010",
+  closePrice: "286.140015",
   day: 137
 }, {
-  closePrice: "279.320007",
+  closePrice: "289.670013",
   day: 138
 }, {
-  closePrice: "281.399994",
+  closePrice: "289.049988",
   day: 139
 }, {
-  closePrice: "286.140015",
+  closePrice: "286.540009",
   day: 140
 }, {
-  closePrice: "289.670013",
+  closePrice: "286.220001",
   day: 141
 }, {
-  closePrice: "289.049988",
+  closePrice: "286.5",
   day: 142
 }, {
-  closePrice: "286.540009",
+  closePrice: "284.910004",
   day: 143
 }, {
-  closePrice: "286.220001",
+  closePrice: "284.820007",
   day: 144
 }, {
-  closePrice: "286.500000",
+  closePrice: "287.119995",
   day: 145
 }, {
-  closePrice: "284.910004",
+  closePrice: "286.51001",
   day: 146
 }, {
-  closePrice: "284.820007",
+  closePrice: "289.519989",
   day: 147
 }, {
-  closePrice: "287.119995",
+  closePrice: "289.459991",
   day: 148
 }, {
-  closePrice: "286.510010",
+  closePrice: "288.329987",
   day: 149
 }, {
-  closePrice: "289.519989",
+  closePrice: "286.440002",
   day: 150
 }, {
-  closePrice: "289.459991",
+  closePrice: "286.950012",
   day: 151
 }, {
-  closePrice: "288.329987",
+  closePrice: "289.809998",
   day: 152
 }, {
-  closePrice: "286.440002",
+  closePrice: "292.850006",
   day: 153
 }, {
-  closePrice: "286.950012",
+  closePrice: "294.600006",
   day: 154
 }, {
-  closePrice: "289.809998",
+  closePrice: "293.079987",
   day: 155
 }, {
-  closePrice: "292.850006",
+  closePrice: "290.730011",
   day: 156
 }, {
-  closePrice: "294.600006",
+  closePrice: "296.769989",
   day: 157
 }, {
-  closePrice: "293.079987",
+  closePrice: "304.359985",
   day: 158
 }, {
-  closePrice: "290.730011",
+  closePrice: "304.649994",
   day: 159
 }, {
-  closePrice: "296.769989",
+  closePrice: "302.619995",
   day: 160
 }, {
-  closePrice: "304.359985",
+  closePrice: "302.01001",
   day: 161
 }, {
-  closePrice: "304.649994",
+  closePrice: "299.089996",
   day: 162
 }, {
-  closePrice: "302.619995",
+  closePrice: "299.720001",
   day: 163
 }, {
-  closePrice: "302.010010",
+  closePrice: "303.589996",
   day: 164
 }, {
-  closePrice: "299.089996",
+  closePrice: "301.880005",
   day: 165
 }, {
-  closePrice: "299.720001",
+  closePrice: "301.829987",
   day: 166
 }, {
-  closePrice: "303.589996",
+  closePrice: "301.149994",
   day: 167
 }, {
-  closePrice: "301.880005",
+  closePrice: "301.140015",
   day: 168
 }, {
-  closePrice: "301.829987",
+  closePrice: "300.179993",
   day: 169
 }, {
-  closePrice: "301.149994",
+  closePrice: "300.209991",
   day: 170
 }, {
-  closePrice: "301.140015",
+  closePrice: "297.25",
   day: 171
 }, {
-  closePrice: "300.179993",
+  closePrice: "295.709991",
   day: 172
 }, {
-  closePrice: "300.209991",
+  closePrice: "296.98999",
   day: 173
 }, {
-  closePrice: "297.250000",
+  closePrice: "299.790009",
   day: 174
 }, {
-  closePrice: "295.709991",
+  closePrice: "304.820007",
   day: 175
 }, {
-  closePrice: "296.989990",
+  closePrice: "305.220001",
   day: 176
 }, {
-  closePrice: "299.790009",
+  closePrice: "299.869995",
   day: 177
 }, {
-  closePrice: "304.820007",
+  closePrice: "294.299988",
   day: 178
 }, {
-  closePrice: "305.220001",
+  closePrice: "294.799988",
   day: 179
 }, {
-  closePrice: "299.869995",
+  closePrice: "298.579987",
   day: 180
 }, {
-  closePrice: "294.299988",
+  closePrice: "299.559998",
   day: 181
 }, {
-  closePrice: "294.799988",
+  closePrice: "299.350006",
   day: 182
 }, {
-  closePrice: "298.579987",
+  closePrice: "294.170013",
   day: 183
 }, {
-  closePrice: "299.559998",
+  closePrice: "283.519989",
   day: 184
 }, {
-  closePrice: "299.350006",
+  closePrice: "284",
   day: 185
 }, {
-  closePrice: "294.170013",
+  closePrice: "281.920013",
   day: 186
 }, {
-  closePrice: "283.519989",
+  closePrice: "289.100006",
   day: 187
 }, {
-  closePrice: "284.000000",
+  closePrice: "283.109985",
   day: 188
 }, {
-  closePrice: "281.920013",
+  closePrice: "288.76001",
   day: 189
 }, {
-  closePrice: "289.100006",
+  closePrice: "293.109985",
   day: 190
 }, {
-  closePrice: "283.109985",
+  closePrice: "294.850006",
   day: 191
 }, {
-  closePrice: "288.760010",
+  closePrice: "294.850006",
   day: 192
 }, {
-  closePrice: "293.109985",
+  closePrice: "294.230011",
   day: 193
 }, {
-  closePrice: "294.850006",
+  closePrice: "292.880005",
   day: 194
 }, {
-  closePrice: "294.850006",
+  closePrice: "296.309998",
   day: 195
 }, {
-  closePrice: "294.230011",
+  closePrice: "302.75",
   day: 196
 }, {
-  closePrice: "292.880005",
+  closePrice: "304.209991",
   day: 197
 }, {
-  closePrice: "296.309998",
+  closePrice: "307.290009",
   day: 198
 }, {
-  closePrice: "302.750000",
+  closePrice: "308.230011",
   day: 199
 }, {
-  closePrice: "304.209991",
+  closePrice: "307.410004",
   day: 200
 }, {
-  closePrice: "307.290009",
+  closePrice: "310.76001",
   day: 201
 }, {
-  closePrice: "308.230011",
+  closePrice: "309.160004",
   day: 202
 }, {
-  closePrice: "307.410004",
+  closePrice: "308.130005",
   day: 203
 }, {
-  closePrice: "310.760010",
+  closePrice: "310.109985",
   day: 204
 }, {
-  closePrice: "309.160004",
+  closePrice: "323.170013",
   day: 205
 }, {
-  closePrice: "308.130005",
+  closePrice: "324.350006",
   day: 206
 }, {
-  closePrice: "310.109985",
+  closePrice: "331.619995",
   day: 207
 }, {
-  closePrice: "323.170013",
+  closePrice: "329.369995",
   day: 208
 }, {
-  closePrice: "324.350006",
+  closePrice: "333.130005",
   day: 209
 }, {
-  closePrice: "331.619995",
+  closePrice: "334",
   day: 210
 }, {
-  closePrice: "329.369995",
+  closePrice: "336.440002",
   day: 211
 }, {
-  closePrice: "333.130005",
+  closePrice: "336.059998",
   day: 212
 }, {
-  closePrice: "334.000000",
+  closePrice: "336.98999",
   day: 213
 }, {
-  closePrice: "336.440002",
+  closePrice: "335.950012",
   day: 214
 }, {
-  closePrice: "336.059998",
+  closePrice: "330.799988",
   day: 215
 }, {
-  closePrice: "336.989990",
+  closePrice: "332.429993",
   day: 216
 }, {
-  closePrice: "335.950012",
+  closePrice: "336.720001",
   day: 217
 }, {
-  closePrice: "330.799988",
+  closePrice: "336.070007",
   day: 218
 }, {
-  closePrice: "332.429993",
+  closePrice: "339.51001",
   day: 219
 }, {
-  closePrice: "336.720001",
+  closePrice: "339.119995",
   day: 220
 }, {
-  closePrice: "336.070007",
+  closePrice: "341.269989",
   day: 221
 }, {
-  closePrice: "339.510010",
+  closePrice: "343.109985",
   day: 222
 }, {
-  closePrice: "339.119995",
+  closePrice: "339.829987",
   day: 223
 }, {
-  closePrice: "341.269989",
+  closePrice: "337.679993",
   day: 224
 }, {
-  closePrice: "343.109985",
+  closePrice: "337.910004",
   day: 225
 }, {
-  closePrice: "339.829987",
+  closePrice: "329.679993",
   day: 226
 }, {
-  closePrice: "337.679993",
+  closePrice: "336.630005",
   day: 227
 }, {
-  closePrice: "337.910004",
+  closePrice: "330.589996",
   day: 228
 }, {
-  closePrice: "329.679993",
+  closePrice: "330.079987",
   day: 229
 }, {
-  closePrice: "336.630005",
+  closePrice: "329.48999",
   day: 230
 }, {
-  closePrice: "330.589996",
+  closePrice: "323.01001",
   day: 231
 }, {
-  closePrice: "330.079987",
+  closePrice: "326.190002",
   day: 232
 }, {
-  closePrice: "329.489990",
+  closePrice: "334.920013",
   day: 233
 }, {
-  closePrice: "323.010010",
+  closePrice: "334.970001",
   day: 234
 }, {
-  closePrice: "326.190002",
+  closePrice: "333.100006",
   day: 235
 }, {
-  closePrice: "334.920013",
+  closePrice: "342.540009",
   day: 236
 }, {
-  closePrice: "334.970001",
+  closePrice: "339.399994",
   day: 237
 }, {
-  closePrice: "333.100006",
+  closePrice: "328.339996",
   day: 238
 }, {
-  closePrice: "342.540009",
+  closePrice: "334.649994",
   day: 239
 }, {
-  closePrice: "339.399994",
+  closePrice: "324.899994",
   day: 240
 }, {
-  closePrice: "328.339996",
+  closePrice: "323.799988",
   day: 241
 }, {
-  closePrice: "334.649994",
+  closePrice: "319.910004",
   day: 242
 }, {
-  closePrice: "324.899994",
+  closePrice: "327.290009",
   day: 243
 }, {
-  closePrice: "323.799988",
+  closePrice: "333.200012",
   day: 244
 }, {
-  closePrice: "319.910004",
+  closePrice: "334.690002",
   day: 245
 }, {
-  closePrice: "327.290009",
+  closePrice: "342.450012",
   day: 246
 }, {
-  closePrice: "333.200012",
+  closePrice: "341.25",
   day: 247
 }, {
-  closePrice: "334.690002",
+  closePrice: "341.950012",
   day: 248
 }, {
-  closePrice: "342.450012",
+  closePrice: "339.320007",
   day: 249
 }, {
-  closePrice: "341.250000",
+  closePrice: "336.320007",
   day: 250
 }, {
-  closePrice: "341.950012",
+  closePrice: "334.75",
   day: 251
 }, {
-  closePrice: "339.320007",
+  closePrice: "329.01001",
   day: 252
 }, {
-  closePrice: "336.320007",
+  closePrice: "316.380005",
   day: 253
 }, {
-  closePrice: "334.750000",
+  closePrice: "313.880005",
   day: 254
 }, {
-  closePrice: "329.010010",
+  closePrice: "314.040009",
   day: 255
 }, {
-  closePrice: "316.380005",
+  closePrice: "314.269989",
   day: 256
 }, {
-  closePrice: "313.880005",
+  closePrice: "314.980011",
   day: 257
 }, {
-  closePrice: "314.040009",
+  closePrice: "318.269989",
   day: 258
 }, {
-  closePrice: "314.269989",
+  closePrice: "304.799988",
   day: 259
 }, {
-  closePrice: "314.980011",
+  closePrice: "310.200012",
   day: 260
 }, {
-  closePrice: "318.269989",
+  closePrice: "302.649994",
   day: 261
 }, {
-  closePrice: "304.799988",
+  closePrice: "303.329987",
   day: 262
 }, {
-  closePrice: "310.200012",
+  closePrice: "301.600006",
   day: 263
 }, {
-  closePrice: "302.649994",
+  closePrice: "296.029999",
   day: 264
 }, {
-  closePrice: "303.329987",
+  closePrice: "296.369995",
   day: 265
 }, {
-  closePrice: "301.600006",
+  closePrice: "288.48999",
   day: 266
 }, {
-  closePrice: "296.029999",
+  closePrice: "296.709991",
   day: 267
 }, {
-  closePrice: "296.369995",
+  closePrice: "299.839996",
   day: 268
 }, {
-  closePrice: "288.489990",
+  closePrice: "308.26001",
   day: 269
 }, {
-  closePrice: "296.709991",
+  closePrice: "310.980011",
   day: 270
 }, {
-  closePrice: "299.839996",
+  closePrice: "308.76001",
   day: 271
 }, {
-  closePrice: "308.260010",
+  closePrice: "313.459991",
   day: 272
 }, {
-  closePrice: "310.980011",
+  closePrice: "301.25",
   day: 273
 }, {
-  closePrice: "308.760010",
+  closePrice: "305.940002",
   day: 274
 }, {
-  closePrice: "313.459991",
+  closePrice: "300.950012",
   day: 275
 }, {
-  closePrice: "301.250000",
+  closePrice: "304.559998",
   day: 276
 }, {
-  closePrice: "305.940002",
+  closePrice: "311.209991",
   day: 277
 }, {
-  closePrice: "300.950012",
+  closePrice: "302.380005",
   day: 278
 }, {
-  closePrice: "304.559998",
+  closePrice: "295.040009",
   day: 279
 }, {
-  closePrice: "311.209991",
+  closePrice: "295",
   day: 280
 }, {
-  closePrice: "302.380005",
+  closePrice: "300.470001",
   day: 281
 }, {
-  closePrice: "295.040009",
+  closePrice: "299.5",
   day: 282
 }, {
-  closePrice: "295.000000",
+  closePrice: "290.730011",
   day: 283
 }, {
-  closePrice: "300.470001",
+  closePrice: "287.929993",
   day: 284
 }, {
-  closePrice: "299.500000",
+  closePrice: "287.720001",
   day: 285
 }, {
-  closePrice: "290.730011",
+  closePrice: "280.269989",
   day: 286
 }, {
-  closePrice: "287.929993",
+  closePrice: "294.589996",
   day: 287
 }, {
-  closePrice: "287.720001",
+  closePrice: "297.309998",
   day: 288
 }, {
-  closePrice: "280.269989",
+  closePrice: "298.790009",
   day: 289
 }, {
-  closePrice: "294.589996",
+  closePrice: "294.950012",
   day: 290
 }, {
-  closePrice: "297.309998",
+  closePrice: "300.190002",
   day: 291
 }, {
-  closePrice: "298.790009",
+  closePrice: "295.920013",
   day: 292
 }, {
-  closePrice: "294.950012",
+  closePrice: "289.859985",
   day: 293
 }, {
-  closePrice: "300.190002",
+  closePrice: "278.910004",
   day: 294
 }, {
-  closePrice: "295.920013",
+  closePrice: "275.850006",
   day: 295
 }, {
-  closePrice: "289.859985",
+  closePrice: "288.5",
   day: 296
 }, {
-  closePrice: "278.910004",
+  closePrice: "285.589996",
   day: 297
 }, {
-  closePrice: "275.850006",
+  closePrice: "280.070007",
   day: 298
 }, {
-  closePrice: "288.500000",
+  closePrice: "276.440002",
   day: 299
 }, {
-  closePrice: "285.589996",
+  closePrice: "287.149994",
   day: 300
 }, {
-  closePrice: "280.070007",
+  closePrice: "294.390015",
   day: 301
 }, {
-  closePrice: "276.440002",
+  closePrice: "295.220001",
   day: 302
 }, {
-  closePrice: "287.149994",
+  closePrice: "300.429993",
   day: 303
 }, {
-  closePrice: "294.390015",
+  closePrice: "299.160004",
   day: 304
 }, {
-  closePrice: "295.220001",
+  closePrice: "304.059998",
   day: 305
 }, {
-  closePrice: "300.429993",
+  closePrice: "299.48999",
   day: 306
 }, {
-  closePrice: "299.160004",
+  closePrice: "304.100006",
   day: 307
 }, {
-  closePrice: "304.059998",
+  closePrice: "303.679993",
   day: 308
 }, {
-  closePrice: "299.489990",
+  closePrice: "310.700012",
   day: 309
 }, {
-  closePrice: "304.100006",
+  closePrice: "315.410004",
   day: 310
 }, {
-  closePrice: "303.679993",
+  closePrice: "313.859985",
   day: 311
 }, {
-  closePrice: "310.700012",
+  closePrice: "308.309998",
   day: 312
 }, {
-  closePrice: "315.410004",
+  closePrice: "309.420013",
   day: 313
 }, {
-  closePrice: "313.859985",
+  closePrice: "314.970001",
   day: 314
 }, {
-  closePrice: "308.309998",
+  closePrice: "310.880005",
   day: 315
 }, {
-  closePrice: "309.420013",
+  closePrice: "299.5",
   day: 316
 }, {
-  closePrice: "314.970001",
+  closePrice: "301.369995",
   day: 317
 }, {
-  closePrice: "310.880005",
+  closePrice: "296.970001",
   day: 318
 }, {
-  closePrice: "299.500000",
+  closePrice: "285.26001",
   day: 319
 }, {
-  closePrice: "301.369995",
+  closePrice: "282.059998",
   day: 320
 }, {
-  closePrice: "296.970001",
+  closePrice: "287.619995",
   day: 321
 }, {
-  closePrice: "285.260010",
+  closePrice: "279.829987",
   day: 322
 }, {
-  closePrice: "282.059998",
+  closePrice: "280.519989",
   day: 323
 }, {
-  closePrice: "287.619995",
+  closePrice: "285.299988",
   day: 324
 }, {
-  closePrice: "279.829987",
+  closePrice: "286.359985",
   day: 325
 }, {
-  closePrice: "280.519989",
+  closePrice: "280.809998",
   day: 326
 }, {
-  closePrice: "285.299988",
+  closePrice: "274.029999",
   day: 327
 }, {
-  closePrice: "286.359985",
+  closePrice: "280.720001",
   day: 328
 }, {
-  closePrice: "280.809998",
+  closePrice: "270.220001",
   day: 329
 }, {
-  closePrice: "274.029999",
+  closePrice: "283.220001",
   day: 330
 }, {
-  closePrice: "280.720001",
+  closePrice: "289.630005",
   day: 331
 }, {
-  closePrice: "270.220001",
+  closePrice: "277.519989",
   day: 332
 }, {
-  closePrice: "283.220001",
+  closePrice: "284.470001",
   day: 333
 }, {
-  closePrice: "289.630005",
+  closePrice: "281.779999",
   day: 334
 }, {
-  closePrice: "277.519989",
+  closePrice: "289.980011",
   day: 335
 }, {
-  closePrice: "284.470001",
+  closePrice: "277.350006",
   day: 336
 }, {
-  closePrice: "281.779999",
+  closePrice: "274.730011",
   day: 337
 }, {
-  closePrice: "289.980011",
+  closePrice: "264.579987",
   day: 338
 }, {
-  closePrice: "277.350006",
+  closePrice: "269.5",
   day: 339
 }, {
-  closePrice: "274.730011",
+  closePrice: "260.549988",
   day: 340
 }, {
-  closePrice: "264.579987",
+  closePrice: "255.350006",
   day: 341
 }, {
-  closePrice: "269.500000",
+  closePrice: "261.119995",
   day: 342
 }, {
-  closePrice: "260.549988",
+  closePrice: "261.5",
   day: 343
 }, {
-  closePrice: "255.350006",
+  closePrice: "266.820007",
   day: 344
 }, {
-  closePrice: "261.119995",
+  closePrice: "254.080002",
   day: 345
 }, {
-  closePrice: "261.500000",
+  closePrice: "253.139999",
   day: 346
 }, {
-  closePrice: "266.820007",
+  closePrice: "252.559998",
   day: 347
 }, {
-  closePrice: "254.080002",
+  closePrice: "260.649994",
   day: 348
 }, {
-  closePrice: "253.139999",
+  closePrice: "259.619995",
   day: 349
 }, {
-  closePrice: "252.559998",
+  closePrice: "262.519989",
   day: 350
 }, {
-  closePrice: "260.649994",
+  closePrice: "265.899994",
   day: 351
 }, {
-  closePrice: "259.619995",
+  closePrice: "273.23999",
   day: 352
 }, {
-  closePrice: "262.519989",
+  closePrice: "271.869995",
   day: 353
 }, {
-  closePrice: "265.899994",
+  closePrice: "272.420013",
   day: 354
 }, {
-  closePrice: "273.239990",
+  closePrice: "274.579987",
   day: 355
 }, {
-  closePrice: "271.869995",
+  closePrice: "270.019989",
   day: 356
 }, {
-  closePrice: "272.420013",
+  closePrice: "268.75",
   day: 357
 }, {
-  closePrice: "274.579987",
+  closePrice: "272.5",
   day: 358
 }, {
-  closePrice: "270.019989",
+  closePrice: "270.410004",
   day: 359
 }, {
-  closePrice: "268.750000",
+  closePrice: "264.790009",
   day: 360
 }, {
-  closePrice: "272.500000",
+  closePrice: "252.990005",
   day: 361
 }, {
-  closePrice: "270.410004",
+  closePrice: "242.259995",
   day: 362
 }, {
-  closePrice: "264.790009",
+  closePrice: "244.490005",
   day: 363
 }, {
-  closePrice: "252.990005",
+  closePrice: "251.759995",
   day: 364
 }, {
-  closePrice: "242.259995",
+  closePrice: "244.970001",
   day: 365
 }, {
-  closePrice: "244.490005",
+  closePrice: "247.649994",
   day: 366
 }, {
-  closePrice: "251.759995",
+  closePrice: "253.740005",
   day: 367
 }, {
-  closePrice: "244.970001",
+  closePrice: "253.130005",
   day: 368
 }, {
-  closePrice: "247.649994",
+  closePrice: "258.859985",
   day: 369
 }, {
-  closePrice: "253.740005",
+  closePrice: "267.700012",
   day: 370
 }, {
-  closePrice: "253.130005",
+  closePrice: "264.890015",
   day: 371
 }, {
-  closePrice: "258.859985",
+  closePrice: "256.480011",
   day: 372
 }, {
-  closePrice: "267.700012",
+  closePrice: "260.26001",
   day: 373
 }, {
-  closePrice: "264.890015",
+  closePrice: "256.829987",
   day: 374
 }, {
-  closePrice: "256.480011",
+  closePrice: "259.579987",
   day: 375
 }, {
-  closePrice: "260.260010",
+  closePrice: "262.850006",
   day: 376
 }, {
-  closePrice: "256.829987",
+  closePrice: "266.209991",
   day: 377
 }, {
-  closePrice: "259.579987",
+  closePrice: "268.399994",
   day: 378
 }, {
-  closePrice: "262.850006",
+  closePrice: "267.660004",
   day: 379
 }, {
-  closePrice: "266.209991",
+  closePrice: "264.51001",
   day: 380
 }]
