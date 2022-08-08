@@ -117,24 +117,11 @@
             <div class="heading-container">
                 Events
             </div>
-            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                <div v-if="article.ticker == 'Advisor'">
-                    <Transition name="fade">
-                        <AdvisorCard :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id"></AdvisorCard>
-                    </Transition>
+            <TransitionGroup name="fade" key="articles">
+                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
+                    <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
                 </div>
-                <div v-else>
-                    <Transition name="fade">
-                        <NewsCard :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
-                    </Transition>
-                </div>
-            </div>
-            <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
-            <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
-            <NewsCard :title="'Silicon Shortage Catastrophe'" :subtitle="'The precious resource has been ...'" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Digital Entertainment Boosted'" :subtitle="'The media giant receives highest ... '" :imageNum="1"></NewsCard>
-            <NewsCard :title="'Apple Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="3"></NewsCard> -->
+            </TransitionGroup>
         </div> 
     </div>
 </template> 
@@ -146,7 +133,7 @@
 
     import StockCard from './StockCard.vue'
     import NewsCard from './NewsCard.vue'
-    import AdvisorCard from './AdvisorCard.vue'
+    //import AdvisorCard from './AdvisorCard.vue'
     import StockCardPortfolio from './StockCardPortfolio.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
@@ -166,7 +153,6 @@
             StockChart,
             StockCard,
             NewsCard,
-            AdvisorCard,
             StockCardPortfolio,
             ClockIcon,
             TradingForm,
@@ -291,8 +277,13 @@
             updateNewsFeed(){
                 for (const [key, article] of Object.entries(newsData)){
                     if (article["day"] == this.currentDay){
-                        this.currentNewsFeed.enq(article)
-                        console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        if(article["ticker"]!=="Advisor"){
+                            this.currentNewsFeed.enq(article)
+                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        } else if (article["ticker"]==="Advisor" && this.playerDataStore.isAdvisorEnabled === true){
+                            this.currentNewsFeed.enq(article)
+                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        }
                     }
                 }
             },
@@ -303,9 +294,10 @@
                     playerDataStore.incrementSimulationTime()
                     this.simulationTimeElapsed += this.ratio
                 }
-                const remainder = this.simulationTimeElapsed % 86400
-                if (remainder === 0){
-                    this.currentDay++
+                
+                let day = Math.floor(this.simulationTimeElapsed/86400)
+                if(this.currentDay!=day){
+                    this.currentDay = day
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()

@@ -176,7 +176,6 @@
                     document.getElementById("value_error").innerHTML = valueError; 
                     document.getElementById("1").focus()
                 } else {
-                    this.playerDataStore.setAccountBalance(parseInt(this.accountBalance))
                     this.triggerAdvisorOption()
                 }
                 this.setFee()
@@ -188,8 +187,8 @@
                  if (this.advisorSubscription === true){
                     let fee = this.accountBalance*(1/10).toFixed(2)
                     this.accountBalance -= fee
-                    this.playerDataStore.setAccountBalance(this.accountBalance - fee)
                 }
+                this.playerDataStore.setAccountBalance(parseFloat(this.accountBalance.toFixed(2)))
             },
 
             triggerAdvisorOption(){

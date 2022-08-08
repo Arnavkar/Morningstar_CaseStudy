@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'news-card-main nice-boxshadow': !was_read, 'news-card-main-deactivated nice-boxshadow': was_read}">
+    <div :class="{'news-card-main nice-boxshadow': (!was_read && !is_advisor_message),'advisor-card-main nice-boxshadow': (!was_read && is_advisor_message), 'news-card-main-deactivated nice-boxshadow': was_read}">
         <div class="title-container">
             {{ title }}   
         </div>
@@ -29,7 +29,8 @@
             description: { type: String },
             source: { type: String },
             imageNum: { type: Number },
-            _article_id:{type: Number}
+            _article_id:{type: Number},
+            is_advisor_message:{type:Boolean}
         },
         data() {
             return {
@@ -82,6 +83,23 @@
         flex-direction: column;
         justify-content: space-between;
         opacity:0.9
+    }
+
+    .advisor-card-main {
+        @include mds-level-3-heading($bold: true);
+        background: white;
+        border: 2px solid grey;
+        border-right: 4px solid green;
+        text-align: left;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 300px;
+        margin-top: 15px;
+        transition: 0.5s;
+        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .title-container {
