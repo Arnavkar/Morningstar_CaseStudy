@@ -9,8 +9,11 @@
   },
   "dependencies": {
     "@mds/constants": "^3.3.0",
+    "@mds/fieldset": "^3.3.4",
     "@mds/fonts": "^3.1.1",
+    "@mds/form": "^3.4.6",
     "@mds/icon": "^4.5.1",
+    "@mds/input": "^3.6.16",
     "@mds/typography": "^3.1.9",
     "@mds/utils-scss": "^3.0.14",
     "chart.js": "^3.8.0",

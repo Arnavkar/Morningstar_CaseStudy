@@ -2,7 +2,7 @@
     <div class="container-main">
         <div class="section-left section-margin">
             <div class="heading-container">
-                Welcome,&nbsp;<b> Luke</b>
+                Welcome,&nbsp;<b> {{playerDataStore.playerName.slice(0,15)}}</b>
             </div>
             <div class="timer-section">
                 <div class="timer-section-top">
@@ -303,24 +303,18 @@
                     playerDataStore.incrementSimulationTime()
                     this.simulationTimeElapsed += this.ratio
                 }
-                console.log(this.simulationTimeElapsed)
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
-                    console.log("Day: " + this.currentDay)
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 120) {
+                if (this.currentDay === 15){
+                    // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
-
-                // if (this.currentDay === 5){
-                //     // TODO: Currently Set to 15 just for testing purposes, should set to 120
-                //     this.stopSimulation()
-                // }
             },
             startSimulation() {
                 this.isTimeRunning = true

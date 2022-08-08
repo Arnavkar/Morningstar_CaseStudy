@@ -1,8 +1,7 @@
 <template>
     <div class="info-page-main">
-        <h1 class="header-one">Welcome to the Morningstar Overconfidence Trading Simulation</h1>
         <Transition name="fade">
-            <h1 class="header-two" v-if="isShowingSubHeader">In this game, you will be following five stocks in a controlled trading environment.</h1>
+            <h1 class="header-two" v-if="isShowingHeader">In this game, you will be following five stocks in a controlled trading environment.</h1>
         </Transition>
         <div class="card-container">
             <div class="card">
@@ -56,7 +55,26 @@
             </div>
         </div>
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest $20,000, good luck!</h1>
+            <div v-if="isShowingSliderMessage">
+                <h1 class="header-one">Please select your starting account balance.</h1>
+                <h3>You may use the slider or provide a custom value that more accurately represents your financial situation</h3>
+            </div>
+        </Transition> 
+        <Transition name="fade">
+            <div v-if="isShowingSlider">
+                <form>
+                    <span>
+                        <span class = "rangetext"> $1000  <input type="range" min="1000" max="10000" v-model="accountBalance" class="slider" id="myRange"/>  $10000      </span>
+                        <span class = "input-symbol-dollar">
+                            <input type = "number" class = "input-field nice-boxshadow" id="1" v-model="accountBalance" @change="clearErrorText" required> <span class="error"><p id="value_error"></p></span>
+                        </span>
+                    </span>
+                </form>
+                <button class="click-here nice-boxshadow" v-on:click="submitAccountBalance">Submit</button>
+            </div>
+        </Transition>
+        <Transition name="fade">
+            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest and grow ${{accountBalance}}, good luck!</h1>
         </Transition>
         <Transition name="fade">
             <h3 @click="switchToTradingPage()" v-if="showClickAnywhere" class="click-here">Click here to continue.</h3>
@@ -65,19 +83,24 @@
 </template>
 
 <script>
+    import { playerDataStore } from '@/use/playerDataStore'
 
     export default {
         name: 'InfoPage',
         data() {
             return {
-                isShowingSubHeader: false,
-                isShowingLastMessage: false,
+                isShowingHeader: false,
                 showSquareOne: false,
                 showSquareTwo: false,
                 showSquareThree: false,
                 showSquareFour: false,
                 showSquareFive: false,
+                isShowingSliderMessage: false,
+                isShowingSlider:false,
+                isShowingLastMessage: false,
                 showClickAnywhere: false,
+                accountBalance: 2350,
+                playerDataStore
             }
         },
         props: {
@@ -85,7 +108,10 @@
         },
         mounted() {
             setTimeout(() => {
-                this.isShowingSubHeader = true;
+                this.isShowingHeader = false;
+            }, 1000)
+            setTimeout(() => {
+                this.isShowingHeader = true;
             }, 2000)
             setTimeout(() => {
                 this.showSquareOne = true;
@@ -103,12 +129,43 @@
                 this.showSquareFive = true;
             }, 7000)
             setTimeout(() => {
-                this.isShowingLastMessage = true;
-            }, 9000)
+                this.isShowingSliderMessage = true;
+            }, 8000)
             setTimeout(() => {
-                this.showClickAnywhere = true;
-            }, 9500)
+                this.isShowingSlider = true;
+            }, 9000)
         },
+        methods:{
+            submitAccountBalance(){
+                if (this.accountBalance === '' || this.accountBalance < 1000){
+                    let valueError = "Please enter a value greater than $1000";
+                    document.getElementById("value_error").innerHTML = valueError; 
+                    document.getElementById("1").focus()
+                } else {
+                    this.playerDataStore.setAccountBalance(parseInt(this.accountBalance))
+                    this.triggerLastMessage()
+                }
+            },
+
+            triggerLastMessage(){
+                setTimeout(() => {
+                    this.isShowingSliderMessage = false;
+                    this.isShowingSlider = false;
+                }, 0)
+                setTimeout(() => {
+                    this.isShowingLastMessage = true;
+                    this.showClickAnywhere = true;
+                }, 2000)
+
+                console.log(this.playerDataStore)
+            },
+            clearErrorText(){
+                document.getElementById("value_error").innerHTML = ""
+            }
+
+        }
+
+
     }
 
 </script>
@@ -147,17 +204,44 @@
 
     .click-here {
         @include mds-level-3-heading($bold: false);
-        color: #969696;
+        color: #8d8c8c;
         position: relative;
         bottom: 10px;
+        border-radius:10px;
+        border-width:0px;
+        opacity:0.6;
+        transition: 0.5s;
+        margin-top:30px
     }
 
     .click-here:hover {
         cursor: pointer;
+        opacity:1;
+        transform: scale(1.02);
+    }
+
+    .input-field:invalid {
+        box-shadow: $mds-form-box-shadow-error;
+    }
+
+    .error{
+        @include mds-body-text-m($bold: false);
+        color: red;
+        position: relative;
+        top:-28px;
+        padding-bottom: -28px;
     }
 
     .text {
         @include mds-body-text-l($bold: false);
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 30px;
+        width: 75%;
+    }
+
+    .rangetext {
+        @include mds-level-3-heading($bold: false);
         text-align: center;
         vertical-align: middle;
         margin-left: 30px;
@@ -210,5 +294,77 @@
     .fade-leave-to {
         opacity: 0;
     }
+
+    .input-symbol-dollar {
+        position: relative;
+        width:100%
+    }
+
+    .input-symbol-dollar input {
+        padding-left:18px;
+    }
+
+    .input-symbol-dollar:before {
+        @include mds-body-text-l($bold: false);
+        position: relative;
+        content:"$";
+        left: 15px;
+    }
+
+    .input-field{
+        width:10%;
+        height:25px;
+        padding: 10px;
+        margin-bottom: 20px;
+        @include mds-body-text-l($bold: false);
+        background: rgb(215, 215, 215);
+        border-radius: 5px;
+        font-size: 26px;
+        color: black;
+        outline: none;
+        transition: .5s;
+        caret-color: #cccccc;
+        border: none;
+    }
+
+    .input-field:focus {
+        box-shadow: $mds-form-box-shadow-focus, $mds-form-box-shadow-hover;
+        outline: none;
+    }
+
+    /* The slider itself */
+    .slider {  /* Override default CSS styles */
+        appearance: none;
+        width: 50%; /* Full-width */
+        height: 15px; /* Specified height */
+        background: #ffffff; /* Grey background */
+        opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+        -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+        transition: opacity .2s;
+        border-radius:13px;
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(114, 114, 114);
+    }
+
+    /* Mouse-over effects */
+    .slider:hover {
+        opacity: 1; /* Fully shown on mouse-over */
+    }
+
+    /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        width: 30px; /* Set a specific slider handle width */
+        height: 30px; /* Slider handle height */
+        background: #adadad; /* Green background */
+        cursor: pointer; /* Cursor on hover */
+        border-radius: 20px
+    }
+
+
+
+
 
 </style>

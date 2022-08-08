@@ -11,6 +11,9 @@ export const playerDataStore = reactive({
     articlesRead: [],
     tradeHistory: [],
     portfolioValue: 0,
+    playerName:'', 
+    annualSalary:0, 
+    annualSavings:0,
     portfolio:{
         "CROC":{
             index: 0,
@@ -191,6 +194,16 @@ export const playerDataStore = reactive({
             this.incrementOverconfidenceScore(5)
             console.log("Overconfidence score: " + this.overconfidenceScore)
         }
+    },
+
+    setPlayerData(name,salary,savings){
+        this.playerName = name
+        this.annualSalary = salary
+        this.annualSavings = savings
+    },
+
+    setAccountBalance(accountBalance){
+        this.accountBalance = accountBalance
     }
 
 })
