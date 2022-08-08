@@ -207,16 +207,13 @@ export const playerDataStore = reactive({
         this.accountBalance = accountBalance
     },
 
-<<<<<<< HEAD
     addPortfolioSnapshot(day){
         this.portfolioSnapshots.push({
             day:day,
             holdingsData:this.holdingsData
         })
-=======
     setIsAdvisorEnabled(value){
         this.isAdvisorEnabled = value
->>>>>>> master
     }
 
 })
