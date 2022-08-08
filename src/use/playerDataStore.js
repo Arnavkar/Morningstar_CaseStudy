@@ -199,6 +199,10 @@ export const playerDataStore = reactive({
         this.playerName = name
         this.annualSalary = salary
         this.annualSavings = savings
+    },
+
+    setAccountBalance(accountBalance){
+        this.accountBalance = accountBalance
     }
 
 })

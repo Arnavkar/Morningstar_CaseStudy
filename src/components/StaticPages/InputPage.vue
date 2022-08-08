@@ -9,7 +9,7 @@
             <Transition name="fade">
                 <form class = "form" v-if="showInputFields">
                     <label for="1" class = "input-header-name">Name</label>
-                    <input type = "text" class = "input-field-name nice-boxshadow" placeholder="Required" id="1" v-model="playerName" required> <span class="error"><p id="name_error"></p></span>
+                    <input type = "text" class = "input-field-name nice-boxshadow" placeholder="Required" id="1" v-model="playerName" maxlength="15" @change="clearErrorText" required> <span class="error"><p id="name_error"></p></span>
 
                     <label for="2" class = "input-header">Annual Salary</label>
                     <span class = "input-symbol-dollar">
@@ -24,8 +24,8 @@
             </Transition>
         </div>
         <Transition name="fade">
-            <div class ="click-here-container">  
-                <h3 @click="submitPlayerData();" v-if="showInputFields" class="click-here"> Next </h3>
+            <div class ="click-here-container" v-if="showInputFields" >  
+                <h3 @click="submitPlayerData();" class="click-here"> Next </h3>
             </div>   
         </Transition>
     </div>
@@ -67,7 +67,11 @@
                 } else {
                     this.playerDataStore.setPlayerData(this.playerName,this.annualSalary,this.annualSavings)
                     this.switchToInfoPage()
+                    console.log(this.playerDataStore)
                 }
+            },
+            clearErrorText(){
+                document.getElementById("name_error").innerHTML = ""
             }
         }
     }
@@ -247,8 +251,13 @@
         outline: none;
     }
 
-    .input-field-name:focus:invalid {
-        box-shadow: $mds-form-box-shadow-error, $mds-form-box-shadow-focus;
+    .input-field-name:focus {
+        box-shadow: $mds-form-box-shadow-focus, $mds-form-box-shadow-hover;
+        outline: none;
+    }
+
+    .input-field-name:invalid {
+        box-shadow: $mds-form-box-shadow-error;
     }
 
     .nice-boxshadow {

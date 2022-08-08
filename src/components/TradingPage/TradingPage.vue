@@ -2,7 +2,7 @@
     <div class="container-main">
         <div class="section-left section-margin">
             <div class="heading-container">
-                Welcome,&nbsp;<b> Luke</b>
+                Welcome,&nbsp;<b> {{playerDataStore.playerName.slice(0,15)}}</b>
             </div>
             <div class="timer-section">
                 <div class="timer-section-top">
@@ -117,11 +117,12 @@
             <div class="heading-container">
                 Events
             </div>
-            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                <Transition name="fade">
-                    <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
-                </Transition>
-            </div>
+            <TransitionGroup name="fade">
+                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
+                    
+                        <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
+                </div>
+            </TransitionGroup>
             <!-- <NewsCard :title="'Push for EV Bill Rejected'" :subtitle="'The push for electric vehicles has ...'" :imageNum="1"></NewsCard>
             <NewsCard :title="'Google Eearnings Report'" :subtitle="'Higher-than-expected returns for tech giant ...'" :imageNum="2"></NewsCard>
             <NewsCard :title="'EV Stocks Crumble'" :subtitle="'With bill rejected, will TSLA prevail? '" :imageNum="3"></NewsCard>
@@ -294,11 +295,9 @@
                     playerDataStore.incrementSimulationTime()
                     this.simulationTimeElapsed += this.ratio
                 }
-                console.log(this.simulationTimeElapsed)
                 const remainder = this.simulationTimeElapsed % 86400
                 if (remainder === 0){
                     this.currentDay++
-                    console.log("Day: " + this.currentDay)
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
@@ -307,7 +306,7 @@
                     }
                 }
 
-                if (this.currentDay === 5){
+                if (this.currentDay === 15){
                     // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
