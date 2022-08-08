@@ -1,5 +1,5 @@
 <template>
-    <div :class="{'news-card-main nice-boxshadow': (!was_read && !is_advisor_message),'advisor-card-main nice-boxshadow': (!was_read && is_advisor_message), 'news-card-main-deactivated nice-boxshadow': was_read}">
+    <div :class="{'advisor-card-main nice-boxshadow': !was_read, 'advisor-card-main-deactivated nice-boxshadow': was_read}">
         <div class="title-container">
             {{ title }}   
         </div>
@@ -9,7 +9,7 @@
         <div v-if="showContent" class="content-container">
             {{ description }}
         </div>
-        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead(_article_id);;" class="collapsible">
+        <button v-if="showContent == false" @click="showContent = true; playerDataStore.markArticleAsRead(_article_id);" class="collapsible">
             Read more
         </button>
         <button v-else @click="showContent = false; was_read=true" class="collapsible">
@@ -23,14 +23,13 @@
     import { playerDataStore } from '@/use/playerDataStore'
 
     export default {
-        name: 'NewsCard',
+        name: 'AdvisorCard',
         props: {
             title: { type: String },
             description: { type: String },
             source: { type: String },
             imageNum: { type: Number },
-            _article_id:{type: Number},
-            is_advisor_message:{type:Boolean}
+            _article_id:{type: Number}
         },
         data() {
             return {
@@ -50,41 +49,6 @@
     @import '@mds/utils-scss';
     @import '@mds/typography';
 
-    .news-card-main {
-        @include mds-level-3-heading($bold: true);
-        background: white;
-        border: 2px solid grey;
-        border-right: 4px solid red;
-        text-align: left;
-        border-radius: 5px;
-        width: 100%;
-        max-height: 300px;
-        margin-top: 15px;
-        transition: 0.5s;
-        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .news-card-main-deactivated {
-        @include mds-level-3-heading($bold: true);
-        background: white;
-        border: 2px solid grey;
-        border-right: 4px solid rgb(175, 172, 172);
-        text-align: left;
-        border-radius: 5px;
-        width: 100%;
-        max-height: 300px;
-        margin-top: 15px;
-        transition: 0.5s;
-        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        opacity:0.9
-    }
-
     .advisor-card-main {
         @include mds-level-3-heading($bold: true);
         background: white;
@@ -100,6 +64,24 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .advisor-card-main-deactivated {
+        @include mds-level-3-heading($bold: true);
+        background: white;
+        border: 2px solid grey;
+        border-right: 4px solid rgb(175, 172, 172);
+        text-align: left;
+        border-radius: 5px;
+        width: 100%;
+        max-height: 300px;
+        margin-top: 15px;
+        transition: 0.5s;
+        box-shadow: 2px 2px 2px rgba(4,4,4,0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity:0.9
     }
 
     .title-container {

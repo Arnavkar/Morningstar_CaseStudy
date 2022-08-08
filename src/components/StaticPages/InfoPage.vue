@@ -73,6 +73,28 @@
                 <button class="click-here nice-boxshadow" v-on:click="submitAccountBalance">Submit</button>
             </div>
         </Transition>
+
+        <Transition name="fade">
+            <div v-if="isShowingAdvisorSubscription">
+                <h1 class="header-one">You also have the option to subscribe to expert advice before the simulation begins. This will cost ${{fee}}</h1>
+                <h3> The advisor subscription provides you with additional investing tips, and additional information about the data presented to you</h3>
+            </div>
+        </Transition>
+        <Transition name="fade">
+            <div  v-if="isShowingAdvisorSubscription">
+                <span class="toggletext">No   
+                    <label class="switch">
+                        <input type="checkbox" id="_button" v-model="advisorSubscription" v-on:click="toggleAdvisorSubscription();">
+                        <span class="switch-slider round nice-boxshadow"></span>
+                    </label>   Yes
+                </span>
+            </div>
+        </Transition>
+         <Transition name="fade">
+            <button v-if="isShowingAdvisorSubscription" class="click-here nice-boxshadow" v-on:click="submitAdvisorSubscription">Submit</button>
+        </Transition>
+
+
         <Transition name="fade">
             <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest and grow ${{accountBalance}}, good luck!</h1>
         </Transition>
@@ -98,9 +120,21 @@
                 isShowingSliderMessage: false,
                 isShowingSlider:false,
                 isShowingLastMessage: false,
+                isShowingAdvisorSubscription:false,
                 showClickAnywhere: false,
                 accountBalance: 2350,
-                playerDataStore
+                advisorSubscription:false,
+                playerDataStore,
+                fee:235
+            }
+        },
+        computed:{
+            toggleText(){
+                if(this.advisorSubscription === true){
+                    return 'Yes'
+                } else {
+                    return 'No'
+                }
             }
         },
         props: {
@@ -142,15 +176,34 @@
                     document.getElementById("value_error").innerHTML = valueError; 
                     document.getElementById("1").focus()
                 } else {
-                    this.playerDataStore.setAccountBalance(parseInt(this.accountBalance))
-                    this.triggerLastMessage()
+                    this.triggerAdvisorOption()
                 }
+                this.setFee()
+            },
+
+            submitAdvisorSubscription(){
+                this.playerDataStore.setIsAdvisorEnabled(this.advisorSubscription)
+                this.triggerLastMessage()
+                 if (this.advisorSubscription === true){
+                    let fee = this.accountBalance*(1/10).toFixed(2)
+                    this.accountBalance -= fee
+                }
+                this.playerDataStore.setAccountBalance(parseFloat(this.accountBalance.toFixed(2)))
+            },
+
+            triggerAdvisorOption(){
+                setTimeout(() => {
+                    this.isShowingSliderMessage = false;
+                    this.isShowingSlider = false;
+                }, 0)
+                setTimeout(() => {
+                    this.isShowingAdvisorSubscription = true
+                }, 2000)
             },
 
             triggerLastMessage(){
                 setTimeout(() => {
-                    this.isShowingSliderMessage = false;
-                    this.isShowingSlider = false;
+                    this.isShowingAdvisorSubscription = false
                 }, 0)
                 setTimeout(() => {
                     this.isShowingLastMessage = true;
@@ -159,8 +212,18 @@
 
                 console.log(this.playerDataStore)
             },
+
             clearErrorText(){
                 document.getElementById("value_error").innerHTML = ""
+            },
+
+            toggleAdvisorSubscription(){
+                this.advisorSubscription = !this.advisorSubscription
+                console.log(this.advisorSubscription)
+            },
+
+            setFee(){
+                this.fee = (this.accountBalance/10).toFixed(2)
             }
 
         }
@@ -245,6 +308,15 @@
         text-align: center;
         vertical-align: middle;
         margin-left: 30px;
+        width: 75%;
+    }
+
+     .toggletext {
+        @include mds-level-3-heading($bold: false);
+        text-align: center;
+        vertical-align: middle;
+        margin-left: 20px;
+        margin-right: 20px;
         width: 75%;
     }
 
@@ -362,9 +434,67 @@
         cursor: pointer; /* Cursor on hover */
         border-radius: 20px
     }
+    /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
+/* The slider */
+.switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
+.switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
 
+input:checked + .switch-slider {
+  background-color: #2196F3;
+}
+
+input:focus + .switch-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.switch-slider.round {
+  border-radius: 34px;
+}
+
+.switch-slider.round:before {
+  border-radius: 50%;
+}
 
 </style>

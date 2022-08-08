@@ -14,7 +14,7 @@ def extract_data_from_csv(path):
 			row_output["id"] = idx
 			for idx,val in enumerate(row):
 					if headerRow[idx] in ["day","credibility"]:
-						row_output[headerRow[idx]] = int(row[idx])
+						row_output[headerRow[idx]] = row[idx]
 					else:
 						row_output[headerRow[idx]] = row[idx]
 			output.append(row_output)

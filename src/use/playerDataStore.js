@@ -114,7 +114,8 @@ export const playerDataStore = reactive({
             }
         }
 
-        if (this.numberOfTrades >= 25) {
+        // Consider both numberOfTrades and percentageOfInvestedMoney?
+        if (this.numberOfTrades >= 50) {
             this.incrementOverconfidenceScore(30)
             console.log("Overconfidence score: " + this.overconfidenceScore)
         }
@@ -206,11 +207,16 @@ export const playerDataStore = reactive({
         this.accountBalance = accountBalance
     },
 
+<<<<<<< HEAD
     addPortfolioSnapshot(day){
         this.portfolioSnapshots.push({
             day:day,
             holdingsData:this.holdingsData
         })
+=======
+    setIsAdvisorEnabled(value){
+        this.isAdvisorEnabled = value
+>>>>>>> master
     }
 
 })

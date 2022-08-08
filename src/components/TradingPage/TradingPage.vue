@@ -117,9 +117,9 @@
             <div class="heading-container">
                 Events
             </div>
-            <TransitionGroup name="fade">
-                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                    <NewsCard :title="article.headline" :subtitle="article.description" :imageNum=1 :_article_id="article.id"></NewsCard>
+            <TransitionGroup name="fade" key="articles">
+                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
+                    <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
                 </div>
             </TransitionGroup>
         </div> 
@@ -133,6 +133,7 @@
 
     import StockCard from './StockCard.vue'
     import NewsCard from './NewsCard.vue'
+    //import AdvisorCard from './AdvisorCard.vue'
     import StockCardPortfolio from './StockCardPortfolio.vue'
     import ClockIcon from '../Icons/ClockIcon.vue'
     import TradingForm from './TradingForm.vue'
@@ -276,8 +277,13 @@
             updateNewsFeed(){
                 for (const [key, article] of Object.entries(newsData)){
                     if (article["day"] == this.currentDay){
-                        this.currentNewsFeed.enq(article)
-                        console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        if(article["ticker"]!=="Advisor"){
+                            this.currentNewsFeed.enq(article)
+                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        } else if (article["ticker"]==="Advisor" && this.playerDataStore.isAdvisorEnabled === true){
+                            this.currentNewsFeed.enq(article)
+                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
+                        }
                     }
                 }
             },
@@ -288,15 +294,13 @@
                     playerDataStore.incrementSimulationTime()
                     this.simulationTimeElapsed += this.ratio
                 }
-                const remainder = this.simulationTimeElapsed % 86400
-                if (remainder === 0){
-                    this.currentDay++
+                
+                let day = Math.floor(this.simulationTimeElapsed/86400)
+                if(this.currentDay!=day){
+                    this.currentDay = day
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
-                    if (this.currentDay === 120) {
-                        this.stopSimulation()
-                    }
                 }
 
                 if (this.currentDay === 121){
