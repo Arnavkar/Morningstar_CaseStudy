@@ -217,6 +217,14 @@
     @import '@mds/utils-scss';
     @import '@mds/typography';
 
+    hr {
+        width: 60%;
+        margin-top:50px;
+        margin-bottom: 15px;
+        background-color: #cccccc;
+        color: #cccccc;
+    }
+
     .end-page-main {
         margin-top: 100px;
     }

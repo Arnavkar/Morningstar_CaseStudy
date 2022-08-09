@@ -291,7 +291,7 @@
                     playerDataStore.incrementPauseTime()
                 } else {
                     playerDataStore.incrementSimulationTime()
-                    this.simulationTimeElapsed += this.ratio*4
+                    this.simulationTimeElapsed += this.ratio
                 }
                 
                 let day = Math.floor(this.simulationTimeElapsed/86400)
