@@ -74,17 +74,17 @@ export const playerDataStore = reactive({
     
     markArticleAsRead(id){
         if(this.articlesRead.includes(id)){
-            console.log(`article ${id} was already read`)
+            //console.log(`article ${id} was already read`)
         } else {
             this.articlesRead.push(id)
             this.incrementOverconfidenceScore(-1)
-            console.log( `Just read article no. ${id}`)
+            console.log( `Just read article no. ${id}, Overconfidence score: `+ this.overconfidenceScore)
             console.log("Overconfidence score: " + this.overconfidenceScore)
         }
     },
 
-    get overConfidenceScoreFromArticles(){
-        return 30 - this.articlesRead.length
+    get numArticlesRead(){
+        return this.articlesRead.length
     },
 
     // Updates the current portfolio as the day changes
@@ -101,7 +101,7 @@ export const playerDataStore = reactive({
 
         if ( (currentDay % 20 === 0) && (currentDay != 20) ) {
             let stockCount = 0
-
+            //NOT RUNNING because this.stockCount not the same as stockcount
             for (const data of Object.values(this.portfolio)) {
                 if (data['isInPortfolio'] === true) {
                     this.stockCount += 1
@@ -153,6 +153,7 @@ export const playerDataStore = reactive({
         // To do: Make percentageOfInvestedMoney in history a number, not NAN
 		if (history['percentageOfInvestedMoney'] >= 40 && uninvestedMoney >= 1000) {
 			this.incrementOverconfidenceScore(history['percentageOfInvestedMoney'] / 2) // change value
+            console.log(history)
             console.log("Overconfidence score: " + this.overconfidenceScore)
 		}
 
@@ -185,7 +186,7 @@ export const playerDataStore = reactive({
 			numberOfShares: numShares,
 			tradeValue: totalPrice,
 			totalValue: this.portfolio[ticker]['totalValue'],
-			percentageOfInvestedMoney: 'N/A',
+			percentageOfInvestedMoney: 0,
             isTimeRunning: isTimeRunning,
 		}
 
@@ -207,16 +208,45 @@ export const playerDataStore = reactive({
         this.accountBalance = accountBalance
     },
 
-    addPortfolioSnapshot(day){
+    addPortfolioSnapshot(){
+        let holdingsDataCopy = [...this.holdingsData]
+        let stockCount = 0
+        let balanced = false
+
+        for (const data of Object.values(this.portfolio)) {
+            if (data['isInPortfolio'] === true) {
+                stockCount += 1
+            }
+        }
+
+        if (stockCount >= 3){
+            balanced = true
+        } else {
+            balanced = false
+        }
+
         this.portfolioSnapshots.push({
-            day:day,
-            holdingsData:this.holdingsData
+            data:holdingsDataCopy,
+            wasBalanced:balanced
         })
     },
     
     setIsAdvisorEnabled(value){
         this.isAdvisorEnabled = value
-    }
-       
+    },
 
+    get bigTrades(){
+        let bigTrades = this.tradeHistory.filter(trade => trade["percentageOfInvestedMoney"] >= 40)
+        return bigTrades
+    },
+
+    get hastyTrades(){
+        let hastyTrades = this.tradeHistory.filter(trade => trade["isTimeRunning"] === true)
+        return hastyTrades
+    },
+
+    get numBalancedPortfolioSnapshots(){
+        let balancedPortfolioSnapshots = this.portfolioSnapshots.filter( snapshot => snapshot["wasBalanced"] === true)
+        return balancedPortfolioSnapshots.length
+    }
 })

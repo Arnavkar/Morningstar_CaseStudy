@@ -117,8 +117,8 @@
             <div class="heading-container">
                 Events
             </div>
-            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
-                <NewsCard :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
+            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
+                <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
             </div>
         </div> 
     </div>
@@ -275,15 +275,13 @@
                 }
                 return -1
             },
-            updateNewsFeed() {
-                for (const [key, article] of Object.entries(newsData)){
+            updateNewsFeed(){
+                for (const article of Object.values(newsData)){
                     if (article["day"] == this.currentDay){
                         if(article["ticker"]!=="Advisor"){
                             this.currentNewsFeed.enq(article)
-                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
                         } else if (article["ticker"]==="Advisor" && this.playerDataStore.isAdvisorEnabled === true){
                             this.currentNewsFeed.enq(article)
-                            console.log(`article no. ${key}, '${article.headline}'' was added to ring buffer`)
                         }
                     }
                 }
@@ -293,7 +291,7 @@
                     playerDataStore.incrementPauseTime()
                 } else {
                     playerDataStore.incrementSimulationTime()
-                    this.simulationTimeElapsed += this.ratio
+                    this.simulationTimeElapsed += this.ratio*4
                 }
                 
                 let day = Math.floor(this.simulationTimeElapsed/86400)
@@ -304,13 +302,13 @@
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 120){
+                if (this.currentDay === 120 || this.currentDay > 120){
                     // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
 
                 if ([40,60,80,100,120].includes(this.currentDay)){
-                    this.playerDataStore.addPortfolioSnapshot(this.currentDay)
+                    this.playerDataStore.addPortfolioSnapshot()
                 }
             },
             startSimulation() {
@@ -329,7 +327,6 @@
             resumeSimulation() {
                 
                 if (this.interval == undefined){
-                    console.log("Was Called")
                     this.startSimulation()
                     return //If game has not started, first start it 
                 }
