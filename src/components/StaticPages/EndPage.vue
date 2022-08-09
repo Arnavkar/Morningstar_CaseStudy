@@ -218,7 +218,7 @@
     @import '@mds/typography';
 
     hr {
-        width: 60%;
+        width: 66%;
         margin-top:50px;
         margin-bottom: 15px;
         background-color: #cccccc;
