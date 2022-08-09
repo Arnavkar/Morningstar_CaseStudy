@@ -319,7 +319,7 @@
             stopSimulation() {
                 this.isTimeRunning = false
                 clearInterval(this.interval);
-                this.playerDataStore.capOverconfidencScoree()
+                this.playerDataStore.capOverconfidenceScore()
                 this.switchToEndPage()
             },
             pauseSimulation() {

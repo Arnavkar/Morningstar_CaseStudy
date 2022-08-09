@@ -67,7 +67,6 @@ export const playerDataStore = reactive({
 
     enableAdvisor(){
         this.isAdvisorEnabled = true
-        this.accountBalance -= 1000
         this.incrementOverconfidenceScore(-50)
         console.log("Overconfidence score: " + this.overconfidenceScore)
     },
@@ -230,10 +229,6 @@ export const playerDataStore = reactive({
             wasBalanced:balanced
         })
     },
-    
-    setIsAdvisorEnabled(value){
-        this.isAdvisorEnabled = value
-    },
 
     capOverconfidenceScore(){
         //Set hard cap
@@ -255,5 +250,9 @@ export const playerDataStore = reactive({
     get numBalancedPortfolioSnapshots(){
         let balancedPortfolioSnapshots = this.portfolioSnapshots.filter( snapshot => snapshot["wasBalanced"] === true)
         return balancedPortfolioSnapshots.length
+    },
+
+    get tradeCount(){
+        return this.tradeHistory.length
     }
 })

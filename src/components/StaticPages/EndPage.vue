@@ -6,16 +6,19 @@
         </Transition>
         <Transition name="fade">
             <div v-if="isShowingScore" class="meter-wrapper">
-                <div class="percentage">{{calculateOverConfidencePercentage()}}</div>
-                <circle-progress :fill-color="'#ff0000'" :percent="calculateOverConfidencePercentage()" :size="300" :transition="200"/>
+                <div class="percentage">{{playerDataStore.overconfidenceScore.toFixed(2)}}</div>
+                <circle-progress :fill-color=getFillColor() :percent=calculateOverConfidencePercentage() :size="300" :transition="200"/>
             </div>
         </Transition>
         <Transition name="fade">
-            <h2 v-if="showVerbage" class="">
-                Your overconfidence level is: <b>average</b>
-            </h2>
+            <div v-if="showVerbage">
+                <h2> Your overconfidence level is: <b>{{getOverconfidenceRating()}}</b></h2>
+                <h3> You made a total of <b>{{playerDataStore.tradeCount}} {{playerDataStore.tradeCount===1?"trade":"trades"}} over the course of the simulation</b> </h3>
+                <hr>
+            </div>
         </Transition>
-        
+        <!-- <div v-if="playerDataStore.annualSavings !== ''"></div> -->
+
         <Transition name="fade">
             <div v-if="showMetric_1">
                 <h2>Based on your trade history, We saw that you made <b>{{playerDataStore.bigTrades.length}} {{playerDataStore.bigTrades.length===1?"trade":"trades"}}</b> with a value that was more than 40% of your uninvested money at the time.</h2>
@@ -177,7 +180,30 @@
         methods: {
             calculateOverConfidencePercentage() {
                 console.log(playerDataStore.overconfidenceScore)
-                return parseFloat(playerDataStore.overconfidenceScore).toFixed(2);
+                return parseFloat(playerDataStore.overconfidenceScore*100/250);
+            },
+
+            getOverconfidenceRating(){
+                const value = this.calculateOverConfidencePercentage()
+
+                if (value <= 30){
+                    return "low"
+                } else if (value <= 60){
+                    return "average"
+                } else {
+                    return "high"
+                }
+            },
+
+            getFillColor(){
+                const rating = this.getOverconfidenceRating()
+                if(rating==='high'){
+                    return'#ff0000'
+                } else if (rating==='average'){
+                    return '#ffff00'
+                } else {
+                    return '#00ff00'
+                }
             }
         }
     }
