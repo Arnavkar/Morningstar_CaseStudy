@@ -186,7 +186,7 @@
             submitAdvisorSubscription(){
                 this.playerDataStore.setIsAdvisorEnabled(this.advisorSubscription)
                 this.triggerLastMessage()
-                 if (this.advisorSubscription === true){
+                if (this.advisorSubscription === true){
                     let fee = this.accountBalance*(1/10).toFixed(2)
                     this.accountBalance -= fee
                 }

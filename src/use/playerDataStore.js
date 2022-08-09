@@ -65,10 +65,12 @@ export const playerDataStore = reactive({
         this.timeSpentInSimulation++
     },
 
-    enableAdvisor(){
-        this.isAdvisorEnabled = true
-        this.incrementOverconfidenceScore(-50)
-        console.log("Overconfidence score: " + this.overconfidenceScore)
+    setIsAdvisorEnabled(value){
+        this.isAdvisorEnabled = value
+        if (value === true){
+            this.incrementOverconfidenceScore(-50)
+            console.log("Overconfidence score: " + this.overconfidenceScore)
+        }
     },
     
     markArticleAsRead(id){
