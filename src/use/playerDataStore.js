@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 export const playerDataStore = reactive({
     accountBalance: 10000,
-    overconfidenceScore: 30,
+    overconfidenceScore: 125,
     isAdvisorEnabled: false,
     timeSpentInPause: 0,
     timeSpentInSimulation: 0,
@@ -77,7 +77,7 @@ export const playerDataStore = reactive({
             //console.log(`article ${id} was already read`)
         } else {
             this.articlesRead.push(id)
-            this.incrementOverconfidenceScore(-1)
+            this.incrementOverconfidenceScore(-5)
             console.log( `Just read article no. ${id}, Overconfidence score: `+ this.overconfidenceScore)
             console.log("Overconfidence score: " + this.overconfidenceScore)
         }
@@ -104,7 +104,7 @@ export const playerDataStore = reactive({
             //NOT RUNNING because this.stockCount not the same as stockcount
             for (const data of Object.values(this.portfolio)) {
                 if (data['isInPortfolio'] === true) {
-                    this.stockCount += 1
+                    stockCount += 1
                 }
             }
             
@@ -233,6 +233,13 @@ export const playerDataStore = reactive({
     
     setIsAdvisorEnabled(value){
         this.isAdvisorEnabled = value
+    },
+
+    capOverconfidenceScore(){
+        //Set hard cap
+        if (this.overconfidenceScore > 250){
+            this.overconfidenceScore = 250
+        }
     },
 
     get bigTrades(){
