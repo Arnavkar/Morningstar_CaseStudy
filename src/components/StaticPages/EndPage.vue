@@ -1,24 +1,32 @@
 <template>
     <div class="end-page-main">
-        <h1 class="header-one">Thank you for completing the Morningstar Overconfidence Trading Simulation!</h1>
+        <h1 class="header-one">Time's Up! Thank you for completing the Morningstar Overconfidence Trading Simulation!</h1>
         <Transition name="fade">
             <h1 class="score" v-if="isShowingSubHeader">Here is your score:</h1>
         </Transition>
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingScore">{SCORE WITH RATING METER HERE}</h1>
+            <div v-if="isShowingScore" class="meter-wrapper">
+                <div class="percentage">{{calculateOverConfidencePercentage()}}</div>
+                <circle-progress :fill-color="'#ff0000'" :percent="calculateOverConfidencePercentage()" :size="300" :transition="200"/>
+            </div>
         </Transition>
         <Transition name="fade">
-            <h2 v-if="showMetric_1">Based on your trade history, We saw that you made 6 trades with a value that was more than 40% of your uninvested money at the time. See more</h2>
+            <h2 v-if="showVerbage" class="">
+                Your overconfidence level is: <b>average</b>
+            </h2>
         </Transition>
         <Transition name="fade">
-            <h2 v-if="showMetric_2">Your portfolio was well balanced throughout the simulation, here are snapshots of your portfolio</h2>
+            <h2 v-if="showMetric_1">Based on your trade history, We saw that you made <b>6</b> trades with a value that was more than 40% of your uninvested money at the time.</h2>
+        </Transition>
+        <Transition name="fade">
+            <h2 v-if="showMetric_2">Your portfolio was <b>well balanced</b> throughout the simulation. Here's how your portfolio progressed:</h2>
         </Transition>
         <div class="card-container" v-if="showMetric_2">
             <div class="card">
                 <Transition name="fade">
                     <div v-if="showChart1" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 40</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[0]" :key="1"></PieChart> 
+                        <PieChart :holdingsData="[0, 0, 0, 0, 1000, 6000]" :key="1"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -27,7 +35,7 @@
                 <Transition name="fade">
                     <div v-if="showChart2" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 60</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[1]" :key="2"></PieChart> 
+                        <PieChart :holdingsData="[0, 0, 2000, 0, 1000, 6000]" :key="2"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -36,7 +44,7 @@
                 <Transition name="fade">
                     <div v-if="showChart3" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 80</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[2]" :key="3"></PieChart> 
+                        <PieChart :holdingsData="[0, 0, 500, 0, 1000, 6000]" :key="3"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -45,7 +53,7 @@
                 <Transition name="fade">
                     <div v-if="showChart4" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 100</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[3]" :key="4"></PieChart> 
+                        <PieChart :holdingsData="[300, 0, 1000, 500, 1000, 6000]" :key="4"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -54,41 +62,45 @@
                 <Transition name="fade">
                     <div v-if="showChart5" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 120 - End</h2>
-                        <PieChart :holdingsData="portfolioSnapshots[4]" :key="5"></PieChart> 
+                        <PieChart :holdingsData="[500, 2000, 1000, 1200, 1000, 6000]" :key="5"></PieChart> 
                     </div>
                 </Transition>
             </div>
         </div>
 
         <Transition name="fade">
-            <h2 v-if="showMetric_3">You read a total of 20 articles</h2>
+            <h2 v-if="showMetric_3">You read a total of <b>20</b> articles.</h2>
         </Transition>
 
         <Transition name="fade">
-            <h2  v-if="showMetric_4">You decided to subscribe to Morningstar's premium advice, enhancing the quality of the information you received</h2>
+            <h2  v-if="showMetric_4">You decided to subscribe to <b>Morningstar's premium advice</b>, enhancing the quality of the information you received.</h2>
         </Transition>
 
         <Transition name="fade">
-            <h2 v-if="showMetric_5">You frequently made trades in the game's pause state, which tells us that you took time to think about each trade</h2>
+            <h2 v-if="showMetric_5">You frequently made trades in the game's <b>pause</b> state, which tells us that you took time to think about each trade.</h2>
         </Transition>
-
-        
     </div>
 </template>
 
 <script>
+
     import PieChart from '../Charts/PieChart'
+    import CircleProgress from "vue3-circle-progress";
+
     import { playerDataStore } from '@/use/playerDataStore'
+    
 
     export default {
         name: 'EndPage',
         components: {
             PieChart,
+            CircleProgress,
         },
         data() {
             return {
                 isShowingSubHeader: false,
                 isShowingScore: false,
+                showVerbage: false,
                 showMetric_1: false,
                 showMetric_2: false,
                 showMetric_3: false,
@@ -108,6 +120,9 @@
             }, 2000)
             setTimeout(() => {
                 this.isShowingScore = true;
+            }, 3000)
+            setTimeout(() => {
+                this.showVerbage = true;
             }, 3000)
             setTimeout(() => {
                 this.showMetric_1 = true;
@@ -139,8 +154,13 @@
             setTimeout(() => {
                 this.showMetric_5 = true;
             }, 14000)
-            
         },
+        methods: {
+            calculateOverConfidencePercentage() {
+                console.log(playerDataStore.overconfidenceScore)
+                return parseFloat(playerDataStore.overconfidenceScore).toFixed(2);
+            }
+        }
     }
 
 </script>
@@ -163,11 +183,17 @@
 
     .score {
         @include mds-level-1-heading($bold: false);
-        margin-bottom: 70px;
+        margin-bottom: 35px;
     }
 
     .card-header {
         @include mds-level-1-heading($bold: false);
+    }
+
+    .percentage {
+        @include mds-level-1-heading($bold: false);
+        position: absolute;
+        top: 390px;
     }
 
     h2 {
@@ -194,6 +220,12 @@
         vertical-align: middle;
         margin-left: 30px;
         width: 75%;
+    }
+
+    .meter-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
     }
 
     .card-container {
@@ -225,7 +257,7 @@
     }
 
     .card-cover:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 
     .nice-boxshadow {

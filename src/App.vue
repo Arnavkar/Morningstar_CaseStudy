@@ -20,28 +20,28 @@
 
 <script>
 
+  import EndPage from './components/StaticPages/EndPage.vue'
   import IntroPage from './components/StaticPages/IntroPage.vue'
   import InfoPage from './components/StaticPages/InfoPage.vue'
   import TradingPage from './components/TradingPage/TradingPage.vue'
-  import EndPage from './components/StaticPages/EndPage.vue'
   import InputPage from './components/StaticPages/InputPage.vue'
 
   export default {
     name: 'App',
     components: {
-    IntroPage,
-    InfoPage,
-    TradingPage,
-    EndPage,
-    InputPage
-},
+      EndPage,
+      IntroPage,
+      InfoPage,
+      TradingPage,
+      InputPage,
+    },
     data() {
       return {
         isShowingIntroPage: true,
         isShowingInputPage: false,
         isShowingInfoPage: false,
         isShowingTradingPage: false,
-        isShowingEndPage: false
+        isShowingEndPage: false,
       }
     },
     methods: {

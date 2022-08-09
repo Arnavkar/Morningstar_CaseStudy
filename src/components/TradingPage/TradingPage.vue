@@ -117,11 +117,9 @@
             <div class="heading-container">
                 Events
             </div>
-            <TransitionGroup name="fade" key="articles">
-                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
-                    <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
-                </div>
-            </TransitionGroup>
+            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())" :key="article.id">
+                <NewsCard :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
+            </div>
         </div> 
     </div>
 </template> 
@@ -160,6 +158,9 @@
         },
         props: {
             switchToEndPage: { type: Function },
+        },
+        mounted() {
+            this.updateNewsFeed();
         },
         data() {
             return {
@@ -274,7 +275,7 @@
                 }
                 return -1
             },
-            updateNewsFeed(){
+            updateNewsFeed() {
                 for (const [key, article] of Object.entries(newsData)){
                     if (article["day"] == this.currentDay){
                         if(article["ticker"]!=="Advisor"){
@@ -296,14 +297,14 @@
                 }
                 
                 let day = Math.floor(this.simulationTimeElapsed/86400)
-                if(this.currentDay!=day){
+                if(this.currentDay != day){
                     this.currentDay = day
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
                 }
 
-                if (this.currentDay === 121){
+                if (this.currentDay === 120){
                     // TODO: Currently Set to 15 just for testing purposes, should set to 120
                     this.stopSimulation()
                 }
@@ -315,7 +316,7 @@
             startSimulation() {
                 this.isTimeRunning = true
                 this.updateNewsFeed()
-                this.interval = setInterval(this.updateTimeData,1000)
+                this.interval = setInterval(this.updateTimeData, 1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false
