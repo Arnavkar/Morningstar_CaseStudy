@@ -101,7 +101,7 @@ export const playerDataStore = reactive({
 
         if ( (currentDay % 20 === 0) && (currentDay != 20) ) {
             let stockCount = 0
-
+            //NOT RUNNING because this.stockCount not the same as stockcount
             for (const data of Object.values(this.portfolio)) {
                 if (data['isInPortfolio'] === true) {
                     this.stockCount += 1
@@ -210,7 +210,25 @@ export const playerDataStore = reactive({
 
     addPortfolioSnapshot(){
         let holdingsDataCopy = [...this.holdingsData]
-        this.portfolioSnapshots.push(holdingsDataCopy)
+        let stockCount = 0
+        let balanced = false
+
+        for (const data of Object.values(this.portfolio)) {
+            if (data['isInPortfolio'] === true) {
+                stockCount += 1
+            }
+        }
+
+        if (stockCount >= 3){
+            balanced = true
+        } else {
+            balanced = false
+        }
+
+        this.portfolioSnapshots.push({
+            data:holdingsDataCopy,
+            wasBalanced:balanced
+        })
     },
     
     setIsAdvisorEnabled(value){
@@ -225,7 +243,10 @@ export const playerDataStore = reactive({
     get hastyTrades(){
         let hastyTrades = this.tradeHistory.filter(trade => trade["isTimeRunning"] === true)
         return hastyTrades
-    }
-       
+    },
 
+    get numBalancedPortfolioSnapshots(){
+        let balancedPortfolioSnapshots = this.portfolioSnapshots.filter( snapshot => snapshot["wasBalanced"] === true)
+        return balancedPortfolioSnapshots.length
+    }
 })

@@ -117,11 +117,9 @@
             <div class="heading-container">
                 Events
             </div>
-            <TransitionGroup name="fade" key="articles">
-                <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
-                    <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
-                </div>
-            </TransitionGroup>
+            <div v-for="article in currentNewsFeed.peekN(currentNewsFeed.size())"  :key="article.id">
+                <NewsCard  :key="article.id" :title="article.headline" :description="article.description" :imageNum=1 :_article_id="article.id" :is_advisor_message="article.ticker==='Advisor'"></NewsCard>
+            </div>
         </div> 
     </div>
 </template> 

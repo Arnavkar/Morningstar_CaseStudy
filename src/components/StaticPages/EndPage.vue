@@ -5,20 +5,32 @@
             <h1 class="score" v-if="isShowingSubHeader">Here is your score:</h1>
         </Transition>
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingScore">{{playerDataStore.overconfidenceScore.toFixed(2)}}</h1>
+            <div v-if="isShowingScore">
+                <h1 class="header-one"><b>{{playerDataStore.overconfidenceScore.toFixed(2)}}</b></h1>
+                <hr>
+            </div>
         </Transition>
+        
         <Transition name="fade">
-            <h2 v-if="showMetric_1">Based on your trade history, We saw that you made {{playerDataStore.bigTrades.length}} {{playerDataStore.bigTrades.length===1?"trade":"trades"}} with a value that was more than 40% of your uninvested money at the time. See more</h2>
+            <div v-if="showMetric_1">
+                <h2>Based on your trade history, We saw that you made <b>{{playerDataStore.bigTrades.length}} {{playerDataStore.bigTrades.length===1?"trade":"trades"}}</b> with a value that was more than 40% of your uninvested money at the time.</h2>
+                <h3>This could be a sign of overconfidence, especially if you are betting on a single stock to go up. It might be better to avoid such transactions that are a big portion of your portfolio.</h3>
+                <hr>
+            </div>
         </Transition>
+
         <Transition name="fade">
-            <h2 v-if="showMetric_2">Your portfolio was well balanced throughout the simulation, here are snapshots of your portfolio</h2>
+            <div v-if="showMetric_2">
+                <h2> We analyzed snapshots of your portfolio: They were well balanced <b>{{playerDataStore.numBalancedPortfolioSnapshots}} out of 5 times.</b> </h2>
+                <h3> Make sure you aren't putting all your eggs in one basket!.</h3>
+            </div>
         </Transition>
         <div class="card-container" v-if="showMetric_2">
             <div class="card">
                 <Transition name="fade">
                     <div v-if="showChart1" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 40</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[0]" :key="1"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[0].data" :key="1"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -27,7 +39,7 @@
                 <Transition name="fade">
                     <div v-if="showChart2" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 60</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[1]" :key="2"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[1].data" :key="2"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -36,7 +48,7 @@
                 <Transition name="fade">
                     <div v-if="showChart3" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 80</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[2]" :key="3"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[2].data" :key="3"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -45,7 +57,7 @@
                 <Transition name="fade">
                     <div v-if="showChart4" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 100</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[3]" :key="4"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[3].data" :key="4"></PieChart> 
                     </div>
                 </Transition>
             </div>
@@ -54,28 +66,33 @@
                 <Transition name="fade">
                     <div v-if="showChart5" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 120 - End</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[4]" :key="5"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[4].data" :key="5"></PieChart> 
                     </div>
                 </Transition>
             </div>
         </div>
-
         <Transition name="fade">
-            <h2 v-if="showMetric_3">You read a total of {{playerDataStore.numArticlesRead}} articles</h2>
-        </Transition>
-
-        <Transition name="fade">
-            <div v-if="showMetric_4">
-                <h2 v-if="playerDataStore.isAdvisorEnabled === true"> You decided to subscribe to Morningstar's premium advice, enhancing the objectiveness & quality of the information you received to best make decisions</h2>
-                <h2 v-else> You chose not to subscribe to Morningstar's premium advice. This could be a sign of overconfidence, especially if you are only looking of perspectives that reinforce your own</h2>
+            <div v-if="showMetric_3">
+                <hr>
+                <h2>You read a total of <b>{{playerDataStore.numArticlesRead}}</b> articles {{playerDataStore.isAdvisorEnabled===true?"and advisor messages":""}}</h2>
+                <h3> The more research you do, the better. But make sure your sources are as reliable as possible! </h3>
             </div>
         </Transition>
-
         <Transition name="fade">
-            <h2 v-if="showMetric_5">You made {{playerDataStore.hastyTrades.length}} {{playerDataStore.hastyTrades.length===1?"trade":"trades"}} in the game's running state</h2>
+            <div v-if="showMetric_4">
+                <hr>
+                <h2 v-if="playerDataStore.isAdvisorEnabled === true"> You <b>did</b> subscribe to Morningstar's premium advice</h2>
+                <h2 v-else> You <b>did not</b> subscribe to Morningstar's premium advice. This could be a sign of overconfidence, especially if you are only looking of perspectives that reinforce your own</h2>
+                <h3> Expert advice can help to enhance the overall objectiveness & quality of the information you receive, to helping you make better decisions</h3>
+            </div>
         </Transition>
-
-        
+        <Transition name="fade">
+            <div v-if="showMetric_5">
+                <hr>
+                <h2 >You made <b>{{playerDataStore.hastyTrades.length}} {{playerDataStore.hastyTrades.length===1?"trade":"trades"}}</b> in the game's running state.</h2>
+                <h3> Players who chose to trade without stopping the time might be more prone to impulsive decision making</h3>
+            </div>
+        </Transition>
     </div>
 </template>
 
@@ -117,31 +134,31 @@
             }, 5000)
             setTimeout(() => {
                 this.showMetric_2 = true;
-            }, 6000)
-            setTimeout(() => {
-                this.showChart1 = true;
             }, 7000)
             setTimeout(() => {
-                this.showChart2 = true;
+                this.showChart1 = true;
             }, 8000)
             setTimeout(() => {
-                this.showChart3 = true;
+                this.showChart2 = true;
             }, 9000)
             setTimeout(() => {
-                this.showChart4 = true;
+                this.showChart3 = true;
             }, 10000)
             setTimeout(() => {
-                this.showChart5 = true;
+                this.showChart4 = true;
             }, 11000)
             setTimeout(() => {
-                this.showMetric_3 = true;
+                this.showChart5 = true;
             }, 12000)
             setTimeout(() => {
+                this.showMetric_3 = true;
+            }, 14000)
+            setTimeout(() => {
                 this.showMetric_4 = true;
-            }, 13000)
+            }, 16000)
             setTimeout(() => {
                 this.showMetric_5 = true;
-            }, 14000)
+            }, 18000)
             
         },
     }
@@ -177,7 +194,12 @@
         @include mds-level-2-heading($bold: false);
         color: black;
         position: relative;
-        bottom: 10px;
+    }
+
+    h3 {
+        @include mds-level-3-heading($bold: false);
+        color: rgb(48, 48, 48);
+        position: relative;
     }
 
     .click-here {
