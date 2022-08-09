@@ -297,6 +297,7 @@
     .input-symbol-dollar input {
         padding-left:18px;
     }
+    
     .input-symbol-dollar:before {
         @include mds-body-text-l($bold: false);
         position: relative;
