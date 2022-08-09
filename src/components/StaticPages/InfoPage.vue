@@ -70,6 +70,7 @@
                         </span>
                     </span>
                 </form>
+                
                 <button class="click-here nice-boxshadow" v-on:click="submitAccountBalance">Submit</button>
             </div>
         </Transition>
@@ -271,9 +272,12 @@
         color: #000000;
         position: relative;
         bottom: 10px;
-        border-radius:10px;
-        border-width:0px;
-        opacity:0.9;
+        border-radius:5px;
+        border: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         transition: 0.5s;
         margin-top:30px
     }
