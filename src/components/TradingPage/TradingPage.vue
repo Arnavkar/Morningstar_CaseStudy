@@ -61,7 +61,7 @@
                 :stopSimulation="stopSimulation" 
                 :makeTrade="makeTrade"
                 :currentPrices="getCurrentPrices()" 
-                :accountBalance="accountBalance" 
+                :accountBalance="playerDataStore.accountBalance" 
                 :portfolio="portfolio"
             ></TradingForm>
             <div class="portfolio-card-main nice-boxshadow">

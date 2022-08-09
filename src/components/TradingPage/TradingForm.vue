@@ -57,7 +57,9 @@ export default {
     methods: {
         validateForm() {
             if (this.orderType === 'BUY') {
-                return this.selectedStock != '' && this.orderType != '' && this.amount > 0 && this.amount >= 100 && this.amount <= this.accountBalance
+                console.log('Amount is ' + this.amount)
+                console.log('Account balance is ' + this.accountBalance)
+                return this.selectedStock != '' && this.orderType != '' && this.amount > 0 && this.amount >= 100 && this.amount <= this.accountBalance 
             } else if (this.orderType === 'SELL') {
                 let valueOfActiveStock = parseFloat(this.currentPrices[this.selectedStock]) * this.portfolio[this.selectedStock]['numberOfShares']
 
