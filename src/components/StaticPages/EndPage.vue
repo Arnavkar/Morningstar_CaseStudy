@@ -1,14 +1,19 @@
 <template>
     <div class="end-page-main">
-        <h1 class="header-one">Thank you for completing the Morningstar Overconfidence Trading Simulation!</h1>
+        <h1 class="header-one">Time's Up! Thank you for completing the Morningstar Overconfidence Trading Simulation!</h1>
         <Transition name="fade">
             <h1 class="score" v-if="isShowingSubHeader">Here is your score:</h1>
         </Transition>
         <Transition name="fade">
-            <div v-if="isShowingScore">
-                <h1 class="header-one"><b>{{playerDataStore.overconfidenceScore.toFixed(2)}}</b></h1>
-                <hr>
+            <div v-if="isShowingScore" class="meter-wrapper">
+                <div class="percentage">{{calculateOverConfidencePercentage()}}</div>
+                <circle-progress :fill-color="'#ff0000'" :percent="calculateOverConfidencePercentage()" :size="300" :transition="200"/>
             </div>
+        </Transition>
+        <Transition name="fade">
+            <h2 v-if="showVerbage" class="">
+                Your overconfidence level is: <b>average</b>
+            </h2>
         </Transition>
         
         <Transition name="fade">
@@ -39,7 +44,7 @@
                 <Transition name="fade">
                     <div v-if="showChart2" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 60</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[1].data" :key="2"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[1].data" :key="2"></PieChart>
                     </div>
                 </Transition>
             </div>
@@ -48,7 +53,7 @@
                 <Transition name="fade">
                     <div v-if="showChart3" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 80</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[2].data" :key="3"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[2].data" :key="3"></PieChart>
                     </div>
                 </Transition>
             </div>
@@ -57,7 +62,7 @@
                 <Transition name="fade">
                     <div v-if="showChart4" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 100</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[3].data" :key="4"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[3].data" :key="4"></PieChart>
                     </div>
                 </Transition>
             </div>
@@ -66,7 +71,7 @@
                 <Transition name="fade">
                     <div v-if="showChart5" class="card-cover nice-boxshadow">
                         <h2 class="card-header">Day 120 - End</h2>
-                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[4].data" :key="5"></PieChart> 
+                        <PieChart :holdingsData="playerDataStore.portfolioSnapshots[4].data" :key="5"></PieChart>
                     </div>
                 </Transition>
             </div>
@@ -97,18 +102,24 @@
 </template>
 
 <script>
+
     import PieChart from '../Charts/PieChart'
+    import CircleProgress from "vue3-circle-progress";
+
     import { playerDataStore } from '@/use/playerDataStore'
+    
 
     export default {
         name: 'EndPage',
         components: {
             PieChart,
+            CircleProgress,
         },
         data() {
             return {
                 isShowingSubHeader: false,
                 isShowingScore: false,
+                showVerbage: false,
                 showMetric_1: false,
                 showMetric_2: false,
                 showMetric_3: false,
@@ -128,6 +139,9 @@
             }, 2000)
             setTimeout(() => {
                 this.isShowingScore = true;
+            }, 3000)
+            setTimeout(() => {
+                this.showVerbage = true;
             }, 3000)
             setTimeout(() => {
                 this.showMetric_1 = true;
@@ -159,8 +173,13 @@
             setTimeout(() => {
                 this.showMetric_5 = true;
             }, 18000)
-            
         },
+        methods: {
+            calculateOverConfidencePercentage() {
+                console.log(playerDataStore.overconfidenceScore)
+                return parseFloat(playerDataStore.overconfidenceScore).toFixed(2);
+            }
+        }
     }
 
 </script>
@@ -183,11 +202,17 @@
 
     .score {
         @include mds-level-1-heading($bold: false);
-        margin-bottom: 70px;
+        margin-bottom: 35px;
     }
 
     .card-header {
         @include mds-level-1-heading($bold: false);
+    }
+
+    .percentage {
+        @include mds-level-1-heading($bold: false);
+        position: absolute;
+        top: 390px;
     }
 
     h2 {
@@ -221,6 +246,12 @@
         width: 75%;
     }
 
+    .meter-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+
     .card-container {
         display: inline-flex;
         margin-top: 40px;
@@ -250,7 +281,7 @@
     }
 
     .card-cover:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
 
     .nice-boxshadow {

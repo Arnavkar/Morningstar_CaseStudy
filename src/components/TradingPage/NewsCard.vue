@@ -1,7 +1,9 @@
 <template>
     <div :class="{'news-card-main nice-boxshadow': (!was_read && !is_advisor_message),'advisor-card-main nice-boxshadow': (!was_read && is_advisor_message), 'news-card-main-deactivated nice-boxshadow': was_read}">
         <div class="title-container">
-            {{ title }}   
+            <img v-if="is_advisor_message" class='morningstar-logo' src="../../assets/morningstar-logo.svg"/>
+            <div class="advisor-message-header" v-if="is_advisor_message">&nbsp;|&nbsp; Advisor</div>
+            <div v-else>{{title}}</div>
         </div>
         <div v-if="!showContent" class="content-container-hidden">
             {{ description.slice(0, 100) }} ...
@@ -54,7 +56,7 @@
         @include mds-level-3-heading($bold: true);
         background: white;
         border: 2px solid grey;
-        border-right: 4px solid red;
+        border-right: 4px solid black;
         text-align: left;
         border-radius: 5px;
         width: 100%;
@@ -89,7 +91,7 @@
         @include mds-level-3-heading($bold: true);
         background: white;
         border: 2px solid grey;
-        border-right: 4px solid green;
+        border-right: 4px solid rgb(255, 0, 0);
         text-align: left;
         border-radius: 5px;
         width: 100%;
@@ -102,10 +104,19 @@
         justify-content: space-between;
     }
 
+    .advisor-message-header {
+        @include mds-level-3-heading($bold: false);
+        color: red;
+    }
+
     .title-container {
-        display: flex;
-        flex-direction: column;
+        display: inline-flex;
         padding: 10px;
+    }
+
+    .morningstar-logo {
+        height: 35px;
+        width: 125px;
     }
 
     .subtitle-container {
@@ -141,7 +152,6 @@
 
     .content-container {
         @include mds-body-text-l($bold: false);
-        height: 100px;
         overflow: hidden;
         width: 90%;
         transition: max-height 0.2s ease-out;

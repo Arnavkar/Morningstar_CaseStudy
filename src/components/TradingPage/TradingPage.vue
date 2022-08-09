@@ -159,6 +159,9 @@
         props: {
             switchToEndPage: { type: Function },
         },
+        mounted() {
+            this.updateNewsFeed();
+        },
         data() {
             return {
                 playerDataStore,
@@ -292,7 +295,7 @@
                 }
                 
                 let day = Math.floor(this.simulationTimeElapsed/86400)
-                if(this.currentDay!=day){
+                if(this.currentDay != day){
                     this.currentDay = day
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
@@ -311,7 +314,7 @@
             startSimulation() {
                 this.isTimeRunning = true
                 this.updateNewsFeed()
-                this.interval = setInterval(this.updateTimeData,1000)
+                this.interval = setInterval(this.updateTimeData, 1000)
             },
             stopSimulation() {
                 this.isTimeRunning = false

@@ -364,7 +364,7 @@ export const newsData = [
     "day": "85",
     "ticker": "CROC",
     "headline": "Crocodile refines its protfolio ",
-    "description": "WE ARENT TO KEEN ON THE CROC-PHONE SE ANYMORE. Which is probably why Crocodile is cutting its CROC-PHONE SE outout by 20% in the next quarter as the model receiives weaker-than expected demans in China. Also Electronics demand is taking a hit in the face of the Ukraine war.",
+    "description": "WE ARENT TOO KEEN ON THE CROC-PHONE SE ANYMORE. Which is probably why Crocodile is cutting its CROC-PHONE SE outout by 20% in the next quarter as the model receiives weaker-than expected demans in China. Also Electronics demand is taking a hit in the face of the Ukraine war.",
     "source": "YouTube",
     "credibility": "3",
     "analyst_opinion": "-"

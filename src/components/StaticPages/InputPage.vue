@@ -8,8 +8,8 @@
         <div class="form-container">
             <Transition name="fade">
                 <form class = "form" v-if="showInputFields">
-                    <label for="1" class = "input-header-name">Name</label>
-                    <input type = "text" class = "input-field-name nice-boxshadow" placeholder="Required" id="1" v-model="playerName" maxlength="15" @change="clearErrorText" required> <span class="error"><p id="name_error"></p></span>
+                    <label for="1" class="input-header-name">Name</label>
+                    <input type="text" class="input-field-name nice-boxshadow" placeholder="Required" id="1" v-model="playerName" maxlength="15" @change="clearErrorText" required><span class="error"><p id="name_error"></p></span>
 
                     <label for="2" class = "input-header">Annual Salary</label>
                     <span class = "input-symbol-dollar">
@@ -25,7 +25,7 @@
         </div>
         <Transition name="fade">
             <div class ="click-here-container" v-if="showInputFields" >  
-                <h3 @click="submitPlayerData();" class="click-here"> Next </h3>
+                <h3 @click="submitPlayerData();" class="click-here">Next</h3>
             </div>   
         </Transition>
     </div>
@@ -126,7 +126,6 @@
         -webkit-animation: gradient 10s infinite; 
         animation: gradient 10s infinite;
         color: rgba(0,0,0,0);
-    
     }
 
     .click-here:hover {
@@ -215,7 +214,7 @@
     }
 
     .input-field{
-        width:50%;
+        width:30%;
         height:25px;
         padding: 10px;
         margin-bottom: 20px;
@@ -272,7 +271,7 @@
     }
 
     .form {
-        display:flex;
+        display: flex;
         flex-direction: column; 
         align-items: center;
     }
@@ -280,14 +279,14 @@
     .input-header{
         @include mds-body-text-l($bold: true);
         text-align: left;
-        width:51%;
+        width:30.5%;
         color: #cccccc;
     }
 
     .input-header-name{
         @include mds-body-text-l($bold: true);
         text-align: left;
-        width:31%;
+        width:30.5%;
         color: #cccccc;
     }
 

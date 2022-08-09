@@ -57,16 +57,16 @@
         <Transition name="fade">
             <div v-if="isShowingSliderMessage">
                 <h1 class="header-one">Please select your starting account balance.</h1>
-                <h3>You may use the slider or provide a custom value that more accurately represents your financial situation</h3>
+                <h3>You may use the slider or provide a custom value that more accurately represents your financial situation.</h3>
             </div>
         </Transition> 
         <Transition name="fade">
             <div v-if="isShowingSlider">
                 <form>
                     <span>
-                        <span class = "rangetext"> $1000  <input type="range" min="1000" max="10000" v-model="accountBalance" class="slider" id="myRange"/>  $10000      </span>
-                        <span class = "input-symbol-dollar">
-                            <input type = "number" class = "input-field nice-boxshadow" id="1" v-model="accountBalance" @change="clearErrorText" required> <span class="error"><p id="value_error"></p></span>
+                        <span class="rangetext"> $1000  <input type="range" min="1000" max="10000" v-model="accountBalance" class="slider" id="myRange"/>  $10000      </span>
+                        <span class="input-symbol-dollar">
+                            <input type="number" class="input-field nice-boxshadow" id="1" v-model="accountBalance" @change="clearErrorText" required> <span class="error"><p id="value_error"></p></span>
                         </span>
                     </span>
                 </form>
@@ -76,8 +76,8 @@
 
         <Transition name="fade">
             <div v-if="isShowingAdvisorSubscription">
-                <h1 class="header-one">You also have the option to subscribe to expert advice before the simulation begins. This will cost ${{fee}}</h1>
-                <h3> The advisor subscription provides you with additional investing tips, and additional information about the data presented to you</h3>
+                <h1 class="header-one">You also have the option to subscribe to Morningstar Advisor before the simulation begins. This will cost ${{ fee }}.</h1>
+                <h3> The advisor subscription provides you with additional investing tips, and additional information about the data presented to you </h3>
             </div>
         </Transition>
         <Transition name="fade">
@@ -86,7 +86,8 @@
                     <label class="switch">
                         <input type="checkbox" id="_button" v-model="advisorSubscription" v-on:click="toggleAdvisorSubscription();">
                         <span class="switch-slider round nice-boxshadow"></span>
-                    </label>   Yes
+                    </label>
+                    Yes
                 </span>
             </div>
         </Transition>
@@ -96,10 +97,10 @@
 
 
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest and grow ${{accountBalance.toFixed(2)}}, good luck!</h1>
+            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest ${{ accountBalance }}, good luck!</h1>
         </Transition>
         <Transition name="fade">
-            <h3 @click="switchToTradingPage()" v-if="showClickAnywhere" class="click-here">Click here to continue.</h3>
+            <h3 @click="switchToTradingPage()" v-if="isShowingLastMessage" class="click-here">Click here to continue.</h3>
         </Transition>
     </div>
 </template>
@@ -267,12 +268,12 @@
 
     .click-here {
         @include mds-level-3-heading($bold: false);
-        color: #8d8c8c;
+        color: #000000;
         position: relative;
         bottom: 10px;
         border-radius:10px;
         border-width:0px;
-        opacity:0.6;
+        opacity:0.9;
         transition: 0.5s;
         margin-top:30px
     }
@@ -426,75 +427,72 @@
 
     /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
     .slider::-webkit-slider-thumb {
-        -webkit-appearance: none; /* Override default look */
+        -webkit-appearance: none;
         appearance: none;
-        width: 30px; /* Set a specific slider handle width */
-        height: 30px; /* Slider handle height */
-        background: #adadad; /* Green background */
-        cursor: pointer; /* Cursor on hover */
+        width: 30px;
+        height: 30px;
+        background: #adadad;
+        cursor: pointer;
         border-radius: 20px
     }
-    /* The switch - the box around the slider */
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
-}
 
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
 
-/* The slider */
-.switch-slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
 
-.switch-slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+    .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
 
-input:checked + .switch-slider {
-  background-color: #2196F3;
-}
+    .switch-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
 
-input:focus + .switch-slider {
-  box-shadow: 0 0 1px #2196F3;
-}
+    input:checked + .switch-slider {
+        background-color: #2196F3;
+    }
 
-input:checked + .switch-slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
+    input:focus + .switch-slider {
+        box-shadow: 0 0 1px #2196F3;
+    }
 
-/* Rounded sliders */
-.switch-slider.round {
-  border-radius: 34px;
-}
+    input:checked + .switch-slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
 
-.switch-slider.round:before {
-  border-radius: 50%;
-}
+    .switch-slider.round {
+        border-radius: 34px;
+    }
+
+    .switch-slider.round:before {
+        border-radius: 50%;
+    }
 
 </style>
