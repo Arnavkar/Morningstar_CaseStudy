@@ -77,7 +77,7 @@
 
         <Transition name="fade">
             <div v-if="isShowingAdvisorSubscription">
-                <h1 class="header-one">You also have the option to subscribe to Morningstar Advisor before the simulation begins. This will cost ${{ fee }}.</h1>
+                <h1 class="header-one">You also have the option to subscribe to Morningstar Advisor before the simulation begins. This will cost ${{ fee.toFixed(2) }}.</h1>
                 <h3> The advisor subscription provides you with additional investing tips, and additional information about the data presented to you </h3>
             </div>
         </Transition>
@@ -98,7 +98,7 @@
 
 
         <Transition name="fade">
-            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest ${{ accountBalance.toFixed(2) }}, good luck!</h1>
+            <h1 class="header-one" v-if="isShowingLastMessage">You will have 120 days to invest ${{accountBalance.toFixed(2)}}, good luck!</h1>
         </Transition>
         <Transition name="fade">
             <h3 @click="switchToTradingPage()" v-if="isShowingLastMessage" class="click-here">Click here to continue.</h3>
@@ -128,15 +128,6 @@
                 advisorSubscription:false,
                 playerDataStore,
                 fee:235
-            }
-        },
-        computed:{
-            toggleText(){
-                if(this.advisorSubscription === true){
-                    return 'Yes'
-                } else {
-                    return 'No'
-                }
             }
         },
         props: {
@@ -187,10 +178,10 @@
                 this.playerDataStore.setIsAdvisorEnabled(this.advisorSubscription)
                 this.triggerLastMessage()
                 if (this.advisorSubscription === true){
-                    let fee = this.accountBalance*(1/10).toFixed(2)
+                    let fee = this.accountBalance*(1/10)
                     this.accountBalance -= fee
                 }
-                this.playerDataStore.setAccountBalance(parseFloat(this.accountBalance.toFixed(2)))
+                this.playerDataStore.setAccountBalance(this.accountBalance)
             },
 
             triggerAdvisorOption(){
@@ -225,7 +216,7 @@
             },
 
             setFee(){
-                this.fee = (this.accountBalance/10).toFixed(2)
+                this.fee = this.accountBalance/10
             }
 
         }

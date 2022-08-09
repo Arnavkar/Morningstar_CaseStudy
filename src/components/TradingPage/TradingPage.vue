@@ -300,6 +300,10 @@
                     this.currentPrices = this.getCurrentPrices()
                     playerDataStore.updatePortfolio(this.currentPrices, this.currentDay)
                     this.updateNewsFeed()
+
+                    if ([40,60,80,100,120].includes(this.currentDay)){
+                        this.playerDataStore.addPortfolioSnapshot()
+                    }
                 }
 
                 if (this.currentDay === 120 || this.currentDay > 120){
@@ -307,9 +311,7 @@
                     this.stopSimulation()
                 }
 
-                if ([40,60,80,100,120].includes(this.currentDay)){
-                    this.playerDataStore.addPortfolioSnapshot()
-                }
+                
             },
             startSimulation() {
                 this.isTimeRunning = true

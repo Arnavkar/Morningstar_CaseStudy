@@ -230,12 +230,16 @@ export const playerDataStore = reactive({
             data:holdingsDataCopy,
             wasBalanced:balanced
         })
+
+        console.log(this.portfolioSnapshots)
     },
 
     capOverconfidenceScore(){
-        //Set hard cap
+        //Set caps
         if (this.overconfidenceScore > 250){
             this.overconfidenceScore = 250
+        } else if (this.overconfidenceScore < 20){
+            this.overconfidenceScore = 20
         }
     },
 
